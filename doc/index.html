@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar de Oficinas — Documentação técnica</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --surface:#ffffff; --ink:#1c2430; --muted:#5b6675;
+    --line:#e3e7ee; --brand:#0f766e; --brand-soft:#e6f4f2;
+    --ok:#16a34a; --alerta:#d97706; --critico:#dc2626;
+    --code-bg:#0f172a; --code-ink:#e2e8f0; --chip:#eef1f6;
+    --shadow:0 1px 2px rgba(16,24,40,.06),0 4px 16px rgba(16,24,40,.05);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px;display:grid;
+    grid-template-columns:250px 1fr;gap:36px;align-items:start;}
+  /* Sidebar / TOC */
+  nav.toc{position:sticky;top:0;max-height:100vh;overflow:auto;padding:26px 0;}
+  nav.toc h2{font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 10px;}
+  nav.toc a{display:block;color:var(--muted);text-decoration:none;padding:5px 10px;
+    border-radius:7px;font-size:14px;border-left:2px solid transparent;}
+  nav.toc a:hover{background:var(--surface);color:var(--ink);}
+  nav.toc a.sub{padding-left:22px;font-size:13px;}
+  main{padding:26px 0 90px;min-width:0;}
+  header.hero{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff;
+    border-radius:16px;padding:30px 32px;margin-bottom:30px;box-shadow:var(--shadow);}
+  header.hero h1{margin:0 0 6px;font-size:27px;letter-spacing:-.01em;}
+  header.hero p{margin:0;opacity:.92;max-width:70ch;}
+  header.hero .meta{margin-top:16px;font-size:13px;opacity:.85;display:flex;
+    gap:8px;flex-wrap:wrap;}
+  header.hero .meta span{background:rgba(255,255,255,.15);padding:3px 10px;border-radius:999px;}
+  section{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:24px 26px;margin-bottom:22px;box-shadow:var(--shadow);}
+  section > h2{margin:0 0 4px;font-size:21px;letter-spacing:-.01em;scroll-margin-top:20px;}
+  section > h2 .n{color:var(--brand);font-variant-numeric:tabular-nums;margin-right:8px;}
+  h3{margin:26px 0 8px;font-size:16px;color:var(--ink);}
+  h3:first-of-type{margin-top:14px;}
+  p{margin:10px 0;}
+  .lead{color:var(--muted);}
+  a{color:var(--brand);}
+  code{background:var(--chip);padding:1px 6px;border-radius:5px;font-size:.86em;
+    font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;}
+  .col{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;font-weight:700;
+    background:var(--brand-soft);color:var(--brand);padding:1px 7px;border-radius:5px;}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14.5px;
+    display:block;overflow-x:auto;}
+  th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+  th{background:#f1f4f8;font-weight:600;white-space:nowrap;}
+  td .col{white-space:nowrap;}
+  .formula{background:var(--code-bg);color:var(--code-ink);border-radius:10px;
+    padding:14px 16px;margin:12px 0;font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;
+    font-size:14px;overflow-x:auto;line-height:1.55;}
+  .formula .cmt{color:#94a3b8;}
+  .callout{border-left:4px solid var(--brand);background:var(--brand-soft);
+    padding:12px 16px;border-radius:0 10px 10px 0;margin:14px 0;font-size:14.5px;}
+  .callout.warn{border-color:var(--alerta);background:#fef6ec;}
+  .callout.val{border-color:var(--ok);background:#eafaf0;}
+  .callout b{color:var(--ink);}
+  .pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;}
+  .pill.ok{background:#eafaf0;color:var(--ok);} .pill.al{background:#fef6ec;color:var(--alerta);}
+  .pill.cr{background:#fdecec;color:var(--critico);} .pill.no{background:var(--chip);color:var(--muted);}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .card{border:1px solid var(--line);border-radius:10px;padding:14px 16px;}
+  .card h4{margin:0 0 6px;font-size:14px;}
+  .src{font-size:13px;color:var(--muted);margin:2px 0 0;}
+  .src b{color:var(--ink);}
+  footer{color:var(--muted);font-size:13px;text-align:center;padding:20px;}
+  @media (max-width:880px){
+    .wrap{grid-template-columns:1fr;gap:0;}
+    nav.toc{position:static;max-height:none;padding:16px 0;border-bottom:1px solid var(--line);}
+    .grid2{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="toc">
+  <h2>Sumário</h2>
+  <a href="#visao">Visão geral</a>
+  <a href="#pipeline">Pipeline de dados</a>
+  <a href="#chave">Chave de junção (De-Para)</a>
+  <a href="#planilhas">Planilhas usadas</a>
+  <a href="#produtividade" class="sub">Produtividade</a>
+  <a href="#absenteismo" class="sub">Absenteísmo</a>
+  <a href="#eficiencia" class="sub">Eficiência</a>
+  <a href="#treinos" class="sub">Treinamentos</a>
+  <a href="#qualidade" class="sub">Qualidade</a>
+  <a href="#impacto" class="sub">Impacto (dif-em-dif)</a>
+  <a href="#semaforos">Semáforos e metas</a>
+  <a href="#saidas">Saídas (data/*.json)</a>
+  <a href="#atualizar">Como atualizar</a>
+  <a href="#validar">Como validar</a>
+  <a href="#manutencao">Notas de manutenção</a>
+</nav>
+
+<main>
+<header class="hero">
+  <h1>Radar de Oficinas — Documentação técnica</h1>
+  <p>O que o app faz, quais planilhas ele lê, quais colunas alimentam cada
+     número e de onde vem cada valor — escrito para quem for dar manutenção e
+     precisar validar os resultados célula a célula.</p>
+  <div class="meta">
+    <span>App: Streamlit + SPA (ECharts)</span>
+    <span>ETL: Python / openpyxl</span>
+    <span>Fonte-verdade: <code>app_oficinas/config.py</code></span>
+  </div>
+</header>
+
+<!-- ============================================================ VISÃO GERAL -->
+<section id="visao">
+  <h2><span class="n">1.</span>Visão geral</h2>
+  <p class="lead">O Radar de Oficinas mede o desempenho das oficinas parceiras e
+     cruza esse desempenho com os treinamentos que elas receberam.</p>
+  <p>A partir de planilhas <code>.xlsx</code> exportadas pela operação, um
+     pipeline em Python gera arquivos <code>data/*.json</code> que abastecem um
+     painel web (SPA em ECharts) com quatro telas:</p>
+  <ul>
+    <li><b>Ranking geral</b> — todas as oficinas comparadas por peças/mês,
+        peças/semana, totais recentes, absenteísmo e eficiência.</li>
+    <li><b>Ficha da oficina</b> — linha do tempo de produção e absenteísmo, a %
+        de eficiência atual e os marcos de treino sobre o gráfico.</li>
+    <li><b>Impacto</b> — comparação antes × depois do treino, com grupo de
+        controle (diferença-em-diferenças).</li>
+    <li><b>Qualidade</b> — nota de qualidade, índice de 2ª qualidade e as
+        principais causas de defeito.</li>
+  </ul>
+  <div class="callout"><b>Princípio central:</b> o app <b>não inventa fórmula</b>.
+     Ele lê os números que as próprias planilhas já calculam (eficiência,
+     qualidade) e apenas agrega/organiza. Onde há cálculo, ele reproduz o mesmo
+     critério da planilha de origem.</div>
+</section>
+
+<!-- ================================================================ PIPELINE -->
+<section id="pipeline">
+  <h2><span class="n">2.</span>Pipeline de dados</h2>
+  <p>O comando <code>python -m scripts.build_tudo</code> (o que o botão
+     <b>Atualizar dados</b> dispara) roda seis passos em ordem — cada um lê a
+     saída do anterior:</p>
+  <table>
+    <tr><th>#</th><th>Passo</th><th>Script</th><th>O que faz</th><th>Gera</th></tr>
+    <tr><td>1</td><td>De-Para</td><td><code>build_depara.py</code></td>
+        <td>Normaliza a razão social e cria a dimensão canônica de oficinas.</td>
+        <td><code>depara.json</code></td></tr>
+    <tr><td>2</td><td>Fatos (ETL)</td><td><code>build_fatos.py</code></td>
+        <td>Lê as colunas de valor das planilhas e resolve cada linha à oficina canônica.</td>
+        <td><code>fato_*.json</code></td></tr>
+    <tr><td>3</td><td>Métricas</td><td><code>build_metricas.py</code></td>
+        <td>Agrega os fatos por oficina × período (mês/semana/ano).</td>
+        <td><code>metricas_*.json</code></td></tr>
+    <tr><td>4</td><td>Impacto</td><td><code>build_impacto.py</code></td>
+        <td>Calcula antes×depois do treino + controle (dif-em-dif).</td>
+        <td><code>impacto_*.json</code></td></tr>
+    <tr><td>5</td><td>Dashboard</td><td><code>build_dashboard.py</code></td>
+        <td>Monta o payload das telas (ranking, séries, semáforos).</td>
+        <td><code>dashboard.json</code></td></tr>
+    <tr><td>6</td><td>Qualidade</td><td><code>build_qualidade.py</code></td>
+        <td>Lê as abas RESUMO/DEFEITOS do “Indicador geral” e gera qualidade.</td>
+        <td><code>qualidade.json</code></td></tr>
+  </table>
+  <div class="callout">Camadas: <code>infra/</code> só faz I/O (sabe onde estão
+     as células, via <code>config.py</code>); <code>services/</code> contém as
+     regras de negócio puras; <code>scripts/</code> orquestra. Toda peculiaridade
+     de planilha (arquivo, aba, linha, coluna) mora em <b><code>app_oficinas/config.py</code></b>.</div>
+</section>
+
+<!-- =================================================================== CHAVE -->
+<section id="chave">
+  <h2><span class="n">3.</span>Chave de junção — o De-Para</h2>
+  <p>Não existe um código único de oficina compartilhado entre as planilhas. A
+     chave que liga tudo é a <b>razão social</b>, que vem grafada de formas
+     diferentes em cada arquivo (sufixos POLO/CARGO, acentos, ME/LTDA,
+     matriz/filial). Por isso o passo 1 constrói um <b>De-Para</b>:</p>
+  <ul>
+    <li>Remove tokens jurídicos (<code>LTDA, ME, EPP…</code>) e de unidade
+        (<code>POLO, CARGO, JEANS, MALHA…</code>) para achar um <b>nome-base</b>.</li>
+    <li>Agrupa variantes no mesmo <code>oficina_id</code> canônico.</li>
+    <li>O <b>nome de exibição</b> segue a grafia de <code>postos.xlsx</code>
+        (lista oficial de parceiros — <code>config.FONTE_NOME_PADRAO</code>).</li>
+    <li>Nomes muito parecidos (similaridade ≥ 0,90) são marcados para revisão humana.</li>
+  </ul>
+  <div class="callout warn"><b>CNPJ</b> só existe nas planilhas de treinamento;
+     as de desempenho têm apenas o nome. Se uma oficina não aparecer cruzada,
+     quase sempre é divergência de razão social — ajuste o vocabulário em
+     <code>config.py</code> (<code>TOKENS_UNIDADE</code>, <code>TOKENS_JURIDICOS</code>,
+     <code>RUIDO</code>).</div>
+</section>
+
+<!-- =============================================================== PLANILHAS -->
+<section id="planilhas">
+  <h2><span class="n">4.</span>Planilhas usadas</h2>
+  <p>Todas ficam na <b>raiz do projeto</b>. Os índices de coluna abaixo são
+     base 0 no código; a letra é a coluna do Excel correspondente.</p>
+  <table>
+    <tr><th>Arquivo</th><th>Aba</th><th>Cabeçalho / 1ª linha</th><th>Alimenta</th></tr>
+    <tr><td><code>RECEBIMENTO.xlsx</code></td><td>RECEBIMENTO</td><td>dados na linha 2</td><td>Produtividade</td></tr>
+    <tr><td><code>postos.xlsx</code></td><td>Dados</td><td>dados na linha 2</td><td>Absenteísmo · nomes-padrão</td></tr>
+    <tr><td><code>ESTOQUE OFICINAS - JEANS - 2026.xlsx</code></td><td>ESTOQUE</td><td>cabeçalho linha 5 · dados linha 6</td><td>Eficiência (JEANS)</td></tr>
+    <tr><td><code>ESTOQUE OFICINA NÃO JEANS.xlsx</code></td><td>ESTOQUE OFICINAS</td><td>cabeçalho linha 8 · dados linha 9</td><td>Eficiência (não-jeans)</td></tr>
+    <tr><td><code>Histórico de Atendimento EP.xlsx</code></td><td>Planilha1</td><td>dados na linha 2</td><td>Treinamentos (EP)</td></tr>
+    <tr><td><code>Inscrições Lidera+ Gestão de Pessoas.xlsx</code></td><td>Sheet1</td><td>dados na linha 2</td><td>Treinamentos (Lidera+)</td></tr>
+    <tr><td><code>Indicador geral_Junho.xlsx</code></td><td>RESUMO · DEFEITOS</td><td>cabeçalho linha 2 · dados linha 3</td><td>Qualidade <b>somente</b></td></tr>
+  </table>
+  <div class="callout warn"><b>“Indicador geral” é ignorado de propósito</b> para
+     eficiência/produtividade/absenteísmo. Ele só é usado nas abas
+     <code>RESUMO</code> e <code>DEFEITOS</code> para as métricas de Qualidade.</div>
+
+  <!-- -------------------------------------------------- PRODUTIVIDADE -->
+  <h3 id="produtividade">4.1 · Produtividade — volume de peças</h3>
+  <p class="src"><b>Fonte:</b> <code>RECEBIMENTO.xlsx</code> · aba
+     <code>RECEBIMENTO</code> · dados a partir da linha 2 (diário, jan→ago/2026).</p>
+  <table>
+    <tr><th>Coluna</th><th>Índice</th><th>Campo</th><th>Uso</th></tr>
+    <tr><td><span class="col">A</span></td><td>0</td><td>Data</td><td>define mês / semana ISO</td></tr>
+    <tr><td><span class="col">B</span></td><td>1</td><td>Razão social</td><td>chave da oficina</td></tr>
+    <tr><td><span class="col">D</span></td><td>3</td><td>MP (matéria-prima)</td><td>normalização (JEANS/MALHA…)</td></tr>
+    <tr><td><span class="col">E</span></td><td>4</td><td>REAL CORTADO</td><td><b>peças produzidas</b> (o volume)</td></tr>
+    <tr><td><span class="col">F</span></td><td>5</td><td>MINUTOS</td><td>base do antigo peças/minuto (não exibido)</td></tr>
+  </table>
+  <div class="formula">
+peças/mês (<b>pecas_mes</b>)   = média das peças (Σ REAL CORTADO) por <b>mês</b> com dado<br>
+peças/semana (<b>pecas_semana</b>) = média das peças por <b>semana ISO</b> com dado<br>
+total do mês  (<b>pecas_mes_total</b>)    = Σ peças do <b>mês mais recente</b> com produção<br>
+total da semana (<b>pecas_semana_total</b>) = Σ peças da <b>semana mais recente</b> com produção<br>
+<span class="cmt"># peças_por_minuto = Σpeças ÷ Σminutos — ainda calculado, mas NÃO mostrado</span>
+  </div>
+  <div class="callout">Decisão do usuário: produtividade é lida como
+     <b>volume</b>, não como peças/hora. Volume depende do tamanho da oficina,
+     então <b>não tem semáforo</b> — mostra só o número. Os “totais” refletem o
+     <b>ritmo atual</b> (último período com dado), não o acumulado do ano.</div>
+
+  <!-- -------------------------------------------------- ABSENTEÍSMO -->
+  <h3 id="absenteismo">4.2 · Absenteísmo</h3>
+  <p class="src"><b>Fonte:</b> <code>postos.xlsx</code> · aba <code>Dados</code>
+     · dados a partir da linha 2 (jan/2024 → ago/2026).</p>
+  <table>
+    <tr><th>Coluna</th><th>Índice</th><th>Campo</th><th>Uso</th></tr>
+    <tr><td><span class="col">A</span></td><td>0</td><td>Frete</td><td>—</td></tr>
+    <tr><td><span class="col">B</span></td><td>1</td><td>MP</td><td>normalização</td></tr>
+    <tr><td><span class="col">C</span></td><td>2</td><td>Razão social</td><td>chave da oficina · nome-padrão</td></tr>
+    <tr><td><span class="col">D</span></td><td>3</td><td>Data (Efetivos)</td><td>período — <b>referência de data</b></td></tr>
+    <tr><td><span class="col">E</span></td><td>4</td><td>QTD Efetivos</td><td>denominador</td></tr>
+    <tr><td><span class="col">G</span></td><td>6</td><td>QTD Trabalhados</td><td>numerador</td></tr>
+    <tr><td><span class="col">H</span></td><td>7</td><td>Contratação</td><td>rotatividade (brinde)</td></tr>
+    <tr><td><span class="col">I</span></td><td>8</td><td>Demissão</td><td>rotatividade (brinde)</td></tr>
+    <tr><td><span class="col">J</span></td><td>9</td><td>Semana</td><td>rótulo semanal</td></tr>
+  </table>
+  <div class="formula">
+absenteísmo = 1 − ( Σ QTD Trabalhados ÷ Σ QTD Efetivos )   <span class="cmt"># razão agregada do período</span>
+  </div>
+  <div class="callout warn">A <b>Data de Trabalhados</b> às vezes vem como
+     placeholder <code>1990-12-31</code> (semana ainda não fechada). Por isso a
+     <b>Data de Efetivos</b> (coluna D) é a referência de período.</div>
+
+  <!-- -------------------------------------------------- EFICIÊNCIA -->
+  <h3 id="eficiencia">4.3 · Eficiência</h3>
+  <p class="src"><b>Fonte:</b> duas planilhas de estoque. O valor é a
+     <b>% oficial que a própria planilha calcula</b> — lido direto, sem recalcular.</p>
+  <div class="grid2">
+    <div class="card">
+      <h4>JEANS</h4>
+      <p class="src"><code>ESTOQUE OFICINAS - JEANS - 2026.xlsx</code> · aba
+         <code>ESTOQUE</code> · cabeçalho linha 5 · dados linha 6.</p>
+      <p class="src">Nome: coluna <span class="col">A</span> (0). Valor: coluna
+         com rótulo <code>% 4WK</code>.</p>
+    </div>
+    <div class="card">
+      <h4>NÃO-JEANS</h4>
+      <p class="src"><code>ESTOQUE OFICINA NÃO JEANS.xlsx</code> · aba
+         <code>ESTOQUE OFICINAS</code> · cabeçalho linha 8 · dados linha 9.</p>
+      <p class="src">MP: coluna <span class="col">A</span> (0). Nome: coluna
+         <span class="col">B</span> (1). Valor: rótulo <code>MÉDIA 4W</code>.</p>
+    </div>
+  </div>
+  <div class="formula">
+eficiência = Méd. das últimas 4 semanas de entrega (peças) ÷ Cap Peças 100%   <span class="cmt"># já pronta na planilha</span>
+  </div>
+  <div class="callout warn"><b>A coluna do valor é achada pelo RÓTULO do
+     cabeçalho, não por posição fixa</b> (<code>config.ROTULOS_EFIC_OFICIAL</code>
+     = <code>"% 4WK"</code>, <code>"MÉDIA 4W"</code>). As abas ganham colunas de
+     semana a cada carga, o que deslocaria um índice fixo. Se o rótulo sumir, o
+     leitor levanta <code>FonteInvalida</code> (falha alto, em vez de ler a
+     coluna errada). <b>Não</b> recalcular, <b>não</b> usar base 70%, <b>não</b>
+     usar a aba <code>HISTÓRICO EFIC</code> (abandonada).</div>
+  <div class="callout val"><b>Validação célula-a-célula (conferido):</b>
+     IDEAL = <code>0,1816</code> · I M = <code>0,7921</code> · ASA =
+     <code>0,5523</code>. Meta = <b>65%</b>.</div>
+
+  <!-- -------------------------------------------------- TREINAMENTOS -->
+  <h3 id="treinos">4.4 · Treinamentos</h3>
+  <p class="src"><b>Fonte A:</b> <code>Histórico de Atendimento EP.xlsx</code> ·
+     aba <code>Planilha1</code> · linha 2.</p>
+  <table>
+    <tr><th>Coluna</th><th>Índice</th><th>Campo</th><th>Uso</th></tr>
+    <tr><td><span class="col">A</span></td><td>0</td><td>Empresa (razão social)</td><td>chave da oficina</td></tr>
+    <tr><td><span class="col">C</span></td><td>2</td><td>Módulo</td><td>Lean · TOC · Costura e Mecânica</td></tr>
+    <tr><td><span class="col">D</span></td><td>3</td><td>CH</td><td>carga horária</td></tr>
+    <tr><td><span class="col">E</span></td><td>4</td><td>Ciclo</td><td><b>ano do marco</b> (2021/22 · 2023/24 · 2025)</td></tr>
+  </table>
+  <p class="src"><b>Fonte B:</b> <code>Inscrições Lidera+ Gestão de Pessoas.xlsx</code>
+     · aba <code>Sheet1</code> · linha 2 — módulo fixo “Lidera+ Gestão de Pessoas”, ano 2026.</p>
+  <table>
+    <tr><th>Coluna</th><th>Índice</th><th>Campo</th><th>Uso</th></tr>
+    <tr><td><span class="col">B</span></td><td>1</td><td>Hora de início</td><td>data</td></tr>
+    <tr><td><span class="col">G</span></td><td>6</td><td>Razão social</td><td>chave da oficina</td></tr>
+    <tr><td><span class="col">I</span></td><td>8</td><td>Polo</td><td>unidade</td></tr>
+  </table>
+  <div class="callout">Os treinos viram <b>marcos</b> (linhas tracejadas) sobre
+     os gráficos da Ficha e alimentam a tela de Impacto. O ano do marco vem do
+     campo <b>Ciclo</b> (EP) ou é fixo 2026 (Lidera+).</div>
+
+  <!-- -------------------------------------------------- QUALIDADE -->
+  <h3 id="qualidade">4.5 · Qualidade</h3>
+  <p class="src"><b>Fonte:</b> <code>Indicador geral_Junho.xlsx</code> —
+     reproduz os critérios da aba GRÁFICOS. Duas tabelas; cabeçalho na linha 2,
+     dados a partir da linha 3.</p>
+  <div class="grid2">
+    <div class="card">
+      <h4>Aba RESUMO <span class="src">(1 linha = 1 inspeção/OM)</span></h4>
+      <table>
+        <tr><th>Col</th><th>Campo</th></tr>
+        <tr><td><span class="col">F</span> (5)</td><td>Oficina</td></tr>
+        <tr><td><span class="col">L</span> (11)</td><td>Status da inspeção</td></tr>
+        <tr><td><span class="col">V</span> (21)</td><td>Peças de 2ª qualidade (2QA)</td></tr>
+        <tr><td><span class="col">W</span> (22)</td><td>Produção</td></tr>
+        <tr><td><span class="col">AC</span> (28)</td><td>Data (filtro de período)</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h4>Aba DEFEITOS <span class="src">(1 linha = 1 defeito)</span></h4>
+      <table>
+        <tr><th>Col</th><th>Campo</th></tr>
+        <tr><td><span class="col">G</span> (6)</td><td>QNTD (quantidade)</td></tr>
+        <tr><td><span class="col">I</span> (8)</td><td>Descrição do defeito</td></tr>
+        <tr><td><span class="col">L</span> (11)</td><td>Tipo de inspeção</td></tr>
+        <tr><td><span class="col">P</span> (15)</td><td>Setor</td></tr>
+        <tr><td><span class="col">S</span> (18)</td><td>Mês</td></tr>
+        <tr><td><span class="col">T</span> (19)</td><td>Ano</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="formula">
+Nota de Qualidade = 0,6·%Reprovado + 0,3·%Concessão + 0,1·(Σ2QA ÷ ΣProd)   <span class="cmt"># MAIOR = PIOR</span><br>
+Índice de 2ª Qualidade = Σ2QA ÷ ΣProd<br>
+Principais Causas = Σ QNTD por defeito  <span class="cmt"># tipo contém "SEGUNDA", setor = COSTURA</span>
+  </div>
+  <div class="callout">Status que entram no denominador da nota:
+     <code>APROVADO</code>, <code>REPROVADO</code>,
+     <code>APROVADO COM CONCESSÃO</code> (os demais são ignorados). Os rankings
+     exigem no mínimo <b>10 inspeções</b> por oficina. Pesos e filtros ficam em
+     <code>config.py</code> (<code>PESO_*</code>, <code>CAUSAS_*</code>).</div>
+
+  <!-- -------------------------------------------------- IMPACTO -->
+  <h3 id="impacto">4.6 · Impacto do treinamento (dif-em-dif)</h3>
+  <p>Responde: <i>a oficina que treinou melhorou?</i> Compara a métrica
+     <b>antes</b> × <b>depois</b> do treino e contrasta com um <b>grupo de
+     controle</b> de oficinas não treinadas no mesmo período.</p>
+  <div class="formula">
+pré  = anos com dado <b>antes</b> do ano do treino<br>
+pós  = anos com dado <b>depois</b> do ano do treino     <span class="cmt"># o ano do treino é buffer, excluído</span><br>
+Δ    = valor_pós − valor_pré<br>
+dif-em-dif = Δmédio(treinadas) − Δmédio(controle)
+  </div>
+  <div class="callout warn">Cobertura curta hoje (produtividade e eficiência só
+     têm 2026), então a maioria dos pares fica sem janela pré/pós completa —
+     recebe status <code>sem_pre</code>/<code>sem_pos</code>/<code>sem_dado</code>
+     em vez de ser omitida. A máquina fica pronta e preenche conforme o histórico
+     cresce. Roll-up anual segue as mesmas fórmulas das métricas.</div>
+</section>
+
+<!-- =============================================================== SEMÁFOROS -->
+<section id="semaforos">
+  <h2><span class="n">5.</span>Semáforos e metas</h2>
+  <p>Só as métricas com <b>meta absoluta</b> recebem cor. Volume de produção não
+     tem semáforo (depende do tamanho da oficina).</p>
+  <table>
+    <tr><th>Métrica</th><th>Sentido</th><th><span class="pill ok">ok</span></th>
+        <th><span class="pill al">alerta</span></th><th><span class="pill cr">crítico</span></th></tr>
+    <tr><td>Eficiência</td><td>maior é melhor</td><td>≥ 65%</td><td>≥ 55%</td><td>&lt; 55%</td></tr>
+    <tr><td>Absenteísmo</td><td>menor é melhor</td><td>≤ 5%</td><td>≤ 10%</td><td>&gt; 10%</td></tr>
+    <tr><td>Peças/mês · Peças/semana · Totais</td><td>volume</td>
+        <td colspan="3"><span class="pill no">sem semáforo</span></td></tr>
+    <tr><td>Nota de Qualidade / 2ª Qualidade</td><td>maior é pior</td>
+        <td colspan="3">ranking por valor (maior = pior); mín. 10 inspeções</td></tr>
+  </table>
+  <p class="src">Definido em <code>services/dashboard.py</code>:
+     <code>FAIXA_EFICIENCIA=(0.65,0.55)</code>,
+     <code>FAIXA_ABSENTEISMO=(0.05,0.10)</code>.</p>
+</section>
+
+<!-- ================================================================= SAÍDAS -->
+<section id="saidas">
+  <h2><span class="n">6.</span>Saídas — os arquivos <code>data/*.json</code></h2>
+  <p>O painel web consome apenas dois; os demais são intermediários do pipeline
+     (úteis para depurar/validar cada etapa).</p>
+  <table>
+    <tr><th>Arquivo</th><th>Conteúdo</th><th>Consumido pelo painel?</th></tr>
+    <tr><td><code>dashboard.json</code></td><td>Ranking, séries da Ficha, semáforos, impacto</td><td><b>Sim</b></td></tr>
+    <tr><td><code>qualidade.json</code></td><td>Nota, 2ª qualidade, principais causas</td><td><b>Sim</b></td></tr>
+    <tr><td><code>depara.json</code> / <code>.csv</code></td><td>Dimensão canônica de oficinas</td><td>não (intermediário)</td></tr>
+    <tr><td><code>fato_producao / absenteismo / eficiencia / treino.json</code></td><td>Fatos crus resolvidos à oficina</td><td>não</td></tr>
+    <tr><td><code>metricas_*_mes / _semana.json</code></td><td>Séries agregadas por período</td><td>não</td></tr>
+    <tr><td><code>impacto_por_oficina / _coorte.json</code></td><td>Antes×depois e dif-em-dif</td><td>não (embutido no dashboard)</td></tr>
+    <tr><td><code>fatos_nao_resolvidos.json</code></td><td>Linhas cuja oficina não casou no De-Para</td><td>não — <b>revisar aqui</b></td></tr>
+  </table>
+  <div class="callout"><b>Cada JSON traz um campo <code>gerado_em</code></b> (timestamp
+     UTC do build). É o que muda a cada rebuild mesmo sem dados novos.</div>
+</section>
+
+<!-- ============================================================== ATUALIZAR -->
+<section id="atualizar">
+  <h2><span class="n">7.</span>Como atualizar os dados</h2>
+  <p>Duas formas, ambas rodam o mesmo pipeline (<code>build_tudo</code>):</p>
+  <h3>a) Pelo app (equipe)</h3>
+  <ul>
+    <li>Barra lateral → <b>Atualizar dados</b> → suba a(s) planilha(s) <code>.xlsx</code> → clique no botão.</li>
+    <li>O app salva os arquivos, roda o build e <b>faz commit</b> dos JSONs no
+        GitHub (para persistir entre reinícios do Streamlit Cloud, cujo disco é efêmero).</li>
+    <li>O commit exige o token do GitHub configurado nos <i>Secrets</i>
+        (<code>[github]</code>) com permissão <b>Contents: Read and write</b>.
+        Sem permissão, o app avisa em amarelo que os dados atualizaram na sessão
+        mas <b>não</b> persistiram.</li>
+  </ul>
+  <h3>b) Pela linha de comando (manutenção)</h3>
+  <div class="formula">
+python -m scripts.build_tudo        <span class="cmt"># regenera todos os data/*.json</span><br>
+python -m http.server 8756          <span class="cmt"># e abra /web/ para conferir localmente</span>
+  </div>
+  <div class="callout warn">Mantenha os <b>nomes dos arquivos</b> idênticos aos
+     registrados em <code>config.py</code>. Ao subir uma planilha nova pelo app,
+     o nome precisa bater (a planilha de qualidade é reconhecida por conter
+     “indicador” no nome).</div>
+</section>
+
+<!-- ================================================================ VALIDAR -->
+<section id="validar">
+  <h2><span class="n">8.</span>Como validar um valor</h2>
+  <ol>
+    <li>Identifique a <b>métrica</b> e ache a oficina no painel.</li>
+    <li>Volte à <b>planilha/aba/coluna</b> da seção 4 correspondente.</li>
+    <li>Aplique a <b>fórmula</b> daquela seção sobre as células de origem.</li>
+    <li>Compare. Exemplos já conferidos: eficiência IDEAL <code>0,1816</code>,
+        I M <code>0,7921</code>, ASA <code>0,5523</code>.</li>
+  </ol>
+  <div class="callout val">Para depurar, os arquivos intermediários ajudam:
+     <code>fato_*.json</code> mostra o dado cru já resolvido à oficina;
+     <code>metricas_*.json</code> mostra a agregação por período — dá para
+     rastrear um número do painel até a linha da planilha.</div>
+</section>
+
+<!-- ============================================================= MANUTENÇÃO -->
+<section id="manutencao">
+  <h2><span class="n">9.</span>Notas de manutenção</h2>
+  <ul>
+    <li><b>Fonte-verdade de configuração:</b> <code>app_oficinas/config.py</code>.
+        Qualquer mudança de arquivo/aba/coluna começa aí.</li>
+    <li><b>Eficiência</b> é localizada por rótulo de cabeçalho — se a operação
+        renomear a coluna, atualize <code>ROTULOS_EFIC_OFICIAL</code>. O sistema
+        falha alto (<code>FonteInvalida</code>) em vez de ler errado.</li>
+    <li><b>“Indicador geral”</b> só entra na Qualidade. Não usar para as demais métricas.</li>
+    <li><b>Divergência de oficina</b> → confira <code>fatos_nao_resolvidos.json</code>
+        e ajuste o vocabulário de normalização em <code>config.py</code>.</li>
+    <li><b>Streamlit Cloud</b> tem disco efêmero: a persistência real vem do
+        commit dos JSONs no GitHub. O app reimplanta sozinho a cada push.</li>
+    <li>Esta documentação é mantida à mão — <b>atualize-a quando as colunas ou
+        fórmulas mudarem</b>.</li>
+  </ul>
+</section>
+
+<footer>Radar de Oficinas · documentação técnica · fonte-verdade: <code>app_oficinas/config.py</code></footer>
+</main>
+</div>
+</body>
+</html>
