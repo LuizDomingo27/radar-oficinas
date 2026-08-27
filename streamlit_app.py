@@ -122,6 +122,7 @@ def _commitar_dados(arquivos: list[str]) -> tuple[bool, str]:
     headers = {"Authorization": f"Bearer {token}",
                "Accept": "application/vnd.github+json"}
     linhas = []
+    falhou = False
     for rel in arquivos:
         caminho = RAIZ / rel
         if not caminho.exists():
@@ -135,7 +136,16 @@ def _commitar_dados(arquivos: list[str]) -> tuple[bool, str]:
         if sha:
             payload["sha"] = sha
         pr = requests.put(url, headers=headers, json=payload, timeout=30)
-        linhas.append(f"{rel}: {'ok' if pr.status_code in (200, 201) else 'erro ' + str(pr.status_code)}")
+        ok_arquivo = pr.status_code in (200, 201)
+        falhou = falhou or not ok_arquivo
+        linhas.append(f"{rel}: {'ok' if ok_arquivo else 'erro ' + str(pr.status_code)}")
+    # Nunca relatar sucesso quando o PUT falhou (ex.: 403 = token sem permissão
+    # 'Contents: Read and write') — senão o app mostraria "publicado" e os dados
+    # não teriam persistido no repositório.
+    if falhou:
+        return False, ("Falha ao publicar no GitHub (" + "; ".join(linhas) +
+                       "). Erro 403 = o token não tem permissão 'Contents: "
+                       "Read and write' neste repositório.")
     return True, "Commit no GitHub — " + "; ".join(linhas)
 
 
@@ -172,6 +182,13 @@ st.sidebar.header("Atualizar dados")
 uploads = st.sidebar.file_uploader(
     "Planilhas (.xlsx)", type=["xlsx"], accept_multiple_files=True)
 
+# Resultado da última atualização — guardado em session_state para sobreviver ao
+# st.rerun() (que recarrega o dashboard com os números novos). Sem isso, a
+# mensagem sumiria antes de o usuário lê-la.
+_aviso = st.session_state.pop("_aviso_atualizacao", None)
+if _aviso:
+    getattr(st.sidebar, _aviso[0])(_aviso[1])
+
 if st.sidebar.button("Atualizar dados", type="primary", use_container_width=True):
     if not uploads:
         st.sidebar.warning("Selecione ao menos uma planilha.")
@@ -179,14 +196,17 @@ if st.sidebar.button("Atualizar dados", type="primary", use_container_width=True
         with st.spinner("Processando..."):
             _salvar_uploads(uploads)
             ok, msg = _rodar_build()
-        if ok:
-            st.sidebar.success(msg)
+        if not ok:
+            st.sidebar.error(msg)
+        else:
             with st.spinner("Publicando no GitHub..."):
                 cok, cmsg = _commitar_dados(["data/dashboard.json", "data/qualidade.json"])
-            (st.sidebar.success if cok else st.sidebar.info)(cmsg)
+            # success (verde) só quando o commit também passou; senão warning
+            # (amarelo) deixando claro que os dados atualizaram na sessão mas NÃO
+            # persistiram no GitHub.
+            st.session_state["_aviso_atualizacao"] = (
+                "success" if cok else "warning", f"{msg} {cmsg}")
             st.rerun()
-        else:
-            st.sidebar.error(msg)
 
 # ------------------------------------------------------------------- dashboard
 components.html(montar_html(), height=2400, scrolling=True)
