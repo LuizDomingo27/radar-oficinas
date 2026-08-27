@@ -1,0 +1,390 @@
+<title>Radar de Oficinas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --ground:#eef1f4; --surface:#ffffff; --surface-2:#f6f8fa; --line:#d9dee6;
+    --ink:#171b23; --muted:#5a6474; --faint:#8a93a3;
+    --accent:#0f6e66; --accent-soft:#d7ece9; --accent-ink:#0a4f49;
+    --efic:#0f6e66; --efic-soft:#d7ece9;
+    --prod:#2f4bd6; --prod-soft:#dbe1fb;
+    --abse:#c05a12; --abse-soft:#f6e2cf;
+    --good:#2f7d5b; --warn:#b7791f; --crit:#c03636;
+    --shadow:0 1px 2px rgba(20,25,35,.05),0 8px 24px -12px rgba(20,25,35,.18);
+    --radius:12px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0e1116; --surface:#161b23; --surface-2:#1c222c; --line:#2b333f;
+      --ink:#e8ecf2; --muted:#a2acbd; --faint:#727d8f;
+      --accent:#4fd0c3; --accent-soft:#123430; --accent-ink:#8fe6dc;
+      --efic:#4fd0c3; --efic-soft:#123430;
+      --prod:#8ea0ff; --prod-soft:#1a2244;
+      --abse:#e39a5c; --abse-soft:#3a2413;
+      --good:#68c493; --warn:#e0b155; --crit:#e77;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0e1116; --surface:#161b23; --surface-2:#1c222c; --line:#2b333f;
+    --ink:#e8ecf2; --muted:#a2acbd; --faint:#727d8f;
+    --accent:#4fd0c3; --accent-soft:#123430; --accent-ink:#8fe6dc;
+    --efic:#4fd0c3; --efic-soft:#123430;
+    --prod:#8ea0ff; --prod-soft:#1a2244;
+    --abse:#e39a5c; --abse-soft:#3a2413;
+    --good:#68c493; --warn:#e0b155; --crit:#e77;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--ground);color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:940px;margin:0 auto;padding:0 22px 96px}
+  h1,h2,h3{font-family:"Archivo",system-ui,sans-serif;text-wrap:balance;letter-spacing:-.01em;line-height:1.15}
+  .mono{font-family:"IBM Plex Mono",monospace}
+  a{color:var(--accent-ink)}
+
+  /* header */
+  header{padding:64px 0 30px}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--accent-ink);font-weight:600;margin:0 0 16px}
+  header h1{font-size:clamp(2.1rem,5vw,3.3rem);font-weight:800;margin:0 0 14px}
+  header .lede{font-size:1.12rem;color:var(--muted);max-width:62ch;margin:0}
+  .quote{margin:26px 0 0;padding:16px 20px;border-left:3px solid var(--accent);
+    background:var(--surface);border-radius:0 var(--radius) var(--radius) 0;box-shadow:var(--shadow);
+    font-size:.98rem;color:var(--ink)}
+  .quote b{color:var(--accent-ink)}
+
+  section{margin-top:52px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:20px;
+    border-bottom:1px solid var(--line);padding-bottom:12px}
+  .sec-num{font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--faint);font-weight:600}
+  .sec-head h2{font-size:1.5rem;font-weight:700;margin:0}
+  p{margin:0 0 14px}
+  .sub{color:var(--muted)}
+
+  /* source table */
+  .tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+  table{border-collapse:collapse;width:100%;min-width:640px;background:var(--surface);font-size:.9rem}
+  thead th{background:var(--surface-2);text-align:left;padding:12px 14px;font-family:"IBM Plex Mono",monospace;
+    font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;
+    border-bottom:1px solid var(--line);white-space:nowrap}
+  tbody td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  tbody tr:last-child td{border-bottom:none}
+  td .file{font-weight:600}
+  td .aba{font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:var(--accent-ink)}
+  .role-pill{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 9px;border-radius:20px;white-space:nowrap}
+  .r-efic{background:var(--efic-soft);color:var(--efic)}
+  .r-prod{background:var(--prod-soft);color:var(--prod)}
+  .r-abse{background:var(--abse-soft);color:var(--abse)}
+  .r-trein{background:var(--accent-soft);color:var(--accent-ink)}
+
+  /* metric cards */
+  .metrics{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:720px){.metrics{grid-template-columns:repeat(3,1fr)}}
+  .mcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px;box-shadow:var(--shadow);border-top:3px solid var(--bar)}
+  .mcard.efic{--bar:var(--efic)} .mcard.prod{--bar:var(--prod)} .mcard.abse{--bar:var(--abse)}
+  .mcard h3{font-size:1.05rem;margin:0 0 4px}
+  .mcard .tag{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+  .formula{font-family:"IBM Plex Mono",monospace;font-size:.82rem;background:var(--surface-2);
+    border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:10px 0;color:var(--ink);
+    overflow-x:auto;white-space:nowrap}
+  .mcard p{font-size:.88rem;color:var(--muted);margin:8px 0 0}
+  .mcard .src{margin-top:12px;font-size:.78rem;color:var(--faint)}
+  .mcard .src b{color:var(--muted);font-weight:600}
+
+  /* generic card / callout */
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;box-shadow:var(--shadow)}
+  .callout{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--warn);
+    border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;box-shadow:var(--shadow)}
+  .callout.key{border-left-color:var(--crit)}
+  .callout h3{font-size:1rem;margin:0 0 6px}
+  .callout p{font-size:.92rem;color:var(--muted);margin:0 0 8px}
+  .callout p:last-child{margin-bottom:0}
+
+  ul.clean{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+  ul.clean li{padding-left:22px;position:relative;font-size:.94rem;color:var(--ink)}
+  ul.clean li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;
+    border-radius:2px;background:var(--accent);transform:rotate(45deg)}
+  ul.clean li b{font-weight:600}
+  ul.clean li .m{color:var(--muted)}
+
+  /* star schema */
+  .schema{display:grid;gap:14px}
+  .schema .center{display:grid;gap:14px}
+  @media(min-width:760px){.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}}
+  .node{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:14px 16px;box-shadow:var(--shadow)}
+  .node.dim{border-top:3px solid var(--accent)}
+  .node.fact{border-top:3px solid var(--bar)}
+  .node.fact.f-efic{--bar:var(--efic)} .node.fact.f-prod{--bar:var(--prod)}
+  .node.fact.f-abse{--bar:var(--abse)} .node.fact.f-trein{--bar:var(--accent)}
+  .node .nt{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:.9rem;margin-bottom:4px}
+  .node .nf{font-size:.8rem;color:var(--muted);font-family:"IBM Plex Mono",monospace}
+  .node .role{font-size:.75rem;color:var(--faint);margin-top:6px}
+  .schema-lbl{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--faint);margin:4px 0 2px}
+
+  /* phases timeline */
+  .phases{display:flex;flex-direction:column;gap:0}
+  .phase{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:0 0 22px;position:relative}
+  .phase:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line)}
+  .pnum{width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;
+    display:grid;place-items:center;font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:.85rem;z-index:1}
+  :root[data-theme="dark"] .pnum,:root:not([data-theme="light"]) .pnum{color:#06231f}
+  @media (prefers-color-scheme:light){.pnum{color:#fff}}
+  .phase .pbody h3{font-size:1.02rem;margin:2px 0 4px}
+  .phase .pbody p{font-size:.9rem;color:var(--muted);margin:0}
+  .phase .pbody .out{font-family:"IBM Plex Mono",monospace;font-size:.76rem;color:var(--accent-ink);margin-top:6px}
+
+  .grid2{display:grid;gap:16px}
+  @media(min-width:720px){.grid2{grid-template-columns:1fr 1fr}}
+  .stat{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0 0}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;box-shadow:var(--shadow)}
+  .chip .n{font-family:"Archivo";font-weight:800;font-size:1.4rem;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .chip .l{font-size:.74rem;color:var(--muted);font-family:"IBM Plex Mono",monospace;letter-spacing:.04em}
+  footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);color:var(--faint);font-size:.82rem}
+  footer .mono{color:var(--muted)}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">Plano de aplicação · Eficiência de Parceiros</p>
+  <h1>Radar de Oficinas</h1>
+  <p class="lede">Um plano para consolidar sete planilhas em uma única aplicação que mede a evolução de cada oficina em <b>Produtividade</b>, <b>Eficiência</b> e <b>Absenteísmo</b> — e revela o impacto real dos treinamentos.</p>
+  <div class="quote">
+    A pergunta que a aplicação responde: <b>“A Oficina X participou do treinamento em TOC em 2025 — a eficiência subiu, o absenteísmo caiu, a produtividade evoluiu?”</b> Para todas as oficinas, todos os treinamentos, todos os anos.
+  </div>
+  <div class="stat">
+    <div class="chip"><div class="n">7</div><div class="l">planilhas-fonte</div></div>
+    <div class="chip"><div class="n">3</div><div class="l">métricas de saída</div></div>
+    <div class="chip"><div class="n">4</div><div class="l">trilhas de treino</div></div>
+    <div class="chip"><div class="n">~150</div><div class="l">oficinas mapeadas</div></div>
+  </div>
+</header>
+
+<section>
+  <div class="sec-head"><span class="sec-num">01</span><h2>Inventário das fontes</h2></div>
+  <p class="sub">O que cada planilha entrega — e qual aba realmente importa. A planilha <span class="mono">Indicador geral_Junho.xlsx</span> foi deixada de fora conforme instruído.</p>
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Planilha / Aba</th><th>Papel</th><th>Campos-chave</th><th>Cobertura</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="file">Histórico de Atendimento EP</span><br><span class="aba">Planilha1</span></td>
+          <td><span class="role-pill r-trein">Treinamento</span></td>
+          <td>Empresa · CNPJ · Módulo <span class="sub">(Lean Manufacturing, TOC, Costura e Mecânica)</span> · CH · Ciclo</td>
+          <td>204 registros · 149 empresas · ciclos 2021/22, 2023/24, 2025</td>
+        </tr>
+        <tr>
+          <td><span class="file">Inscrições Lidera+ Gestão de Pessoas</span><br><span class="aba">Sheet1</span></td>
+          <td><span class="role-pill r-trein">Treinamento</span></td>
+          <td>Empresa · Nº participantes · Polo/data · Contato</td>
+          <td>102 inscrições · 77 empresas · Lidera+ 2026</td>
+        </tr>
+        <tr>
+          <td><span class="file">postos.xlsx</span><br><span class="aba">Dados</span></td>
+          <td><span class="role-pill r-abse">Absenteísmo</span></td>
+          <td>Oficina · MP · QTD Efetivos · QTD Trabalhados · Contratação · Demissão · Semana</td>
+          <td>12.614 linhas · 144 oficinas · jan/2024 → ago/2026</td>
+        </tr>
+        <tr>
+          <td><span class="file">RECEBIMENTO.xlsx</span><br><span class="aba">RECEBIMENTO</span></td>
+          <td><span class="role-pill r-prod">Produtividade</span></td>
+          <td>Dia · Oficina · Ordem · MP · REAL CORTADO · MINUTOS</td>
+          <td>11.758 linhas · 129 oficinas · jan → ago/2026 (diário)</td>
+        </tr>
+        <tr>
+          <td><span class="file">ESTOQUE OFICINAS – JEANS</span><br><span class="aba">ESTOQUE</span> · <span class="aba">Concantenação</span></td>
+          <td><span class="role-pill r-efic">Eficiência</span></td>
+          <td>Fornecedor · Postos · Cap. Peças 100%/70% · entrega semanal WKxx · Situação · Meta</td>
+          <td>Linha Jeans · capacidade × entrega</td>
+        </tr>
+        <tr>
+          <td><span class="file">ESTOQUE OFICINA NÃO JEANS</span><br><span class="aba">ESTOQUE OFICINAS</span> · <span class="aba">HISTÓRICO EFIC</span></td>
+          <td><span class="role-pill r-efic">Eficiência</span></td>
+          <td>Capacidade por MP (Malha 69% · Tear 73% · Polo 60%) · eficiência % semanal por oficina</td>
+          <td>Malha / Polo / Tear · 49 oficinas com % pronto</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">02</span><h2>As três métricas</h2></div>
+  <p class="sub">Cada métrica tem uma fórmula concreta e uma fonte definida. A meta de eficiência (65%) é o piso: abaixo dela, a oficina entrega menos do que sua capacidade instalada.</p>
+  <div class="metrics">
+    <div class="mcard prod">
+      <h3>Produtividade</h3>
+      <div class="tag">Peças produzidas</div>
+      <div class="formula">Σ REAL_CORTADO · Σ MINUTOS</div>
+      <p>Volume por oficina / MP / período. Normalizável por posto — <span class="mono">peças ÷ QTD Efetivos</span> — para comparar oficinas de tamanhos diferentes.</p>
+      <div class="src"><b>Fonte:</b> RECEBIMENTO (diário)</div>
+    </div>
+    <div class="mcard efic">
+      <h3>Eficiência</h3>
+      <div class="tag">Entrega vs. capacidade</div>
+      <div class="formula">entregue ÷ capacidade</div>
+      <p>Meta 65%; a capacidade-alvo varia por matéria-prima (Malha 69%, Tear 73%, Polo 60%). A aba HISTÓRICO EFIC já traz o % semanal calculado.</p>
+      <div class="src"><b>Fonte:</b> Estoque Oficinas (Jeans + Não-Jeans)</div>
+    </div>
+    <div class="mcard abse">
+      <h3>Absenteísmo</h3>
+      <div class="tag">Colaboradores × ausências</div>
+      <div class="formula">1 − (Trabalhados ÷ Efetivos)</div>
+      <p>Média por semana/mês. Contratação e Demissão dão, de brinde, um indicador de rotatividade que costuma andar junto com o absenteísmo.</p>
+      <div class="src"><b>Fonte:</b> postos (semanal)</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">03</span><h2>O nó do projeto: a chave de junção</h2></div>
+  <div class="callout key">
+    <h3>As planilhas não conversam por um ID comum.</h3>
+    <p>Absenteísmo, produtividade e eficiência identificam a oficina só pela <b>razão social</b> — e ela aparece escrita de formas diferentes em cada arquivo: sufixos <span class="mono">POLO</span> / <span class="mono">CARGO</span>, acentuação, <span class="mono">ME</span>/<span class="mono">LTDA</span>, matriz vs. filial. Já os treinamentos trazem <b>CNPJ</b>, que as outras fontes não têm.</p>
+    <p>Sem resolver isso, nenhuma junção fecha. Este é o primeiro entregável, não um detalhe de implementação.</p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <p style="margin-top:0"><b>Solução:</b> uma tabela <b>De-Para</b> — a dimensão canônica de oficinas — que reúne cada variação de nome sob um <span class="mono">oficina_id</span> único, ancorado no CNPJ quando existe. As abas <span class="mono">AUX</span> das planilhas de estoque já começam esse mapeamento (razão social → apelido curto) e servem de semente.</p>
+    <ul class="clean">
+      <li><b>Semente automática</b> <span class="m">— casamento aproximado de nomes (rapidfuzz) gera pares candidatos.</span></li>
+      <li><b>Revisão humana</b> <span class="m">— uma tela aprova/corrige os pares duvidosos uma única vez.</span></li>
+      <li><b>Persistência</b> <span class="m">— o De-Para vira arquivo versionado; toda carga futura passa por ele.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">04</span><h2>Modelo de dados</h2></div>
+  <p class="sub">Um esquema em estrela: a dimensão Oficina no centro, quatro fatos ao redor. Assim cada métrica vira uma linha do tempo por oficina, comparável e agregável.</p>
+  <div class="schema">
+    <p class="schema-lbl">Dimensão central</p>
+    <div class="node dim">
+      <div class="nt">dim_oficina</div>
+      <div class="nf">oficina_id · razão_social_canônica · cnpj · polo/cidade · rota/frete · mp_principal · nº_postos</div>
+      <div class="role">O De-Para. Chave de tudo.</div>
+    </div>
+    <p class="schema-lbl">Fatos (linha do tempo por oficina)</p>
+    <div class="facts">
+      <div class="node fact f-trein">
+        <div class="nt">fato_participacao</div>
+        <div class="nf">oficina_id · módulo · ano/ciclo · fonte · nº_participantes</div>
+        <div class="role">Une Histórico EP + Lidera+</div>
+      </div>
+      <div class="node fact f-prod">
+        <div class="nt">fato_producao</div>
+        <div class="nf">oficina_id · dia · mp · peças · minutos</div>
+        <div class="role">De RECEBIMENTO</div>
+      </div>
+      <div class="node fact f-abse">
+        <div class="nt">fato_absenteismo</div>
+        <div class="nf">oficina_id · semana · efetivos · trabalhados · abs% · contrat · demiss</div>
+        <div class="role">De postos</div>
+      </div>
+      <div class="node fact f-efic">
+        <div class="nt">fato_eficiencia</div>
+        <div class="nf">oficina_id · semana · mp · entregue · capacidade · efic%</div>
+        <div class="role">De Estoque Oficinas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">05</span><h2>Motor de impacto: antes × depois</h2></div>
+  <p class="sub">O coração analítico. Para cada oficina treinada, a data do treinamento vira um marco; a aplicação compara as médias das três métricas numa janela antes e depois.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3 style="margin-top:0;font-size:1.05rem">Como o cálculo funciona</h3>
+      <ul class="clean">
+        <li><b>Janela pré</b> <span class="m">— N semanas antes da data do treinamento.</span></li>
+        <li><b>Janela pós</b> <span class="m">— N semanas depois, com carência para o efeito maturar.</span></li>
+        <li><b>Δ por métrica</b> <span class="m">— variação % de eficiência, produtividade e absenteísmo.</span></li>
+        <li><b>Grupo de controle</b> <span class="m">— oficinas não treinadas no mesmo período, para separar efeito do treino de sazonalidade.</span></li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Limitação temporal — projetar com ela à vista</h3>
+      <p><b>Produtividade (RECEBIMENTO)</b> só existe a partir de jan/2026: o “antes/depois” de produção só fecha para treinos de <b>2025 e Lidera+ 2026</b>.</p>
+      <p><b>Absenteísmo (postos)</b> cobre 2024→2026 — serve para treinos de 2023/24 em diante.</p>
+      <p><b>Eficiência histórica</b> é curta (poucas semanas em HISTÓRICO EFIC); pode exigir acumular semanas daqui para frente.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">06</span><h2>Arquitetura da aplicação</h2></div>
+  <div class="grid2">
+    <div class="card">
+      <h3 style="margin-top:0;font-size:1.05rem">Camadas</h3>
+      <ul class="clean">
+        <li><b>ETL em Python</b> <span class="m">(pandas + openpyxl) lê as planilhas, aplica o De-Para e consolida.</span></li>
+        <li><b>Armazenamento</b> <span class="m">— SQLite ou Parquet local; leve, versionável, sem servidor.</span></li>
+        <li><b>Camada de métricas</b> <span class="m">— calcula abs%, efic%, produtividade e os deltas de impacto.</span></li>
+        <li><b>Dashboard</b> <span class="m">— recomendação: Streamlit (mesmo ecossistema Python, rápido de entregar).</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0;font-size:1.05rem">Telas</h3>
+      <ul class="clean">
+        <li><b>Ranking geral</b> <span class="m">— todas as oficinas nas três métricas, com semáforo.</span></li>
+        <li><b>Ficha da oficina</b> <span class="m">— linha do tempo das métricas com marcadores de treinamento.</span></li>
+        <li><b>Impacto do treinamento</b> <span class="m">— treinados × não-treinados, antes × depois, por módulo e ano.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">07</span><h2>Roadmap por fases</h2></div>
+  <div class="phases">
+    <div class="phase"><div class="pnum">1</div><div class="pbody">
+      <h3>Descoberta &amp; De-Para</h3>
+      <p>Consolidar todas as variações de nome de oficina num ID canônico ancorado no CNPJ. Validar com o time.</p>
+      <div class="out">→ dim_oficina revisada</div>
+    </div></div>
+    <div class="phase"><div class="pnum">2</div><div class="pbody">
+      <h3>ETL &amp; consolidação</h3>
+      <p>Ingestão das sete planilhas nas tabelas-fato, normalizando períodos (diário → semanal/mensal).</p>
+      <div class="out">→ base única consultável</div>
+    </div></div>
+    <div class="phase"><div class="pnum">3</div><div class="pbody">
+      <h3>Métricas</h3>
+      <p>Implementar e validar as fórmulas das três métricas contra números conferidos manualmente.</p>
+      <div class="out">→ efic% · produtividade · abs% por oficina/período</div>
+    </div></div>
+    <div class="phase"><div class="pnum">4</div><div class="pbody">
+      <h3>Motor de impacto</h3>
+      <p>Janelas antes/depois, deltas e grupo de controle por módulo e ano de treinamento.</p>
+      <div class="out">→ resposta à pergunta central</div>
+    </div></div>
+    <div class="phase"><div class="pnum">5</div><div class="pbody">
+      <h3>Dashboard &amp; validação</h3>
+      <p>As três telas, revisão com a liderança e ajuste das janelas/metas.</p>
+      <div class="out">→ aplicação em uso</div>
+    </div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">08</span><h2>Decisões abertas</h2></div>
+  <p class="sub">Três pontos que valem confirmar antes de escrever a primeira linha do ETL.</p>
+  <ul class="clean" style="gap:14px">
+    <li><b>“Acompanhamento” não existe como arquivo na pasta.</b> <span class="m">A eficiência foi mapeada para as abas de Estoque Oficinas (Jeans + Não-Jeans), que contêm capacidade × entrega. Confirmar se há uma planilha de Acompanhamento separada a ser incluída, ou se essas abas são a fonte correta.</span></li>
+    <li><b>Tamanho das janelas antes/depois.</b> <span class="m">Sugestão inicial: 8 semanas de cada lado, com 2 semanas de carência. Ajustável.</span></li>
+    <li><b>Tecnologia do dashboard.</b> <span class="m">Streamlit (Python) é a via mais rápida dado o ambiente; se a liderança já usa Power BI, o mesmo modelo de dados o alimenta.</span></li>
+  </ul>
+</section>
+
+<footer>
+  <p><span class="mono">Radar de Oficinas</span> · plano de aplicação para medir eficiência de parceiros · gerado a partir da análise das 7 planilhas em <span class="mono">APP_PERFOR</span>.</p>
+</footer>
+</div>

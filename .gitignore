@@ -1,0 +1,21 @@
+# Planilhas de origem (pesadas) NÃO vão para o GitHub / Streamlit Cloud.
+# Só sobem os agregados leves em data/*.json. As planilhas são enviadas pelo
+# botão "Atualizar dados" do app quando preciso regerar.
+*.xlsx
+*.xls
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Segredos do Streamlit (token do GitHub) — nunca versionar.
+.streamlit/secrets.toml
+
+# Mantém versionados os JSONs que o app carrega no primeiro acesso.
+!data/
+!data/*.json
+
+# Tooling local do agente (não é código do app)
+.claude/

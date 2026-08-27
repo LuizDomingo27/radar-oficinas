@@ -1,0 +1,672 @@
+{
+  "gerado_em": "2026-08-26T09:52:55+00:00",
+  "total": 95,
+  "meta": {},
+  "registros": [
+    {
+      "oficina_id": "a-de-m-dias-alves-limitada",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.7759
+    },
+    {
+      "oficina_id": "a-s-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6074
+    },
+    {
+      "oficina_id": "a-s-empreendimentos",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.8732
+    },
+    {
+      "oficina_id": "a-x-da-penha-filho",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.386
+    },
+    {
+      "oficina_id": "acari-textil",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.5385
+    },
+    {
+      "oficina_id": "acaua-confeccoes",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.515
+    },
+    {
+      "oficina_id": "ajg-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6399
+    },
+    {
+      "oficina_id": "alanis-queiroz",
+      "ano": 2026,
+      "mp": "TEAR",
+      "base": "oficial",
+      "eficiencia_pct": 0.308
+    },
+    {
+      "oficina_id": "alanis-santos",
+      "ano": 2026,
+      "mp": "TEAR",
+      "base": "oficial",
+      "eficiencia_pct": 0.0
+    },
+    {
+      "oficina_id": "aline-rodrigues-de-lima-araujo",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.6113
+    },
+    {
+      "oficina_id": "alves-confeccoes-limitada",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.8075
+    },
+    {
+      "oficina_id": "amorim-pedro-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.9331
+    },
+    {
+      "oficina_id": "antonio-igor-dantas-de-souza",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.5384
+    },
+    {
+      "oficina_id": "araujo-camara",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.4805
+    },
+    {
+      "oficina_id": "araujo-e-m-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6245
+    },
+    {
+      "oficina_id": "asa-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.5523
+    },
+    {
+      "oficina_id": "b-n-silva-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.7594
+    },
+    {
+      "oficina_id": "cabugi-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6215
+    },
+    {
+      "oficina_id": "clara-a-de-medeiros-leite",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.5496
+    },
+    {
+      "oficina_id": "confeccao-g-b-da-s-junior",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.8417
+    },
+    {
+      "oficina_id": "confeccao-sao-sebastiao",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.653
+    },
+    {
+      "oficina_id": "confeccoes-franoelda-m-m-araujo",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6722
+    },
+    {
+      "oficina_id": "confeccoes-genesis",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.7981
+    },
+    {
+      "oficina_id": "confeccoes-j-s",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6641
+    },
+    {
+      "oficina_id": "danjan-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.9453
+    },
+    {
+      "oficina_id": "dantas-e-paulino-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6528
+    },
+    {
+      "oficina_id": "di3-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.9476
+    },
+    {
+      "oficina_id": "dona-tica",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.7694
+    },
+    {
+      "oficina_id": "dona-tica-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.7421
+    },
+    {
+      "oficina_id": "ebenezer-industria-textil",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 1.1686
+    },
+    {
+      "oficina_id": "evalber-de-castro-dantas",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.705
+    },
+    {
+      "oficina_id": "f-a-n-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6303
+    },
+    {
+      "oficina_id": "f-da-silva-junior",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.5442
+    },
+    {
+      "oficina_id": "f-j-de-azevedo",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.7007
+    },
+    {
+      "oficina_id": "f-k-faccao",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.6191
+    },
+    {
+      "oficina_id": "f-l-azevedo-confeccao",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.8892
+    },
+    {
+      "oficina_id": "f-w-de-souza-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.7481
+    },
+    {
+      "oficina_id": "faccao-ello",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 1.1306
+    },
+    {
+      "oficina_id": "faccao-santanense",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.7855
+    },
+    {
+      "oficina_id": "ferreira-e-araujo-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.755
+    },
+    {
+      "oficina_id": "fios-do-sertao",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6873
+    },
+    {
+      "oficina_id": "flavia-georgia-b-silva-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.715
+    },
+    {
+      "oficina_id": "forte-fortex-producao-textil",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.6339
+    },
+    {
+      "oficina_id": "freire-silva-confeccoes",
+      "ano": 2026,
+      "mp": "TEAR",
+      "base": "oficial",
+      "eficiencia_pct": 0.5606
+    },
+    {
+      "oficina_id": "g-c-empreendimentos-textil",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.6055
+    },
+    {
+      "oficina_id": "g4-industria-e-comercio-do-vestuario",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.7007
+    },
+    {
+      "oficina_id": "geferson-alan-dos-santos-silva",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.7731
+    },
+    {
+      "oficina_id": "i-m-de-oliveira-silva",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.7921
+    },
+    {
+      "oficina_id": "ideal-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.4597
+    },
+    {
+      "oficina_id": "ivanildo-jose-de-sousa",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.762
+    },
+    {
+      "oficina_id": "j-f-confeccoes",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.5172
+    },
+    {
+      "oficina_id": "j-m-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6792
+    },
+    {
+      "oficina_id": "j-s-silva",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.7428
+    },
+    {
+      "oficina_id": "jakeline-f-de-azevedo",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 1.0644
+    },
+    {
+      "oficina_id": "januncio-nobrega-de-azevedo",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.9242
+    },
+    {
+      "oficina_id": "jk-industria-textil",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.1169
+    },
+    {
+      "oficina_id": "joli-textil-servicos-e-comercio",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.3997
+    },
+    {
+      "oficina_id": "jose-medeiros-de-araujo",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.3607
+    },
+    {
+      "oficina_id": "joseni-maria-de-medeiros",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.4804
+    },
+    {
+      "oficina_id": "jucurutu-textil",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.5654
+    },
+    {
+      "oficina_id": "ksw-confeccoes",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.0
+    },
+    {
+      "oficina_id": "lajedo-jeans-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6171
+    },
+    {
+      "oficina_id": "lc-textil",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.7061
+    },
+    {
+      "oficina_id": "ld-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6673
+    },
+    {
+      "oficina_id": "leandro-matias-da-silva",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.3052
+    },
+    {
+      "oficina_id": "lima-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6993
+    },
+    {
+      "oficina_id": "linea-ind-com-ser-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6726
+    },
+    {
+      "oficina_id": "livia-reboucas-de-carvalho",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.5408
+    },
+    {
+      "oficina_id": "m-a-vieira-de-almeida",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.7585
+    },
+    {
+      "oficina_id": "m-dalison-de-medeiros",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.568
+    },
+    {
+      "oficina_id": "m-f-empreendimentos",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.4543
+    },
+    {
+      "oficina_id": "m-k-de-azevedo-medeiros-industria-textil",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.564
+    },
+    {
+      "oficina_id": "m-k-industria-textil",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.3721
+    },
+    {
+      "oficina_id": "mansour-dantas-confeccoes",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.6586
+    },
+    {
+      "oficina_id": "marionete-m-de-a-camara",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6121
+    },
+    {
+      "oficina_id": "maxwela-araujo-silva",
+      "ano": 2026,
+      "mp": "POLO",
+      "base": "oficial",
+      "eficiencia_pct": 0.4524
+    },
+    {
+      "oficina_id": "n-s-constantino",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.4953
+    },
+    {
+      "oficina_id": "noel-pereira-de-azevedo-confeccao",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.4255
+    },
+    {
+      "oficina_id": "nova-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.8933
+    },
+    {
+      "oficina_id": "oficina-de-costura-santos",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.7957
+    },
+    {
+      "oficina_id": "p-a-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 1.7489
+    },
+    {
+      "oficina_id": "p-a-viturino-servicos-e-confeccoes",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.4779
+    },
+    {
+      "oficina_id": "pedro-e-odair-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.4752
+    },
+    {
+      "oficina_id": "poest-industria-comercio-vestuario",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6898
+    },
+    {
+      "oficina_id": "potengi-textil",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.6355
+    },
+    {
+      "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.4675
+    },
+    {
+      "oficina_id": "serrana-textil",
+      "ano": 2026,
+      "mp": "POLO",
+      "base": "oficial",
+      "eficiencia_pct": 0.5132
+    },
+    {
+      "oficina_id": "solis-confeccoes",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.2461
+    },
+    {
+      "oficina_id": "soly-brasil",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.6184
+    },
+    {
+      "oficina_id": "tece-costuras-e-confeccoes",
+      "ano": 2026,
+      "mp": "POLO",
+      "base": "oficial",
+      "eficiencia_pct": 0.4768
+    },
+    {
+      "oficina_id": "tendencia-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.8533
+    },
+    {
+      "oficina_id": "tropicalliz-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.5671
+    },
+    {
+      "oficina_id": "uniao-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.5669
+    },
+    {
+      "oficina_id": "vitalize-confeccoes",
+      "ano": 2026,
+      "mp": "MALHA",
+      "base": "oficial",
+      "eficiencia_pct": 0.6051
+    },
+    {
+      "oficina_id": "w-a-2-confeccoes",
+      "ano": 2026,
+      "mp": "JEANS",
+      "base": "oficial",
+      "eficiencia_pct": 0.4464
+    }
+  ]
+}

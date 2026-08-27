@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar de Oficinas — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/estilo.css?v=20">
+  <link rel="stylesheet" href="assets/css/dashboard.css?v=20">
+</head>
+<body>
+  <!-- Sprite de ícones SVG (sem emojis) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="ic-radar"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 12 20 6"/></g>
+      <g id="ic-busca"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></g>
+      <g id="ic-alerta"><path d="M12 3l9 16H3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></g>
+      <g id="ic-check"><path d="M20 6L9 17l-5-5"/></g>
+      <g id="ic-chevron"><path d="M9 6l6 6-6 6"/></g>
+      <g id="ic-camadas"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></g>
+      <g id="ic-clock"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g>
+      <g id="ic-tema"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></g>
+      <g id="ic-rank"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></g>
+      <g id="ic-oficina"><path d="M3 21V9l6-4v4l6-4v16"/><path d="M3 21h18"/><path d="M9 21v-4h4v4"/></g>
+      <g id="ic-impacto"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></g>
+      <g id="ic-treino"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M7 10v5c0 1 2.2 2.5 5 2.5S17 16 17 15v-5"/></g>
+      <g id="ic-arrow"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></g>
+      <g id="ic-info"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></g>
+      <g id="ic-qualidade"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></g>
+    </defs>
+  </svg>
+
+  <header class="appbar">
+    <div class="brand">
+      <span class="mark"><svg class="icon" style="font-size:1.15rem" aria-hidden="true"><use href="#ic-radar"></use></svg></span>
+      <span>Radar de Oficinas<small>Dashboard · Fase 5</small></span>
+    </div>
+    <nav class="nav-tabs" aria-label="Telas">
+      <button class="nav-tab ativa" data-view="ranking" aria-current="page">
+        <svg class="icon" aria-hidden="true"><use href="#ic-rank"></use></svg>Ranking</button>
+      <button class="nav-tab" data-view="ficha">
+        <svg class="icon" aria-hidden="true"><use href="#ic-oficina"></use></svg>Ficha</button>
+      <button class="nav-tab" data-view="impacto">
+        <svg class="icon" aria-hidden="true"><use href="#ic-impacto"></use></svg>Impacto</button>
+      <button class="nav-tab" data-view="qualidade">
+        <svg class="icon" aria-hidden="true"><use href="#ic-qualidade"></use></svg>Qualidade</button>
+    </nav>
+    <button class="theme-btn" id="tema" title="Alternar tema" aria-label="Alternar tema">
+      <svg class="icon" aria-hidden="true"><use href="#ic-tema"></use></svg>
+    </button>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== TELA 1 · RANKING GERAL ===================== -->
+    <section class="view ativa" id="view-ranking">
+      <div class="intro">
+        <h1>Ranking geral das oficinas</h1>
+      </div>
+
+      <div class="card grafico-card">
+        <h2><svg class="icon" aria-hidden="true"><use href="#ic-rank"></use></svg>Top 12 por
+          <select id="rank-metrica" class="inline-select" aria-label="Métrica do gráfico">
+            <option value="pecas_mes">peças/mês (média)</option>
+            <option value="pecas_mes_total">total do mês</option>
+            <option value="pecas_semana">peças/semana (média)</option>
+            <option value="pecas_semana_total">total da semana</option>
+            <option value="eficiencia">eficiência</option>
+          </select>
+        </h2>
+        <div id="grafico-ranking"></div>
+      </div>
+
+      <div class="toolbar">
+        <div class="busca">
+          <svg class="icon" aria-hidden="true"><use href="#ic-busca"></use></svg>
+          <input id="rank-busca" type="search" placeholder="Buscar oficina…" autocomplete="off">
+        </div>
+        <div class="filtros" id="rank-ordena">
+          <span class="filtro-label">Ordenar:</span>
+          <button class="chip-btn ativa" data-ord="nome" aria-pressed="true">Nome</button>
+          <button class="chip-btn" data-ord="pecas_mes" aria-pressed="false">Peças/mês</button>
+          <button class="chip-btn" data-ord="pecas_mes_total" aria-pressed="false">Total mês</button>
+          <button class="chip-btn" data-ord="pecas_semana" aria-pressed="false">Peças/sem</button>
+          <button class="chip-btn" data-ord="pecas_semana_total" aria-pressed="false">Total sem</button>
+          <button class="chip-btn" data-ord="absenteismo" aria-pressed="false">Absenteísmo</button>
+          <button class="chip-btn" data-ord="eficiencia" aria-pressed="false">Eficiência</button>
+        </div>
+      </div>
+
+      <div class="tabela-wrap">
+        <table class="tabela-rank">
+          <thead>
+            <tr>
+              <th>Oficina</th>
+              <th class="col-metrica">Peças/mês<small>média</small></th>
+              <th class="col-metrica">Total mês<small>mais recente</small></th>
+              <th class="col-metrica">Peças/sem<small>média</small></th>
+              <th class="col-metrica">Total sem<small>mais recente</small></th>
+              <th class="col-metrica">Absenteísmo<small>1 − trab/efet</small></th>
+              <th class="col-metrica">Eficiência<small>entrega/capac. · meta 65%</small></th>
+            </tr>
+          </thead>
+          <tbody id="rank-corpo"></tbody>
+        </table>
+      </div>
+      <p class="rodape"><span id="rank-contador">—</span></p>
+    </section>
+
+    <!-- ===================== TELA 2 · FICHA DA OFICINA ===================== -->
+    <section class="view" id="view-ficha">
+      <div class="intro">
+        <h1>Ficha da oficina</h1>
+      </div>
+
+      <div class="ficha-selector">
+        <div class="busca">
+          <svg class="icon" aria-hidden="true"><use href="#ic-oficina"></use></svg>
+          <input id="ficha-busca" type="search" list="lista-oficinas"
+                 placeholder="Escolha uma oficina…" autocomplete="off">
+          <datalist id="lista-oficinas"></datalist>
+        </div>
+      </div>
+
+      <div id="ficha-conteudo" class="ficha-conteudo" hidden>
+        <div class="ficha-cabecalho">
+          <div>
+            <h2 id="ficha-nome">—</h2>
+            <div class="papeis" id="ficha-papeis"></div>
+          </div>
+          <div class="ficha-treinos" id="ficha-treinos"></div>
+        </div>
+
+        <div class="ficha-graficos">
+          <div class="card">
+            <h2><span class="dot-metrica m-prod"></span>Peças por mês</h2>
+            <div class="grafico-serie" id="grafico-pecas-mes"></div>
+          </div>
+          <div class="card">
+            <h2><span class="dot-metrica m-prod"></span>Peças por semana</h2>
+            <div class="grafico-serie" id="grafico-pecas-sem"></div>
+          </div>
+          <div class="card">
+            <h2><span class="dot-metrica m-abse"></span>Absenteísmo</h2>
+            <div class="grafico-serie" id="grafico-abse"></div>
+          </div>
+          <div class="card">
+            <h2><span class="dot-metrica m-efic"></span>Eficiência</h2>
+            <div class="efic-kpi" id="ficha-efic"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ficha-vazio" class="ficha-vazio">
+        <svg class="icon" aria-hidden="true"><use href="#ic-oficina"></use></svg>
+        <p>Selecione uma oficina para ver a linha do tempo.</p>
+      </div>
+    </section>
+
+    <!-- ===================== TELA 3 · IMPACTO DO TREINAMENTO ===================== -->
+    <section class="view" id="view-impacto">
+      <div class="intro">
+        <h1>Impacto do treinamento</h1>
+      </div>
+
+      <h3 class="secao-titulo">Oficinas com antes × depois medido</h3>
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Oficina</th><th>Módulo</th><th>Ano</th><th>Métrica</th>
+              <th class="num">Pré</th><th class="num">Pós</th><th class="num">Δ</th><th>Efeito</th>
+            </tr>
+          </thead>
+          <tbody id="impacto-oficina-corpo"></tbody>
+        </table>
+      </div>
+
+      <p class="pagina-nota">
+        <svg class="icon" aria-hidden="true"><use href="#ic-info"></use></svg>
+        <span><strong>Por que só o absenteísmo aparece com impacto medido?</strong>
+          O cálculo compara o período <em>antes</em> e <em>depois</em> de cada treinamento.
+          Produtividade e eficiência só têm dados a partir de 2026 — sem um período anterior
+          aos treinos, não há diferença a medir. O absenteísmo é a única métrica com histórico
+          desde 2024, então apenas nele (ciclo de 2025) existe “antes” e “depois” para comparar.</span>
+      </p>
+    </section>
+
+    <!-- ===================== TELA 4 · QUALIDADE ===================== -->
+    <section class="view" id="view-qualidade">
+      <div class="intro">
+        <h1>Qualidade das oficinas</h1>
+      </div>
+
+      <div class="toolbar">
+        <div class="filtros" id="q-filtros">
+          <span class="filtro-label">Ano:</span>
+          <select id="q-ano" class="inline-select" aria-label="Ano"></select>
+          <span class="filtro-label">Mês:</span>
+          <select id="q-mes" class="inline-select" aria-label="Mês"></select>
+          <span class="filtro-label">Mín. inspeções:</span>
+          <select id="q-min" class="inline-select" aria-label="Mínimo de inspeções">
+            <option value="0">todas</option>
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+          </select>
+          <span class="filtro-label">Top:</span>
+          <select id="q-top" class="inline-select" aria-label="Quantidade no ranking">
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20" selected>20</option>
+            <option value="30">30</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="banner" id="q-alerta" hidden>
+        <svg class="icon" aria-hidden="true"><use href="#ic-alerta"></use></svg>
+        <span id="q-alerta-txt"></span>
+      </p>
+
+      <div class="card grafico-card">
+        <h2><svg class="icon" aria-hidden="true"><use href="#ic-rank"></use></svg>Ranking Oficinas · Nota de Qualidade</h2>
+        <div id="g-nota" class="grafico-q"></div>
+      </div>
+
+      <div class="card grafico-card">
+        <h2><svg class="icon" aria-hidden="true"><use href="#ic-rank"></use></svg>Ranking Oficinas · 2ª Qualidade</h2>
+        <div id="g-2qa" class="grafico-q"></div>
+      </div>
+
+      <div class="card grafico-card">
+        <h2><svg class="icon" aria-hidden="true"><use href="#ic-alerta"></use></svg>Principais Causas · 2ª Qualidade
+          <select id="q-setor" class="inline-select" aria-label="Setor das causas"></select>
+        </h2>
+        <div id="g-causas" class="grafico-q"></div>
+      </div>
+
+      <p class="pagina-nota">
+        <svg class="icon" aria-hidden="true"><use href="#ic-info"></use></svg>
+        <span>Os valores são recalculados ao vivo sobre a base atual (abas RESUMO e DEFEITOS) e
+          podem diferir levemente dos gráficos em cache do Excel, que refletem a última
+          atualização manual. Indicadores de apoio à gestão — confira com a liderança antes
+          de decisões formais.</span>
+      </p>
+    </section>
+
+    <p class="rodape rodape-geral">
+      Fonte: <code>data/dashboard.json</code> · <code>data/qualidade.json</code> ·
+      gerado em <span id="gerado-em">—</span>
+    </p>
+  </main>
+
+  <div id="erro-carga"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+  <script src="assets/js/graficos_dashboard.js?v=20"></script>
+  <script src="assets/js/dashboard.js?v=20"></script>
+</body>
+</html>

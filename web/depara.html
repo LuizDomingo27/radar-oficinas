@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar de Oficinas — De-Para</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/estilo.css?v=12">
+  <link rel="stylesheet" href="assets/css/dashboard.css?v=12">
+</head>
+<body>
+  <!-- Sprite de ícones SVG (sem emojis) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="ic-radar"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 12 20 6"/></g>
+      <g id="ic-busca"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></g>
+      <g id="ic-alerta"><path d="M12 3l9 16H3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></g>
+      <g id="ic-check"><path d="M20 6L9 17l-5-5"/></g>
+      <g id="ic-chevron"><path d="M9 6l6 6-6 6"/></g>
+      <g id="ic-filtro"><path d="M3 5h18"/><path d="M6 12h12"/><path d="M10 19h4"/></g>
+      <g id="ic-camadas"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></g>
+      <g id="ic-clock"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g>
+      <g id="ic-tema"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></g>
+    </defs>
+  </svg>
+
+  <header class="appbar">
+    <div class="brand">
+      <span class="mark"><svg class="icon" style="font-size:1.15rem" aria-hidden="true"><use href="#ic-radar"></use></svg></span>
+      <span>Radar de Oficinas<small>De-Para · base canônica</small></span>
+    </div>
+    <nav class="nav-tabs" aria-label="Telas">
+      <a class="nav-tab" href="index.html">Ranking</a>
+      <a class="nav-tab" href="index.html#ficha">Ficha</a>
+      <a class="nav-tab" href="index.html#impacto">Impacto</a>
+      <a class="nav-tab ativa" href="depara.html" aria-current="page">De-Para</a>
+    </nav>
+    <button class="theme-btn" id="tema" title="Alternar tema" aria-label="Alternar tema">
+      <svg class="icon" aria-hidden="true"><use href="#ic-tema"></use></svg>
+    </button>
+  </header>
+
+  <main id="conteudo">
+    <section class="intro">
+      <h1>De-Para das Oficinas</h1>
+      <p>A base que faz as sete planilhas conversarem: cada variação de nome de oficina
+         reunida sob uma identidade única, agrupada pelo nome. Revise os casos
+         sinalizados antes de seguirmos para as métricas.</p>
+    </section>
+
+    <div class="banner" role="note">
+      <svg class="icon" aria-hidden="true"><use href="#ic-clock"></use></svg>
+      <p><b>Cobertura temporal.</b> A produtividade (RECEBIMENTO) só existe a partir de
+        <b>jan/2026</b>. Comparações “antes × depois” de produção para treinamentos
+        anteriores a 2025 aparecerão com <b>alerta de dados ausentes</b> nas telas de métricas.</p>
+    </div>
+
+    <section class="painel">
+      <div class="kpis">
+        <div class="kpi"><div class="n" id="kpi-total">—</div><div class="l">oficinas canônicas</div></div>
+        <div class="kpi k-efic"><div class="n" id="kpi-3metricas">—</div><div class="l">cobrem 3 métricas</div></div>
+        <div class="kpi k-prod"><div class="n" id="kpi-treino">—</div><div class="l">com treino</div></div>
+        <div class="kpi k-rev"><div class="n" id="kpi-revisao">—</div><div class="l">a revisar</div></div>
+      </div>
+      <div class="card">
+        <h2><svg class="icon" aria-hidden="true"><use href="#ic-camadas"></use></svg>Cobertura de métricas</h2>
+        <p class="sub">Quantas oficinas têm dados de produção, absenteísmo e eficiência.</p>
+        <div id="grafico-cobertura"></div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="busca">
+        <svg class="icon" aria-hidden="true"><use href="#ic-busca"></use></svg>
+        <input id="busca" type="search" placeholder="Buscar por nome ou variante…" autocomplete="off">
+      </div>
+      <div class="filtros" id="filtros">
+        <button class="chip-btn" data-papel="producao" aria-pressed="false">Produção</button>
+        <button class="chip-btn" data-papel="absenteismo" aria-pressed="false">Absenteísmo</button>
+        <button class="chip-btn" data-papel="eficiencia" aria-pressed="false">Eficiência</button>
+        <button class="chip-btn" data-papel="treino" aria-pressed="false">Treino</button>
+        <button class="chip-btn rev" aria-pressed="false">
+          <svg class="icon" aria-hidden="true"><use href="#ic-alerta"></use></svg>Só a revisar</button>
+      </div>
+    </div>
+
+    <div class="tabela-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Oficina</th><th>Cobertura</th>
+            <th style="text-align:center">Variantes</th><th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-tabela"></tbody>
+      </table>
+    </div>
+
+    <p class="rodape">
+      <span id="contador">—</span> · gerado em <span id="gerado-em">—</span> ·
+      clique numa linha para ver variantes e pendências
+    </p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+  <script src="assets/js/graficos.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

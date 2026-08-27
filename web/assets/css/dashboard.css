@@ -1,0 +1,151 @@
+/* Radar de Oficinas — estilos da Fase 5 (dashboard de 3 telas).
+   Estende os tokens e componentes de estilo.css (appbar, card, tag, kpi,
+   tabela, chip-btn, busca, banner). Aqui ficam só o que é novo do dashboard:
+   navegação entre telas, semáforo, tabela de ranking, layout da ficha. */
+
+/* ---- Largura de ocupação ---- */
+/* O dashboard é denso (tabela de ranking larga, 2 gráficos lado a lado na
+   ficha). Ocupa mais da tela que a página do De-Para — sobrescreve o
+   max-width do estilo.css. Fluido: nunca encosta nas bordas em telas menores. */
+main{max-width:min(1440px, 94vw)}
+@media(max-width:720px){main{max-width:100%;padding-left:16px;padding-right:16px}}
+
+/* ---- Navegação entre telas (na appbar) ---- */
+.nav-tabs{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+/* Desktop: navbar centralizada na appbar (marca à esquerda, tema à direita).
+   A appbar é position:sticky, que já serve de contexto para o absolute. */
+@media(min-width:760px){
+  .nav-tabs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);margin-left:0}
+}
+.nav-tab{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:9px;
+  border:1px solid transparent;background:none;cursor:pointer;color:var(--muted);
+  font-family:var(--mono);font-size:.82rem;letter-spacing:.02em;text-decoration:none;line-height:1}
+.nav-tab .icon{font-size:1rem}
+.nav-tab:hover{color:var(--ink);background:var(--surface-2)}
+.nav-tab.ativa,.nav-tab[aria-current="page"]{background:var(--accent-soft);color:var(--accent-ink);
+  border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+.appbar .theme-btn{margin-left:8px}
+/* Desktop: com a navbar centralizada (absolute), empurra o botão de tema para
+   a direita da appbar. Vem depois da regra acima p/ vencer por ordem. */
+@media(min-width:760px){.appbar .theme-btn{margin-left:auto}}
+
+/* ---- Alternância de telas ---- */
+.view{display:none}
+.view.ativa{display:block;animation:surge .18s ease}
+@keyframes surge{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+.intro{margin-bottom:26px}
+
+/* ---- Título de cada tela: destaque em gradiente + entrada animada ---- */
+/* O texto ganha um degradê tinta→teal e um traço que "desenha" embaixo. A
+   animação redispara a cada troca de tela, pois a view sai de display:none
+   para block — o navegador reinicia a animação do <h1> ao reexibi-lo. */
+.intro h1{display:inline-block;position:relative;
+  background:linear-gradient(94deg,var(--ink) 26%,var(--accent) 86%,var(--accent-ink) 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.intro h1::after{content:"";position:absolute;left:0;bottom:-7px;height:3px;width:100%;
+  border-radius:3px;transform-origin:left center;
+  background:linear-gradient(90deg,var(--accent),var(--accent-ink) 70%,transparent)}
+.view.ativa .intro h1{animation:tituloRevela .58s cubic-bezier(.22,1,.36,1) both}
+.view.ativa .intro h1::after{animation:tituloTraco .6s .12s cubic-bezier(.22,1,.36,1) both}
+@keyframes tituloRevela{
+  from{opacity:0;transform:translateY(16px);filter:blur(6px);letter-spacing:.05em}
+  to{opacity:1;transform:none;filter:blur(0);letter-spacing:-.01em}}
+@keyframes tituloTraco{from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .view.ativa .intro h1,.view.ativa .intro h1::after{animation:none}
+  .intro h1::after{transform:scaleX(1)}}
+
+/* ---- Nota de rodapé da página (aviso informativo) ---- */
+.pagina-nota{display:flex;gap:12px;align-items:flex-start;margin-top:30px;padding:14px 16px;
+  border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:var(--radius);
+  background:var(--surface-2);color:var(--muted);font-size:.86rem;line-height:1.55}
+.pagina-nota .icon{color:var(--accent);font-size:1.2rem;margin-top:1px;flex:none}
+.pagina-nota strong{color:var(--ink)}
+.secao-titulo{font-family:var(--display);font-size:1.05rem;margin:30px 0 12px;
+  padding-bottom:8px;border-bottom:1px solid var(--line)}
+.filtro-label{font-family:var(--mono);font-size:.75rem;color:var(--faint);align-self:center;margin-right:2px}
+.chip-btn.ativa,.chip-btn[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent-ink);
+  border-color:var(--accent)}
+.rodape-geral{margin-top:34px}
+.rodape code,.banner code{font-family:var(--mono);font-size:.9em;
+  background:var(--surface-2);padding:1px 5px;border-radius:4px}
+
+/* ---- Gráficos ---- */
+.grafico-card h2{align-items:baseline}
+.inline-select{font-family:var(--mono);font-size:.92rem;color:var(--accent-ink);
+  background:var(--surface-2);border:1px solid var(--line);border-radius:7px;
+  padding:2px 6px;cursor:pointer}
+#grafico-ranking{width:100%;height:clamp(340px,42vw,440px)}
+/* Aba Qualidade: barras horizontais (até 30 oficinas) — mais altas. */
+.grafico-q{width:100%;height:clamp(360px,48vw,560px)}
+#view-qualidade .grafico-card h2{flex-wrap:wrap;gap:8px}
+/* O .banner tem display:flex, que vence o atributo [hidden] — reforça o oculto. */
+#q-alerta[hidden]{display:none}
+/* Séries da ficha: mais altas e ocupando a largura toda do card. A altura
+   acompanha a viewport para aproveitar telas largas sem ficar espremida. */
+.grafico-serie{width:100%;height:clamp(240px,26vw,320px)}
+
+/* ---- Tela 1: tabela de ranking com semáforo ---- */
+/* 7 colunas (nome + 2 médias + 2 totais + absenteísmo + eficiência): precisa de
+   mais largura mínima antes de rolar na horizontal. */
+.tabela-rank{min-width:940px}
+.tabela-rank th.col-metrica{text-align:right}
+.tabela-rank th small{display:block;font-weight:400;font-size:.62rem;letter-spacing:.02em;
+  text-transform:none;color:var(--faint);margin-top:2px}
+.cel-metrica{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);white-space:nowrap}
+.cel-metrica .val{font-size:.92rem;color:var(--ink)}
+.cel-metrica.vazio{color:var(--faint)}
+.semaforo{display:inline-block;width:9px;height:9px;border-radius:50%;margin-left:8px;
+  vertical-align:middle;background:var(--faint)}
+.semaforo.ok{background:var(--ok)}
+.semaforo.alerta{background:var(--alerta)}
+.semaforo.critico{background:var(--critico)}
+.semaforo.neutro{background:var(--faint);opacity:.5}
+tr.linha-rank{cursor:pointer}
+tr.linha-rank:hover{background:var(--surface-2)}
+tr.linha-rank .nome{gap:6px}
+tr.linha-rank .ir{color:var(--faint);font-size:.95rem;opacity:0;transition:opacity .15s}
+tr.linha-rank:hover .ir{opacity:1}
+
+/* ---- Tela 2: ficha ---- */
+.ficha-selector{max-width:460px;margin-bottom:22px}
+.ficha-selector .busca input{padding-left:38px}
+.ficha-vazio{display:flex;flex-direction:column;align-items:center;gap:10px;
+  padding:60px 20px;color:var(--faint);text-align:center}
+.ficha-vazio .icon{font-size:2rem}
+.ficha-cabecalho{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;
+  align-items:flex-start;margin-bottom:18px}
+.ficha-cabecalho h2{font-family:var(--display);font-size:1.4rem;margin:0 0 8px}
+.ficha-treinos{display:flex;flex-wrap:wrap;gap:6px;max-width:100%}
+.treino-chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.72rem;
+  padding:5px 10px;border-radius:16px;background:var(--treino-soft);color:var(--treino);
+  border:1px solid color-mix(in srgb,var(--treino) 30%,var(--line))}
+.treino-chip .icon{font-size:.9rem}
+.ficha-graficos{display:grid;gap:16px}
+@media(min-width:900px){.ficha-graficos{grid-template-columns:1fr 1fr}}
+.dot-metrica{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:2px}
+.dot-metrica.m-prod{background:var(--producao)}
+.dot-metrica.m-abse{background:var(--absenteismo)}
+.dot-metrica.m-efic{background:var(--eficiencia)}
+.card h2 small.sub{font-family:var(--sans);font-weight:400;margin-left:auto}
+.serie-vazia{display:flex;height:100%;min-height:140px;align-items:center;justify-content:center;
+  color:var(--faint);font-size:.85rem;text-align:center;padding:0 20px}
+
+/* KPI de eficiência na ficha (valor oficial único, não série) */
+.efic-kpi{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:8px;padding:18px 16px 8px;text-align:center;min-height:160px}
+.efic-num{font-family:var(--display);font-weight:800;font-size:3rem;line-height:1;
+  font-variant-numeric:tabular-nums;color:var(--eficiencia)}
+.efic-num.ok{color:var(--ok)} .efic-num.alerta{color:var(--alerta)} .efic-num.critico{color:var(--critico)}
+.efic-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.82rem;color:var(--muted)}
+.efic-nota{font-size:.78rem;color:var(--faint);max-width:46ch;margin-top:2px}
+
+/* ---- Tela 3: impacto ---- */
+.delta-bom{color:var(--ok);font-weight:600}
+.delta-ruim{color:var(--critico);font-weight:600}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono)}
+
+.erro-carga{margin:40px auto;max-width:560px;padding:20px;border:1px solid var(--critico);
+  border-radius:var(--radius);background:var(--critico-soft);color:var(--ink)}
+.erro-carga code{font-family:var(--mono);font-size:.85rem;background:var(--surface);padding:2px 6px;border-radius:4px}
