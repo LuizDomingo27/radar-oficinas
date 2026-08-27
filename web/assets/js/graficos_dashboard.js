@@ -155,6 +155,12 @@ const GraficosDash = (() => {
         data: serie.map((p) => p.valor),
         lineStyle: { color: cor, width: 2 }, itemStyle: { color: cor },
         areaStyle: { color: cor, opacity: 0.10 },
+        // Rótulos com o valor de cada ponto. Em séries densas (semanal) o
+        // ECharts esconde os que colidem (hideOverlap) — mantém legível.
+        label: { show: true, position: "top", distance: 4,
+          color: corTema("--muted"), fontFamily: "IBM Plex Sans", fontSize: 9.5,
+          formatter: (p) => p.value == null ? "" : (ehPct ? pctFmt(p.value) : intFmt(p.value)) },
+        labelLayout: { hideOverlap: true },
         markLine: markLines.length ? {
           symbol: "none", silent: true, data: markLines,
           // Estilo/etiqueta padrão dos marcos de treino (a meta sobrescreve o seu).
