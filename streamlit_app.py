@@ -144,7 +144,24 @@ def _commitar_dados(arquivos: list[str]) -> tuple[bool, str]:
 # e cola o iframe no topo, sem margens.
 st.markdown("""
 <style>
-  header[data-testid="stHeader"], #MainMenu, footer {display:none;}
+  /* Some com o chrome do Streamlit (menu/deploy/rodapé), MAS mantém acessível o
+     botão que reabre a barra lateral. O antigo "header{display:none}" escondia
+     junto o botão de expandir (ele vive DENTRO do header): ao recolher a barra
+     — o que acontece sozinho no celular e na Streamlit Cloud — a área
+     "Atualizar dados" sumia sem nenhuma forma de trazê-la de volta. */
+  header[data-testid="stHeader"]{
+    background:transparent !important; height:0 !important; min-height:0 !important;
+    pointer-events:none;
+  }
+  #MainMenu, footer,
+  header[data-testid="stHeader"] [data-testid="stMainMenu"],
+  header[data-testid="stHeader"] [data-testid="stAppDeployButton"]{display:none !important;}
+  /* Botão de reabrir a barra lateral: sempre visível e clicável. */
+  [data-testid="stExpandSidebarButton"]{
+    display:inline-flex !important; visibility:visible !important; pointer-events:auto !important;
+  }
+  /* Botão de recolher (dentro da barra) sempre visível, não só no hover. */
+  [data-testid="stSidebarCollapseButton"]{visibility:visible !important;}
   .block-container{padding:0 !important; max-width:100% !important;}
   section.main > div{gap:0 !important;}
   div[data-testid="stSidebarUserContent"]{padding-top:1rem;}
