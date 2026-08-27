@@ -17,7 +17,6 @@ faça commit dos ``data/*.json`` regerados (arquivos pequenos).
 """
 from __future__ import annotations
 
-import json
 from pathlib import Path
 
 import streamlit as st
@@ -64,6 +63,10 @@ def montar_html() -> str:
                   injecao + f"<script>{js_graf}</script>", html)
     html = re.sub(r'<script src="assets/js/dashboard\.js[^"]*"></script>',
                   f"<script>{js_dash}</script>", html)
+    # Fixa o tema PRÓPRIO da SPA no embed — sem isso o iframe herda o
+    # prefers-color-scheme do ambiente Streamlit e o dashboard "pega" o tema
+    # errado. O botão de tema da própria SPA continua funcionando.
+    html = html.replace('<html lang="pt-BR">', '<html lang="pt-BR" data-theme="dark">')
     return html
 
 
@@ -137,43 +140,36 @@ def _commitar_dados(arquivos: list[str]) -> tuple[bool, str]:
 
 
 # --------------------------------------------------------------- barra lateral
+# Deixa o embed no comando visual: some com o chrome do Streamlit (menu/rodapé)
+# e cola o iframe no topo, sem margens.
+st.markdown("""
+<style>
+  header[data-testid="stHeader"], #MainMenu, footer {display:none;}
+  .block-container{padding:0 !important; max-width:100% !important;}
+  section.main > div{gap:0 !important;}
+  div[data-testid="stSidebarUserContent"]{padding-top:1rem;}
+</style>
+""", unsafe_allow_html=True)
+
 st.sidebar.header("Atualizar dados")
-st.sidebar.caption(
-    "Suba as planilhas (.xlsx) e clique em Atualizar dados. Pode enviar TODAS de "
-    "uma vez — o build reconstrói o dashboard inteiro (Ranking, Ficha, Impacto) e "
-    "a Qualidade. Mantenha os nomes de arquivo abaixo.")
-with st.sidebar.expander("Nomes de arquivo esperados"):
-    st.markdown(
-        "- `Indicador geral_Junho.xlsx` (Qualidade)\n"
-        "- `RECEBIMENTO.xlsx` (produção)\n"
-        "- `postos.xlsx` (absenteísmo)\n"
-        "- `ESTOQUE OFICINAS - JEANS - 2026.xlsx`\n"
-        "- `ESTOQUE OFICINA NÃO JEANS.xlsx`\n"
-        "- `Histórico de Atendimento EP.xlsx` (treino)\n"
-        "- `Inscrições Lidera+ Gestão de Pessoas.xlsx` (treino)")
 uploads = st.sidebar.file_uploader(
-    "Planilhas", type=["xlsx"], accept_multiple_files=True)
+    "Planilhas (.xlsx)", type=["xlsx"], accept_multiple_files=True)
 
 if st.sidebar.button("Atualizar dados", type="primary", use_container_width=True):
     if not uploads:
-        st.sidebar.warning("Selecione ao menos uma planilha antes de atualizar.")
+        st.sidebar.warning("Selecione ao menos uma planilha.")
     else:
-        with st.spinner("Processando planilhas e regenerando os dados..."):
-            nomes = _salvar_uploads(uploads)
+        with st.spinner("Processando..."):
+            _salvar_uploads(uploads)
             ok, msg = _rodar_build()
         if ok:
             st.sidebar.success(msg)
-            st.sidebar.caption("Arquivos recebidos: " + ", ".join(nomes))
             with st.spinner("Publicando no GitHub..."):
                 cok, cmsg = _commitar_dados(["data/dashboard.json", "data/qualidade.json"])
             (st.sidebar.success if cok else st.sidebar.info)(cmsg)
             st.rerun()
         else:
             st.sidebar.error(msg)
-
-meta_q = json.loads(_ler(DATA / "qualidade.json", "{}") or "{}").get("meta", {})
-if (DATA / "qualidade.json").exists():
-    st.sidebar.caption(f"Fonte de qualidade: {meta_q.get('fonte', '—')}")
 
 # ------------------------------------------------------------------- dashboard
 components.html(montar_html(), height=2400, scrolling=True)
