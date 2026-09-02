@@ -43,7 +43,7 @@ def ler_fonte(
         AbaNaoEncontrada: a aba configurada não existe.
         ColunaInvalida: índice de coluna fora do intervalo da aba.
     """
-    base_dir = base_dir or config.BASE_DIR
+    base_dir = base_dir or config.PLANILHAS_DIR
     caminho = base_dir / fonte.arquivo
     wb = _abrir(caminho)
     try:

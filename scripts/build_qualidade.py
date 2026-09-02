@@ -12,9 +12,11 @@ de ranking já validadas no serviço.
 from __future__ import annotations
 
 import json
+import sys
 from datetime import datetime, timezone
 
 from app_oficinas import config
+from app_oficinas.errors import RadarError
 from app_oficinas.infra import leitor_qualidade
 from app_oficinas.services import qualidade
 
@@ -69,5 +71,20 @@ def main() -> None:
     print(f"  anos={anos} meses={meses} setores={setores}")
 
 
+def executar() -> int:
+    """Wrapper com código de saída para o orquestrador (0 = ok, 1 = falhou).
+
+    ``main()`` continua levantando ``RadarError`` — o fallback "Qualidade-só" do
+    app depende disso. Aqui traduzimos a exceção em código de saída, para que o
+    ``build_tudo`` trate todos os passos do mesmo jeito.
+    """
+    try:
+        main()
+    except RadarError as exc:
+        print(f"ERRO ao gerar a Qualidade: {exc}", file=sys.stderr)
+        return 1
+    return 0
+
+
 if __name__ == "__main__":
-    main()
+    raise SystemExit(executar())

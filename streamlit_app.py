@@ -71,31 +71,80 @@ def montar_html() -> str:
 
 
 def _salvar_uploads(uploads) -> list[str]:
+    # Salva na MESMA pasta de onde o pipeline lê (config.PLANILHAS_DIR). Antes
+    # gravava na raiz enquanto a leitura passou a ser feita em Planilhas/, então
+    # o upload nunca chegava ao build — o app dizia "sincronizado" sem mudar nada.
+    #
+    # Cada upload é salvo com o NOME CANÔNICO que o pipeline procura (mapeado por
+    # palavras-chave). Assim o usuário pode subir "estoque jeans agosto.xlsx" ou
+    # "Indicador geral_Julho.xlsx" que o build ainda encontra a base — sem isso, o
+    # nome com ano/mês/acento diferente faria a base "sumir" e os valores não
+    # mudariam. Se não casar nenhuma regra, mantém o nome original (não perde o
+    # arquivo) e ele aparecerá como base faltante no aviso pós-build.
+    destino = config.PLANILHAS_DIR
+    destino.mkdir(parents=True, exist_ok=True)
     nomes = []
-    esperado = config.QUALIDADE_RESUMO.arquivo
     for up in uploads:
-        (RAIZ / up.name).write_bytes(up.getbuffer())
-        nomes.append(up.name)
-        # Garante o nome que o config espera para a planilha de qualidade.
-        if "indicador" in up.name.lower() and up.name != esperado:
-            (RAIZ / esperado).write_bytes(up.getbuffer())
+        canonico = config.nome_canonico_upload(up.name)
+        (destino / (canonico or up.name)).write_bytes(up.getbuffer())
+        nomes.append(canonico or up.name)
     return nomes
 
 
+def _bases_presentes() -> tuple[list[str], list[str]]:
+    """Divide as planilhas esperadas em (presentes, faltando) em PLANILHAS_DIR."""
+    presentes, faltando = [], []
+    for arq in config.ARQUIVOS_ESPERADOS:
+        (presentes if (config.PLANILHAS_DIR / arq).exists() else faltando).append(arq)
+    return presentes, faltando
+
+
+def _ultimo_motivo(log: str) -> str:
+    """Extrai a linha de erro mais útil do log do build (motivo p/ o usuário)."""
+    pistas = ("Planilha não encontrada", "Aba '", "não encontrada",
+              "ERRO", "FALHOU", "faltam", "Coluna")
+    for linha in reversed([l.strip() for l in log.splitlines() if l.strip()]):
+        if any(p in linha for p in pistas):
+            return linha
+    return "verifique se todas as planilhas foram enviadas com os nomes esperados"
+
+
 def _rodar_build() -> tuple[bool, str]:
-    """Roda o pipeline completo; se faltar alguma planilha, cai para Qualidade."""
+    """Roda o pipeline completo; se ele falhar, cai para Qualidade-só.
+
+    IMPORTANTE: ``build_tudo.main()`` NÃO levanta exceção quando um passo falha —
+    ele engole o ``RadarError`` e devolve o código de saída ``1``. Antes este
+    método só tratava exceções e ignorava esse código, então um build que falhou
+    (planilha faltando/renomeada) era relatado como sucesso e os JSONs nunca eram
+    regerados: a origem do "sincronizado mas sem mudança nos valores". Agora o
+    código de saída é conferido de verdade.
+    """
+    import io
+    from contextlib import redirect_stderr, redirect_stdout
+
     from app_oficinas.errors import RadarError
     from scripts import build_qualidade, build_tudo
-    try:
-        build_tudo.main()
+
+    log = io.StringIO()
+    with redirect_stdout(log), redirect_stderr(log):
+        codigo = build_tudo.main()
+    if codigo == 0:
         return True, "Pipeline completo atualizado (Ranking, Ficha, Impacto e Qualidade)."
-    except RadarError as erro:
-        try:
+
+    # Pipeline completo falhou. Tenta ao menos regerar a Qualidade, que só
+    # depende do "Indicador geral".
+    motivo = _ultimo_motivo(log.getvalue())
+    try:
+        with redirect_stdout(log), redirect_stderr(log):
             build_qualidade.main()
-            return True, (f"Qualidade atualizada. O restante do dashboard não pôde "
-                          f"ser regerado (faltou uma planilha): {erro}")
-        except RadarError as erro2:
-            return False, f"Falha ao atualizar: {erro2}"
+    except RadarError as erro2:
+        return False, (f"Falha ao atualizar — nada foi alterado. Motivo: {motivo}. "
+                       f"(Qualidade também falhou: {erro2}.) Reenvie as planilhas "
+                       f"com os nomes esperados e tente de novo.")
+    return True, (f"Apenas a Qualidade foi atualizada. O restante do dashboard NÃO "
+                  f"mudou porque o pipeline completo falhou: {motivo}. Confira se "
+                  f"TODAS as planilhas necessárias foram enviadas com os nomes "
+                  f"corretos e atualize de novo.")
 
 
 def _commitar_dados(arquivos: list[str]) -> tuple[bool, str]:
@@ -194,13 +243,24 @@ if st.sidebar.button("Atualizar dados", type="primary", use_container_width=True
         st.sidebar.warning("Selecione ao menos uma planilha.")
     else:
         with st.spinner("Processando..."):
-            _salvar_uploads(uploads)
+            reconhecidos = _salvar_uploads(uploads)
             ok, msg = _rodar_build()
+        # Mostra o que o app reconheceu e o que ainda falta para o pipeline
+        # COMPLETO — assim fica claro por que só parte pôde ser regerada.
+        _, faltando = _bases_presentes()
+        if faltando:
+            st.sidebar.info(
+                "Bases ainda ausentes para o pipeline completo: "
+                + "; ".join(faltando)
+                + ". (Qualidade só precisa do 'Indicador geral'.)")
         if not ok:
             st.sidebar.error(msg)
         else:
             with st.spinner("Publicando no GitHub..."):
-                cok, cmsg = _commitar_dados(["data/dashboard.json", "data/qualidade.json"])
+                cok, cmsg = _commitar_dados([
+                    "data/dashboard.json", "data/qualidade.json",
+                    "docs/explicacao_oficinas.html",
+                ])
             # success (verde) só quando o commit também passou; senão warning
             # (amarelo) deixando claro que os dados atualizaram na sessão mas NÃO
             # persistiram no GitHub.

@@ -73,7 +73,7 @@ def _ano_mes(valor) -> tuple[int | None, int | None]:
 def ler_inspecoes(base_dir: Path | None = None) -> Iterator[dict]:
     """Cada inspeção da aba RESUMO: {oficina, status, dois_qa, prod, ano, mes}."""
     fonte = config.QUALIDADE_RESUMO
-    base = base_dir or config.BASE_DIR
+    base = base_dir or config.PLANILHAS_DIR
     wb = _abrir(base / fonte.arquivo)
     try:
         ws = _aba(wb, fonte.aba, fonte.arquivo)
@@ -99,7 +99,7 @@ def ler_inspecoes(base_dir: Path | None = None) -> Iterator[dict]:
 def ler_defeitos(base_dir: Path | None = None) -> Iterator[dict]:
     """Cada defeito da aba DEFEITOS: {defeito, tipo, setor, ano, mes, qntd}."""
     fonte = config.QUALIDADE_DEFEITOS
-    base = base_dir or config.BASE_DIR
+    base = base_dir or config.PLANILHAS_DIR
     wb = _abrir(base / fonte.arquivo)
     try:
         ws = _aba(wb, fonte.aba, fonte.arquivo)

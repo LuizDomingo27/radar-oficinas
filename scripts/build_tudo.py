@@ -15,6 +15,7 @@ from app_oficinas.errors import RadarError
 from scripts import (
     build_dashboard,
     build_depara,
+    build_explicacao,
     build_fatos,
     build_impacto,
     build_metricas,
@@ -22,14 +23,19 @@ from scripts import (
 )
 
 # Ordem obrigatória: cada passo consome os JSONs gravados pelo anterior.
-# Qualidade é independente (lê o "Indicador geral"), então roda por último.
+# Chamamos ``executar`` (não ``main``): ``main`` reprocessa ``argparse`` sobre o
+# ``sys.argv`` do processo — inofensivo na CLI, mas frágil quando o app Streamlit
+# chama o pipeline (o argv é o do Streamlit). ``executar`` roda o trabalho puro e
+# devolve o código de saída (0 = ok). Qualidade é independente (lê o "Indicador
+# geral"); Explicação lê o dashboard.json, então fecham a fila.
 PASSOS = (
-    ("1/6 De-Para", build_depara.main),
-    ("2/6 Fatos (ETL)", build_fatos.main),
-    ("3/6 Métricas", build_metricas.main),
-    ("4/6 Impacto", build_impacto.main),
-    ("5/6 Dashboard", build_dashboard.main),
-    ("6/6 Qualidade", build_qualidade.main),
+    ("1/7 De-Para", build_depara.executar),
+    ("2/7 Fatos (ETL)", build_fatos.executar),
+    ("3/7 Métricas", build_metricas.executar),
+    ("4/7 Impacto", build_impacto.executar),
+    ("5/7 Dashboard", build_dashboard.executar),
+    ("6/7 Qualidade", build_qualidade.executar),
+    ("7/7 Explicação", build_explicacao.executar),
 )
 
 

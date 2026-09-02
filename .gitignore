@@ -1,6 +1,9 @@
 # Planilhas de origem (pesadas) NÃO vão para o GitHub / Streamlit Cloud.
 # Só sobem os agregados leves em data/*.json. As planilhas são enviadas pelo
-# botão "Atualizar dados" do app quando preciso regerar.
+# botão "Atualizar dados" do app quando preciso regerar. No Streamlit Cloud o
+# disco é efêmero: o upload cai em Planilhas/, o build gera os JSON e só os JSON
+# são commitados (persistem entre reinícios).
+Planilhas/
 *.xlsx
 *.xls
 

@@ -78,7 +78,7 @@ def _celula(linha: tuple, indice: int):
 
 def ler_producao(base_dir: Path | None = None) -> Iterator[dict]:
     f = config.PRODUCAO
-    wb = _abrir((base_dir or config.BASE_DIR) / f.arquivo)
+    wb = _abrir((base_dir or config.PLANILHAS_DIR) / f.arquivo)
     try:
         ws = _aba(wb, f.aba, f.arquivo)
         for linha in ws.iter_rows(min_row=f.primeira_linha, values_only=True):
@@ -98,7 +98,7 @@ def ler_producao(base_dir: Path | None = None) -> Iterator[dict]:
 
 def ler_absenteismo(base_dir: Path | None = None) -> Iterator[dict]:
     f = config.ABSENTEISMO
-    wb = _abrir((base_dir or config.BASE_DIR) / f.arquivo)
+    wb = _abrir((base_dir or config.PLANILHAS_DIR) / f.arquivo)
     try:
         ws = _aba(wb, f.aba, f.arquivo)
         for linha in ws.iter_rows(min_row=f.primeira_linha, values_only=True):
@@ -122,7 +122,7 @@ def ler_absenteismo(base_dir: Path | None = None) -> Iterator[dict]:
 
 def ler_treino_ep(base_dir: Path | None = None) -> Iterator[dict]:
     f = config.TREINO_EP
-    wb = _abrir((base_dir or config.BASE_DIR) / f.arquivo)
+    wb = _abrir((base_dir or config.PLANILHAS_DIR) / f.arquivo)
     try:
         ws = _aba(wb, f.aba, f.arquivo)
         for linha in ws.iter_rows(min_row=f.primeira_linha, values_only=True):
@@ -141,7 +141,7 @@ def ler_treino_ep(base_dir: Path | None = None) -> Iterator[dict]:
 
 def ler_treino_lidera(base_dir: Path | None = None) -> Iterator[dict]:
     f = config.TREINO_LIDERA
-    wb = _abrir((base_dir or config.BASE_DIR) / f.arquivo)
+    wb = _abrir((base_dir or config.PLANILHAS_DIR) / f.arquivo)
     try:
         ws = _aba(wb, f.aba, f.arquivo)
         for linha in ws.iter_rows(min_row=f.primeira_linha, values_only=True):
@@ -221,7 +221,7 @@ def _achar_col_efic(cabecalho: tuple, arquivo: str, aba: str) -> int:
 def _ler_efic_oficial(arquivo, aba, linha_cabecalho, primeira_linha, col_nome,
                       mp_fixo=None, col_mp=None, base_dir=None) -> Iterator[dict]:
     """Lê a % de eficiência oficial (um valor por oficina) de uma aba de estoque."""
-    wb = _abrir((base_dir or config.BASE_DIR) / arquivo)
+    wb = _abrir((base_dir or config.PLANILHAS_DIR) / arquivo)
     try:
         ws = _aba(wb, aba, arquivo)
         linhas = list(ws.iter_rows(values_only=True))

@@ -9,9 +9,16 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
-# Raiz do projeto (a pasta que contém as planilhas .xlsx).
+# Raiz do projeto.
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_OUT_DIR = BASE_DIR / "data"
+
+# Pasta ÚNICA das planilhas .xlsx de origem (não versionada; ver .gitignore).
+# É o mesmo lugar onde o app salva os uploads ("Atualizar dados") E de onde o
+# pipeline lê. Manter os dois lados apontando para cá evita o bug em que o
+# upload era salvo num diretório e a leitura acontecia em outro — o app dizia
+# "sincronizado" mas os números não mudavam, porque o build lia a base antiga.
+PLANILHAS_DIR = BASE_DIR / "Planilhas"
 
 
 # --------------------------------------------------------------------------- #
@@ -243,6 +250,63 @@ class FonteQualidadeDefeitos:
 
 QUALIDADE_RESUMO = FonteQualidadeResumo()
 QUALIDADE_DEFEITOS = FonteQualidadeDefeitos()
+
+
+# --------------------------------------------------------------------------- #
+# Mapeamento de UPLOAD → nome canônico esperado pelo pipeline.                 #
+# --------------------------------------------------------------------------- #
+# Por que existe: no Streamlit Cloud o disco é efêmero e o build procura CADA
+# planilha por um nome EXATO (ex.: "ESTOQUE OFICINAS - JEANS - 2026.xlsx", com o
+# ano no nome; "ESTOQUE OFICINA NÃO JEANS.xlsx", com acento). Se o arquivo subir
+# com o nome ligeiramente diferente, a base esperada "some", o build lê a antiga
+# (ou falha) e os valores não mudam. Aqui casamos o upload por palavras-chave e o
+# salvamos já com o nome canônico — o usuário pode subir com o nome que tiver.
+
+# Todos os .xlsx que o pipeline completo consome (derivado das fontes, sem
+# duplicar strings). Ordem estável para exibir "o que falta" ao usuário.
+ARQUIVOS_ESPERADOS: tuple[str, ...] = (
+    PRODUCAO.arquivo,          # RECEBIMENTO.xlsx
+    ABSENTEISMO.arquivo,       # postos.xlsx
+    EFIC_JEANS.arquivo,        # ESTOQUE OFICINAS - JEANS - 2026.xlsx
+    EFIC_NAOJEANS.arquivo,     # ESTOQUE OFICINA NÃO JEANS.xlsx
+    TREINO_EP.arquivo,         # Histórico de Atendimento EP.xlsx
+    TREINO_LIDERA.arquivo,     # Inscrições Lidera+ Gestão de Pessoas.xlsx
+    QUALIDADE_RESUMO.arquivo,  # Indicador geral_*.xlsx
+)
+
+# Regras (tokens que precisam TODOS aparecer no nome enviado, já sem acento e em
+# minúsculas) → nome canônico. Ordem importa: a mais específica vem primeiro
+# ("nao jeans" antes de "jeans"). A 1ª regra que casar vence.
+REGRAS_UPLOAD: tuple[tuple[tuple[str, ...], str], ...] = (
+    (("indicador",), QUALIDADE_RESUMO.arquivo),
+    (("nao", "jeans"), EFIC_NAOJEANS.arquivo),
+    (("estoque", "jeans"), EFIC_JEANS.arquivo),
+    (("recebimento",), PRODUCAO.arquivo),
+    (("posto",), ABSENTEISMO.arquivo),
+    (("atendimento",), TREINO_EP.arquivo),
+    (("lidera",), TREINO_LIDERA.arquivo),
+)
+
+
+def _sem_acento_minusculo(texto: str) -> str:
+    """Minúsculas sem acento — para casar nomes de arquivo de forma tolerante."""
+    import unicodedata
+    decomposto = unicodedata.normalize("NFKD", texto)
+    return "".join(c for c in decomposto if not unicodedata.combining(c)).lower()
+
+
+def nome_canonico_upload(nome_arquivo: str) -> str | None:
+    """Nome canônico esperado para um arquivo enviado, ou ``None`` se não casar.
+
+    Casa por palavras-chave (todas presentes) na 1ª regra de ``REGRAS_UPLOAD``.
+    Assim um upload chamado "estoque nao jeans agosto.xlsx" vira
+    "ESTOQUE OFICINA NÃO JEANS.xlsx" — o nome que o pipeline procura.
+    """
+    alvo = _sem_acento_minusculo(nome_arquivo)
+    for tokens, canonico in REGRAS_UPLOAD:
+        if all(tok in alvo for tok in tokens):
+            return canonico
+    return None
 
 
 # --------------------------------------------------------------------------- #
