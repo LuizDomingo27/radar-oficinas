@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia do fluxo operacional — Radar de Oficinas</title>
+<style>
+  :root { color-scheme: dark; --bg:#0f141b; --card:#182230; --txt:#e6edf3;
+    --sub:#9fb0c3; --linha:#25313f; --ok:#2ea043; --alerta:#d29922; --crit:#f85149;
+    --acc:#3fb9a0; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt);
+    font:15px/1.6 system-ui,Segoe UI,Roboto,Arial,sans-serif; }
+  header { padding:28px 20px; border-bottom:1px solid var(--linha); }
+  h1 { margin:0 0 6px; font-size:24px; }
+  h2 { font-size:19px; margin:0 0 10px; }
+  h3 { font-size:15px; margin:18px 0 6px; color:var(--acc); }
+  .intro { color:var(--sub); max-width:78ch; }
+  main { padding:20px; max-width:1000px; margin:0 auto; display:grid; gap:18px; }
+  section { background:var(--card); border:1px solid var(--linha);
+    border-radius:12px; padding:18px 20px; }
+  table { width:100%; border-collapse:collapse; margin-top:8px; font-size:14px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--linha);
+    vertical-align:top; }
+  th { color:var(--sub); font-weight:600; font-size:13px; text-transform:uppercase;
+    letter-spacing:.03em; }
+  code { background:#0b1017; border:1px solid var(--linha); border-radius:5px;
+    padding:1px 6px; font-size:13px; }
+  ol.passos { counter-reset:p; list-style:none; padding:0; margin:0; }
+  ol.passos > li { counter-increment:p; position:relative; padding:10px 0 10px 44px;
+    border-bottom:1px solid var(--linha); }
+  ol.passos > li:last-child { border-bottom:0; }
+  ol.passos > li::before { content:counter(p); position:absolute; left:0; top:10px;
+    width:28px; height:28px; border-radius:50%; background:rgba(63,185,160,.16);
+    color:var(--acc); font-weight:700; font-size:13px; display:grid; place-items:center; }
+  .selo { font-size:11px; padding:2px 8px; border-radius:999px; font-weight:700;
+    display:inline-block; }
+  .selo.ok { background:rgba(46,160,67,.18); color:var(--ok); }
+  .selo.alerta { background:rgba(210,153,34,.18); color:var(--alerta); }
+  .selo.critico { background:rgba(248,81,73,.18); color:var(--crit); }
+  .nota { color:var(--sub); font-size:13.5px; }
+  footer { padding:16px 20px; color:var(--sub); font-size:12px; text-align:center; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Guia do fluxo operacional</h1>
+  <div class="intro">
+    O que o <b>Radar de Oficinas</b> faz, quem opera, o que entra, o que sai e o
+    que acontece quando algo dá errado. Este guia descreve o único fluxo com
+    escrita do sistema: <b>Atualizar dados</b> — a substituição das planilhas de
+    origem pelos números publicados no dashboard.
+  </div>
+</header>
+
+<main>
+
+<section>
+  <h2>Propósito</h2>
+  <p>
+    As áreas de Produção, RH e Qualidade mantêm suas planilhas em Excel. O Radar
+    consolida essas planilhas num único painel comparável entre oficinas —
+    ranking, ficha individual, impacto de treinamentos e qualidade — para que a
+    decisão sobre onde atuar não dependa de abrir sete arquivos diferentes.
+  </p>
+  <p class="nota">
+    O sistema <b>não digita</b> nem edita dado de origem: ele apenas lê as
+    planilhas, calcula os indicadores e publica o resultado. A fonte da verdade
+    continua sendo o Excel de cada área.
+  </p>
+</section>
+
+<section>
+  <h2>Papéis e tela</h2>
+  <table>
+    <tr><th>Papel</th><th>O que faz</th></tr>
+    <tr>
+      <td><b>Analista de dados</b> (operador)</td>
+      <td>Reúne as planilhas do mês, envia pelo painel e confirma a mensagem de
+        resultado. É o único papel que escreve no sistema.</td>
+    </tr>
+    <tr>
+      <td><b>Gestor / supervisão</b></td>
+      <td>Consulta o dashboard e a Explicação por oficina. Somente leitura.</td>
+    </tr>
+  </table>
+  <h3>Tela usada</h3>
+  <p>
+    Barra lateral do app, bloco <b>Atualizar dados</b>: um campo
+    <b>Planilhas (.xlsx)</b> (aceita vários arquivos) e o botão
+    <b>Atualizar dados</b>. Abaixo, o seletor <b>Exibir</b> alterna entre
+    <b>Dashboard</b> e <b>Explicação por oficina</b>.
+  </p>
+</section>
+
+<section>
+  <h2>Dados de entrada</h2>
+  <p>Sete planilhas alimentam o painel completo:</p>
+  <table>
+    <tr><th>Planilha</th><th>Alimenta</th></tr>
+    <tr><td>RECEBIMENTO</td><td>Produtividade (peças e minutos por dia)</td></tr>
+    <tr><td>POSTOS</td><td>Absenteísmo (efetivos × trabalhados por semana)</td></tr>
+    <tr><td>ESTOQUE OFICINAS — JEANS</td><td>Eficiência das oficinas de jeans</td></tr>
+    <tr><td>ESTOQUE OFICINA NÃO JEANS</td><td>Eficiência de malha, polo e tear</td></tr>
+    <tr><td>Histórico de Atendimento EP</td><td>Treinamentos realizados</td></tr>
+    <tr><td>Inscrições Lidera+ Gestão de Pessoas</td><td>Treinamentos (Lidera+)</td></tr>
+    <tr><td>Indicador geral</td><td>Qualidade (nota, 2ª qualidade e causas)</td></tr>
+  </table>
+
+  <h3>O nome do arquivo não precisa estar exato</h3>
+  <p class="nota">
+    O envio é reconhecido por <b>palavras-chave</b> no nome. “estoque jeans
+    agosto.xlsx” e “Indicador geral_Julho.xlsx” são aceitos e salvos com o nome
+    que o processamento espera. Um arquivo que não casa com nenhuma regra é
+    guardado como veio e aparece na lista do que ainda falta.
+  </p>
+
+  <h3>A aba pode ter sido renomeada</h3>
+  <p class="nota">
+    Quando uma planilha é reexportada, o Excel costuma renomear a aba (foi o que
+    aconteceu com POSTOS: a aba <code>Dados</code> virou <code>Planilha1</code>).
+    O sistema procura a aba primeiro pelo nome e, se não achar, <b>pelo
+    cabeçalho</b> — a aba cujos títulos de coluna são os esperados. Se duas abas
+    ou nenhuma casarem, a atualização para e informa quais abas existem no
+    arquivo, em vez de ler a aba errada e publicar número inventado.
+  </p>
+</section>
+
+<section>
+  <h2>Fluxo completo, do envio ao painel</h2>
+  <ol class="passos">
+    <li><b>Selecionar as planilhas.</b> Juntas ou uma por vez — os envios se
+      acumulam na sessão até completar as sete.</li>
+    <li><b>Clicar em Atualizar dados.</b> Sem nenhum arquivo selecionado, o
+      sistema avisa e não faz nada.</li>
+    <li><b>Gravação.</b> Cada arquivo é salvo com o nome canônico na pasta de
+      onde o processamento lê. Um envio novo substitui o anterior.</li>
+    <li><b>Processamento (7 passos).</b> De-Para de nomes → Fatos → Métricas →
+      Impacto → Dashboard → Qualidade → Explicação por oficina.</li>
+    <li><b>Conferência do que falta.</b> O sistema lista as bases ausentes para
+      o painel completo.</li>
+    <li><b>Publicação.</b> Com o processamento concluído, os arquivos de
+      resultado são gravados no repositório (GitHub) para persistirem entre
+      reinícios.</li>
+    <li><b>Recarga.</b> A página recarrega já com os números novos e a mensagem
+      do resultado.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Decisões e mensagens</h2>
+  <table>
+    <tr><th>Situação</th><th>Mensagem</th><th>O que foi salvo</th></tr>
+    <tr>
+      <td>Todas as bases presentes, processamento e publicação concluídos</td>
+      <td><span class="selo ok">verde</span> Pipeline completo atualizado</td>
+      <td>Todos os indicadores + publicação no repositório</td>
+    </tr>
+    <tr>
+      <td>Processou, mas a publicação falhou (token sem permissão de escrita)</td>
+      <td><span class="selo alerta">amarelo</span> Atualizado, com falha ao publicar</td>
+      <td>Indicadores na sessão atual; <b>não</b> persiste após reinício</td>
+    </tr>
+    <tr>
+      <td>Faltam bases (envio incremental em andamento)</td>
+      <td><span class="selo alerta">informativo</span> Recebido; ainda faltam …</td>
+      <td>Os arquivos enviados ficam guardados aguardando os demais</td>
+    </tr>
+    <tr>
+      <td>Só o Indicador geral está disponível</td>
+      <td><span class="selo alerta">amarelo</span> Apenas a Qualidade foi atualizada</td>
+      <td>Somente os indicadores de qualidade</td>
+    </tr>
+    <tr>
+      <td>Todas as bases presentes, mas uma planilha está inconsistente</td>
+      <td><span class="selo critico">vermelho</span> Falha ao atualizar, com o motivo</td>
+      <td>Nada é alterado — os números anteriores continuam no ar</td>
+    </tr>
+  </table>
+  <p class="nota">
+    A mensagem de erro traz a <b>causa</b> (“Aba X não existe em POSTOS.xlsx…”,
+    “Planilha não encontrada…”), não apenas em que passo parou. É a informação
+    que permite ao operador corrigir o arquivo e reenviar.
+  </p>
+</section>
+
+<section>
+  <h2>Exceções previstas</h2>
+  <table>
+    <tr><th>Exceção</th><th>Comportamento</th></tr>
+    <tr><td>Nenhum arquivo selecionado</td><td>Aviso; nada é processado</td></tr>
+    <tr><td>Arquivo com nome fora do padrão</td>
+        <td>Reconhecido por palavras-chave; se não casar, entra como base faltante</td></tr>
+    <tr><td>Aba renomeada na reexportação</td>
+        <td>Reencontrada pelo cabeçalho; segue o processamento</td></tr>
+    <tr><td>Aba ambígua ou ausente</td>
+        <td>Para com erro nomeando as abas do arquivo; nada é publicado</td></tr>
+    <tr><td>Arquivo corrompido ou não-xlsx</td>
+        <td>Erro identificando o arquivo; nada é publicado</td></tr>
+    <tr><td>Coluna oficial de eficiência ausente</td>
+        <td>Erro explícito — o sistema não estima o valor por posição</td></tr>
+    <tr><td>Credencial de publicação ausente ou sem permissão</td>
+        <td>Indicadores atualizados na sessão, alerta de que não persistiu</td></tr>
+    <tr><td>Nome de oficina divergente entre planilhas</td>
+        <td>Resolvido pelo De-Para; o que não resolve fica registrado à parte</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>O que o sistema salva</h2>
+  <table>
+    <tr><th>Saída</th><th>Conteúdo</th></tr>
+    <tr><td><code>data/dashboard.json</code></td>
+        <td>Ranking, ficha por oficina, séries e impacto — o que a tela lê</td></tr>
+    <tr><td><code>data/qualidade.json</code></td>
+        <td>Nota de qualidade, 2ª qualidade e principais causas</td></tr>
+    <tr><td><code>docs/explicacao_oficinas.html</code></td>
+        <td>O “como” e o “porquê” de cada resultado, oficina por oficina</td></tr>
+    <tr><td><code>data/fato_*.json</code>, <code>data/metricas_*.json</code></td>
+        <td>Etapas intermediárias, para auditoria e reprocessamento</td></tr>
+  </table>
+  <p class="nota">
+    As planilhas de origem <b>não</b> são versionadas — só os resultados, que são
+    leves. No ambiente de nuvem o disco é temporário: sem a publicação no
+    repositório, o envio vale apenas para a sessão atual.
+  </p>
+</section>
+
+</main>
+<footer>Radar de Oficinas — guia do fluxo operacional</footer>
+</body>
+</html>

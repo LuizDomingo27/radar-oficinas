@@ -288,6 +288,80 @@ REGRAS_UPLOAD: tuple[tuple[tuple[str, ...], str], ...] = (
 )
 
 
+# --------------------------------------------------------------------------- #
+# Abas: nome esperado + como reencontrá-la quando a planilha é reexportada.    #
+# --------------------------------------------------------------------------- #
+# Por que existe: a planilha de postos chegou com a aba renomeada de "Dados"
+# para "Planilha1" (o Excel batiza assim toda aba nova/reexportada). O conteúdo
+# era idêntico, mas o build parava no passo 1 com "Aba 'Dados' não existe" e o
+# app só sabia dizer "os dados não puderam ser atualizados". Como esse tipo de
+# renomeação vai se repetir a cada nova carga, a aba passa a ser localizada
+# também pelo CABEÇALHO — a estrutura real dos dados —, não só pelo nome.
+
+
+@dataclass(frozen=True)
+class AbaEsperada:
+    """Como reencontrar uma aba cujo nome mudou.
+
+    Deliberadamente NÃO existe uma lista de "nomes alternativos": aceitar uma
+    aba por um nome genérico como "Planilha1" é apostar que o conteúdo é o
+    esperado. A assinatura confere o conteúdo — é a única forma de reencontrar
+    a aba sem correr o risco de ler a errada e publicar números inventados.
+
+    Attributes:
+        assinatura: rótulos que precisam TODOS aparecer na linha de cabeçalho
+            para a aba ser aceita (comparados sem acento/caixa).
+        linha_cabecalho: linha (base 1) onde estão os rótulos da assinatura.
+    """
+
+    assinatura: tuple[str, ...] = ()
+    linha_cabecalho: int = 1
+
+
+# Chave: (arquivo canônico, aba configurada). As assinaturas foram conferidas
+# nas planilhas atuais; usam poucos rótulos estáveis (evita quebrar quando uma
+# coluna nova é acrescentada no meio).
+ABAS_ESPERADAS: dict[tuple[str, str], AbaEsperada] = {
+    (PRODUCAO.arquivo, PRODUCAO.aba): AbaEsperada(
+        assinatura=("dia", "oficina", "ordem mestre", "mp", "minutos"),
+    ),
+    (ABSENTEISMO.arquivo, ABSENTEISMO.aba): AbaEsperada(
+        assinatura=("frete", "mp", "oficinas", "data efetivos", "qtd efetivos"),
+    ),
+    (TREINO_EP.arquivo, TREINO_EP.aba): AbaEsperada(
+        assinatura=("empresa", "cnpj", "modulo", "ch", "ciclo"),
+    ),
+    (TREINO_LIDERA.arquivo, TREINO_LIDERA.aba): AbaEsperada(
+        assinatura=("id", "hora de inicio", "email", "nome"),
+    ),
+    (EFIC_JEANS.arquivo, EFIC_JEANS.aba): AbaEsperada(
+        assinatura=("fornecedor", "postos", "cap pecas 100%"),
+        linha_cabecalho=EFIC_JEANS.linha_cabecalho,
+    ),
+    (EFIC_NAOJEANS.arquivo, EFIC_NAOJEANS.aba): AbaEsperada(
+        assinatura=("produto", "oficina", "postos", "cap pecas 100%"),
+        linha_cabecalho=EFIC_NAOJEANS.linha_cabecalho,
+    ),
+    (EFIC_JEANS.arquivo, "AUX"): AbaEsperada(assinatura=("razao social", "aux")),
+    (EFIC_NAOJEANS.arquivo, "AUX"): AbaEsperada(assinatura=("razao social", "aux")),
+    (EFIC_NAOJEANS.arquivo, "HISTÓRICO EFIC"): AbaEsperada(
+        assinatura=("produto", "oficina"), linha_cabecalho=2,
+    ),
+    (QUALIDADE_RESUMO.arquivo, QUALIDADE_RESUMO.aba): AbaEsperada(
+        assinatura=("oficina", "status", "2qa", "prod"), linha_cabecalho=2,
+    ),
+    (QUALIDADE_DEFEITOS.arquivo, QUALIDADE_DEFEITOS.aba): AbaEsperada(
+        assinatura=("qntd", "descricao do defeito", "tipo de inspecao", "setor"),
+        linha_cabecalho=2,
+    ),
+}
+
+
+def aba_esperada(arquivo: str, aba: str) -> AbaEsperada:
+    """Regras de reencontro da aba; ``AbaEsperada()`` vazio se não houver."""
+    return ABAS_ESPERADAS.get((arquivo, aba), AbaEsperada())
+
+
 def _sem_acento_minusculo(texto: str) -> str:
     """Minúsculas sem acento — para casar nomes de arquivo de forma tolerante."""
     import unicodedata

@@ -15,7 +15,8 @@ import openpyxl
 from app_oficinas import config
 from app_oficinas.config import FonteNomes
 from app_oficinas.domain.models import RegistroNome
-from app_oficinas.errors import AbaNaoEncontrada, PlanilhaNaoEncontrada
+from app_oficinas.errors import PlanilhaNaoEncontrada
+from app_oficinas.infra import abas
 
 
 def _abrir(caminho: Path):
@@ -47,12 +48,7 @@ def ler_fonte(
     caminho = base_dir / fonte.arquivo
     wb = _abrir(caminho)
     try:
-        if fonte.aba not in wb.sheetnames:
-            raise AbaNaoEncontrada(
-                f"Aba '{fonte.aba}' não existe em {fonte.arquivo}. "
-                f"Disponíveis: {wb.sheetnames}"
-            )
-        ws = wb[fonte.aba]
+        ws = abas.abrir_aba(wb, fonte.aba, fonte.arquivo)
         for linha in ws.iter_rows(min_row=fonte.primeira_linha, values_only=True):
             if len(linha) <= fonte.col_nome:
                 continue

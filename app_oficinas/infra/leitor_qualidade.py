@@ -14,7 +14,8 @@ from typing import Iterator
 import openpyxl
 
 from app_oficinas import config
-from app_oficinas.errors import AbaNaoEncontrada, PlanilhaNaoEncontrada
+from app_oficinas.errors import PlanilhaNaoEncontrada
+from app_oficinas.infra import abas
 
 _EPOCA_EXCEL = _dt.datetime(1899, 12, 30)
 
@@ -31,11 +32,8 @@ def _abrir(caminho: Path):
 
 
 def _aba(wb, nome_aba: str, arquivo: str):
-    if nome_aba not in wb.sheetnames:
-        raise AbaNaoEncontrada(
-            f"Aba '{nome_aba}' não existe em {arquivo}. Disponíveis: {wb.sheetnames}"
-        )
-    return wb[nome_aba]
+    """Aba pedida, tolerando renomeação (ver ``infra.abas``)."""
+    return abas.abrir_aba(wb, nome_aba, arquivo)
 
 
 def _texto(valor) -> str:

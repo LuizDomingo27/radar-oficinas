@@ -113,13 +113,26 @@ def _bases_presentes() -> tuple[list[str], list[str]]:
     return presentes, faltando
 
 
+# Pistas do log, da MAIS específica para a mais genérica. A ordem é o que
+# importa: o pipeline termina sempre com "FALHOU em '1/7 ...'. Abortando o
+# restante." — uma linha que só diz ONDE parou. A causa real ("Aba 'Dados' não
+# existe em postos.xlsx") vem antes. Varrer o log de trás para frente pegava a
+# genérica e escondia a útil, deixando o usuário sem saber o que corrigir.
+_PISTAS_MOTIVO: tuple[tuple[str, ...], ...] = (
+    ("Planilha não encontrada", "Falha ao abrir a planilha"),
+    ("Aba '", "Coluna", "cabeçalho"),
+    ("não encontrada", "não existe", "faltam"),
+    ("ERRO", "FALHOU"),
+)
+
+
 def _ultimo_motivo(log: str) -> str:
     """Extrai a linha de erro mais útil do log do build (motivo p/ o usuário)."""
-    pistas = ("Planilha não encontrada", "Aba '", "não encontrada",
-              "ERRO", "FALHOU", "faltam", "Coluna")
-    for linha in reversed([l.strip() for l in log.splitlines() if l.strip()]):
-        if any(p in linha for p in pistas):
-            return linha
+    linhas = [l.strip() for l in log.splitlines() if l.strip()]
+    for pistas in _PISTAS_MOTIVO:
+        for linha in linhas:
+            if any(p in linha for p in pistas):
+                return linha
     return "verifique se todas as planilhas foram enviadas com os nomes esperados"
 
 
