@@ -81,15 +81,14 @@
     </tr>
     <tr>
       <td><b>Gestor / supervisão</b></td>
-      <td>Consulta o dashboard e a Explicação por oficina. Somente leitura.</td>
+      <td>Consulta o dashboard. Somente leitura.</td>
     </tr>
   </table>
   <h3>Tela usada</h3>
   <p>
     Barra lateral do app, bloco <b>Atualizar dados</b>: um campo
     <b>Planilhas (.xlsx)</b> (aceita vários arquivos) e o botão
-    <b>Atualizar dados</b>. Abaixo, o seletor <b>Exibir</b> alterna entre
-    <b>Dashboard</b> e <b>Explicação por oficina</b>.
+    <b>Atualizar dados</b>. O dashboard ocupa a área principal.
   </p>
 </section>
 
@@ -135,8 +134,8 @@
       sistema avisa e não faz nada.</li>
     <li><b>Gravação.</b> Cada arquivo é salvo com o nome canônico na pasta de
       onde o processamento lê. Um envio novo substitui o anterior.</li>
-    <li><b>Processamento (7 passos).</b> De-Para de nomes → Fatos → Métricas →
-      Impacto → Dashboard → Qualidade → Explicação por oficina.</li>
+    <li><b>Processamento (6 passos).</b> De-Para de nomes → Fatos → Métricas →
+      Impacto → Dashboard → Qualidade.</li>
     <li><b>Conferência do que falta.</b> O sistema lista as bases ausentes para
       o painel completo.</li>
     <li><b>Publicação.</b> Com o processamento concluído, os arquivos de
@@ -214,8 +213,6 @@
         <td>Ranking, ficha por oficina, séries e impacto — o que a tela lê</td></tr>
     <tr><td><code>data/qualidade.json</code></td>
         <td>Nota de qualidade, 2ª qualidade e principais causas</td></tr>
-    <tr><td><code>docs/explicacao_oficinas.html</code></td>
-        <td>O “como” e o “porquê” de cada resultado, oficina por oficina</td></tr>
     <tr><td><code>data/fato_*.json</code>, <code>data/metricas_*.json</code></td>
         <td>Etapas intermediárias, para auditoria e reprocessamento</td></tr>
   </table>

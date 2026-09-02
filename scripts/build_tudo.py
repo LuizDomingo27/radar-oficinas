@@ -3,10 +3,10 @@
 Uso:
     python -m scripts.build_tudo
 
-Executa os cinco passos em sequência — De-Para → Fatos → Métricas → Impacto →
-Dashboard —, cada um lendo a saída do anterior. Para na primeira falha (devolve
-o código de erro do passo). É o comando para atualizar a aplicação depois de
-substituir as planilhas na raiz do projeto.
+Executa os seis passos em sequência — De-Para → Fatos → Métricas → Impacto →
+Dashboard → Qualidade —, cada um lendo a saída do anterior. Para na primeira
+falha (devolve o código de erro do passo). É o comando para atualizar a
+aplicação depois de substituir as planilhas na raiz do projeto.
 """
 
 from __future__ import annotations
@@ -15,7 +15,6 @@ from app_oficinas.errors import RadarError
 from scripts import (
     build_dashboard,
     build_depara,
-    build_explicacao,
     build_fatos,
     build_impacto,
     build_metricas,
@@ -27,15 +26,14 @@ from scripts import (
 # ``sys.argv`` do processo — inofensivo na CLI, mas frágil quando o app Streamlit
 # chama o pipeline (o argv é o do Streamlit). ``executar`` roda o trabalho puro e
 # devolve o código de saída (0 = ok). Qualidade é independente (lê o "Indicador
-# geral"); Explicação lê o dashboard.json, então fecham a fila.
+# geral"), então fecha a fila.
 PASSOS = (
-    ("1/7 De-Para", build_depara.executar),
-    ("2/7 Fatos (ETL)", build_fatos.executar),
-    ("3/7 Métricas", build_metricas.executar),
-    ("4/7 Impacto", build_impacto.executar),
-    ("5/7 Dashboard", build_dashboard.executar),
-    ("6/7 Qualidade", build_qualidade.executar),
-    ("7/7 Explicação", build_explicacao.executar),
+    ("1/6 De-Para", build_depara.executar),
+    ("2/6 Fatos (ETL)", build_fatos.executar),
+    ("3/6 Métricas", build_metricas.executar),
+    ("4/6 Impacto", build_impacto.executar),
+    ("5/6 Dashboard", build_dashboard.executar),
+    ("6/6 Qualidade", build_qualidade.executar),
 )
 
 

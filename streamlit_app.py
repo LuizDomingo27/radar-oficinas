@@ -27,7 +27,6 @@ from app_oficinas import config
 RAIZ = Path(__file__).resolve().parent
 WEB = RAIZ / "web"
 DATA = RAIZ / "data"
-EXPLICACAO = RAIZ / "docs" / "explicacao_oficinas.html"
 
 st.set_page_config(page_title="Radar de Oficinas", layout="wide",
                    initial_sidebar_state="expanded")
@@ -69,19 +68,6 @@ def montar_html() -> str:
     # errado. O botão de tema da própria SPA continua funcionando.
     html = html.replace('<html lang="pt-BR">', '<html lang="pt-BR" data-theme="dark">')
     return html
-
-
-def montar_explicacao() -> str:
-    """HTML da explicação por oficina (docs/), com aviso amigável se ausente.
-
-    O arquivo é gerado pelo pipeline (passo 7) a cada "Atualizar dados"; num
-    ambiente recém-implantado que ainda não regerou, mostra uma orientação em vez
-    de quebrar.
-    """
-    padrao = ("<div style='padding:24px;font:15px system-ui;color:#e6edf3;"
-              "background:#0f141b'>A explicação ainda não foi gerada. Clique em "
-              "<b>Atualizar dados</b> para criá-la a partir das planilhas.</div>")
-    return _ler(EXPLICACAO, padrao)
 
 
 def _salvar_uploads(uploads) -> list[str]:
@@ -280,7 +266,6 @@ if st.sidebar.button("Atualizar dados", type="primary", use_container_width=True
             with st.spinner("Publicando no GitHub..."):
                 cok, cmsg = _commitar_dados([
                     "data/dashboard.json", "data/qualidade.json",
-                    "docs/explicacao_oficinas.html",
                 ])
             extra = ""
             if faltando:
@@ -305,15 +290,4 @@ if st.sidebar.button("Atualizar dados", type="primary", use_container_width=True
             st.sidebar.error(msg)
 
 # --------------------------------------------------------------------- exibição
-# Seletor de visão: o Dashboard (SPA) ou a Explicação por oficina (docs/). No
-# Streamlit Cloud não há servidor de estáticos para abrir o .html por link, então
-# a explicação é renderizada aqui mesmo, no lugar do dashboard.
-st.sidebar.markdown("---")
-visao = st.sidebar.radio(
-    "Exibir", ["Dashboard", "Explicação por oficina"],
-    help="A Explicação mostra o COMO e o PORQUÊ de cada resultado de cada oficina.")
-
-if visao == "Explicação por oficina":
-    components.html(montar_explicacao(), height=2400, scrolling=True)
-else:
-    components.html(montar_html(), height=2400, scrolling=True)
+components.html(montar_html(), height=2400, scrolling=True)
