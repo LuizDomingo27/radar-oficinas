@@ -257,30 +257,39 @@ if st.sidebar.button("Atualizar dados", type="primary", use_container_width=True
         st.sidebar.warning("Selecione ao menos uma planilha.")
     else:
         with st.spinner("Processando..."):
-            reconhecidos = _salvar_uploads(uploads)
+            _salvar_uploads(uploads)
             ok, msg = _rodar_build()
-        # Mostra o que o app reconheceu e o que ainda falta para o pipeline
-        # COMPLETO — assim fica claro por que só parte pôde ser regerada.
+        # Bases que ainda faltam para o pipeline COMPLETO (Ranking/Ficha/Impacto).
+        # Pode subir uma planilha por vez: elas se acumulam no disco da sessão e o
+        # dashboard só regenera quando TODAS estão presentes.
         _, faltando = _bases_presentes()
-        if faltando:
-            st.sidebar.info(
-                "Bases ainda ausentes para o pipeline completo: "
-                + "; ".join(faltando)
-                + ". (Qualidade só precisa do 'Indicador geral'.)")
-        if not ok:
-            st.sidebar.error(msg)
-        else:
+        if ok:
             with st.spinner("Publicando no GitHub..."):
                 cok, cmsg = _commitar_dados([
                     "data/dashboard.json", "data/qualidade.json",
                     "docs/explicacao_oficinas.html",
                 ])
+            extra = ""
+            if faltando:
+                extra = (" Para o dashboard completo, ainda faltam: "
+                         + "; ".join(faltando) + ".")
             # success (verde) só quando o commit também passou; senão warning
-            # (amarelo) deixando claro que os dados atualizaram na sessão mas NÃO
-            # persistiram no GitHub.
+            # (amarelo) deixando claro que atualizou na sessão mas NÃO persistiu.
             st.session_state["_aviso_atualizacao"] = (
-                "success" if cok else "warning", f"{msg} {cmsg}")
+                "success" if cok else "warning", f"{msg}{extra} {cmsg}")
             st.rerun()
+        elif faltando:
+            # Nada regerou ainda, mas é só acúmulo incremental (faltam bases). Sem
+            # alarde: orienta o próximo envio em vez de mostrar erro vermelho.
+            st.sidebar.info(
+                "Recebido. Para gerar o dashboard, ainda faltam estas bases: "
+                + "; ".join(faltando)
+                + ". Envie-as (juntas ou uma a uma) e clique em Atualizar de novo. "
+                + "A Qualidade precisa só do 'Indicador geral'.")
+        else:
+            # Todas as bases presentes, mas o build falhou mesmo assim: erro real
+            # (planilha corrompida, aba/coluna faltando). Mostra o motivo.
+            st.sidebar.error(msg)
 
 # --------------------------------------------------------------------- exibição
 # Seletor de visão: o Dashboard (SPA) ou a Explicação por oficina (docs/). No
