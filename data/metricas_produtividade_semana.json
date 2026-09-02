@@ -1,6 +1,6 @@
 {
-  "gerado_em": "2026-08-27T09:41:33+00:00",
-  "total": 2948,
+  "gerado_em": "2026-09-02T22:12:07+00:00",
+  "total": 3064,
   "meta": {},
   "registros": [
     {
@@ -218,6 +218,14 @@
       "pecas": 1552.0,
       "minutos": 42509.28,
       "pecas_por_minuto": 0.0365
+    },
+    {
+      "oficina_id": "a-de-m-dias-alves-limitada",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2179.0,
+      "minutos": 43199.83,
+      "pecas_por_minuto": 0.0504
     },
     {
       "oficina_id": "a-maria-dos-santos-silva-faccao",
@@ -564,6 +572,14 @@
       "pecas_por_minuto": 0.0424
     },
     {
+      "oficina_id": "a-s-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 3549.0,
+      "minutos": 73697.73,
+      "pecas_por_minuto": 0.0482
+    },
+    {
       "oficina_id": "a-s-empreendimentos",
       "ano": 2026,
       "semana": 2,
@@ -812,6 +828,22 @@
       "pecas_por_minuto": 0.0545
     },
     {
+      "oficina_id": "a-s-empreendimentos",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 3623.0,
+      "minutos": 59199.82,
+      "pecas_por_minuto": 0.0612
+    },
+    {
+      "oficina_id": "a-s-empreendimentos",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 903.0,
+      "minutos": 17247.3,
+      "pecas_por_minuto": 0.0524
+    },
+    {
       "oficina_id": "a-x-da-penha-filho",
       "ano": 2026,
       "semana": 14,
@@ -968,8 +1000,16 @@
       "ano": 2026,
       "semana": 34,
       "pecas": 4372.0,
-      "minutos": 14535.9,
-      "pecas_por_minuto": 0.3008
+      "minutos": 22493.36,
+      "pecas_por_minuto": 0.1944
+    },
+    {
+      "oficina_id": "a-x-da-penha-filho",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1586.0,
+      "minutos": 8263.06,
+      "pecas_por_minuto": 0.1919
     },
     {
       "oficina_id": "acari-textil",
@@ -1234,6 +1274,14 @@
       "pecas": 3714.0,
       "minutos": 69266.1,
       "pecas_por_minuto": 0.0536
+    },
+    {
+      "oficina_id": "acari-textil",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 7972.0,
+      "minutos": 149819.38,
+      "pecas_por_minuto": 0.0532
     },
     {
       "oficina_id": "acaua-confeccoes",
@@ -1508,6 +1556,22 @@
       "pecas_por_minuto": 0.1952
     },
     {
+      "oficina_id": "acaua-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 5034.0,
+      "minutos": 26227.14,
+      "pecas_por_minuto": 0.1919
+    },
+    {
+      "oficina_id": "acaua-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 2472.0,
+      "minutos": 12879.12,
+      "pecas_por_minuto": 0.1919
+    },
+    {
       "oficina_id": "ajg-confeccoes",
       "ano": 2026,
       "semana": 3,
@@ -1767,9 +1831,17 @@
       "oficina_id": "ajg-confeccoes",
       "ano": 2026,
       "semana": 35,
-      "pecas": 1566.0,
-      "minutos": 5872.5,
-      "pecas_por_minuto": 0.2667
+      "pecas": 3196.0,
+      "minutos": 32254.5,
+      "pecas_por_minuto": 0.0991
+    },
+    {
+      "oficina_id": "ajg-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 4268.0,
+      "minutos": 19891.18,
+      "pecas_por_minuto": 0.2146
     },
     {
       "oficina_id": "alanis-queiroz",
@@ -2018,6 +2090,14 @@
       "pecas": 416.0,
       "minutos": 7722.4,
       "pecas_por_minuto": 0.0539
+    },
+    {
+      "oficina_id": "alanis-queiroz",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2099.0,
+      "minutos": 30299.45,
+      "pecas_por_minuto": 0.0693
     },
     {
       "oficina_id": "alanis-santos",
@@ -2335,9 +2415,9 @@
       "oficina_id": "aline-rodrigues-de-lima-araujo",
       "ano": 2026,
       "semana": 35,
-      "pecas": 2048.0,
-      "minutos": 10670.08,
-      "pecas_por_minuto": 0.1919
+      "pecas": 20734.0,
+      "minutos": 106749.05,
+      "pecas_por_minuto": 0.1942
     },
     {
       "oficina_id": "alves-confeccoes-limitada",
@@ -2596,6 +2676,14 @@
       "pecas_por_minuto": 0.0526
     },
     {
+      "oficina_id": "alves-confeccoes-limitada",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2139.0,
+      "minutos": 47585.31,
+      "pecas_por_minuto": 0.045
+    },
+    {
       "oficina_id": "amorim-pedro-confeccoes",
       "ano": 2026,
       "semana": 2,
@@ -2844,6 +2932,14 @@
       "pecas_por_minuto": 0.0503
     },
     {
+      "oficina_id": "amorim-pedro-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1653.0,
+      "minutos": 26580.24,
+      "pecas_por_minuto": 0.0622
+    },
+    {
       "oficina_id": "antonio-igor-dantas-de-souza",
       "ano": 2026,
       "semana": 2,
@@ -3068,6 +3164,22 @@
       "pecas_por_minuto": 0.0554
     },
     {
+      "oficina_id": "antonio-igor-dantas-de-souza",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1324.0,
+      "minutos": 24229.2,
+      "pecas_por_minuto": 0.0546
+    },
+    {
+      "oficina_id": "antonio-igor-dantas-de-souza",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1664.0,
+      "minutos": 25692.16,
+      "pecas_por_minuto": 0.0648
+    },
+    {
       "oficina_id": "araujo-camara",
       "ano": 2026,
       "semana": 2,
@@ -3274,6 +3386,14 @@
       "pecas": 3312.0,
       "minutos": 43727.76,
       "pecas_por_minuto": 0.0757
+    },
+    {
+      "oficina_id": "araujo-camara",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2183.0,
+      "minutos": 43157.91,
+      "pecas_por_minuto": 0.0506
     },
     {
       "oficina_id": "araujo-e-m-confeccoes",
@@ -3532,6 +3652,14 @@
       "pecas_por_minuto": 0.0549
     },
     {
+      "oficina_id": "araujo-e-m-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2410.0,
+      "minutos": 52271.54,
+      "pecas_por_minuto": 0.0461
+    },
+    {
       "oficina_id": "asa-confeccoes",
       "ano": 2026,
       "semana": 4,
@@ -3778,6 +3906,14 @@
       "pecas": 3016.0,
       "minutos": 43375.2,
       "pecas_por_minuto": 0.0695
+    },
+    {
+      "oficina_id": "asa-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 280.0,
+      "minutos": 6006.0,
+      "pecas_por_minuto": 0.0466
     },
     {
       "oficina_id": "b-n-silva-confeccoes",
@@ -4034,6 +4170,22 @@
       "pecas": 3220.0,
       "minutos": 54200.02,
       "pecas_por_minuto": 0.0594
+    },
+    {
+      "oficina_id": "b-n-silva-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 600.0,
+      "minutos": 10506.0,
+      "pecas_por_minuto": 0.0571
+    },
+    {
+      "oficina_id": "b-n-silva-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 2145.0,
+      "minutos": 34491.6,
+      "pecas_por_minuto": 0.0622
     },
     {
       "oficina_id": "cabugi-confeccoes",
@@ -4300,6 +4452,22 @@
       "pecas_por_minuto": 0.0456
     },
     {
+      "oficina_id": "cabugi-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2415.0,
+      "minutos": 41905.2,
+      "pecas_por_minuto": 0.0576
+    },
+    {
+      "oficina_id": "cabugi-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1260.0,
+      "minutos": 24003.0,
+      "pecas_por_minuto": 0.0525
+    },
+    {
       "oficina_id": "clara-a-de-medeiros-leite",
       "ano": 2026,
       "semana": 3,
@@ -4530,6 +4698,22 @@
       "pecas": 1918.0,
       "minutos": 34399.72,
       "pecas_por_minuto": 0.0558
+    },
+    {
+      "oficina_id": "clara-a-de-medeiros-leite",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 971.0,
+      "minutos": 18138.28,
+      "pecas_por_minuto": 0.0535
+    },
+    {
+      "oficina_id": "clara-a-de-medeiros-leite",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1242.0,
+      "minutos": 21355.41,
+      "pecas_por_minuto": 0.0582
     },
     {
       "oficina_id": "comart-cooperativa-das-maos-artesan",
@@ -4964,6 +5148,14 @@
       "pecas_por_minuto": 0.0541
     },
     {
+      "oficina_id": "confeccao-sao-sebastiao",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1271.0,
+      "minutos": 21119.96,
+      "pecas_por_minuto": 0.0602
+    },
+    {
       "oficina_id": "confeccoes-franoelda-m-m-araujo",
       "ano": 2026,
       "semana": 3,
@@ -5212,6 +5404,14 @@
       "pecas_por_minuto": 0.0558
     },
     {
+      "oficina_id": "confeccoes-franoelda-m-m-araujo",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2876.0,
+      "minutos": 45461.66,
+      "pecas_por_minuto": 0.0633
+    },
+    {
       "oficina_id": "confeccoes-genesis",
       "ano": 2026,
       "semana": 2,
@@ -5447,9 +5647,9 @@
       "oficina_id": "confeccoes-genesis",
       "ano": 2026,
       "semana": 31,
-      "pecas": 7245.0,
-      "minutos": 85185.09,
-      "pecas_por_minuto": 0.0851
+      "pecas": 7304.0,
+      "minutos": 86086.02,
+      "pecas_por_minuto": 0.0848
     },
     {
       "oficina_id": "confeccoes-genesis",
@@ -5479,9 +5679,9 @@
       "oficina_id": "confeccoes-genesis",
       "ano": 2026,
       "semana": 35,
-      "pecas": 1470.0,
-      "minutos": 4983.3,
-      "pecas_por_minuto": 0.295
+      "pecas": 7369.0,
+      "minutos": 49796.61,
+      "pecas_por_minuto": 0.148
     },
     {
       "oficina_id": "confeccoes-j-s",
@@ -5714,6 +5914,22 @@
       "pecas": 2394.0,
       "minutos": 39117.96,
       "pecas_por_minuto": 0.0612
+    },
+    {
+      "oficina_id": "confeccoes-j-s",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2575.0,
+      "minutos": 46825.7,
+      "pecas_por_minuto": 0.055
+    },
+    {
+      "oficina_id": "confeccoes-j-s",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1500.0,
+      "minutos": 28800.0,
+      "pecas_por_minuto": 0.0521
     },
     {
       "oficina_id": "danjan-confeccoes",
@@ -5964,6 +6180,22 @@
       "pecas_por_minuto": 0.0605
     },
     {
+      "oficina_id": "danjan-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 5323.0,
+      "minutos": 80308.2,
+      "pecas_por_minuto": 0.0663
+    },
+    {
+      "oficina_id": "danjan-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1671.0,
+      "minutos": 30659.65,
+      "pecas_por_minuto": 0.0545
+    },
+    {
       "oficina_id": "dantas-e-paulino-confeccoes",
       "ano": 2026,
       "semana": 3,
@@ -6212,6 +6444,14 @@
       "pecas_por_minuto": 0.0554
     },
     {
+      "oficina_id": "dantas-e-paulino-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2495.0,
+      "minutos": 39772.68,
+      "pecas_por_minuto": 0.0627
+    },
+    {
       "oficina_id": "di3-confeccoes",
       "ano": 2026,
       "semana": 1,
@@ -6458,6 +6698,22 @@
       "pecas": 6010.0,
       "minutos": 60160.42,
       "pecas_por_minuto": 0.0999
+    },
+    {
+      "oficina_id": "di3-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 7164.0,
+      "minutos": 83356.8,
+      "pecas_por_minuto": 0.0859
+    },
+    {
+      "oficina_id": "di3-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 3097.0,
+      "minutos": 26656.97,
+      "pecas_por_minuto": 0.1162
     },
     {
       "oficina_id": "dona-tica",
@@ -6724,6 +6980,22 @@
       "pecas_por_minuto": 0.2155
     },
     {
+      "oficina_id": "dona-tica",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 4390.0,
+      "minutos": 23706.0,
+      "pecas_por_minuto": 0.1852
+    },
+    {
+      "oficina_id": "dona-tica",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1980.0,
+      "minutos": 9702.0,
+      "pecas_por_minuto": 0.2041
+    },
+    {
       "oficina_id": "dona-tica-confeccoes",
       "ano": 2026,
       "semana": 2,
@@ -6978,6 +7250,14 @@
       "pecas": 2195.0,
       "minutos": 34604.1,
       "pecas_por_minuto": 0.0634
+    },
+    {
+      "oficina_id": "dona-tica-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 3254.0,
+      "minutos": 62579.33,
+      "pecas_por_minuto": 0.052
     },
     {
       "oficina_id": "ebenezer-industria-textil",
@@ -7244,6 +7524,22 @@
       "pecas_por_minuto": 0.1976
     },
     {
+      "oficina_id": "ebenezer-industria-textil",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 10676.0,
+      "minutos": 55539.92,
+      "pecas_por_minuto": 0.1922
+    },
+    {
+      "oficina_id": "ebenezer-industria-textil",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 2322.0,
+      "minutos": 12556.8,
+      "pecas_por_minuto": 0.1849
+    },
+    {
       "oficina_id": "evalber-de-castro-dantas",
       "ano": 2026,
       "semana": 2,
@@ -7508,6 +7804,22 @@
       "pecas_por_minuto": 0.0505
     },
     {
+      "oficina_id": "evalber-de-castro-dantas",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 3328.0,
+      "minutos": 58925.24,
+      "pecas_por_minuto": 0.0565
+    },
+    {
+      "oficina_id": "evalber-de-castro-dantas",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 504.0,
+      "minutos": 9626.4,
+      "pecas_por_minuto": 0.0524
+    },
+    {
       "oficina_id": "f-a-n-confeccoes",
       "ano": 2026,
       "semana": 3,
@@ -7756,6 +8068,14 @@
       "pecas_por_minuto": 0.0525
     },
     {
+      "oficina_id": "f-a-n-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1784.0,
+      "minutos": 36955.68,
+      "pecas_por_minuto": 0.0483
+    },
+    {
       "oficina_id": "f-da-silva-junior",
       "ano": 2026,
       "semana": 2,
@@ -8002,6 +8322,14 @@
       "pecas": 2659.0,
       "minutos": 13853.39,
       "pecas_por_minuto": 0.1919
+    },
+    {
+      "oficina_id": "f-da-silva-junior",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 5529.0,
+      "minutos": 26438.84,
+      "pecas_por_minuto": 0.2091
     },
     {
       "oficina_id": "f-j-de-azevedo",
@@ -8258,6 +8586,14 @@
       "pecas": 2506.0,
       "minutos": 47864.6,
       "pecas_por_minuto": 0.0524
+    },
+    {
+      "oficina_id": "f-j-de-azevedo",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2937.0,
+      "minutos": 40414.99,
+      "pecas_por_minuto": 0.0727
     },
     {
       "oficina_id": "f-k-faccao",
@@ -8519,9 +8855,9 @@
       "oficina_id": "f-k-faccao",
       "ano": 2026,
       "semana": 35,
-      "pecas": 2320.0,
-      "minutos": 12087.2,
-      "pecas_por_minuto": 0.1919
+      "pecas": 8390.0,
+      "minutos": 68161.0,
+      "pecas_por_minuto": 0.1231
     },
     {
       "oficina_id": "f-l-azevedo-confeccao",
@@ -8786,6 +9122,14 @@
       "pecas": 12798.0,
       "minutos": 84659.18,
       "pecas_por_minuto": 0.1512
+    },
+    {
+      "oficina_id": "f-l-azevedo-confeccao",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 5567.0,
+      "minutos": 54693.56,
+      "pecas_por_minuto": 0.1018
     },
     {
       "oficina_id": "f-silva-confeccoes",
@@ -9108,6 +9452,14 @@
       "pecas_por_minuto": 0.0559
     },
     {
+      "oficina_id": "f-w-de-souza-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1440.0,
+      "minutos": 31968.0,
+      "pecas_por_minuto": 0.045
+    },
+    {
       "oficina_id": "faccao-ello",
       "ano": 2026,
       "semana": 2,
@@ -9364,6 +9716,22 @@
       "pecas_por_minuto": 0.0668
     },
     {
+      "oficina_id": "faccao-ello",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2088.0,
+      "minutos": 24153.91,
+      "pecas_por_minuto": 0.0864
+    },
+    {
+      "oficina_id": "faccao-ello",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 3105.0,
+      "minutos": 41824.35,
+      "pecas_por_minuto": 0.0742
+    },
+    {
       "oficina_id": "faccao-santanense",
       "ano": 2026,
       "semana": 2,
@@ -9618,6 +9986,14 @@
       "pecas": 2218.0,
       "minutos": 38837.18,
       "pecas_por_minuto": 0.0571
+    },
+    {
+      "oficina_id": "faccao-santanense",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2082.0,
+      "minutos": 35004.48,
+      "pecas_por_minuto": 0.0595
     },
     {
       "oficina_id": "fenix-industria-textil",
@@ -10100,6 +10476,14 @@
       "pecas_por_minuto": 0.0543
     },
     {
+      "oficina_id": "ferreira-e-araujo-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 4011.0,
+      "minutos": 65504.62,
+      "pecas_por_minuto": 0.0612
+    },
+    {
       "oficina_id": "fios-do-sertao",
       "ano": 2026,
       "semana": 1,
@@ -10372,6 +10756,14 @@
       "pecas_por_minuto": 0.0557
     },
     {
+      "oficina_id": "fios-do-sertao",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 5889.0,
+      "minutos": 107619.92,
+      "pecas_por_minuto": 0.0547
+    },
+    {
       "oficina_id": "flavia-georgia-b-silva-confeccoes",
       "ano": 2026,
       "semana": 3,
@@ -10623,9 +11015,17 @@
       "oficina_id": "flavia-georgia-b-silva-confeccoes",
       "ano": 2026,
       "semana": 34,
-      "pecas": 9195.0,
-      "minutos": 132945.9,
-      "pecas_por_minuto": 0.0692
+      "pecas": 8491.0,
+      "minutos": 128186.86,
+      "pecas_por_minuto": 0.0662
+    },
+    {
+      "oficina_id": "flavia-georgia-b-silva-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 6520.0,
+      "minutos": 81795.1,
+      "pecas_por_minuto": 0.0797
     },
     {
       "oficina_id": "forte-fortex-producao-textil",
@@ -10895,9 +11295,17 @@
       "oficina_id": "forte-fortex-producao-textil",
       "ano": 2026,
       "semana": 35,
-      "pecas": 1564.0,
-      "minutos": 7053.64,
-      "pecas_por_minuto": 0.2217
+      "pecas": 6836.0,
+      "minutos": 63886.48,
+      "pecas_por_minuto": 0.107
+    },
+    {
+      "oficina_id": "forte-fortex-producao-textil",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 3324.0,
+      "minutos": 16287.6,
+      "pecas_por_minuto": 0.2041
     },
     {
       "oficina_id": "freire-silva-confeccoes",
@@ -11111,9 +11519,9 @@
       "oficina_id": "freire-silva-confeccoes",
       "ano": 2026,
       "semana": 31,
-      "pecas": 5212.0,
-      "minutos": 68220.92,
-      "pecas_por_minuto": 0.0764
+      "pecas": 5241.0,
+      "minutos": 68715.66,
+      "pecas_por_minuto": 0.0763
     },
     {
       "oficina_id": "freire-silva-confeccoes",
@@ -11138,6 +11546,14 @@
       "pecas": 6157.0,
       "minutos": 97372.63,
       "pecas_por_minuto": 0.0632
+    },
+    {
+      "oficina_id": "freire-silva-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 4798.0,
+      "minutos": 51566.68,
+      "pecas_por_minuto": 0.093
     },
     {
       "oficina_id": "g-c-empreendimentos-textil",
@@ -11407,9 +11823,9 @@
       "oficina_id": "g-c-empreendimentos-textil",
       "ano": 2026,
       "semana": 35,
-      "pecas": 1708.0,
-      "minutos": 7088.2,
-      "pecas_por_minuto": 0.241
+      "pecas": 8380.0,
+      "minutos": 34570.48,
+      "pecas_por_minuto": 0.2424
     },
     {
       "oficina_id": "g4-industria-e-comercio-do-vestuario",
@@ -11490,6 +11906,14 @@
       "pecas": 2957.0,
       "minutos": 50895.07,
       "pecas_por_minuto": 0.0581
+    },
+    {
+      "oficina_id": "g4-industria-e-comercio-do-vestuario",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2470.0,
+      "minutos": 43249.7,
+      "pecas_por_minuto": 0.0571
     },
     {
       "oficina_id": "geferson-alan-dos-santos-silva",
@@ -11738,6 +12162,22 @@
       "pecas": 5862.0,
       "minutos": 25978.5,
       "pecas_por_minuto": 0.2256
+    },
+    {
+      "oficina_id": "geferson-alan-dos-santos-silva",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 5620.0,
+      "minutos": 22412.6,
+      "pecas_por_minuto": 0.2508
+    },
+    {
+      "oficina_id": "geferson-alan-dos-santos-silva",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 2976.0,
+      "minutos": 11249.28,
+      "pecas_por_minuto": 0.2646
     },
     {
       "oficina_id": "i-m-de-araujo-f-nogueira",
@@ -12044,6 +12484,22 @@
       "pecas_por_minuto": 0.0583
     },
     {
+      "oficina_id": "i-m-de-oliveira-silva",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2478.0,
+      "minutos": 39846.24,
+      "pecas_por_minuto": 0.0622
+    },
+    {
+      "oficina_id": "i-m-de-oliveira-silva",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1104.0,
+      "minutos": 17752.32,
+      "pecas_por_minuto": 0.0622
+    },
+    {
       "oficina_id": "ideal-confeccoes",
       "ano": 2026,
       "semana": 2,
@@ -12290,6 +12746,22 @@
       "pecas": 5621.0,
       "minutos": 82531.9,
       "pecas_por_minuto": 0.0681
+    },
+    {
+      "oficina_id": "ideal-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 4198.0,
+      "minutos": 78010.3,
+      "pecas_por_minuto": 0.0538
+    },
+    {
+      "oficina_id": "ideal-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1080.0,
+      "minutos": 23004.0,
+      "pecas_por_minuto": 0.0469
     },
     {
       "oficina_id": "ivanildo-jose-de-sousa",
@@ -12540,6 +13012,14 @@
       "pecas_por_minuto": 0.0503
     },
     {
+      "oficina_id": "ivanildo-jose-de-sousa",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1848.0,
+      "minutos": 36756.72,
+      "pecas_por_minuto": 0.0503
+    },
+    {
       "oficina_id": "j-f-confeccoes",
       "ano": 2026,
       "semana": 23,
@@ -12639,9 +13119,9 @@
       "oficina_id": "j-f-confeccoes",
       "ano": 2026,
       "semana": 35,
-      "pecas": 2724.0,
-      "minutos": 11413.56,
-      "pecas_por_minuto": 0.2387
+      "pecas": 6016.0,
+      "minutos": 28074.86,
+      "pecas_por_minuto": 0.2143
     },
     {
       "oficina_id": "j-m-confeccoes",
@@ -12916,6 +13396,22 @@
       "pecas_por_minuto": 0.0666
     },
     {
+      "oficina_id": "j-m-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 5052.0,
+      "minutos": 86049.4,
+      "pecas_por_minuto": 0.0587
+    },
+    {
+      "oficina_id": "j-m-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1110.0,
+      "minutos": 20990.1,
+      "pecas_por_minuto": 0.0529
+    },
+    {
       "oficina_id": "j-r-c-botelho-comercial",
       "ano": 2026,
       "semana": 2,
@@ -13167,9 +13663,9 @@
       "oficina_id": "j-s-silva",
       "ano": 2026,
       "semana": 28,
-      "pecas": 3345.0,
-      "minutos": 52845.15,
-      "pecas_por_minuto": 0.0633
+      "pecas": 2685.0,
+      "minutos": 40879.35,
+      "pecas_por_minuto": 0.0657
     },
     {
       "oficina_id": "j-s-silva",
@@ -13210,6 +13706,14 @@
       "pecas": 1854.0,
       "minutos": 31242.54,
       "pecas_por_minuto": 0.0593
+    },
+    {
+      "oficina_id": "j-s-silva",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 3075.0,
+      "minutos": 50984.1,
+      "pecas_por_minuto": 0.0603
     },
     {
       "oficina_id": "jakeline-f-de-azevedo",
@@ -13452,6 +13956,22 @@
       "pecas_por_minuto": 0.0751
     },
     {
+      "oficina_id": "jakeline-f-de-azevedo",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2495.0,
+      "minutos": 55389.0,
+      "pecas_por_minuto": 0.045
+    },
+    {
+      "oficina_id": "jakeline-f-de-azevedo",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1428.0,
+      "minutos": 27588.96,
+      "pecas_por_minuto": 0.0518
+    },
+    {
       "oficina_id": "januncio-nobrega-de-azevedo",
       "ano": 2026,
       "semana": 3,
@@ -13666,6 +14186,22 @@
       "pecas": 2890.0,
       "minutos": 66271.0,
       "pecas_por_minuto": 0.0436
+    },
+    {
+      "oficina_id": "januncio-nobrega-de-azevedo",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 3128.0,
+      "minutos": 56998.17,
+      "pecas_por_minuto": 0.0549
+    },
+    {
+      "oficina_id": "januncio-nobrega-de-azevedo",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1325.0,
+      "minutos": 30316.0,
+      "pecas_por_minuto": 0.0437
     },
     {
       "oficina_id": "jk-industria-textil",
@@ -14108,6 +14644,14 @@
       "pecas_por_minuto": 0.2217
     },
     {
+      "oficina_id": "joli-textil-servicos-e-comercio",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 5546.0,
+      "minutos": 25755.4,
+      "pecas_por_minuto": 0.2153
+    },
+    {
       "oficina_id": "jose-medeiros-de-araujo",
       "ano": 2026,
       "semana": 3,
@@ -14362,6 +14906,22 @@
       "pecas": 6339.0,
       "minutos": 83517.79,
       "pecas_por_minuto": 0.0759
+    },
+    {
+      "oficina_id": "jose-medeiros-de-araujo",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 7813.0,
+      "minutos": 126131.71,
+      "pecas_por_minuto": 0.0619
+    },
+    {
+      "oficina_id": "jose-medeiros-de-araujo",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 870.0,
+      "minutos": 4532.7,
+      "pecas_por_minuto": 0.1919
     },
     {
       "oficina_id": "joseni-maria-de-medeiros",
@@ -14623,9 +15183,17 @@
       "oficina_id": "joseni-maria-de-medeiros",
       "ano": 2026,
       "semana": 35,
-      "pecas": 1782.0,
-      "minutos": 5666.76,
-      "pecas_por_minuto": 0.3145
+      "pecas": 9684.0,
+      "minutos": 96798.9,
+      "pecas_por_minuto": 0.1
+    },
+    {
+      "oficina_id": "joseni-maria-de-medeiros",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 3242.0,
+      "minutos": 32332.66,
+      "pecas_por_minuto": 0.1003
     },
     {
       "oficina_id": "jucurutu-textil",
@@ -14882,6 +15450,14 @@
       "pecas": 1260.0,
       "minutos": 20563.2,
       "pecas_por_minuto": 0.0613
+    },
+    {
+      "oficina_id": "jucurutu-textil",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 3452.0,
+      "minutos": 53243.44,
+      "pecas_por_minuto": 0.0648
     },
     {
       "oficina_id": "ksw-confeccoes",
@@ -15364,6 +15940,14 @@
       "pecas_por_minuto": 0.0556
     },
     {
+      "oficina_id": "lajedo-jeans-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1691.0,
+      "minutos": 34590.17,
+      "pecas_por_minuto": 0.0489
+    },
+    {
       "oficina_id": "lc-textil",
       "ano": 2026,
       "semana": 2,
@@ -15623,9 +16207,17 @@
       "oficina_id": "lc-textil",
       "ano": 2026,
       "semana": 35,
-      "pecas": 1420.0,
-      "minutos": 5367.6,
-      "pecas_por_minuto": 0.2646
+      "pecas": 5423.0,
+      "minutos": 20053.29,
+      "pecas_por_minuto": 0.2704
+    },
+    {
+      "oficina_id": "lc-textil",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 3734.0,
+      "minutos": 16103.38,
+      "pecas_por_minuto": 0.2319
     },
     {
       "oficina_id": "ld-confeccoes",
@@ -15794,6 +16386,14 @@
       "pecas": 1040.0,
       "minutos": 18782.4,
       "pecas_por_minuto": 0.0554
+    },
+    {
+      "oficina_id": "ld-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2456.0,
+      "minutos": 39465.92,
+      "pecas_por_minuto": 0.0622
     },
     {
       "oficina_id": "leandro-matias-da-silva",
@@ -16042,6 +16642,14 @@
       "pecas": 2217.0,
       "minutos": 38473.0,
       "pecas_por_minuto": 0.0576
+    },
+    {
+      "oficina_id": "leandro-matias-da-silva",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1452.0,
+      "minutos": 22418.88,
+      "pecas_por_minuto": 0.0648
     },
     {
       "oficina_id": "lima-confeccoes",
@@ -16300,6 +16908,14 @@
       "pecas_por_minuto": 0.0648
     },
     {
+      "oficina_id": "lima-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1479.0,
+      "minutos": 28041.06,
+      "pecas_por_minuto": 0.0527
+    },
+    {
       "oficina_id": "linea-ind-com-ser-confeccoes",
       "ano": 2026,
       "semana": 2,
@@ -16546,6 +17162,14 @@
       "pecas": 1260.0,
       "minutos": 18698.4,
       "pecas_por_minuto": 0.0674
+    },
+    {
+      "oficina_id": "linea-ind-com-ser-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1155.0,
+      "minutos": 23128.6,
+      "pecas_por_minuto": 0.0499
     },
     {
       "oficina_id": "livia-reboucas-de-carvalho",
@@ -16810,6 +17434,14 @@
       "pecas": 2418.0,
       "minutos": 39619.62,
       "pecas_por_minuto": 0.061
+    },
+    {
+      "oficina_id": "livia-reboucas-de-carvalho",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 2.0,
+      "minutos": 34.12,
+      "pecas_por_minuto": 0.0586
     },
     {
       "oficina_id": "luiz-lupercio-da-silva-junior",
@@ -17178,6 +17810,14 @@
       "pecas": 942.0,
       "minutos": 16494.42,
       "pecas_por_minuto": 0.0571
+    },
+    {
+      "oficina_id": "m-a-vieira-de-almeida",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 4098.0,
+      "minutos": 87546.6,
+      "pecas_por_minuto": 0.0468
     },
     {
       "oficina_id": "m-c-confeccoes",
@@ -17676,6 +18316,22 @@
       "pecas_por_minuto": 0.0599
     },
     {
+      "oficina_id": "m-dalison-de-medeiros",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1215.0,
+      "minutos": 21578.4,
+      "pecas_por_minuto": 0.0563
+    },
+    {
+      "oficina_id": "m-dalison-de-medeiros",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 868.0,
+      "minutos": 15676.08,
+      "pecas_por_minuto": 0.0554
+    },
+    {
       "oficina_id": "m-f-empreendimentos",
       "ano": 2026,
       "semana": 2,
@@ -17930,6 +18586,22 @@
       "pecas": 2689.0,
       "minutos": 48929.14,
       "pecas_por_minuto": 0.055
+    },
+    {
+      "oficina_id": "m-f-empreendimentos",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1823.0,
+      "minutos": 31920.73,
+      "pecas_por_minuto": 0.0571
+    },
+    {
+      "oficina_id": "m-f-empreendimentos",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1075.0,
+      "minutos": 16834.5,
+      "pecas_por_minuto": 0.0639
     },
     {
       "oficina_id": "m-k-de-azevedo-medeiros-industria-textil",
@@ -18196,6 +18868,14 @@
       "pecas_por_minuto": 0.0718
     },
     {
+      "oficina_id": "m-k-de-azevedo-medeiros-industria-textil",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1302.0,
+      "minutos": 17537.94,
+      "pecas_por_minuto": 0.0742
+    },
+    {
       "oficina_id": "m-k-industria-textil",
       "ano": 2026,
       "semana": 5,
@@ -18418,6 +19098,14 @@
       "pecas": 1581.0,
       "minutos": 25422.48,
       "pecas_por_minuto": 0.0622
+    },
+    {
+      "oficina_id": "m-k-industria-textil",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 3560.0,
+      "minutos": 62114.49,
+      "pecas_por_minuto": 0.0573
     },
     {
       "oficina_id": "mansour-dantas-confeccoes",
@@ -18674,6 +19362,14 @@
       "pecas": 7163.0,
       "minutos": 35395.37,
       "pecas_por_minuto": 0.2024
+    },
+    {
+      "oficina_id": "mansour-dantas-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 8308.0,
+      "minutos": 39608.75,
+      "pecas_por_minuto": 0.2098
     },
     {
       "oficina_id": "marionete-m-de-a-camara",
@@ -19132,6 +19828,14 @@
       "pecas_por_minuto": 0.1425
     },
     {
+      "oficina_id": "maxwela-araujo-silva",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2309.0,
+      "minutos": 15562.66,
+      "pecas_por_minuto": 0.1484
+    },
+    {
       "oficina_id": "n-s-constantino",
       "ano": 2026,
       "semana": 3,
@@ -19383,9 +20087,17 @@
       "oficina_id": "n-s-constantino",
       "ano": 2026,
       "semana": 35,
-      "pecas": 5266.0,
-      "minutos": 63688.2,
-      "pecas_por_minuto": 0.0827
+      "pecas": 6618.0,
+      "minutos": 92699.77,
+      "pecas_por_minuto": 0.0714
+    },
+    {
+      "oficina_id": "n-s-constantino",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 2458.0,
+      "minutos": 14140.26,
+      "pecas_por_minuto": 0.1738
     },
     {
       "oficina_id": "noel-pereira-de-azevedo-confeccao",
@@ -19636,6 +20348,22 @@
       "pecas_por_minuto": 0.0502
     },
     {
+      "oficina_id": "noel-pereira-de-azevedo-confeccao",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 3157.0,
+      "minutos": 36595.65,
+      "pecas_por_minuto": 0.0863
+    },
+    {
+      "oficina_id": "noel-pereira-de-azevedo-confeccao",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1462.0,
+      "minutos": 19693.14,
+      "pecas_por_minuto": 0.0742
+    },
+    {
       "oficina_id": "nova-confeccoes",
       "ano": 2026,
       "semana": 1,
@@ -19882,6 +20610,22 @@
       "pecas": 1853.0,
       "minutos": 37192.1,
       "pecas_por_minuto": 0.0498
+    },
+    {
+      "oficina_id": "nova-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2269.0,
+      "minutos": 50371.8,
+      "pecas_por_minuto": 0.045
+    },
+    {
+      "oficina_id": "nova-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 894.0,
+      "minutos": 17075.4,
+      "pecas_por_minuto": 0.0524
     },
     {
       "oficina_id": "oficina-de-costura-santos",
@@ -20148,6 +20892,14 @@
       "pecas_por_minuto": 0.0535
     },
     {
+      "oficina_id": "oficina-de-costura-santos",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1979.0,
+      "minutos": 33546.64,
+      "pecas_por_minuto": 0.059
+    },
+    {
       "oficina_id": "p-a-confeccoes",
       "ano": 2026,
       "semana": 3,
@@ -20404,6 +21156,22 @@
       "pecas_por_minuto": 0.0611
     },
     {
+      "oficina_id": "p-a-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1786.0,
+      "minutos": 37418.4,
+      "pecas_por_minuto": 0.0477
+    },
+    {
+      "oficina_id": "p-a-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1012.0,
+      "minutos": 20229.88,
+      "pecas_por_minuto": 0.05
+    },
+    {
       "oficina_id": "p-a-viturino-servicos-e-confeccoes",
       "ano": 2026,
       "semana": 11,
@@ -20591,9 +21359,17 @@
       "oficina_id": "p-a-viturino-servicos-e-confeccoes",
       "ano": 2026,
       "semana": 35,
-      "pecas": 2433.0,
-      "minutos": 11313.45,
-      "pecas_por_minuto": 0.2151
+      "pecas": 4129.0,
+      "minutos": 17317.97,
+      "pecas_por_minuto": 0.2384
+    },
+    {
+      "oficina_id": "p-a-viturino-servicos-e-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1952.0,
+      "minutos": 7320.0,
+      "pecas_por_minuto": 0.2667
     },
     {
       "oficina_id": "pedro-e-odair-confeccoes",
@@ -20762,6 +21538,22 @@
       "pecas": 1278.0,
       "minutos": 23515.2,
       "pecas_por_minuto": 0.0543
+    },
+    {
+      "oficina_id": "pedro-e-odair-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1754.0,
+      "minutos": 27081.76,
+      "pecas_por_minuto": 0.0648
+    },
+    {
+      "oficina_id": "pedro-e-odair-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1326.0,
+      "minutos": 21322.08,
+      "pecas_por_minuto": 0.0622
     },
     {
       "oficina_id": "poest-industria-comercio-vestuario",
@@ -20986,6 +21778,22 @@
       "pecas": 1553.0,
       "minutos": 27592.88,
       "pecas_por_minuto": 0.0563
+    },
+    {
+      "oficina_id": "poest-industria-comercio-vestuario",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 860.0,
+      "minutos": 15824.0,
+      "pecas_por_minuto": 0.0543
+    },
+    {
+      "oficina_id": "poest-industria-comercio-vestuario",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1605.0,
+      "minutos": 25808.4,
+      "pecas_por_minuto": 0.0622
     },
     {
       "oficina_id": "potengi-textil",
@@ -21252,6 +22060,22 @@
       "pecas_por_minuto": 0.1263
     },
     {
+      "oficina_id": "potengi-textil",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 9252.0,
+      "minutos": 77074.8,
+      "pecas_por_minuto": 0.12
+    },
+    {
+      "oficina_id": "potengi-textil",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 2474.0,
+      "minutos": 16175.24,
+      "pecas_por_minuto": 0.1529
+    },
+    {
       "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
       "ano": 2026,
       "semana": 2,
@@ -21500,6 +22324,14 @@
       "pecas_por_minuto": 0.0508
     },
     {
+      "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 3872.0,
+      "minutos": 69081.57,
+      "pecas_por_minuto": 0.056
+    },
+    {
       "oficina_id": "serrana-textil",
       "ano": 2026,
       "semana": 18,
@@ -21634,6 +22466,14 @@
       "pecas": 4255.0,
       "minutos": 38975.8,
       "pecas_por_minuto": 0.1092
+    },
+    {
+      "oficina_id": "serrana-textil",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 5085.0,
+      "minutos": 37627.02,
+      "pecas_por_minuto": 0.1351
     },
     {
       "oficina_id": "solis-confeccoes",
@@ -21903,9 +22743,17 @@
       "oficina_id": "solis-confeccoes",
       "ano": 2026,
       "semana": 35,
-      "pecas": 1144.0,
-      "minutos": 6177.6,
-      "pecas_por_minuto": 0.1852
+      "pecas": 7864.0,
+      "minutos": 41529.0,
+      "pecas_por_minuto": 0.1894
+    },
+    {
+      "oficina_id": "solis-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1116.0,
+      "minutos": 5814.36,
+      "pecas_por_minuto": 0.1919
     },
     {
       "oficina_id": "soly-brasil",
@@ -22167,8 +23015,8 @@
       "oficina_id": "soly-brasil",
       "ano": 2026,
       "semana": 35,
-      "pecas": 720.0,
-      "minutos": 3888.0,
+      "pecas": 3210.0,
+      "minutos": 17334.0,
       "pecas_por_minuto": 0.1852
     },
     {
@@ -22410,6 +23258,14 @@
       "pecas": 2178.0,
       "minutos": 14679.72,
       "pecas_por_minuto": 0.1484
+    },
+    {
+      "oficina_id": "tece-costuras-e-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 3145.0,
+      "minutos": 21201.46,
+      "pecas_por_minuto": 0.1483
     },
     {
       "oficina_id": "tendencia-confeccoes",
@@ -22660,6 +23516,22 @@
       "pecas_por_minuto": 0.0952
     },
     {
+      "oficina_id": "tendencia-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1546.0,
+      "minutos": 29621.36,
+      "pecas_por_minuto": 0.0522
+    },
+    {
+      "oficina_id": "tendencia-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 5067.0,
+      "minutos": 26153.7,
+      "pecas_por_minuto": 0.1937
+    },
+    {
       "oficina_id": "tropicalliz-confeccoes",
       "ano": 2026,
       "semana": 15,
@@ -22818,6 +23690,22 @@
       "pecas": 3619.0,
       "minutos": 58058.88,
       "pecas_por_minuto": 0.0623
+    },
+    {
+      "oficina_id": "tropicalliz-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 3901.0,
+      "minutos": 50553.22,
+      "pecas_por_minuto": 0.0772
+    },
+    {
+      "oficina_id": "tropicalliz-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1109.0,
+      "minutos": 30486.41,
+      "pecas_por_minuto": 0.0364
     },
     {
       "oficina_id": "uniao-confeccoes",
@@ -23066,6 +23954,22 @@
       "pecas": 682.0,
       "minutos": 14335.64,
       "pecas_por_minuto": 0.0476
+    },
+    {
+      "oficina_id": "uniao-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 1586.0,
+      "minutos": 32243.38,
+      "pecas_por_minuto": 0.0492
+    },
+    {
+      "oficina_id": "uniao-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1833.0,
+      "minutos": 28664.16,
+      "pecas_por_minuto": 0.0639
     },
     {
       "oficina_id": "vitalize-confeccoes",
@@ -23340,6 +24244,22 @@
       "pecas_por_minuto": 0.1744
     },
     {
+      "oficina_id": "vitalize-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 4241.0,
+      "minutos": 26228.65,
+      "pecas_por_minuto": 0.1617
+    },
+    {
+      "oficina_id": "vitalize-confeccoes",
+      "ano": 2026,
+      "semana": 36,
+      "pecas": 1762.0,
+      "minutos": 10977.26,
+      "pecas_por_minuto": 0.1605
+    },
+    {
       "oficina_id": "w-a-2-confeccoes",
       "ano": 2026,
       "semana": 2,
@@ -23586,6 +24506,14 @@
       "pecas": 2646.0,
       "minutos": 49533.12,
       "pecas_por_minuto": 0.0534
+    },
+    {
+      "oficina_id": "w-a-2-confeccoes",
+      "ano": 2026,
+      "semana": 35,
+      "pecas": 2487.0,
+      "minutos": 41704.26,
+      "pecas_por_minuto": 0.0596
     }
   ]
 }

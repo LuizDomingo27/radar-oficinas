@@ -1,6 +1,6 @@
 {
-  "gerado_em": "2026-08-27T09:41:33+00:00",
-  "total": 18,
+  "gerado_em": "2026-09-02T22:12:07+00:00",
+  "total": 15,
   "meta": {
     "janela": "anual; ano do treino excluído como buffer (carência)",
     "tratamento_sem_dado": "linha mantida com status sem_pre/sem_pos/sem_dado"
@@ -129,12 +129,12 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "n_treinadas": 43,
-      "n_delta_treinadas": 27,
-      "delta_medio_treinadas": 0.01,
-      "n_controle": 57,
-      "delta_medio_controle": 0.0243,
-      "dif_em_dif": -0.0143,
-      "status": "ok"
+      "n_delta_treinadas": 0,
+      "delta_medio_treinadas": null,
+      "n_controle": 0,
+      "delta_medio_controle": null,
+      "dif_em_dif": null,
+      "status": "sem_pre"
     },
     {
       "modulo": "Costura e Mecânica",
@@ -168,12 +168,12 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "n_treinadas": 9,
-      "n_delta_treinadas": 7,
-      "delta_medio_treinadas": -0.0087,
-      "n_controle": 57,
-      "delta_medio_controle": 0.0243,
-      "dif_em_dif": -0.033,
-      "status": "ok"
+      "n_delta_treinadas": 0,
+      "delta_medio_treinadas": null,
+      "n_controle": 0,
+      "delta_medio_controle": null,
+      "dif_em_dif": null,
+      "status": "sem_pre"
     },
     {
       "modulo": "TOC",
@@ -200,45 +200,6 @@
       "delta_medio_controle": null,
       "dif_em_dif": null,
       "status": "sem_pre"
-    },
-    {
-      "modulo": "Lidera+ Gestão de Pessoas",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "n_treinadas": 67,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_pos"
-    },
-    {
-      "modulo": "Lidera+ Gestão de Pessoas",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "n_treinadas": 67,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_dado"
-    },
-    {
-      "modulo": "Lidera+ Gestão de Pessoas",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "n_treinadas": 67,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_dado"
     }
   ]
 }
