@@ -56,14 +56,25 @@ class TestNomeCanonicoUpload(unittest.TestCase):
             config.nome_canonico_upload("Histórico de Atendimento EP.xlsx"),
             config.TREINO_EP.arquivo)
 
+    def test_ep_2025(self):
+        self.assertEqual(
+            config.nome_canonico_upload("EP 2025 atualizada.xlsx"),
+            config.TREINO_EP2025_CM.arquivo)
+
+    def test_ep_2025_nao_colide_com_atendimento_ep(self):
+        # "Atendimento EP" tem "ep" mas não "2025": continua no histórico antigo.
+        self.assertEqual(
+            config.nome_canonico_upload("Histórico de Atendimento EP.xlsx"),
+            config.TREINO_EP.arquivo)
+
     def test_sem_correspondencia_retorna_none(self):
         self.assertIsNone(config.nome_canonico_upload("planilha aleatoria.xlsx"))
 
 
 class TestArquivosEsperados(unittest.TestCase):
-    def test_cobre_sete_fontes_distintas(self):
-        self.assertEqual(len(config.ARQUIVOS_ESPERADOS), 7)
-        self.assertEqual(len(set(config.ARQUIVOS_ESPERADOS)), 7)
+    def test_cobre_oito_fontes_distintas(self):
+        self.assertEqual(len(config.ARQUIVOS_ESPERADOS), 8)
+        self.assertEqual(len(set(config.ARQUIVOS_ESPERADOS)), 8)
 
     def test_toda_regra_aponta_para_arquivo_esperado(self):
         for _tokens, canonico in config.REGRAS_UPLOAD:

@@ -2,7 +2,7 @@
 a-a-pereira-limitada;A A PEREIRA LIMITADA;absenteismo|treino;;nao;;A A PEREIRA LIMITADA
 a-de-m-dias-alves-limitada;A DE M DIAS ALVES LIMITADA;absenteismo|eficiencia|producao;;nao;;A DE M DIAS ALVES LIMITADA
 a-maria-dos-santos-silva-faccao;A MARIA DOS SANTOS SILVA FACCAO;absenteismo|producao|treino;;nao;;A MARIA DOS SANTOS SILVA FACCAO | A MARIA DOS SANTOS SILVA FACÇÃO - ME | A. Maria dos Santos Silva Facção
-a-s-confeccoes;A S CONFECCOES LTDA;absenteismo|eficiencia|producao|treino;;sim;Possível duplicata de 'ASA CONFECCOES LTDA - ME' (93%);A S CONFECCOES LTDA
+a-s-confeccoes;A S CONFECCOES LTDA;absenteismo|eficiencia|producao|treino;BASICO|ELABORADO;sim;Possível duplicata de 'ASA CONFECCOES LTDA - ME' (93%);A S CONFECCOES LTDA | A S CONFECCOES LTDA BÁSICO | A S CONFECCOES LTDA ELABORADO
 a-x-da-penha-filho;A X DA PENHA FILHO LTDA;absenteismo|eficiencia|producao;;nao;;A X DA PENHA FILHO LTDA
 a-n-de-azevedo-medeiros;A. N. DE AZEVEDO MEDEIROS;treino;;nao;;A. N. DE AZEVEDO MEDEIROS
 a-s-empreendimentos;A. S. EMPREENDIMENTOS LTDA;absenteismo|eficiencia|producao|treino;;nao;;A. S. EMPREENDIMENTOS LTDA | A. S. Empreendimentos
@@ -14,34 +14,34 @@ alanis-queiroz;ALANIS QUEIROZ LTDA;absenteismo|eficiencia|producao|treino;;nao;;
 alanis-santos;ALANIS SANTOS LTDA;absenteismo|eficiencia|producao;;nao;;ALANIS SANTOS LTDA
 alianca-confeccoes;ALIANCA CONFECCOES LTDA;absenteismo|treino;;nao;;ALIANCA CONFECCOES LTDA | aliança confecções
 aline-rodrigues-de-lima-araujo;ALINE RODRIGUES DE LIMA ARAUJO;absenteismo|eficiencia|producao|treino;;nao;;ALINE RODRIGUES DE LIMA ARAUJO | Aline Rodrigues de Lima Araújo - ME
-alves-trindade-confeccoes;ALVES & TRINDADE CONFECCOES LTDA;treino;;nao;;ALVES & TRINDADE CONFECCOES LTDA
+alves-trindade-confeccoes;ALVES & TRINDADE CONFECCOES LTDA - ME;absenteismo|treino;;nao;;ALVES & TRINDADE CONFECCOES LTDA | ALVES & TRINDADE CONFECCOES LTDA - ME
 alves-confeccoes-limitada;ALVES CONFECCOES LIMITADA;absenteismo|eficiencia|producao;;nao;;ALVES CONFECCOES LIMITADA
 amorim-pedro-confeccoes;AMORIM & PEDRO CONFECCOES LTDA - ME;absenteismo|eficiencia|producao|treino;;nao;;AMORIM & PEDRO CONFECCOES LTDA | AMORIM & PEDRO CONFECCOES LTDA - ME
 amorim-e-pedro;AMORIM E PEDRO;treino;;nao;;AMORIM E PEDRO
 antonio-igor-dantas-de-souza;ANTONIO IGOR DANTAS DE SOUZA;absenteismo|eficiencia|producao;;nao;;ANTONIO IGOR DANTAS DE SOUZA
-arara-confeccoes;ARARA CONFECCOES LTDA;treino;;nao;;ARARA CONFECCOES LTDA
 araujo-camara;ARAUJO & CAMARA LTDA;absenteismo|eficiencia|producao|treino;;nao;;ARAUJO & CAMARA LTDA | ARAUJO CAMARA LTDA
 araujo-e-m-confeccoes;ARAUJO E M CONFECCOES EIRELI;absenteismo|eficiencia|producao|treino;;nao;;ARAUJO E M CONFECCOES EIRELI | ARAUJO E M CONFECCOES LTDA | Araujo E M Confeccoes Ltda
 arca-fabril-industria-de-vestuario;ARCA FABRIL INDUSTRIA DE VESTUARIO LTDA;absenteismo|treino;;nao;;ARCA FABRIL INDUSTRIA DE VESTUARIO LTDA
 asa-confeccoes;ASA CONFECCOES LTDA - ME;absenteismo|eficiencia|producao;;sim;Possível duplicata de 'A S CONFECCOES LTDA' (93%);ASA CONFECCOES LTDA - ME
+arara-confeccoes;Arara confeccoes Ltda;absenteismo|treino;;nao;;ARARA CONFECCOES LTDA | Arara confeccoes Ltda
 b-n-silva-confeccoes;B&N SILVA CONFECCOES LTDA;absenteismo|eficiencia|producao|treino;;nao;;B & N SILVA CONFECCOES LTDA | B&N SILVA CONFECCOES LTDA
 cabugi-confeccoes;CABUGI CONFECCOES LTDA.;absenteismo|eficiencia|producao;;nao;;CABUGI CONFECCOES LTDA.
 cabugi-ind-e-com-de-confeccoes;CABUGI IND. E COM. DE CONFECÇÕES LTDA.;treino;;nao;;CABUGI IND. E COM. DE CONFECÇÕES LTDA.
 cabugi-industria-e-comercio-de-confeccoes;CABUGI INDUSTRIA E COMERCIO DE CONFECCOES LTDA;treino;;nao;;CABUGI INDUSTRIA E COMERCIO DE CONFECCOES LTDA
 cabugi-industria-com-confeccoes;CABUGI INDÚSTRIA COM. CONFECÇÕES EIRELI;treino;;nao;;CABUGI INDÚSTRIA COM. CONFECÇÕES EIRELI
-canaa-companhia-textil;CANAA COMPANHIA TEXTIL LTDA;treino;;nao;;CANAA COMPANHIA TEXTIL LTDA
+canaa-companhia-textil;CANAA COMPANHIA TEXTIL LTDA - ME;absenteismo|treino;;nao;;CANAA COMPANHIA TEXTIL LTDA | CANAA COMPANHIA TEXTIL LTDA - ME
 clara-a-de-medeiros-leite;CLARA A DE MEDEIROS LEITE;absenteismo|eficiencia|producao|treino;;nao;;CLARA A DE MEDEIROS LEITE
 comart-cooperativa-das-maos-artesan;COMART COOPERATIVA DAS MAOS ARTESAN;producao;;nao;;COMART COOPERATIVA DAS MAOS ARTESAN
 confeccao-g-b-da-s-junior;CONFECCAO G. B. DA S. JUNIOR & CIA LTDA;absenteismo|eficiencia|producao;;sim;Possível duplicata de 'CONFECCAO G. B. DA SILVA JUNIOR & CIA LTDA' (93%);CONFECCAO G. B. DA S. JUNIOR & CIA LTDA
 confeccao-g-b-da-silva-junior;CONFECCAO G. B. DA SILVA JUNIOR & CIA LTDA;treino;;sim;Possível duplicata de 'CONFECCAO G. B. DA S. JUNIOR & CIA LTDA' (93%);CONFECCAO G. B. DA SILVA JUNIOR & CIA LTDA
-confeccoes-f-sales;CONFECCOES F SALES CIA LTDA;treino;;nao;;CONFECCOES F SALES CIA LTDA
+confeccoes-f-sales;CONFECCOES F SALES CIA LTDA;absenteismo|treino;;nao;;CONFECCOES F SALES CIA LTDA
 confeccoes-franoelda-m-m-araujo;CONFECCOES FRANOELDA M. M. ARAUJO EIRELI;absenteismo|eficiencia|producao;;nao;;CONFECCOES FRANOELDA M. M. ARAUJO EIRELI
 confeccoes-franoelda-magneuda-de-medeiros-araujo;CONFECCOES FRANOELDA MAGNEUDA DE MEDEIROS ARAUJO LTDA;treino;;nao;;CONFECCOES FRANOELDA MAGNEUDA DE MEDEIROS ARAUJO LTDA
 confeccoes-genesis;CONFECCOES GENESIS LTDA ME;absenteismo|eficiencia|producao|treino;POLO|TEAR;nao;;CONFECCOES GENESIS LTDA | CONFECCOES GENESIS LTDA ME | CONFECCOES GENESIS LTDA ME POLO | CONFECCOES GENESIS LTDA ME TEAR
 confeccoes-j-s;CONFECCOES J.S. LTDA;absenteismo|eficiencia|producao|treino;;sim;Possível duplicata de 'Confecções JS Ltda' (96%);CONFECCOES J. S. LTDA | CONFECCOES J.S. LTDA
 confeccao-sao-sebastiao;CONFECÇÃO SÃO SEBASTIÃO LTDA;absenteismo|eficiencia|producao;;nao;;CONFECÇÃO SÃO SEBASTIÃO LTDA
-confianca-industria-textil;CONFIANCA INDUSTRIA TEXTIL LTDA;treino;;nao;;CONFIANCA INDUSTRIA TEXTIL LTDA
-conquista-empreendimentos;CONQUISTA EMPREENDIMENTOS LTDA;treino;;nao;;CONQUISTA EMPREENDIMENTOS LTDA
+confianca-industria-textil;CONFIANCA INDUSTRIA TEXTIL LTDA;absenteismo|treino;;nao;;CONFIANCA INDUSTRIA TEXTIL LTDA
+conquista-empreendimentos;CONQUISTA EMPREENDIMENTOS LTDA - ME;absenteismo|treino;;nao;;CONQUISTA EMPREENDIMENTOS LTDA | CONQUISTA EMPREENDIMENTOS LTDA - ME
 confeccoes-dona-dina;Confecções Dona Dina;treino;;nao;;Confecções Dona Dina
 confeccoes-js;Confecções JS Ltda;treino;;sim;Possível duplicata de 'CONFECCOES J.S. LTDA' (96%);Confecções JS Ltda
 danjan-confeccoes;DANJAN CONFECCOES LTDA;absenteismo|eficiencia|producao|treino;;nao;;DANJAN CONFECCOES LTDA | DANJAN CONFECÇÕES LTDA | danjan confecções Ltda me
@@ -70,12 +70,14 @@ fios-do-sertao;FIOS DO SERTÃO LTDA;absenteismo|eficiencia|producao;FILIAL;nao;;
 flavia-georgia-b-silva-confeccoes;FLAVIA GEORGIA B SILVA CONFECCOES EIRELI;absenteismo|eficiencia|producao;;sim;Possível duplicata de 'FLAVIA GEORGIA BRAGA SILVA CONFECCOES LTDA' (94%);FLAVIA GEORGIA B SILVA CONFECCOES EIRELI
 flavia-georgia-braga-silva;FLAVIA GEORGIA BRAGA SILVA - ME;treino;;nao;;FLAVIA GEORGIA BRAGA SILVA - ME
 flavia-georgia-braga-silva-confeccoes;FLAVIA GEORGIA BRAGA SILVA CONFECCOES LTDA;treino;;sim;Possível duplicata de 'FLAVIA GEORGIA B SILVA CONFECCOES EIRELI' (94%);FLAVIA GEORGIA BRAGA SILVA CONFECCOES LTDA
-fortaleza-industria-de-vestuario;FORTALEZA INDUSTRIA DE VESTUARIO LTDA;treino;;nao;;FORTALEZA INDUSTRIA DE VESTUARIO LTDA
+fortaleza-industria-de-vestuario;FORTALEZA INDUSTRIA DE VESTUARIO LTDA;absenteismo|treino;;nao;;FORTALEZA INDUSTRIA DE VESTUARIO LTDA
 forte-fortex-producao-textil;FORTE FORTEX PRODUÇÃO TEXTIL;absenteismo|eficiencia|producao;TEAR;nao;;FORTE FORTEX PRODUÇÃO TEXTIL | FORTE FORTEX PRODUÇÃO TEXTIL TEAR
+francisco-edson-da-s-confeccoes;FRANCISCO EDSON DA S. CONFECCOES - EPP;absenteismo;;nao;;FRANCISCO EDSON DA S. CONFECCOES - EPP
 freire-silva-confeccoes;FREIRE SILVA CONFECÇÕES LTDA;absenteismo|eficiencia|producao;POLO;nao;;FREIRE SILVA CONFECÇÕES LTDA | FREIRE SILVA CONFECÇÕES LTDA POLO
 faccao-f-sales;Faccao F Sales;treino;;nao;;Faccao F Sales
 fsilva-confeccoes;Fsilva Confecções;treino;;sim;Possível duplicata de 'F SILVA CONFECÇÕES LTDA' (97%);Fsilva Confecções
 g-c-empreendimentos-textil;G&C EMPREENDIMENTOS TEXTIL LTDA;absenteismo|eficiencia|producao|treino;;nao;;G&C EMPREENDIMENTOS TEXTIL LTDA
+g-l-j-l-confeccoes;G. L. J. L. CONFECCÕES LTDA;absenteismo;;nao;;G. L. J. L. CONFECCÕES LTDA
 g4-industria-e-comercio-do-vestuario;G4 INDUSTRIA E COMERCIO DO VESTUARIO LTDA;absenteismo|eficiencia|producao;;nao;;G4 INDUSTRIA E COMERCIO DO VESTUARIO LTDA
 geferson-alan-dos-santos-silva;GEFERSON ALAN DOS SANTOS SILVA;absenteismo|eficiencia|producao|treino;;nao;;GEFERSON ALAN DOS SANTOS SILVA
 helio-araujo-araujo-ind-de-conf;HELIO ARAUJO & ARAUJO IND. DE CONF. LTDA;absenteismo|treino;;nao;;HELIO ARAUJO & ARAUJO IND. DE CONF. LTDA
@@ -91,13 +93,14 @@ ivanildo-jose-de-sousa;IVANILDO JOSE DE SOUSA - ME;absenteismo|eficiencia|produc
 ivanildo-jose-de-souza;IVANILDO JOSE DE SOUZA;treino;;sim;Possível duplicata de 'IVANILDO JOSE DE SOUSA - ME' (95%);IVANILDO JOSE DE SOUZA
 j-f-confeccoes;J F CONFECCOES LTDA;absenteismo|eficiencia|producao;;sim;Possível duplicata de 'I F CONFECCOES LTDA' (93%) / Possível duplicata de 'J M CONFECÇÕES & CIA LTDA MATRIZ' (93%);J F CONFECCOES LTDA
 j-g-industria-e-comercio;J G INDUSTRIA E COMERCIO LTDA;treino;;sim;Possível duplicata de 'M & J INDUSTRIA E COMERCIO LTDA' (92%);J G INDUSTRIA E COMERCIO LTDA
+j-geovane-p-batista-industria-textil;J GEOVANE P BATISTA INDUSTRIA TEXTIL LTDA;absenteismo;;nao;;J GEOVANE P BATISTA INDUSTRIA TEXTIL LTDA
 j-m-confeccoes;J M CONFECÇÕES & CIA LTDA MATRIZ;absenteismo|eficiencia|producao;FILIAL|MATRIZ;sim;Possível duplicata de 'J F CONFECCOES LTDA' (93%) / Possível duplicata de 'JM confecções & cia ltda - MATRIZ' (96%);J M CONFECÇÕES & CIA LTDA FILIAL | J M CONFECÇÕES & CIA LTDA MATRIZ
 j-r-c-botelho-comercial;J R C BOTELHO COMERCIAL LTDA;absenteismo|producao;;nao;;J R C BOTELHO COMERCIAL LTDA
 j-s-silva;J. S. & SILVA LTDA;absenteismo|eficiencia|producao|treino;;nao;;J S & Silva ltda | J. S. & SILVA LTDA
 jakeline-f-de-azevedo;JAKELINE F DE AZEVEDO - ME;absenteismo|eficiencia|producao|treino;;nao;;JAKELINE F DE AZEVEDO | JAKELINE F DE AZEVEDO - ME
 januncio-nobrega-de-azevedo;JANUNCIO NOBREGA DE AZEVEDO;absenteismo|eficiencia|producao|treino;;nao;;JANUNCIO NOBREGA DE AZEVEDO
 jayne-da-silva-panicio-limitada;JAYNE DA SILVA PANICIO LIMITADA;treino;;nao;;JAYNE DA SILVA PANICIO LIMITADA
-jero-confeccoes;JERO CONFECÇÕES LTDA;treino;;nao;;JERO CONFECÇÕES LTDA
+jero-confeccoes;JERO CONFECCOES LTDA;absenteismo|treino;;nao;;JERO CONFECCOES LTDA | JERO CONFECÇÕES LTDA
 jero-confeccoes-potengi-textil;JERO CONFECÇÕES/POTENGI TEXTIL;treino;;nao;;JERO CONFECÇÕES/POTENGI TEXTIL
 jg-faccao;JG FACÇÃO LTDA;treino;;nao;;JG FACÇÃO LTDA
 jk-industria-textil;JK INDUSTRIA TEXTIL LTDA;absenteismo|eficiencia|producao;;sim;Possível duplicata de 'M K INDUSTRIA TEXTIL LTDA' (92%);JK INDUSTRIA TEXTIL LTDA
@@ -116,7 +119,7 @@ lima-confeccoes;LIMA CONFECCOES LTDA-ME;absenteismo|eficiencia|producao|treino;;
 linea-ind-com-ser-confeccoes;LINEA IND. COM. SER. CONFECCOES LTDA;absenteismo|eficiencia|producao|treino;;nao;;LINEA IND. COM. SER. CONFECCOES LTDA | LINEA IND. COM. SER. CONFECÇÕES LTDA
 linea-industria-comercio-servicos-de-confeccoes;LINEA INDUSTRIA, COMERCIO & SERVICOS DE CONFECCOES LTDA;treino;;nao;;LINEA INDUSTRIA, COMERCIO & SERVICOS DE CONFECCOES LTDA
 livia-reboucas-de-carvalho;LIVIA REBOUCAS DE CARVALHO - ME;absenteismo|eficiencia|producao|treino;;nao;;LIVIA REBOUCAS DE CARVALHO | LIVIA REBOUCAS DE CARVALHO - ME | Livia Rebouças de Carvalho -me
-luiz-lupercio-da-silva-junior;LUIZ LUPERCIO DA SILVA JUNIOR TEAR;absenteismo|producao|treino;TEAR;nao;;LUIZ LUPERCIO DA SILVA JUNIOR | LUIZ LUPERCIO DA SILVA JUNIOR TEAR | LUIZ LUPÉRCIO DA SILVA JUNIOR | LUIZ LUPERCIO DA SILVA JUNIOR
+luiz-lupercio-da-silva-junior;LUIZ LUPERCIO DA SILVA JUNIOR;absenteismo|producao|treino;TEAR;nao;;LUIZ LUPERCIO DA SILVA JUNIOR | LUIZ LUPERCIO DA SILVA JUNIOR TEAR | LUIZ LUPÉRCIO DA SILVA JUNIOR | LUIZ LUPERCIO DA SILVA JUNIOR
 linea-confeccoes;LÍNEA CONFECÇÕES;treino;;sim;Possível duplicata de 'LIMA CONFECCOES LTDA-ME' (90%);LÍNEA CONFECÇÕES
 m-j-industria-e-comercio;M & J INDUSTRIA E COMERCIO LTDA;treino;;sim;Possível duplicata de 'J G INDUSTRIA E COMERCIO LTDA' (92%);M & J INDUSTRIA E COMERCIO LTDA
 m-a-de-araujo-ferreira;M A DE ARAUJO FERREIRA;treino;;nao;;M A DE ARAUJO FERREIRA
@@ -146,21 +149,23 @@ pedro-e-odair-confeccoes;PEDRO E ODAIR CONFECÇÕES LTDA;absenteismo|eficiencia|
 poest-industria-comercio-vestuario;POEST INDUSTRIA COMERCIO VESTUARIO LTDA;absenteismo|eficiencia|producao|treino;;sim;Possível duplicata de 'POEST indústria e comércio de vestuário Ltda' (93%);POEST INDUSTRIA COMERCIO VESTUARIO LTDA | POEST INDÚSTRIA COMERCIO VESTUÁRIO LTDA
 poest-industria-e-comercio-de-vestuario;POEST indústria e comércio de vestuário Ltda;treino;;sim;Possível duplicata de 'POEST INDUSTRIA COMERCIO VESTUARIO LTDA' (93%);POEST INDUSTRIA E COMERCIO DE VESTUARIO LTDA | POEST indústria e comércio de vestuário Ltda
 potengi-textil;POTENGI TEXTIL LTDA;absenteismo|eficiencia|producao;POLO;nao;;POTENGI TEXTIL LTDA | POTENGI TEXTIL LTDA POLO | POTENGI TEXTIL LTDA PÓLO
-progresso-industria-do-vestuario;PROGRESSO INDUSTRIA DO VESTUARIO LTDA;treino;;nao;;PROGRESSO INDUSTRIA DO VESTUARIO LTDA
+progresso-industria-do-vestuario;PROGRESSO INDUSTRIA DO VESTUARIO LTDA;treino;;sim;Possível duplicata de 'PROGRESSO INDÚSTRIA DE VESTUÁRIO LTDA MATRIZ' (97%);PROGRESSO INDUSTRIA DO VESTUARIO LTDA
+progresso-industria-de-vestuario;PROGRESSO INDÚSTRIA DE VESTUÁRIO LTDA MATRIZ;absenteismo;FILIAL|MATRIZ;sim;Possível duplicata de 'PROGRESSO INDUSTRIA DO VESTUARIO LTDA' (97%);PROGRESSO INDÚSTRIA DE VESTUÁRIO LTDA FILIAL | PROGRESSO INDÚSTRIA DE VESTUÁRIO LTDA MATRIZ
 redencao-industria-de-vestuario;REDENCAO INDUSTRIA DE VESTUARIO LTDA;treino;;nao;;REDENCAO INDUSTRIA DE VESTUARIO LTDA
 s-ramos-de-azevedo-neto-confeccoes;S RAMOS DE AZEVEDO NETO CONFECCOES;absenteismo|eficiencia|producao|treino;;nao;;S RAMOS DE AZEVEDO NETO CONFECCOES | S RAMOS DE AZEVEDO NETO CONFECÇÕES | S Ramos de Azevedo Neto confecções
 serrana-textil;SERRANA TEXTIL LTDA;absenteismo|eficiencia|producao;;nao;;SERRANA TEXTIL LTDA
-sete-montes-empreendimentos;SETE MONTES EMPREENDIMENTOS LTDA;treino;;nao;;SETE MONTES EMPREENDIMENTOS LTDA
+sete-montes-empreendimentos;SETE MONTES EMPREENDIMENTOS LTDA;absenteismo|treino;;nao;;SETE MONTES EMPREENDIMENTOS LTDA
 solis-confeccoes;SOLIS CONFECCOES LTDA;absenteismo|eficiencia|producao|treino;POLO;nao;;SOLIS CONFECCOES LTDA | SOLIS CONFECCOES LTDA POLO
 soly-brasil;SOLY BRASIL LTDA;absenteismo|eficiencia|producao|treino;BASICO|ELABORADO;nao;;SOLY BRASIL LTDA | SOLY BRASIL LTDA - BÁSICO | SOLY BRASIL LTDA - ELABORADO | SOLY BRASIL LTDA ELABORADO
-tamareira-industria-e-comercio;TAMAREIRA INDUSTRIA E COMERCIO LTDA;treino;;nao;;TAMAREIRA INDUSTRIA E COMERCIO LTDA
+tamareira-industria-e-comercio;TAMAREIRA INDUSTRIA E COMERCIO LTDA;absenteismo|treino;;nao;;TAMAREIRA INDUSTRIA E COMERCIO LTDA
 tece-costuras-e-confeccoes;TECE COSTURAS E CONFECCOES LTDA;absenteismo|eficiencia|producao;;nao;;TECE COSTURAS E CONFECCOES LTDA
 tendencia-confeccoes;TENDENCIA CONFECCOES LTDA - ME;absenteismo|eficiencia|producao|treino;;nao;;TENDENCIA CONFECCOES LTDA - ME | TENDÊNCIA CONFECÇÕES LTDA | TENDÊNCIA CONFECÇÕES LTDA - ME
 tiago-de-souza-barbosa;TIAGO DE SOUZA BARBOSA;treino;;nao;;TIAGO DE SOUZA BARBOSA
-triunfo-confeccoes;TRIUNFO CONFECCOES LTDA;treino;;nao;;TRIUNFO CONFECCOES LTDA
+triunfo-confeccoes;TRIUNFO CONFECCOES LTDA ME;absenteismo|treino;;nao;;TRIUNFO CONFECCOES LTDA | TRIUNFO CONFECCOES LTDA ME
 tropicalliz-confeccoes;TROPICALLIZ CONFECCOES LTDA;absenteismo|eficiencia|producao;;nao;;TROPICALLIZ CONFECCOES LTDA
 tropicalliz;Tropicalliz;treino;;nao;;Tropicalliz
 uniao-confeccoes;UNIAO CONFECCOES LTDA ME;absenteismo|eficiencia|producao|treino;;nao;;UNIAO CONFECCOES LTDA ME | UNIAO CONFECÇÕES LTDA ME | União confecções
+valentino-industria-e-comercio-de-confeccoes;VALENTINO INDUSTRIA E COMERCIO DE CONFECÇÕES LTDA;absenteismo;;nao;;VALENTINO INDUSTRIA E COMERCIO DE CONFECÇÕES LTDA
 vitalize-confeccoes;VITALIZE CONFECCOES LTDA;absenteismo|eficiencia|producao|treino;;nao;;VITALIZE CONFECCOES LTDA
 w-a-2-confeccoes;W A 2 CONFECCOES LTDA;absenteismo|eficiencia|producao|treino;;nao;;W A 2 CONFECCOES LTDA
 zaja-confeccoes;Zaja Confecções;treino;;nao;;Zaja Confecções

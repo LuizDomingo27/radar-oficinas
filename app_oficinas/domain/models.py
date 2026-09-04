@@ -139,9 +139,17 @@ class FatoEficiencia(_FatoBase):
 
 @dataclass(frozen=True)
 class FatoTreino(_FatoBase):
-    """Participação de uma oficina num módulo de treinamento."""
+    """Participação de uma oficina num módulo de treinamento.
+
+    ``data_inicio``/``data_fim`` (ISO ``AAAA-MM-DD``) e ``status`` só existem nas
+    fontes com data por turma (EP 2025); nas fontes antigas (só ano/ciclo) ficam
+    ``None``. O mês do treino sai de ``periodo.mes`` (derivado do início).
+    """
 
     modulo: str
     ch: float | None
     ciclo: str | None
     polo: str | None
+    data_inicio: str | None = None
+    data_fim: str | None = None
+    status: str | None = None

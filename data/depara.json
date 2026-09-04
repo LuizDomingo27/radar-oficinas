@@ -1,10 +1,10 @@
 {
-  "gerado_em": "2026-09-02T22:09:11+00:00",
+  "gerado_em": "2026-09-03T23:46:26+00:00",
   "resumo": {
-    "oficinas": 165,
-    "precisam_revisao": 25,
+    "oficinas": 170,
+    "precisam_revisao": 27,
     "com_producao": 104,
-    "com_absenteismo": 111,
+    "com_absenteismo": 127,
     "com_eficiencia": 95,
     "com_treino": 123,
     "cobertura_3_metricas": 95
@@ -59,6 +59,7 @@
       "nome_canonico": "A MARIA DOS SANTOS SILVA FACCAO",
       "nome_base": "A MARIA DOS SANTOS SILVA FACCAO",
       "fontes": [
+        "ep2025_cm",
         "postos",
         "recebimento",
         "treino_ep"
@@ -95,15 +96,20 @@
         "producao",
         "treino"
       ],
-      "unidades": [],
+      "unidades": [
+        "BASICO",
+        "ELABORADO"
+      ],
       "precisa_revisao": true,
       "revisao": [
         "Possível duplicata de 'ASA CONFECCOES LTDA - ME' (93%)"
       ],
       "variantes": [
-        "A S CONFECCOES LTDA"
+        "A S CONFECCOES LTDA",
+        "A S CONFECCOES LTDA BÁSICO",
+        "A S CONFECCOES LTDA ELABORADO"
       ],
-      "qtd_variantes": 1
+      "qtd_variantes": 3
     },
     {
       "oficina_id": "a-x-da-penha-filho",
@@ -111,7 +117,6 @@
       "nome_base": "A X DA PENHA FILHO",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -151,6 +156,8 @@
       "nome_canonico": "A. S. EMPREENDIMENTOS LTDA",
       "nome_base": "A S EMPREENDIMENTOS",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -177,6 +184,7 @@
       "nome_canonico": "ACARI TÊXTIL LTDA",
       "nome_base": "ACARI TEXTIL",
       "fontes": [
+        "ep2025_cm",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -204,7 +212,6 @@
       "nome_base": "ACAUA CONFECCOES",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -250,10 +257,11 @@
       "nome_canonico": "AJG CONFECÇÕES LTDA",
       "nome_base": "AJG CONFECCOES",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "estoque_jeans",
         "estoque_jeans_aux",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -277,8 +285,8 @@
       "nome_canonico": "ALANIS QUEIROZ LTDA",
       "nome_base": "ALANIS QUEIROZ",
       "fontes": [
+        "ep2025_cm",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -303,7 +311,6 @@
       "nome_base": "ALANIS SANTOS",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -325,6 +332,7 @@
       "nome_canonico": "ALIANCA CONFECCOES LTDA",
       "nome_base": "ALIANCA CONFECCOES",
       "fontes": [
+        "ep2025_cm",
         "postos",
         "treino_ep"
       ],
@@ -346,8 +354,8 @@
       "nome_canonico": "ALINE RODRIGUES DE LIMA ARAUJO",
       "nome_base": "ALINE RODRIGUES DE LIMA ARAUJO",
       "fontes": [
+        "ep2025_cm",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -369,21 +377,24 @@
     },
     {
       "oficina_id": "alves-trindade-confeccoes",
-      "nome_canonico": "ALVES & TRINDADE CONFECCOES LTDA",
+      "nome_canonico": "ALVES & TRINDADE CONFECCOES LTDA - ME",
       "nome_base": "ALVES TRINDADE CONFECCOES",
       "fontes": [
+        "postos",
         "treino_ep"
       ],
       "papeis": [
+        "absenteismo",
         "treino"
       ],
       "unidades": [],
       "precisa_revisao": false,
       "revisao": [],
       "variantes": [
-        "ALVES & TRINDADE CONFECCOES LTDA"
+        "ALVES & TRINDADE CONFECCOES LTDA",
+        "ALVES & TRINDADE CONFECCOES LTDA - ME"
       ],
-      "qtd_variantes": 1
+      "qtd_variantes": 2
     },
     {
       "oficina_id": "alves-confeccoes-limitada",
@@ -439,6 +450,7 @@
       "nome_canonico": "AMORIM E PEDRO",
       "nome_base": "AMORIM E PEDRO",
       "fontes": [
+        "ep2025_cm",
         "treino_ep"
       ],
       "papeis": [
@@ -476,24 +488,6 @@
       "qtd_variantes": 1
     },
     {
-      "oficina_id": "arara-confeccoes",
-      "nome_canonico": "ARARA CONFECCOES LTDA",
-      "nome_base": "ARARA CONFECCOES",
-      "fontes": [
-        "treino_ep"
-      ],
-      "papeis": [
-        "treino"
-      ],
-      "unidades": [],
-      "precisa_revisao": false,
-      "revisao": [],
-      "variantes": [
-        "ARARA CONFECCOES LTDA"
-      ],
-      "qtd_variantes": 1
-    },
-    {
       "oficina_id": "araujo-camara",
       "nome_canonico": "ARAUJO & CAMARA LTDA",
       "nome_base": "ARAUJO CAMARA",
@@ -524,6 +518,7 @@
       "nome_canonico": "ARAUJO E M CONFECCOES EIRELI",
       "nome_base": "ARAUJO E M CONFECCOES",
       "fontes": [
+        "ep2025_cm",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -590,6 +585,27 @@
         "ASA CONFECCOES LTDA - ME"
       ],
       "qtd_variantes": 1
+    },
+    {
+      "oficina_id": "arara-confeccoes",
+      "nome_canonico": "Arara confeccoes Ltda",
+      "nome_base": "ARARA CONFECCOES",
+      "fontes": [
+        "postos",
+        "treino_ep"
+      ],
+      "papeis": [
+        "absenteismo",
+        "treino"
+      ],
+      "unidades": [],
+      "precisa_revisao": false,
+      "revisao": [],
+      "variantes": [
+        "ARARA CONFECCOES LTDA",
+        "Arara confeccoes Ltda"
+      ],
+      "qtd_variantes": 2
     },
     {
       "oficina_id": "b-n-silva-confeccoes",
@@ -696,21 +712,24 @@
     },
     {
       "oficina_id": "canaa-companhia-textil",
-      "nome_canonico": "CANAA COMPANHIA TEXTIL LTDA",
+      "nome_canonico": "CANAA COMPANHIA TEXTIL LTDA - ME",
       "nome_base": "CANAA COMPANHIA TEXTIL",
       "fontes": [
+        "postos",
         "treino_ep"
       ],
       "papeis": [
+        "absenteismo",
         "treino"
       ],
       "unidades": [],
       "precisa_revisao": false,
       "revisao": [],
       "variantes": [
-        "CANAA COMPANHIA TEXTIL LTDA"
+        "CANAA COMPANHIA TEXTIL LTDA",
+        "CANAA COMPANHIA TEXTIL LTDA - ME"
       ],
-      "qtd_variantes": 1
+      "qtd_variantes": 2
     },
     {
       "oficina_id": "clara-a-de-medeiros-leite",
@@ -763,7 +782,6 @@
         "estoque_jeans",
         "estoque_jeans_aux",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -807,9 +825,11 @@
       "nome_canonico": "CONFECCOES F SALES CIA LTDA",
       "nome_base": "CONFECCOES F SALES",
       "fontes": [
+        "postos",
         "treino_ep"
       ],
       "papeis": [
+        "absenteismo",
         "treino"
       ],
       "unidades": [],
@@ -867,7 +887,6 @@
       "nome_base": "CONFECCOES GENESIS",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -948,9 +967,11 @@
       "nome_canonico": "CONFIANCA INDUSTRIA TEXTIL LTDA",
       "nome_base": "CONFIANCA INDUSTRIA TEXTIL",
       "fontes": [
+        "postos",
         "treino_ep"
       ],
       "papeis": [
+        "absenteismo",
         "treino"
       ],
       "unidades": [],
@@ -963,27 +984,31 @@
     },
     {
       "oficina_id": "conquista-empreendimentos",
-      "nome_canonico": "CONQUISTA EMPREENDIMENTOS LTDA",
+      "nome_canonico": "CONQUISTA EMPREENDIMENTOS LTDA - ME",
       "nome_base": "CONQUISTA EMPREENDIMENTOS",
       "fontes": [
+        "postos",
         "treino_ep"
       ],
       "papeis": [
+        "absenteismo",
         "treino"
       ],
       "unidades": [],
       "precisa_revisao": false,
       "revisao": [],
       "variantes": [
-        "CONQUISTA EMPREENDIMENTOS LTDA"
+        "CONQUISTA EMPREENDIMENTOS LTDA",
+        "CONQUISTA EMPREENDIMENTOS LTDA - ME"
       ],
-      "qtd_variantes": 1
+      "qtd_variantes": 2
     },
     {
       "oficina_id": "confeccoes-dona-dina",
       "nome_canonico": "Confecções Dona Dina",
       "nome_base": "CONFECCOES DONA DINA",
       "fontes": [
+        "ep2025_cm",
         "treino_ep"
       ],
       "papeis": [
@@ -1002,6 +1027,8 @@
       "nome_canonico": "Confecções JS Ltda",
       "nome_base": "CONFECCOES JS",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "treino_ep"
       ],
       "papeis": [
@@ -1022,10 +1049,10 @@
       "nome_canonico": "DANJAN CONFECCOES LTDA",
       "nome_base": "DANJAN CONFECCOES",
       "fontes": [
+        "ep2025_cm",
         "estoque_jeans",
         "estoque_jeans_aux",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -1051,6 +1078,8 @@
       "nome_canonico": "DANTAS E PAULINO CONFECCOES LTDA",
       "nome_base": "DANTAS E PAULINO CONFECCOES",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -1077,10 +1106,11 @@
       "nome_canonico": "DI3 CONFECCOES LTDA",
       "nome_base": "DI3 CONFECCOES",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "estoque_jeans",
         "estoque_jeans_aux",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -1154,7 +1184,6 @@
       "nome_base": "DONA TICA",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -1179,7 +1208,6 @@
       "nome_base": "EBENEZER INDUSTRIA TEXTIL",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -1247,8 +1275,9 @@
       "nome_canonico": "F & K FACCAO LTDA",
       "nome_base": "F K FACCAO",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -1277,10 +1306,10 @@
       "nome_canonico": "F & L AZEVEDO CONFECCAO LTDA - ME MATRIZ",
       "nome_base": "F L AZEVEDO CONFECCAO",
       "fontes": [
+        "ep2025_cm",
         "estoque_jeans",
         "estoque_jeans_aux",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -1338,7 +1367,6 @@
       "nome_base": "F DA SILVA JUNIOR",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -1386,6 +1414,7 @@
       "nome_canonico": "F SILVA CONFECÇÕES LTDA",
       "nome_base": "F SILVA CONFECCOES",
       "fontes": [
+        "ep2025_toc",
         "postos",
         "recebimento",
         "treino_ep"
@@ -1438,6 +1467,8 @@
       "nome_canonico": "F.W confecção",
       "nome_base": "F W CONFECCAO",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "treino_ep"
       ],
       "papeis": [
@@ -1482,6 +1513,8 @@
       "nome_canonico": "FACCAO SANTANENSE LTDA - ME",
       "nome_base": "FACCAO SANTANENSE",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -1554,6 +1587,8 @@
       "nome_canonico": "FERREIRA E ARAUJO CONFECCOES LTDA",
       "nome_base": "FERREIRA E ARAUJO CONFECCOES",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -1608,7 +1643,6 @@
         "estoque_jeans",
         "estoque_jeans_aux",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -1670,9 +1704,11 @@
       "nome_canonico": "FORTALEZA INDUSTRIA DE VESTUARIO LTDA",
       "nome_base": "FORTALEZA INDUSTRIA DE VESTUARIO",
       "fontes": [
+        "postos",
         "treino_ep"
       ],
       "papeis": [
+        "absenteismo",
         "treino"
       ],
       "unidades": [],
@@ -1689,7 +1725,6 @@
       "nome_base": "FORTE FORTEX PRODUCAO TEXTIL",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -1710,12 +1745,29 @@
       "qtd_variantes": 2
     },
     {
+      "oficina_id": "francisco-edson-da-s-confeccoes",
+      "nome_canonico": "FRANCISCO EDSON DA S. CONFECCOES - EPP",
+      "nome_base": "FRANCISCO EDSON DA S CONFECCOES",
+      "fontes": [
+        "postos"
+      ],
+      "papeis": [
+        "absenteismo"
+      ],
+      "unidades": [],
+      "precisa_revisao": false,
+      "revisao": [],
+      "variantes": [
+        "FRANCISCO EDSON DA S. CONFECCOES - EPP"
+      ],
+      "qtd_variantes": 1
+    },
+    {
       "oficina_id": "freire-silva-confeccoes",
       "nome_canonico": "FREIRE SILVA CONFECÇÕES LTDA",
       "nome_base": "FREIRE SILVA CONFECCOES",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -1758,6 +1810,7 @@
       "nome_canonico": "Fsilva Confecções",
       "nome_base": "FSILVA CONFECCOES",
       "fontes": [
+        "ep2025_cm",
         "treino_ep"
       ],
       "papeis": [
@@ -1779,7 +1832,6 @@
       "nome_base": "G C EMPREENDIMENTOS TEXTIL",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -1795,6 +1847,24 @@
       "revisao": [],
       "variantes": [
         "G&C EMPREENDIMENTOS TEXTIL LTDA"
+      ],
+      "qtd_variantes": 1
+    },
+    {
+      "oficina_id": "g-l-j-l-confeccoes",
+      "nome_canonico": "G. L. J. L. CONFECCÕES LTDA",
+      "nome_base": "G L J L CONFECCOES",
+      "fontes": [
+        "postos"
+      ],
+      "papeis": [
+        "absenteismo"
+      ],
+      "unidades": [],
+      "precisa_revisao": false,
+      "revisao": [],
+      "variantes": [
+        "G. L. J. L. CONFECCÕES LTDA"
       ],
       "qtd_variantes": 1
     },
@@ -1827,7 +1897,6 @@
       "nome_base": "GEFERSON ALAN DOS SANTOS SILVA",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -1871,6 +1940,7 @@
       "nome_canonico": "Helio araujo industria de confeccoes",
       "nome_base": "HELIO ARAUJO INDUSTRIA DE CONFECCOES",
       "fontes": [
+        "ep2025_cm",
         "treino_ep"
       ],
       "papeis": [
@@ -1910,6 +1980,7 @@
       "nome_canonico": "I M ARAÚJO",
       "nome_base": "I M ARAUJO",
       "fontes": [
+        "ep2025_cm",
         "treino_ep"
       ],
       "papeis": [
@@ -1976,10 +2047,10 @@
       "nome_canonico": "IDEAL CONFECCOES LTDA BÁSICO",
       "nome_base": "IDEAL CONFECCOES",
       "fontes": [
+        "ep2025_cm",
         "estoque_jeans",
         "estoque_jeans_aux",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -2096,7 +2167,6 @@
       "nome_base": "J F CONFECCOES",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -2133,6 +2203,24 @@
       ],
       "variantes": [
         "J G INDUSTRIA E COMERCIO LTDA"
+      ],
+      "qtd_variantes": 1
+    },
+    {
+      "oficina_id": "j-geovane-p-batista-industria-textil",
+      "nome_canonico": "J GEOVANE P BATISTA INDUSTRIA TEXTIL LTDA",
+      "nome_base": "J GEOVANE P BATISTA INDUSTRIA TEXTIL",
+      "fontes": [
+        "postos"
+      ],
+      "papeis": [
+        "absenteismo"
+      ],
+      "unidades": [],
+      "precisa_revisao": false,
+      "revisao": [],
+      "variantes": [
+        "J GEOVANE P BATISTA INDUSTRIA TEXTIL LTDA"
       ],
       "qtd_variantes": 1
     },
@@ -2191,6 +2279,7 @@
       "nome_canonico": "J. S. & SILVA LTDA",
       "nome_base": "J S SILVA",
       "fontes": [
+        "ep2025_cm",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -2283,27 +2372,31 @@
     },
     {
       "oficina_id": "jero-confeccoes",
-      "nome_canonico": "JERO CONFECÇÕES LTDA",
+      "nome_canonico": "JERO CONFECCOES LTDA",
       "nome_base": "JERO CONFECCOES",
       "fontes": [
+        "postos",
         "treino_ep"
       ],
       "papeis": [
+        "absenteismo",
         "treino"
       ],
       "unidades": [],
       "precisa_revisao": false,
       "revisao": [],
       "variantes": [
+        "JERO CONFECCOES LTDA",
         "JERO CONFECÇÕES LTDA"
       ],
-      "qtd_variantes": 1
+      "qtd_variantes": 2
     },
     {
       "oficina_id": "jero-confeccoes-potengi-textil",
       "nome_canonico": "JERO CONFECÇÕES/POTENGI TEXTIL",
       "nome_base": "JERO CONFECCOES POTENGI TEXTIL",
       "fontes": [
+        "ep2025_cm",
         "treino_ep"
       ],
       "papeis": [
@@ -2387,6 +2480,7 @@
       "nome_canonico": "JM confecções & cia ltda - MATRIZ",
       "nome_base": "JM CONFECCOES",
       "fontes": [
+        "ep2025_cm",
         "treino_ep"
       ],
       "papeis": [
@@ -2412,7 +2506,6 @@
       "nome_base": "JOLI TEXTIL SERVICOS E COMERCIO",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -2437,7 +2530,6 @@
         "estoque_jeans",
         "estoque_jeans_aux",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -2461,10 +2553,10 @@
       "nome_canonico": "JOSENI MARIA DE MEDEIROS",
       "nome_base": "JOSENI MARIA DE MEDEIROS",
       "fontes": [
+        "ep2025_cm",
         "estoque_jeans",
         "estoque_jeans_aux",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -2520,8 +2612,9 @@
       "nome_canonico": "KSW CONFECÇÕES LTDA",
       "nome_base": "KSW CONFECCOES",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -2573,7 +2666,6 @@
       "nome_base": "LC TEXTIL",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -2646,6 +2738,8 @@
       "nome_canonico": "LIMA CONFECCOES LTDA-ME",
       "nome_base": "LIMA CONFECCOES",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -2718,6 +2812,7 @@
       "nome_canonico": "LIVIA REBOUCAS DE CARVALHO - ME",
       "nome_base": "LIVIA REBOUCAS DE CARVALHO",
       "fontes": [
+        "ep2025_cm",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -2742,7 +2837,7 @@
     },
     {
       "oficina_id": "luiz-lupercio-da-silva-junior",
-      "nome_canonico": "LUIZ LUPERCIO DA SILVA JUNIOR TEAR",
+      "nome_canonico": "LUIZ LUPERCIO DA SILVA JUNIOR",
       "nome_base": "LUIZ LUPERCIO DA SILVA JUNIOR",
       "fontes": [
         "postos",
@@ -2772,6 +2867,7 @@
       "nome_canonico": "LÍNEA CONFECÇÕES",
       "nome_base": "LINEA CONFECCOES",
       "fontes": [
+        "ep2025_cm",
         "treino_ep"
       ],
       "papeis": [
@@ -2961,6 +3057,8 @@
       "nome_canonico": "M dalison",
       "nome_base": "M DALISON",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "treino_ep"
       ],
       "papeis": [
@@ -2979,6 +3077,8 @@
       "nome_canonico": "M. & F. EMPREENDIMENTOS LTDA",
       "nome_base": "M F EMPREENDIMENTOS",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -3005,6 +3105,8 @@
       "nome_canonico": "M. A. VIEIRA DE ALMEIDA - ME",
       "nome_base": "M A VIEIRA DE ALMEIDA",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -3032,7 +3134,6 @@
       "nome_base": "MANSOUR DANTAS CONFECCOES",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -3074,6 +3175,7 @@
       "nome_canonico": "MARIONETE M DE A CAMARA - ME",
       "nome_base": "MARIONETE M DE A CAMARA",
       "fontes": [
+        "ep2025_cm",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -3102,7 +3204,6 @@
       "nome_base": "MAXWELA ARAUJO SILVA",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -3127,6 +3228,8 @@
       "nome_canonico": "Mansour e Dantas confec Ltda.",
       "nome_base": "MANSOUR E DANTAS CONFEC",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "treino_ep"
       ],
       "papeis": [
@@ -3145,10 +3248,11 @@
       "nome_canonico": "N S CONSTANTINO",
       "nome_base": "N S CONSTANTINO",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "estoque_jeans",
         "estoque_jeans_aux",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -3257,6 +3361,7 @@
       "nome_canonico": "OFICINA DE COSTURA SANTOS LTDA",
       "nome_base": "OFICINA DE COSTURA SANTOS",
       "fontes": [
+        "ep2025_cm",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -3306,7 +3411,6 @@
       "nome_base": "P A VITURINO SERVICOS E CONFECCOES",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -3379,6 +3483,7 @@
       "nome_canonico": "POEST indústria e comércio de vestuário Ltda",
       "nome_base": "POEST INDUSTRIA E COMERCIO DE VESTUARIO",
       "fontes": [
+        "ep2025_cm",
         "treino_ep"
       ],
       "papeis": [
@@ -3403,7 +3508,6 @@
         "estoque_jeans",
         "estoque_jeans_aux",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -3435,12 +3539,38 @@
         "treino"
       ],
       "unidades": [],
-      "precisa_revisao": false,
-      "revisao": [],
+      "precisa_revisao": true,
+      "revisao": [
+        "Possível duplicata de 'PROGRESSO INDÚSTRIA DE VESTUÁRIO LTDA MATRIZ' (97%)"
+      ],
       "variantes": [
         "PROGRESSO INDUSTRIA DO VESTUARIO LTDA"
       ],
       "qtd_variantes": 1
+    },
+    {
+      "oficina_id": "progresso-industria-de-vestuario",
+      "nome_canonico": "PROGRESSO INDÚSTRIA DE VESTUÁRIO LTDA MATRIZ",
+      "nome_base": "PROGRESSO INDUSTRIA DE VESTUARIO",
+      "fontes": [
+        "postos"
+      ],
+      "papeis": [
+        "absenteismo"
+      ],
+      "unidades": [
+        "FILIAL",
+        "MATRIZ"
+      ],
+      "precisa_revisao": true,
+      "revisao": [
+        "Possível duplicata de 'PROGRESSO INDUSTRIA DO VESTUARIO LTDA' (97%)"
+      ],
+      "variantes": [
+        "PROGRESSO INDÚSTRIA DE VESTUÁRIO LTDA FILIAL",
+        "PROGRESSO INDÚSTRIA DE VESTUÁRIO LTDA MATRIZ"
+      ],
+      "qtd_variantes": 2
     },
     {
       "oficina_id": "redencao-industria-de-vestuario",
@@ -3465,6 +3595,7 @@
       "nome_canonico": "S RAMOS DE AZEVEDO NETO CONFECCOES",
       "nome_base": "S RAMOS DE AZEVEDO NETO CONFECCOES",
       "fontes": [
+        "ep2025_cm",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -3493,7 +3624,6 @@
       "nome_base": "SERRANA TEXTIL",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -3515,9 +3645,11 @@
       "nome_canonico": "SETE MONTES EMPREENDIMENTOS LTDA",
       "nome_base": "SETE MONTES EMPREENDIMENTOS",
       "fontes": [
+        "postos",
         "treino_ep"
       ],
       "papeis": [
+        "absenteismo",
         "treino"
       ],
       "unidades": [],
@@ -3534,7 +3666,6 @@
       "nome_base": "SOLIS CONFECCOES",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -3562,7 +3693,6 @@
       "nome_base": "SOLY BRASIL",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -3592,9 +3722,11 @@
       "nome_canonico": "TAMAREIRA INDUSTRIA E COMERCIO LTDA",
       "nome_base": "TAMAREIRA INDUSTRIA E COMERCIO",
       "fontes": [
+        "postos",
         "treino_ep"
       ],
       "papeis": [
+        "absenteismo",
         "treino"
       ],
       "unidades": [],
@@ -3611,7 +3743,6 @@
       "nome_base": "TECE COSTURAS E CONFECCOES",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -3636,7 +3767,6 @@
         "estoque_jeans",
         "estoque_jeans_aux",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -3677,21 +3807,24 @@
     },
     {
       "oficina_id": "triunfo-confeccoes",
-      "nome_canonico": "TRIUNFO CONFECCOES LTDA",
+      "nome_canonico": "TRIUNFO CONFECCOES LTDA ME",
       "nome_base": "TRIUNFO CONFECCOES",
       "fontes": [
+        "postos",
         "treino_ep"
       ],
       "papeis": [
+        "absenteismo",
         "treino"
       ],
       "unidades": [],
       "precisa_revisao": false,
       "revisao": [],
       "variantes": [
-        "TRIUNFO CONFECCOES LTDA"
+        "TRIUNFO CONFECCOES LTDA",
+        "TRIUNFO CONFECCOES LTDA ME"
       ],
-      "qtd_variantes": 1
+      "qtd_variantes": 2
     },
     {
       "oficina_id": "tropicalliz-confeccoes",
@@ -3701,7 +3834,6 @@
         "estoque_jeans",
         "estoque_jeans_aux",
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento"
       ],
@@ -3723,6 +3855,7 @@
       "nome_canonico": "Tropicalliz",
       "nome_base": "TROPICALLIZ",
       "fontes": [
+        "ep2025_cm",
         "treino_ep"
       ],
       "papeis": [
@@ -3741,6 +3874,8 @@
       "nome_canonico": "UNIAO CONFECCOES LTDA ME",
       "nome_base": "UNIAO CONFECCOES",
       "fontes": [
+        "ep2025_cm",
+        "ep2025_toc",
         "estoque_jeans",
         "estoque_jeans_aux",
         "postos",
@@ -3764,12 +3899,29 @@
       "qtd_variantes": 3
     },
     {
+      "oficina_id": "valentino-industria-e-comercio-de-confeccoes",
+      "nome_canonico": "VALENTINO INDUSTRIA E COMERCIO DE CONFECÇÕES LTDA",
+      "nome_base": "VALENTINO INDUSTRIA E COMERCIO DE CONFECCOES",
+      "fontes": [
+        "postos"
+      ],
+      "papeis": [
+        "absenteismo"
+      ],
+      "unidades": [],
+      "precisa_revisao": false,
+      "revisao": [],
+      "variantes": [
+        "VALENTINO INDUSTRIA E COMERCIO DE CONFECÇÕES LTDA"
+      ],
+      "qtd_variantes": 1
+    },
+    {
       "oficina_id": "vitalize-confeccoes",
       "nome_canonico": "VITALIZE CONFECCOES LTDA",
       "nome_base": "VITALIZE CONFECCOES",
       "fontes": [
         "estoque_naojeans_aux",
-        "estoque_naojeans_efic",
         "postos",
         "recebimento",
         "treino_ep"
@@ -3818,6 +3970,7 @@
       "nome_canonico": "Zaja Confecções",
       "nome_base": "ZAJA CONFECCOES",
       "fontes": [
+        "ep2025_cm",
         "treino_ep"
       ],
       "papeis": [

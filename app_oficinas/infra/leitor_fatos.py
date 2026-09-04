@@ -136,6 +136,81 @@ def ler_treino_ep(base_dir: Path | None = None) -> Iterator[dict]:
         wb.close()
 
 
+def _modulo_programa(bruto: str | None, programa: str) -> str:
+    """Nome de exibição do módulo com o programa à frente.
+
+    A planilha CM rotula como "PRODUZA+ - MÓDULO 1"; exibimos "<programa> -
+    MÓDULO 1", preservando o sufixo (o número do módulo). Sem sufixo, usa só o
+    programa. Assim o marco no gráfico sai como "Costura e Mecânica - MÓDULO 1".
+    """
+    if bruto and " - " in bruto:
+        sufixo = bruto.split(" - ", 1)[1].strip()
+        return f"{programa} - {sufixo}" if sufixo else programa
+    return programa
+
+
+def ler_treino_ep2025_cm(base_dir: Path | None = None) -> Iterator[dict]:
+    """Turmas de Costura e Mecânica (aba CM da EP 2025): 1 linha = oficina/módulo.
+
+    Emite a data de início/fim crua (o serviço deriva mês/ano do início). O nome
+    do módulo é reescrito com o programa à frente (ver ``_modulo_programa``).
+    Linhas sem oficina são ignoradas.
+    """
+    f = config.TREINO_EP2025_CM
+    wb = _abrir((base_dir or config.PLANILHAS_DIR) / f.arquivo)
+    try:
+        ws = _aba(wb, f.aba, f.arquivo)
+        for linha in ws.iter_rows(min_row=f.primeira_linha, values_only=True):
+            nome = _texto(_celula(linha, f.col_nome))
+            if not nome:
+                continue
+            yield {
+                "nome": nome,
+                "modulo": _modulo_programa(
+                    _texto(_celula(linha, f.col_modulo)), f.programa),
+                "inicio": _celula(linha, f.col_inicio),
+                "fim": _celula(linha, f.col_fim),
+                "status": _texto(_celula(linha, f.col_status)),
+            }
+    finally:
+        wb.close()
+
+
+def ler_treino_ep2025_toc(base_dir: Path | None = None) -> Iterator[dict]:
+    """Turmas do TOC (aba TOC da EP 2025): cada linha rende até duas etapas.
+
+    A 1ª etapa sempre é emitida (quando há oficina); a 2ª só quando tem data de
+    início. Cada etapa vira um marco de treino próprio, com sua data.
+    """
+    f = config.TREINO_EP2025_TOC
+    wb = _abrir((base_dir or config.PLANILHAS_DIR) / f.arquivo)
+    try:
+        ws = _aba(wb, f.aba, f.arquivo)
+        for linha in ws.iter_rows(min_row=f.primeira_linha, values_only=True):
+            nome = _texto(_celula(linha, f.col_nome))
+            if not nome:
+                continue
+            status = _texto(_celula(linha, f.col_status))
+            yield {
+                "nome": nome,
+                "modulo": f"{f.modulo} - 1ª etapa",
+                "inicio": _celula(linha, f.col_inicio1),
+                "fim": _celula(linha, f.col_fim1),
+                "status": status,
+            }
+            inicio2 = _celula(linha, f.col_inicio2)
+            if inicio2 is not None:
+                yield {
+                    "nome": nome,
+                    "modulo": f"{f.modulo} - 2ª etapa",
+                    "inicio": inicio2,
+                    "fim": _celula(linha, f.col_fim2),
+                    "status": status,
+                }
+    finally:
+        wb.close()
+
+
 def ler_treino_lidera(base_dir: Path | None = None) -> Iterator[dict]:
     f = config.TREINO_LIDERA
     wb = _abrir((base_dir or config.PLANILHAS_DIR) / f.arquivo)

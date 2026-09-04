@@ -168,6 +168,26 @@ class TestSeriesETreinos(unittest.TestCase):
         self.assertEqual(len(treinos), 2)
         self.assertEqual([t["ano"] for t in treinos], [2022, 2025])
 
+    def test_treino_carrega_mes_e_datas_e_ordena_por_mes(self):
+        # Marcos com data (EP 2025): mês, semana e intervalo chegam ao payload; o
+        # mesmo módulo em meses diferentes NÃO é deduplicado; ordena por mês.
+        t_mai = {"oficina_id": "of", "modulo": "PRODUZA+ - MÓDULO 1", "ano": 2025,
+                 "mes": 5, "semana_iso": 21, "ciclo": "2025",
+                 "data_inicio": "2025-05-19", "data_fim": "2025-05-23",
+                 "status": "Concluído"}
+        t_jun = {**t_mai, "mes": 6, "semana_iso": 24, "data_inicio": "2025-06-02"}
+        ofs = dashboard.montar_oficinas(
+            [oficina("of", "OF", ["treino"])], [], [], [], [],
+            [t_jun, t_mai],
+        )
+        treinos = ofs[0]["treinos"]
+        self.assertEqual(len(treinos), 2)                 # meses distintos: 2 marcos
+        self.assertEqual([t["mes"] for t in treinos], [5, 6])  # ordenado por mês
+        self.assertEqual(treinos[0]["semana_iso"], 21)
+        self.assertEqual(treinos[0]["inicio"], "2025-05-19")
+        self.assertEqual(treinos[0]["fim"], "2025-05-23")
+        self.assertEqual(treinos[0]["status"], "Concluído")
+
 
 class TestNaoOmiteOficina(unittest.TestCase):
     def test_oficina_sem_metrica_entra_com_ranking_vazio(self):

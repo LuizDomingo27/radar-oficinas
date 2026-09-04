@@ -6,6 +6,22 @@ from app_oficinas.errors import FonteInvalida
 from app_oficinas.infra import leitor_fatos as L
 
 
+class TestModuloProgramaCM(unittest.TestCase):
+    def test_prefixa_programa_preservando_sufixo(self):
+        self.assertEqual(
+            L._modulo_programa("PRODUZA+ - MÓDULO 1", "Costura e Mecânica"),
+            "Costura e Mecânica - MÓDULO 1")
+
+    def test_sem_sufixo_usa_so_programa(self):
+        self.assertEqual(
+            L._modulo_programa("PRODUZA+", "Costura e Mecânica"),
+            "Costura e Mecânica")
+
+    def test_none_usa_programa(self):
+        self.assertEqual(
+            L._modulo_programa(None, "Costura e Mecânica"), "Costura e Mecânica")
+
+
 class TestColunaEficienciaPorCabecalho(unittest.TestCase):
     def test_acha_coluna_pelo_rotulo_jeans(self):
         cab = ("Fornecedor", "Postos", "Cap Peças 100%", "WK32", "WK33",

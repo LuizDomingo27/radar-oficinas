@@ -7,7 +7,7 @@
 /* O dashboard é denso (tabela de ranking larga, 2 gráficos lado a lado na
    ficha). Ocupa mais da tela que a página do De-Para — sobrescreve o
    max-width do estilo.css. Fluido: nunca encosta nas bordas em telas menores. */
-main{max-width:min(1440px, 94vw)}
+main{max-width:min(1840px, 97vw)}
 @media(max-width:720px){main{max-width:100%;padding-left:16px;padding-right:16px}}
 
 /* ---- Navegação entre telas (na appbar) ---- */

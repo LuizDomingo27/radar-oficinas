@@ -96,10 +96,49 @@ const GraficosDash = (() => {
     }, true);
   }
 
-  /** Marcos de treino que caem dentro do eixo da série (mesmo ano presente).
-   *  Cada marco é uma linha vertical tracejada roxa com uma etiqueta-"chip".
-   *  As etiquetas alternam de altura para não colidirem quando os anos ficam
-   *  próximos no eixo. */
+  const MESES_CURTOS = ["", "jan", "fev", "mar", "abr", "mai", "jun",
+    "jul", "ago", "set", "out", "nov", "dez"];
+
+  /** Categoria do eixo X onde o marco de treino deve cair, conforme a
+   *  granularidade da série (mensal ``AAAA-MM`` ou semanal ``AAAA-Www``).
+   *  Usa o mês/semana do treino quando a fonte tem data (EP 2025); se o período
+   *  exato não existir na série, ancora no primeiro ponto igual ou posterior
+   *  (senão no último). Sem mês/semana, cai no 1º período do ano — o
+   *  comportamento antigo das fontes que só têm ano/ciclo. */
+  function periodoAlvo(serie, t) {
+    if (t.ano == null) return null;
+    const semanal = serie[0].periodo.includes("W");
+    const ano = String(t.ano);
+    let alvo;
+    if (semanal) {
+      alvo = t.semana_iso ? `${ano}-W${String(t.semana_iso).padStart(2, "0")}` : `${ano}-`;
+    } else {
+      alvo = t.mes ? `${ano}-${String(t.mes).padStart(2, "0")}` : `${ano}-`;
+    }
+    // Exato — ou o 1º período do ano, no fallback só-ano (fontes antigas).
+    const exato = serie.find((p) => p.periodo === alvo || p.periodo.startsWith(alvo));
+    if (exato) return exato.periodo;
+    // Fora da janela do gráfico (antes do 1º ou depois do último ponto): NÃO
+    // marca. Empilhar no extremo poria um marco num período que não é o do
+    // treino (ex.: "Lean 2022" caindo em jan/2026). O marco aparece só nos
+    // gráficos cujo intervalo cobre o treino.
+    const primeiro = serie[0].periodo, ultimo = serie[serie.length - 1].periodo;
+    if (alvo < primeiro || alvo > ultimo) return null;
+    // Dentro da janela, sem ponto exato: ancora no 1º ponto igual ou posterior.
+    const posterior = serie.find((p) => p.periodo >= alvo);
+    return posterior ? posterior.periodo : null;
+  }
+
+  /** Etiqueta curta do marco: módulo + mês/ano quando há data, senão + ano. */
+  function rotuloTreino(t) {
+    const modulo = t.modulo ? t.modulo.split(" ")[0] : "Treino";
+    if (t.mes) return `${modulo} ${MESES_CURTOS[t.mes]}/${String(t.ano).slice(2)}`;
+    return `${modulo} ${t.ano ?? ""}`.trim();
+  }
+
+  /** Marcos de treino ancorados no MÊS/semana do treino dentro do eixo da série.
+   *  Cada marco é uma linha vertical tracejada roxa com uma etiqueta-"chip". As
+   *  etiquetas alternam de altura para não colidirem quando ficam próximas. */
   function marcasTreino(serie, treinos) {
     if (!serie.length || !treinos.length) return [];
     const treino = corTema("--treino");
@@ -108,16 +147,14 @@ const GraficosDash = (() => {
     const vistos = new Set();
     let i = 0;
     for (const t of treinos) {
-      if (t.ano == null) continue;
-      const alvo = serie.find((p) => p.periodo.startsWith(String(t.ano) + "-"));
-      if (!alvo || vistos.has(alvo.periodo)) { if (alvo) vistos.add(alvo.periodo); continue; }
-      vistos.add(alvo.periodo);
-      const modulo = t.modulo ? t.modulo.split(" ")[0] : "Treino";
+      const periodo = periodoAlvo(serie, t);
+      if (periodo == null || vistos.has(periodo)) continue;
+      vistos.add(periodo);
       dados.push({
-        xAxis: alvo.periodo,
+        xAxis: periodo,
         lineStyle: { color: treino, width: 1.6, type: "dashed", opacity: 0.95 },
         label: {
-          show: true, formatter: `${modulo} ${t.ano}`, position: "end",
+          show: true, formatter: rotuloTreino(t), position: "end",
           rotate: 0, align: "left", distance: 5 + (i % 2) * 15, // abre p/ a direita, fora do eixo Y
           color: inkChip, backgroundColor: treino, padding: [2, 5], borderRadius: 3,
           fontFamily: "IBM Plex Sans", fontSize: 9.5, fontWeight: 600,

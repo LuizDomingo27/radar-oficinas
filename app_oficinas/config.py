@@ -75,10 +75,10 @@ FONTES: tuple[FonteNomes, ...] = (
         "estoque_naojeans_aux",
         "ESTOQUE OFICINA NÃO JEANS.xlsx", "AUX", 0, 2, PAPEL_EFICIENCIA,
     ),
-    FonteNomes(
-        "estoque_naojeans_efic",
-        "ESTOQUE OFICINA NÃO JEANS.xlsx", "HISTÓRICO EFIC", 1, 3, PAPEL_EFICIENCIA,
-    ),
+    # A aba "HISTÓRICO EFIC" foi abandonada e não existe mais nas exportações
+    # atuais do não-jeans; os nomes dessa MP já vêm da aba AUX (acima). Manter a
+    # fonte apontando para uma aba inexistente abortava TODO o pipeline no passo
+    # De-Para a cada upload — a causa dos commits em que os dados não mudavam.
     FonteNomes(
         "treino_ep",
         "Histórico de Atendimento EP.xlsx", "Planilha1", 0, 2, PAPEL_TREINO,
@@ -87,6 +87,12 @@ FONTES: tuple[FonteNomes, ...] = (
         "lidera",
         "Inscrições Lidera+ Gestão de Pessoas.xlsx", "Sheet1", 6, 2, PAPEL_TREINO,
     ),
+    # EP 2025: duas abas de turmas com datas de início/fim por oficina. São
+    # também fonte de NOME (papel treino) — oficinas que só aparecem aqui entram
+    # no De-Para. CM: nome na coluna A, dados da linha 2. TOC: nome na coluna B,
+    # dados da linha 3 (linha 1 é o merge "2ª ETAPA", linha 2 é o cabeçalho).
+    FonteNomes("ep2025_cm", "EP 2025.xlsx", "CM", 0, 2, PAPEL_TREINO),
+    FonteNomes("ep2025_toc", "EP 2025.xlsx", "TOC", 1, 3, PAPEL_TREINO),
 )
 
 
@@ -136,6 +142,48 @@ class FonteTreinoEP:
     col_modulo: int = 2
     col_ch: int = 3
     col_ciclo: int = 4
+
+
+@dataclass(frozen=True)
+class FonteTreinoEP2025CM:
+    """Turmas do PRODUZA+ (aba CM): 1 linha = 1 oficina em 1 módulo, com datas.
+
+    O mês do treinamento sai da data de **início** (col C). O nome do módulo vem
+    por linha (ex.: "PRODUZA+ - MÓDULO 1").
+    """
+
+    arquivo: str = "EP 2025.xlsx"
+    aba: str = "CM"
+    primeira_linha: int = 2
+    col_nome: int = 0
+    col_modulo: int = 1
+    col_inicio: int = 2
+    col_fim: int = 3
+    col_status: int = 4
+    # "CM" é a sigla do programa Costura e Mecânica; a planilha rotula os módulos
+    # como "PRODUZA+ - MÓDULO N". Exibimos com o nome do programa à frente.
+    programa: str = "Costura e Mecânica"
+
+
+@dataclass(frozen=True)
+class FonteTreinoEP2025TOC:
+    """Turmas do TOC (aba TOC): 1 linha = 1 oficina com DUAS etapas datadas.
+
+    O cabeçalho está na linha 2 (a linha 1 traz o merge "2ª ETAPA"); os dados
+    começam na linha 3. Cada linha vira até dois marcos ("TOC - 1ª etapa" e
+    "TOC - 2ª etapa"), cada um com sua data de início/fim.
+    """
+
+    arquivo: str = "EP 2025.xlsx"
+    aba: str = "TOC"
+    primeira_linha: int = 3
+    col_nome: int = 1
+    col_inicio1: int = 2
+    col_fim1: int = 3
+    col_inicio2: int = 4
+    col_fim2: int = 5
+    col_status: int = 7
+    modulo: str = "TOC"
 
 
 @dataclass(frozen=True)
@@ -192,6 +240,8 @@ class FonteEficienciaNaoJeans:
 PRODUCAO = FonteProducao()
 ABSENTEISMO = FonteAbsenteismo()
 TREINO_EP = FonteTreinoEP()
+TREINO_EP2025_CM = FonteTreinoEP2025CM()
+TREINO_EP2025_TOC = FonteTreinoEP2025TOC()
 TREINO_LIDERA = FonteTreinoLidera()
 EFIC_JEANS = FonteEficienciaJeans()
 EFIC_NAOJEANS = FonteEficienciaNaoJeans()
@@ -270,6 +320,7 @@ ARQUIVOS_ESPERADOS: tuple[str, ...] = (
     EFIC_JEANS.arquivo,        # ESTOQUE OFICINAS - JEANS - 2026.xlsx
     EFIC_NAOJEANS.arquivo,     # ESTOQUE OFICINA NÃO JEANS.xlsx
     TREINO_EP.arquivo,         # Histórico de Atendimento EP.xlsx
+    TREINO_EP2025_CM.arquivo,  # EP 2025.xlsx (abas CM e TOC — mesmo arquivo)
     TREINO_LIDERA.arquivo,     # Inscrições Lidera+ Gestão de Pessoas.xlsx
     QUALIDADE_RESUMO.arquivo,  # Indicador geral_*.xlsx
 )
@@ -283,6 +334,10 @@ REGRAS_UPLOAD: tuple[tuple[tuple[str, ...], str], ...] = (
     (("estoque", "jeans"), EFIC_JEANS.arquivo),
     (("recebimento",), PRODUCAO.arquivo),
     (("posto",), ABSENTEISMO.arquivo),
+    # "ep 2025" antes de "atendimento": ambos citam "ep", mas só a EP 2025 casa
+    # os dois tokens ("ep" + "2025"). A regra de atendimento continua para o
+    # histórico antigo ("Histórico de Atendimento EP").
+    (("ep", "2025"), TREINO_EP2025_CM.arquivo),
     (("atendimento",), TREINO_EP.arquivo),
     (("lidera",), TREINO_LIDERA.arquivo),
 )
@@ -334,6 +389,13 @@ ABAS_ESPERADAS: dict[tuple[str, str], AbaEsperada] = {
     (TREINO_LIDERA.arquivo, TREINO_LIDERA.aba): AbaEsperada(
         assinatura=("id", "hora de inicio", "email", "nome"),
     ),
+    (TREINO_EP2025_CM.arquivo, TREINO_EP2025_CM.aba): AbaEsperada(
+        assinatura=("empresa", "modulo", "inicio", "termino", "status"),
+    ),
+    (TREINO_EP2025_TOC.arquivo, TREINO_EP2025_TOC.aba): AbaEsperada(
+        assinatura=("empresa", "inicio", "termino", "consultor", "status"),
+        linha_cabecalho=2,
+    ),
     (EFIC_JEANS.arquivo, EFIC_JEANS.aba): AbaEsperada(
         assinatura=("fornecedor", "postos", "cap pecas 100%"),
         linha_cabecalho=EFIC_JEANS.linha_cabecalho,
@@ -344,9 +406,6 @@ ABAS_ESPERADAS: dict[tuple[str, str], AbaEsperada] = {
     ),
     (EFIC_JEANS.arquivo, "AUX"): AbaEsperada(assinatura=("razao social", "aux")),
     (EFIC_NAOJEANS.arquivo, "AUX"): AbaEsperada(assinatura=("razao social", "aux")),
-    (EFIC_NAOJEANS.arquivo, "HISTÓRICO EFIC"): AbaEsperada(
-        assinatura=("produto", "oficina"), linha_cabecalho=2,
-    ),
     (QUALIDADE_RESUMO.arquivo, QUALIDADE_RESUMO.aba): AbaEsperada(
         assinatura=("oficina", "status", "2qa", "prod"), linha_cabecalho=2,
     ),

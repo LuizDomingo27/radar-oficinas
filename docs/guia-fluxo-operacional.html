@@ -94,17 +94,106 @@
 
 <section>
   <h2>Dados de entrada</h2>
-  <p>Sete planilhas alimentam o painel completo:</p>
+  <p>Oito planilhas alimentam o painel completo:</p>
   <table>
     <tr><th>Planilha</th><th>Alimenta</th></tr>
     <tr><td>RECEBIMENTO</td><td>Produtividade (peças e minutos por dia)</td></tr>
     <tr><td>POSTOS</td><td>Absenteísmo (efetivos × trabalhados por semana)</td></tr>
     <tr><td>ESTOQUE OFICINAS — JEANS</td><td>Eficiência das oficinas de jeans</td></tr>
     <tr><td>ESTOQUE OFICINA NÃO JEANS</td><td>Eficiência de malha, polo e tear</td></tr>
-    <tr><td>Histórico de Atendimento EP</td><td>Treinamentos realizados</td></tr>
+    <tr><td>Histórico de Atendimento EP</td><td>Treinamentos realizados (histórico, só o ano)</td></tr>
+    <tr><td>EP 2025</td><td>Treinamentos com <b>datas</b> — aba CM (Costura e Mecânica) e TOC — o mês de cada turma</td></tr>
     <tr><td>Inscrições Lidera+ Gestão de Pessoas</td><td>Treinamentos (Lidera+)</td></tr>
     <tr><td>Indicador geral</td><td>Qualidade (nota, 2ª qualidade e causas)</td></tr>
   </table>
+
+  <h3>Nome exato, abas e colunas de cada planilha</h3>
+  <p class="nota">
+    Referência do que o processamento procura em cada arquivo. O upload aceita
+    nomes aproximados (pela <b>palavra-chave</b>) e salva com o <b>nome esperado</b>
+    da 1ª coluna. As letras de coluna são as do Excel.
+  </p>
+  <table>
+    <tr>
+      <th>Nome esperado</th><th>Palavra-chave</th><th>Aba(s)</th><th>Colunas usadas</th>
+    </tr>
+    <tr>
+      <td><code>RECEBIMENTO.xlsx</code></td><td>recebimento</td>
+      <td><code>RECEBIMENTO</code> (dados a partir da linha 2)</td>
+      <td>A Dia (data) · B Oficina · D MP · E Real cortado (peças) · F Minutos</td>
+    </tr>
+    <tr>
+      <td><code>postos.xlsx</code></td><td>posto</td>
+      <td><code>Dados</code> (linha 2)</td>
+      <td>A Frete · B MP · C Oficinas · D Data Efetivos · E Qtd Efetivos ·
+        G Qtd Trabalhados · H Contratação · I Demissão · J Semana</td>
+    </tr>
+    <tr>
+      <td><code>ESTOQUE OFICINAS - JEANS - 2026.xlsx</code></td><td>estoque + jeans</td>
+      <td><code>ESTOQUE</code> (cabeçalho na linha 5, dados na 6) e <code>AUX</code> (nomes)</td>
+      <td>A Fornecedor/Oficina · coluna <b>% 4WK</b> (eficiência — localizada pelo
+        título, não pela posição)</td>
+    </tr>
+    <tr>
+      <td><code>ESTOQUE OFICINA NÃO JEANS.xlsx</code></td><td>nao + jeans</td>
+      <td><code>ESTOQUE OFICINAS</code> (cabeçalho na linha 8, dados na 9) e <code>AUX</code> (nomes)</td>
+      <td>A Produto (MP) · B Oficina · coluna <b>MÉDIA 4W</b> (eficiência)</td>
+    </tr>
+    <tr>
+      <td><code>Histórico de Atendimento EP.xlsx</code></td><td>atendimento</td>
+      <td><code>Planilha1</code> (linha 2)</td>
+      <td>A Empresa · C Módulo · D CH · E Ciclo (só o ano — sem data)</td>
+    </tr>
+    <tr>
+      <td><code>EP 2025.xlsx</code></td><td>ep + 2025</td>
+      <td><code>CM</code> (linha 2) e <code>TOC</code> (cabeçalho na linha 2, dados na 3)</td>
+      <td><b>CM:</b> A Empresa · B Módulo · C Início · D Término · E Status ·
+        <b>TOC:</b> B Empresa · C Início 1ª · D Término 1ª · E Início 2ª ·
+        F Término 2ª · G Consultor · H Status</td>
+    </tr>
+    <tr>
+      <td><code>Inscrições Lidera+ Gestão de Pessoas.xlsx</code></td><td>lidera</td>
+      <td><code>Sheet1</code> (linha 2)</td>
+      <td>B Hora de início (data) · G Nome · I Polo</td>
+    </tr>
+    <tr>
+      <td><code>Indicador geral_Junho.xlsx</code></td><td>indicador</td>
+      <td><code>RESUMO</code> (cabeçalho na linha 2, dados na 3) e <code>DEFEITOS</code> (dados na 3)</td>
+      <td><b>RESUMO:</b> F Oficina · L Status · V 2ª qualidade (peças) · W Produção ·
+        AC Data · <b>DEFEITOS:</b> G Qntd · I Descrição do defeito · L Tipo de
+        inspeção · P Setor · S Mês · T Ano</td>
+    </tr>
+  </table>
+  <p class="nota">
+    <b>“Indicador geral”:</b> o mês no nome pode variar (“_Julho”, “_Agosto”); o
+    arquivo é sempre salvo como <code>Indicador geral_Junho.xlsx</code> — é o nome
+    interno do processamento, não muda o conteúdo lido.
+  </p>
+
+  <h3>Qualidade: cache das abas grandes (carregamento otimizado)</h3>
+  <p class="nota">
+    O “Indicador geral” tem ~24 MB e as abas <code>RESUMO</code> (~41 mil linhas)
+    e <code>DEFEITOS</code> (~144 mil linhas) são pesadas de percorrer (~22 s).
+    Para não repetir esse custo, o sistema extrai <b>uma vez</b> só as colunas
+    necessárias dessas duas abas para arquivos compactos (cache em
+    <code>Planilhas/.cache_qualidade/</code>) e passa a ler o cache (~1 s). O
+    cache é validado pelo <b>conteúdo do arquivo</b>: enquanto o “Indicador
+    geral” não mudar, os próximos uploads (que normalmente mexem só em outras
+    planilhas) reaproveitam o cache; quando ele muda, o cache é refeito
+    automaticamente. Resultado: a Qualidade cai de ~28 s para ~1 s nas
+    atualizações que não trocam o “Indicador geral”. Para pré-aquecer/conferir
+    manualmente: <code>python -m scripts.slim_qualidade</code>.
+  </p>
+
+  <h3>EP 2025: o mês do treinamento vem das datas</h3>
+  <p class="nota">
+    A planilha <b>EP 2025</b> traz, em duas abas, o início e o fim de cada turma:
+    <code>CM</code> — Costura e Mecânica (Módulo 1 e 2, rotulados como “PRODUZA+”
+    na planilha) — e <code>TOC</code> (com 1ª e 2ª etapa, cada etapa com sua
+    data). Da data de <b>início</b> o sistema deriva o <b>mês</b> em que a oficina
+    participou. Turmas sem data de início são ignoradas (não há onde marcá-las na
+    linha do tempo).
+  </p>
 
   <h3>O nome do arquivo não precisa estar exato</h3>
   <p class="nota">
@@ -129,7 +218,7 @@
   <h2>Fluxo completo, do envio ao painel</h2>
   <ol class="passos">
     <li><b>Selecionar as planilhas.</b> Juntas ou uma por vez — os envios se
-      acumulam na sessão até completar as sete.</li>
+      acumulam na sessão até completar as oito.</li>
     <li><b>Clicar em Atualizar dados.</b> Sem nenhum arquivo selecionado, o
       sistema avisa e não faz nada.</li>
     <li><b>Gravação.</b> Cada arquivo é salvo com o nome canônico na pasta de
@@ -144,6 +233,33 @@
     <li><b>Recarga.</b> A página recarrega já com os números novos e a mensagem
       do resultado.</li>
   </ol>
+</section>
+
+<section>
+  <h2>Como o treinamento aparece na ficha da oficina</h2>
+  <p>
+    Na <b>Ficha da oficina</b>, cada gráfico com linha do tempo — Peças por mês,
+    Peças por semana e Absenteísmo — recebe uma <b>linha vertical tracejada</b>
+    marcando quando a oficina participou de um treinamento. A Eficiência é um
+    valor único (KPI), então não leva marcador.
+  </p>
+  <ul>
+    <li><b>No mês exato.</b> Para as turmas com data (planilha EP 2025), o
+      marcador cai no <b>mês</b> do início do treinamento — por exemplo,
+      “PRODUZA+ mai/26” sobre maio de 2026. A etiqueta mostra o módulo e o
+      mês/ano; nos chips acima dos gráficos aparece o mês/ano completo.</li>
+    <li><b>Só nos gráficos que cobrem o treino.</b> Se o treino é anterior ao
+      primeiro dado (ou posterior ao último) daquele gráfico, o marcador <b>não</b>
+      é desenhado ali — evita colocar um marco num mês que não é o do treino. Ex.:
+      um treino de 2024 não aparece no gráfico de Peças por mês, que só tem dados
+      de 2026, mas pode aparecer no de Absenteísmo, que tem histórico de 2025.</li>
+    <li><b>Fontes antigas (só ano).</b> Treinamentos do histórico que só têm o
+      ano (sem data — Lean Manufacturing, TOC e Costura e Mecânica antigos)
+      continuam marcados no início do ano correspondente, quando o gráfico cobre
+      aquele ano; o marcador por mês vale para as turmas datadas da EP 2025.</li>
+    <li><b>Duas etapas do TOC.</b> Cada etapa (1ª e 2ª) vira um marcador próprio,
+      no seu respectivo mês.</li>
+  </ul>
 </section>
 
 <section>

@@ -1,11 +1,11 @@
 {
-  "gerado_em": "2026-09-02T22:10:39+00:00",
-  "total": 123,
+  "gerado_em": "2026-09-03T23:47:39+00:00",
+  "total": 122,
   "meta": {},
   "registros": [
     {
-      "oficina_id": "dona-tica-confeccoes",
-      "oficina_nome": "DONA TICA CONFECCOES MATRIZ",
+      "oficina_id": "ajg-confeccoes",
+      "oficina_nome": "AJG CONFECÇÕES LTDA",
       "mp": "JEANS",
       "ano": 2026,
       "mes": null,
@@ -13,115 +13,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.7000197555003062
-    },
-    {
-      "oficina_id": "tropicalliz-confeccoes",
-      "oficina_nome": "TROPICALLIZ CONFECCOES LTDA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.40782146989174217
-    },
-    {
-      "oficina_id": "p-a-confeccoes",
-      "oficina_nome": "P & A CONFECCOES LTDA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.5500932871019764
-    },
-    {
-      "oficina_id": "ferreira-e-araujo-confeccoes",
-      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.713882556568727
-    },
-    {
-      "oficina_id": "livia-reboucas-de-carvalho",
-      "oficina_nome": "LIVIA REBOUCAS DE CARVALHO - ME",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.3844185323771568
-    },
-    {
-      "oficina_id": "jakeline-f-de-azevedo",
-      "oficina_nome": "JAKELINE F DE AZEVEDO - ME",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 1.1460252042455226
-    },
-    {
-      "oficina_id": "n-s-constantino",
-      "oficina_nome": "N S CONSTANTINO",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.5307047872340425
-    },
-    {
-      "oficina_id": "jucurutu-textil",
-      "oficina_nome": "JUCURUTU TEXTIL LTDA ME",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.6505389360348657
-    },
-    {
-      "oficina_id": "i-m-de-oliveira-silva",
-      "oficina_nome": "I M DE OLIVEIRA SILVA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.8131059065139273
-    },
-    {
-      "oficina_id": "w-a-2-confeccoes",
-      "oficina_nome": "W A 2 CONFECCOES LTDA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.40438855164853016
+      "valor": 0.6324882247847978
     },
     {
       "oficina_id": "confeccoes-franoelda-m-m-araujo",
@@ -133,55 +25,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.7528940555465324
-    },
-    {
-      "oficina_id": "amorim-pedro-confeccoes",
-      "oficina_nome": "AMORIM & PEDRO CONFECCOES LTDA - ME",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.5414039237182611
-    },
-    {
-      "oficina_id": "ajg-confeccoes",
-      "oficina_nome": "AJG CONFECÇÕES LTDA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.6146459314601268
-    },
-    {
-      "oficina_id": "faccao-ello",
-      "oficina_nome": "FACCAO ELLO LTDA - ME",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.7490716614352793
-    },
-    {
-      "oficina_id": "dantas-e-paulino-confeccoes",
-      "oficina_nome": "DANTAS E PAULINO CONFECCOES LTDA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.599369040959101
+      "valor": 0.7453196686698068
     },
     {
       "oficina_id": "ld-confeccoes",
@@ -193,7 +37,187 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.6090026551609692
+      "valor": 0.6180631649881921
+    },
+    {
+      "oficina_id": "p-a-confeccoes",
+      "oficina_nome": "P & A CONFECCOES LTDA",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.511415560510087
+    },
+    {
+      "oficina_id": "ferreira-e-araujo-confeccoes",
+      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.7075691286340752
+    },
+    {
+      "oficina_id": "livia-reboucas-de-carvalho",
+      "oficina_nome": "LIVIA REBOUCAS DE CARVALHO - ME",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.38028801254981826
+    },
+    {
+      "oficina_id": "uniao-confeccoes",
+      "oficina_nome": "UNIAO CONFECCOES LTDA ME",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.50853800552217
+    },
+    {
+      "oficina_id": "ideal-confeccoes",
+      "oficina_nome": "IDEAL CONFECCOES LTDA BÁSICO",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.5512946936123807
+    },
+    {
+      "oficina_id": "n-s-constantino",
+      "oficina_nome": "N S CONSTANTINO",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.515227659574468
+    },
+    {
+      "oficina_id": "tropicalliz-confeccoes",
+      "oficina_nome": "TROPICALLIZ CONFECCOES LTDA",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.40877033324653916
+    },
+    {
+      "oficina_id": "confeccao-sao-sebastiao",
+      "oficina_nome": "CONFECÇÃO SÃO SEBASTIÃO LTDA",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.43596665472173024
+    },
+    {
+      "oficina_id": "ivanildo-jose-de-sousa",
+      "oficina_nome": "IVANILDO JOSE DE SOUSA - ME",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.7448289999639076
+    },
+    {
+      "oficina_id": "jucurutu-textil",
+      "oficina_nome": "JUCURUTU TEXTIL LTDA ME",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.6364562915885345
+    },
+    {
+      "oficina_id": "i-m-de-oliveira-silva",
+      "oficina_nome": "I M DE OLIVEIRA SILVA",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.8283600760567242
+    },
+    {
+      "oficina_id": "w-a-2-confeccoes",
+      "oficina_nome": "W A 2 CONFECCOES LTDA",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.4161867154690365
+    },
+    {
+      "oficina_id": "marionete-m-de-a-camara",
+      "oficina_nome": "MARIONETE M DE A CAMARA - ME",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.5283218457311462
+    },
+    {
+      "oficina_id": "amorim-pedro-confeccoes",
+      "oficina_nome": "AMORIM & PEDRO CONFECCOES LTDA - ME",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.5292076317831556
+    },
+    {
+      "oficina_id": "dantas-e-paulino-confeccoes",
+      "oficina_nome": "DANTAS E PAULINO CONFECCOES LTDA",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.5849980550091535
     },
     {
       "oficina_id": "nova-confeccoes",
@@ -205,11 +229,11 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.6895781562990634
+      "valor": 0.688821405369034
     },
     {
-      "oficina_id": "di3-confeccoes",
-      "oficina_nome": "DI3 CONFECCOES LTDA",
+      "oficina_id": "m-a-vieira-de-almeida",
+      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
       "mp": "JEANS",
       "ano": 2026,
       "mes": null,
@@ -217,7 +241,19 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.6773111357314299
+      "valor": 0.5900143016981573
+    },
+    {
+      "oficina_id": "b-n-silva-confeccoes",
+      "oficina_nome": "B&N SILVA CONFECCOES LTDA",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.6303222825204257
     },
     {
       "oficina_id": "leandro-matias-da-silva",
@@ -232,6 +268,54 @@
       "valor": 0.4210573331167776
     },
     {
+      "oficina_id": "faccao-santanense",
+      "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.7097784894299644
+    },
+    {
+      "oficina_id": "noel-pereira-de-azevedo-confeccao",
+      "oficina_nome": "NOEL PEREIRA DE AZEVEDO CONFECCAO",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.6527192701939014
+    },
+    {
+      "oficina_id": "araujo-camara",
+      "oficina_nome": "ARAUJO & CAMARA LTDA",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.4870417336279631
+    },
+    {
+      "oficina_id": "m-k-de-azevedo-medeiros-industria-textil",
+      "oficina_nome": "M K DE AZEVEDO MEDEIROS INDUSTRIA TEXTIL",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.5106442067846092
+    },
+    {
       "oficina_id": "danjan-confeccoes",
       "oficina_nome": "DANJAN CONFECCOES LTDA",
       "mp": "JEANS",
@@ -241,31 +325,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.7801657645354715
-    },
-    {
-      "oficina_id": "fios-do-sertao",
-      "oficina_nome": "FIOS DO SERTÃO LTDA - FILIAL",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.6862967302670079
-    },
-    {
-      "oficina_id": "antonio-igor-dantas-de-souza",
-      "oficina_nome": "ANTONIO IGOR DANTAS DE SOUZA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.5652157317255024
+      "valor": 0.7505129179331308
     },
     {
       "oficina_id": "a-de-m-dias-alves-limitada",
@@ -277,19 +337,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.7395718288127333
-    },
-    {
-      "oficina_id": "joseni-maria-de-medeiros",
-      "oficina_nome": "JOSENI MARIA DE MEDEIROS",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.5913923466901785
+      "valor": 0.6932193539873315
     },
     {
       "oficina_id": "asa-confeccoes",
@@ -301,11 +349,11 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5132192818614669
+      "valor": 0.5135974618106904
     },
     {
-      "oficina_id": "j-m-confeccoes",
-      "oficina_nome": "J M CONFECÇÕES & CIA LTDA FILIAL",
+      "oficina_id": "j-s-silva",
+      "oficina_nome": "J. S. & SILVA LTDA",
       "mp": "JEANS",
       "ano": 2026,
       "mes": null,
@@ -313,11 +361,11 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.7213127044711016
+      "valor": 0.5835770173221008
     },
     {
-      "oficina_id": "uniao-confeccoes",
-      "oficina_nome": "UNIAO CONFECCOES LTDA ME",
+      "oficina_id": "jakeline-f-de-azevedo",
+      "oficina_nome": "JAKELINE F DE AZEVEDO - ME",
       "mp": "JEANS",
       "ano": 2026,
       "mes": null,
@@ -325,11 +373,11 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.4543183043690109
+      "valor": 1.2702031913891048
     },
     {
-      "oficina_id": "ivanildo-jose-de-sousa",
-      "oficina_nome": "IVANILDO JOSE DE SOUSA - ME",
+      "oficina_id": "fios-do-sertao",
+      "oficina_nome": "FIOS DO SERTÃO LTDA",
       "mp": "JEANS",
       "ano": 2026,
       "mes": null,
@@ -337,7 +385,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.7332413586900351
+      "valor": 0.8633560716799308
     },
     {
       "oficina_id": "evalber-de-castro-dantas",
@@ -349,7 +397,19 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.6357151413025826
+      "valor": 0.6368577432191005
+    },
+    {
+      "oficina_id": "j-m-confeccoes",
+      "oficina_nome": "J M CONFECÇÕES & CIA LTDA MATRIZ",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.5893660525766259
     },
     {
       "oficina_id": "f-a-n-confeccoes",
@@ -361,7 +421,19 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5033393446203649
+      "valor": 0.49408372444036225
+    },
+    {
+      "oficina_id": "fios-do-sertao",
+      "oficina_nome": "FIOS DO SERTÃO LTDA - FILIAL",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.6691544053060561
     },
     {
       "oficina_id": "pedro-e-odair-confeccoes",
@@ -373,11 +445,11 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5748696859265878
+      "valor": 0.5853679957771644
     },
     {
-      "oficina_id": "m-a-vieira-de-almeida",
-      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
+      "oficina_id": "potengi-textil",
+      "oficina_nome": "POTENGI TEXTIL LTDA",
       "mp": "JEANS",
       "ano": 2026,
       "mes": null,
@@ -385,7 +457,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.603919206684352
+      "valor": 0.5839033764210393
     },
     {
       "oficina_id": "a-s-empreendimentos",
@@ -400,6 +472,18 @@
       "valor": 0.5431587437740243
     },
     {
+      "oficina_id": "m-dalison-de-medeiros",
+      "oficina_nome": "M DALISON DE MEDEIROS",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.4776133590042049
+    },
+    {
       "oficina_id": "confeccoes-j-s",
       "oficina_nome": "CONFECCOES J.S. LTDA",
       "mp": "JEANS",
@@ -412,18 +496,6 @@
       "valor": 0.5977300753734082
     },
     {
-      "oficina_id": "potengi-textil",
-      "oficina_nome": "POTENGI TEXTIL LTDA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.5621766156503042
-    },
-    {
       "oficina_id": "linea-ind-com-ser-confeccoes",
       "oficina_nome": "LINEA IND. COM. SER. CONFECCOES LTDA",
       "mp": "JEANS",
@@ -433,7 +505,55 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5507476246548644
+      "valor": 0.577910711385415
+    },
+    {
+      "oficina_id": "j-m-confeccoes",
+      "oficina_nome": "J M CONFECÇÕES & CIA LTDA FILIAL",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.7334372018129772
+    },
+    {
+      "oficina_id": "poest-industria-comercio-vestuario",
+      "oficina_nome": "POEST INDUSTRIA COMERCIO VESTUARIO LTDA",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.5836785277979819
+    },
+    {
+      "oficina_id": "confeccao-g-b-da-s-junior",
+      "oficina_nome": "CONFECCAO G. B. DA S. JUNIOR & CIA LTDA",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.59409562286828
+    },
+    {
+      "oficina_id": "faccao-ello",
+      "oficina_nome": "FACCAO ELLO LTDA - ME",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.7584246583819645
     },
     {
       "oficina_id": "januncio-nobrega-de-azevedo",
@@ -445,43 +565,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.45669421736175025
-    },
-    {
-      "oficina_id": "confeccao-sao-sebastiao",
-      "oficina_nome": "CONFECÇÃO SÃO SEBASTIÃO LTDA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.44563356071679927
-    },
-    {
-      "oficina_id": "noel-pereira-de-azevedo-confeccao",
-      "oficina_nome": "NOEL PEREIRA DE AZEVEDO CONFECCAO",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.6404511890554643
-    },
-    {
-      "oficina_id": "m-dalison-de-medeiros",
-      "oficina_nome": "M DALISON DE MEDEIROS",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.4803363230048305
+      "valor": 0.5253040050770278
     },
     {
       "oficina_id": "m-k-industria-textil",
@@ -493,7 +577,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5558285865101279
+      "valor": 0.5704105663704496
     },
     {
       "oficina_id": "g4-industria-e-comercio-do-vestuario",
@@ -508,30 +592,6 @@
       "valor": 0.7592182808002629
     },
     {
-      "oficina_id": "j-m-confeccoes",
-      "oficina_nome": "J M CONFECÇÕES & CIA LTDA MATRIZ",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.7200875515769896
-    },
-    {
-      "oficina_id": "fios-do-sertao",
-      "oficina_nome": "FIOS DO SERTÃO LTDA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.8610839903829591
-    },
-    {
       "oficina_id": "f-l-azevedo-confeccao",
       "oficina_nome": "F & L AZEVEDO CONFECCAO LTDA - ME MATRIZ",
       "mp": "JEANS",
@@ -541,43 +601,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.8386376177521523
-    },
-    {
-      "oficina_id": "marionete-m-de-a-camara",
-      "oficina_nome": "MARIONETE M DE A CAMARA - ME",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.4837909975434465
-    },
-    {
-      "oficina_id": "ideal-confeccoes",
-      "oficina_nome": "IDEAL CONFECCOES LTDA BÁSICO",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.5835170189563563
-    },
-    {
-      "oficina_id": "faccao-santanense",
-      "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.7218813712009864
+      "valor": 0.805551709436414
     },
     {
       "oficina_id": "ideal-confeccoes",
@@ -601,7 +625,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5057147497621756
+      "valor": 0.5232988484815674
     },
     {
       "oficina_id": "lima-confeccoes",
@@ -613,11 +637,11 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5739796861509794
+      "valor": 0.5771332479932982
     },
     {
-      "oficina_id": "m-k-de-azevedo-medeiros-industria-textil",
-      "oficina_nome": "M K DE AZEVEDO MEDEIROS INDUSTRIA TEXTIL",
+      "oficina_id": "joseni-maria-de-medeiros",
+      "oficina_nome": "JOSENI MARIA DE MEDEIROS",
       "mp": "JEANS",
       "ano": 2026,
       "mes": null,
@@ -625,19 +649,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5210657688253058
-    },
-    {
-      "oficina_id": "j-s-silva",
-      "oficina_nome": "J. S. & SILVA LTDA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.6163940301247784
+      "valor": 0.4586313405980998
     },
     {
       "oficina_id": "f-j-de-azevedo",
@@ -649,7 +661,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 1.036213253207731
+      "valor": 0.9171755725190842
     },
     {
       "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
@@ -676,8 +688,8 @@
       "valor": 0.7036869443530561
     },
     {
-      "oficina_id": "poest-industria-comercio-vestuario",
-      "oficina_nome": "POEST INDUSTRIA COMERCIO VESTUARIO LTDA",
+      "oficina_id": "oficina-de-costura-santos",
+      "oficina_nome": "OFICINA DE COSTURA SANTOS LTDA",
       "mp": "JEANS",
       "ano": 2026,
       "mes": null,
@@ -685,11 +697,11 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5773531515408913
+      "valor": 0.5348592658762384
     },
     {
-      "oficina_id": "confeccao-g-b-da-s-junior",
-      "oficina_nome": "CONFECCAO G. B. DA S. JUNIOR & CIA LTDA",
+      "oficina_id": "antonio-igor-dantas-de-souza",
+      "oficina_nome": "ANTONIO IGOR DANTAS DE SOUZA",
       "mp": "JEANS",
       "ano": 2026,
       "mes": null,
@@ -697,19 +709,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5695642899680581
-    },
-    {
-      "oficina_id": "b-n-silva-confeccoes",
-      "oficina_nome": "B&N SILVA CONFECCOES LTDA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.6342775278756594
+      "valor": 0.5609012456225833
     },
     {
       "oficina_id": "lajedo-jeans-confeccoes",
@@ -721,11 +721,11 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.2652643332791944
+      "valor": 0.2672571057333117
     },
     {
-      "oficina_id": "oficina-de-costura-santos",
-      "oficina_nome": "OFICINA DE COSTURA SANTOS LTDA",
+      "oficina_id": "flavia-georgia-b-silva-confeccoes",
+      "oficina_nome": "FLAVIA GEORGIA B SILVA CONFECCOES EIRELI",
       "mp": "JEANS",
       "ano": 2026,
       "mes": null,
@@ -733,7 +733,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5413928049374696
+      "valor": 0.702076471225164
     },
     {
       "oficina_id": "m-f-empreendimentos",
@@ -748,8 +748,8 @@
       "valor": 0.303154105503688
     },
     {
-      "oficina_id": "araujo-camara",
-      "oficina_nome": "ARAUJO & CAMARA LTDA",
+      "oficina_id": "araujo-e-m-confeccoes",
+      "oficina_nome": "ARAUJO E M CONFECCOES EIRELI",
       "mp": "JEANS",
       "ano": 2026,
       "mes": null,
@@ -757,7 +757,31 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5118982245283503
+      "valor": 0.5751186077958801
+    },
+    {
+      "oficina_id": "alves-confeccoes-limitada",
+      "oficina_nome": "ALVES CONFECCOES LIMITADA",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.5675528652056894
+    },
+    {
+      "oficina_id": "a-s-confeccoes",
+      "oficina_nome": "A S CONFECCOES LTDA",
+      "mp": "JEANS",
+      "ano": 2026,
+      "mes": null,
+      "semana_iso": null,
+      "rotulo_semana": null,
+      "fonte": "estoque_jeans",
+      "tipo_valor": "efic_oficial",
+      "valor": 0.6130479390473097
     },
     {
       "oficina_id": "jose-medeiros-de-araujo",
@@ -772,8 +796,8 @@
       "valor": 0.937997835325881
     },
     {
-      "oficina_id": "flavia-georgia-b-silva-confeccoes",
-      "oficina_nome": "FLAVIA GEORGIA B SILVA CONFECCOES EIRELI",
+      "oficina_id": "di3-confeccoes",
+      "oficina_nome": "DI3 CONFECCOES LTDA",
       "mp": "JEANS",
       "ano": 2026,
       "mes": null,
@@ -781,11 +805,11 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.6977772035771064
+      "valor": 0.6773111357314299
     },
     {
-      "oficina_id": "alves-confeccoes-limitada",
-      "oficina_nome": "ALVES CONFECCOES LIMITADA",
+      "oficina_id": "tendencia-confeccoes",
+      "oficina_nome": "TENDENCIA CONFECCOES LTDA - ME",
       "mp": "JEANS",
       "ano": 2026,
       "mes": null,
@@ -793,7 +817,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5741911744979584
+      "valor": 0.7317385795880802
     },
     {
       "oficina_id": "jk-industria-textil",
@@ -817,43 +841,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_jeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.550049740133182
-    },
-    {
-      "oficina_id": "a-s-confeccoes",
-      "oficina_nome": "A S CONFECCOES LTDA",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.611763396482517
-    },
-    {
-      "oficina_id": "tendencia-confeccoes",
-      "oficina_nome": "TENDENCIA CONFECCOES LTDA - ME",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.7317385795880802
-    },
-    {
-      "oficina_id": "araujo-e-m-confeccoes",
-      "oficina_nome": "ARAUJO E M CONFECCOES EIRELI",
-      "mp": "JEANS",
-      "ano": 2026,
-      "mes": null,
-      "semana_iso": null,
-      "rotulo_semana": null,
-      "fonte": "estoque_jeans",
-      "tipo_valor": "efic_oficial",
-      "valor": 0.5864800838355609
+      "valor": 0.5656324611162872
     },
     {
       "oficina_id": "clara-a-de-medeiros-leite",
@@ -877,7 +865,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.39434556562765055
+      "valor": 0.3949484434637404
     },
     {
       "oficina_id": "acaua-confeccoes",
@@ -889,7 +877,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.6444618198277551
+      "valor": 0.645165667030171
     },
     {
       "oficina_id": "acaua-confeccoes",
@@ -913,7 +901,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.3362418320610688
+      "valor": 0.3372033078880408
     },
     {
       "oficina_id": "alanis-queiroz",
@@ -925,7 +913,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.4098537531806616
+      "valor": 0.4297954039440204
     },
     {
       "oficina_id": "alanis-santos",
@@ -949,7 +937,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.804656316178281
+      "valor": 0.7971699264783477
     },
     {
       "oficina_id": "confeccao-g-b-da-s-junior",
@@ -961,7 +949,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5078037723124607
+      "valor": 0.5272283798714343
     },
     {
       "oficina_id": "confeccoes-genesis",
@@ -997,7 +985,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 1.1238232824427483
+      "valor": 1.0449486207494796
     },
     {
       "oficina_id": "danjan-confeccoes",
@@ -1021,7 +1009,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 1.0556980328831476
+      "valor": 1.0713594872171284
     },
     {
       "oficina_id": "dona-tica",
@@ -1033,7 +1021,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.6837135602205259
+      "valor": 0.6781597169211196
     },
     {
       "oficina_id": "ebenezer-industria-textil",
@@ -1045,7 +1033,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 1.1507701063249727
+      "valor": 1.127738210769431
     },
     {
       "oficina_id": "f-k-faccao",
@@ -1069,7 +1057,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.4466869297173186
+      "valor": 0.42407835812803596
     },
     {
       "oficina_id": "f-l-azevedo-confeccao",
@@ -1093,7 +1081,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.7687963467829879
+      "valor": 0.7810028625954198
     },
     {
       "oficina_id": "flavia-georgia-b-silva-confeccoes",
@@ -1105,7 +1093,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.7564936475738004
+      "valor": 0.7445442234292426
     },
     {
       "oficina_id": "forte-fortex-producao-textil",
@@ -1153,7 +1141,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.640673240033927
+      "valor": 0.6458764994547437
     },
     {
       "oficina_id": "g-c-empreendimentos-textil",
@@ -1177,7 +1165,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.6443225403830426
+      "valor": 0.6603828721374045
     },
     {
       "oficina_id": "ideal-confeccoes",
@@ -1189,7 +1177,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.27628771355870596
+      "valor": 0.2763072254028838
     },
     {
       "oficina_id": "j-f-confeccoes",
@@ -1225,7 +1213,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5622844306615775
+      "valor": 0.5737719806434024
     },
     {
       "oficina_id": "joseni-maria-de-medeiros",
@@ -1237,7 +1225,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.910008854961832
+      "valor": 0.9708316793893128
     },
     {
       "oficina_id": "joseni-maria-de-medeiros",
@@ -1249,7 +1237,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.878813613231552
+      "valor": 0.8685926288167939
     },
     {
       "oficina_id": "joseni-maria-de-medeiros",
@@ -1285,7 +1273,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.6719851732237231
+      "valor": 0.7136243927827898
     },
     {
       "oficina_id": "lc-textil",
@@ -1297,7 +1285,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.7064656488549618
+      "valor": 0.7064656488549619
     },
     {
       "oficina_id": "mansour-dantas-confeccoes",
@@ -1309,7 +1297,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.8425530772900764
+      "valor": 0.8529908357188296
     },
     {
       "oficina_id": "maxwela-araujo-silva",
@@ -1321,7 +1309,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.4043674547639242
+      "valor": 0.4058776051132922
     },
     {
       "oficina_id": "n-s-constantino",
@@ -1381,7 +1369,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.6070654059680779
+      "valor": 0.5946542910016194
     },
     {
       "oficina_id": "solis-confeccoes",
@@ -1393,7 +1381,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.43149269640585236
+      "valor": 0.4327158953562341
     },
     {
       "oficina_id": "soly-brasil",
@@ -1405,7 +1393,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.510437833969466
+      "valor": 0.5186921755725192
     },
     {
       "oficina_id": "soly-brasil",
@@ -1417,7 +1405,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.6381861535199324
+      "valor": 0.6301256917938931
     },
     {
       "oficina_id": "tece-costuras-e-confeccoes",
@@ -1429,7 +1417,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.537990185387132
+      "valor": 0.5314143108799596
     },
     {
       "oficina_id": "tendencia-confeccoes",
@@ -1441,7 +1429,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.7044192509541983
+      "valor": 0.7242239627509188
     },
     {
       "oficina_id": "tropicalliz-confeccoes",
@@ -1453,7 +1441,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.5149748091603054
+      "valor": 0.5095643765903308
     },
     {
       "oficina_id": "vitalize-confeccoes",
@@ -1465,7 +1453,7 @@
       "rotulo_semana": null,
       "fonte": "estoque_naojeans",
       "tipo_valor": "efic_oficial",
-      "valor": 0.544018640948746
+      "valor": 0.5484631447150531
     },
     {
       "oficina_id": "solis-confeccoes",

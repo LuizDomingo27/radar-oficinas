@@ -43,6 +43,20 @@ class TestConsolidar(unittest.TestCase):
             {"nome": "BETA", "modulo": "Lidera+", "data": datetime(2026, 5, 12),
              "polo": "Natal - 18/07"},
         ]
+        # O leitor já reescreve o módulo com o programa à frente (Costura e
+        # Mecânica); a consolidação recebe o rótulo pronto.
+        self._treino_ep2025_cm = [
+            {"nome": "ALFA TEXTIL", "modulo": "Costura e Mecânica - MÓDULO 1",
+             "inicio": datetime(2025, 5, 19), "fim": datetime(2025, 5, 23),
+             "status": "Concluído"},
+            {"nome": "BETA", "modulo": "Costura e Mecânica - MÓDULO 2",
+             "inicio": "sem data", "fim": None, "status": "Concluído"},  # descartado
+        ]
+        self._treino_ep2025_toc = [
+            {"nome": "BETA", "modulo": "TOC - 1ª etapa",
+             "inicio": datetime(2025, 10, 6), "fim": datetime(2025, 10, 10),
+             "status": "Concluído"},
+        ]
 
     def _consolidar(self):
         with mock.patch.multiple(
@@ -53,6 +67,8 @@ class TestConsolidar(unittest.TestCase):
             ler_eficiencia_naojeans=mock.Mock(return_value=iter(self._efic)),
             ler_treino_ep=mock.Mock(return_value=iter(self._treino_ep)),
             ler_treino_lidera=mock.Mock(return_value=iter(self._treino_lidera)),
+            ler_treino_ep2025_cm=mock.Mock(return_value=iter(self._treino_ep2025_cm)),
+            ler_treino_ep2025_toc=mock.Mock(return_value=iter(self._treino_ep2025_toc)),
         ):
             return consolidacao.consolidar(self.indice)
 
@@ -79,6 +95,25 @@ class TestConsolidar(unittest.TestCase):
         self.assertEqual(toc.periodo.ano, 2024)
         self.assertEqual(toc.ch, 20.0)
 
+    def test_ep2025_deriva_mes_e_datas_do_inicio(self):
+        c = self._consolidar()
+        m1 = next(f for f in c.treino if f.modulo == "Costura e Mecânica - MÓDULO 1")
+        self.assertEqual(m1.oficina_id, "alfa-textil")
+        self.assertEqual((m1.periodo.ano, m1.periodo.mes), (2025, 5))
+        self.assertEqual((m1.data_inicio, m1.data_fim), ("2025-05-19", "2025-05-23"))
+        self.assertEqual(m1.status, "Concluído")
+
+    def test_ep2025_linha_sem_data_de_inicio_e_descartada(self):
+        c = self._consolidar()
+        self.assertFalse(
+            any(f.modulo == "Costura e Mecânica - MÓDULO 2" for f in c.treino))
+
+    def test_ep2025_toc_etapa_vira_marco_com_mes(self):
+        c = self._consolidar()
+        toc1 = next(f for f in c.treino if f.modulo == "TOC - 1ª etapa")
+        self.assertEqual((toc1.periodo.ano, toc1.periodo.mes), (2025, 10))
+        self.assertEqual(toc1.data_inicio, "2025-10-06")
+
     def test_eficiencia_preserva_tipo_e_rotulo(self):
         c = self._consolidar()
         self.assertEqual(len(c.eficiencia), 1)
@@ -89,7 +124,9 @@ class TestConsolidar(unittest.TestCase):
         r = self._consolidar().resumo()
         self.assertEqual(r["producao"], 2)      # Alfa + Fantasma (Beta descartado)
         self.assertEqual(r["absenteismo"], 1)
-        self.assertEqual(r["treino"], 2)
+        # 2 antigos (ep + lidera) + EP2025: CM Alfa (Beta sem data descartado)
+        # + TOC Beta = 4 no total.
+        self.assertEqual(r["treino"], 4)
         self.assertEqual(r["nao_resolvidos"], 1)
 
 

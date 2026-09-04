@@ -37,7 +37,10 @@ def _compactar_causas(agregados: list[dict]) -> list[list]:
 
 
 def main() -> None:
-    print("Lendo abas RESUMO e DEFEITOS (pode levar ~1 min)...")
+    # Na 1ª leitura, extrai as abas para CSVs de cache (~22 s); depois, enquanto
+    # o "Indicador geral" não mudar, reaproveita o cache (~0,3 s). Ver
+    # infra/leitor_qualidade e scripts/slim_qualidade.
+    print("Lendo abas RESUMO e DEFEITOS (usa cache se o Indicador não mudou)...")
     oficinas = qualidade.agregar_oficinas(leitor_qualidade.ler_inspecoes())
     causas = qualidade.agregar_causas(leitor_qualidade.ler_defeitos())
     print(f"  {len(oficinas)} linhas de oficina, {len(causas)} linhas de causa")

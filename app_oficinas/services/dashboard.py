@@ -214,20 +214,34 @@ def _agrupar_por_oficina(registros: Iterable[dict]) -> dict[str, list[dict]]:
 
 
 def _treinos_por_oficina(treino_reg: Iterable[dict]) -> dict[str, list[dict]]:
-    """Marcos de treino por oficina: ``{modulo, ano, ciclo}`` sem duplicatas."""
+    """Marcos de treino por oficina, sem duplicatas.
+
+    Cada marco carrega, além de ``modulo``/``ano``/``ciclo``, o ``mes`` e a
+    ``semana_iso`` (quando a fonte tem data — EP 2025) e o intervalo
+    ``inicio``/``fim`` com o ``status``. Assim o frontend ancora a linha do treino
+    no MÊS exato do gráfico, não só no ano. A chave de deduplicação inclui o mês:
+    o mesmo módulo em meses diferentes é um marco distinto.
+    """
     vistos: dict[str, set] = defaultdict(set)
     saida: dict[str, list[dict]] = defaultdict(list)
     for r in treino_reg:
         oid = r["oficina_id"]
-        chave = (r.get("modulo"), r.get("ano"), r.get("ciclo"))
+        chave = (r.get("modulo"), r.get("ano"), r.get("mes"), r.get("ciclo"))
         if chave in vistos[oid]:
             continue
         vistos[oid].add(chave)
-        saida[oid].append(
-            {"modulo": r.get("modulo"), "ano": r.get("ano"), "ciclo": r.get("ciclo")}
-        )
+        saida[oid].append({
+            "modulo": r.get("modulo"),
+            "ano": r.get("ano"),
+            "mes": r.get("mes"),
+            "semana_iso": r.get("semana_iso"),
+            "ciclo": r.get("ciclo"),
+            "inicio": r.get("data_inicio"),
+            "fim": r.get("data_fim"),
+            "status": r.get("status"),
+        })
     for lista in saida.values():
-        lista.sort(key=lambda t: (t["ano"] or 0, t["modulo"] or ""))
+        lista.sort(key=lambda t: (t["ano"] or 0, t["mes"] or 0, t["modulo"] or ""))
     return saida
 
 

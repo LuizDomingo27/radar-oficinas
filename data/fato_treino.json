@@ -1,6 +1,6 @@
 {
-  "gerado_em": "2026-09-02T22:10:39+00:00",
-  "total": 306,
+  "gerado_em": "2026-09-03T23:47:39+00:00",
+  "total": 446,
   "meta": {},
   "registros": [
     {
@@ -15,7 +15,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "linea-ind-com-ser-confeccoes",
@@ -29,7 +32,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "flavia-georgia-braga-silva",
@@ -43,7 +49,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "januncio-nobrega-de-azevedo",
@@ -57,7 +66,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "jg-faccao",
@@ -71,7 +83,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "jose-medeiros-de-araujo",
@@ -85,7 +100,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "joseni-maria-de-medeiros",
@@ -99,7 +117,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "j-s-silva",
@@ -113,7 +134,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "luiz-lupercio-da-silva-junior",
@@ -127,7 +151,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-a-vieira-de-almeida",
@@ -141,7 +168,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-m-faccao",
@@ -155,7 +185,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "cabugi-ind-e-com-de-confeccoes",
@@ -169,7 +202,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "ideal-confeccoes",
@@ -183,7 +219,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "danjan-confeccoes",
@@ -197,7 +236,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
@@ -211,7 +253,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "tiago-de-souza-barbosa",
@@ -225,7 +270,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "a-maria-dos-santos-silva-faccao",
@@ -239,7 +287,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "jero-confeccoes",
@@ -253,7 +304,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-w-de-souza-confeccoes",
@@ -267,7 +321,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "helio-araujo-araujo-ind-de-conf",
@@ -281,7 +338,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "nobre-confeccoes",
@@ -295,7 +355,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "poest-industria-comercio-vestuario",
@@ -309,7 +372,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-dalison-de-medeiros",
@@ -323,7 +389,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "marionete-m-de-a-camara",
@@ -337,7 +406,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "n-s-constantino",
@@ -351,7 +423,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "cabugi-industria-com-confeccoes",
@@ -365,7 +440,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "uniao-confeccoes",
@@ -379,7 +457,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "faccao-santos",
@@ -393,7 +474,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "tendencia-confeccoes",
@@ -407,7 +491,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-a-de-araujo-ferreira",
@@ -421,7 +508,10 @@
       "modulo": "Lean Manufacturing",
       "ch": 30.0,
       "ciclo": "2021/2022",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "marionete-m-de-a-camara",
@@ -435,7 +525,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "faccao-ello",
@@ -449,7 +542,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "oficina-de-costura-santos",
@@ -463,7 +559,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "aguia-industria-textil",
@@ -477,7 +576,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "sete-montes-empreendimentos",
@@ -491,7 +593,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "maranatha-companhia-textil",
@@ -505,7 +610,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "araujo-camara",
@@ -519,7 +627,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "arca-fabril-industria-de-vestuario",
@@ -533,7 +644,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "evalber-de-castro-dantas",
@@ -547,7 +661,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "industria-de-confeccoes-simao",
@@ -561,7 +678,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "canaa-companhia-textil",
@@ -575,7 +695,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "alianca-confeccoes",
@@ -589,7 +712,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "esperanca-confeccoes",
@@ -603,7 +729,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "dona-tica-confeccoes",
@@ -617,7 +746,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "ebenezer-industria-textil",
@@ -631,7 +763,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "progresso-industria-do-vestuario",
@@ -645,7 +780,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "a-s-confeccoes",
@@ -659,7 +797,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "ideal-confeccoes",
@@ -673,7 +814,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "confeccao-g-b-da-silva-junior",
@@ -687,7 +831,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "ivanildo-jose-de-souza",
@@ -701,7 +848,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-l-azevedo-confeccao",
@@ -715,7 +865,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-l-azevedo-confeccao",
@@ -729,7 +882,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "a-n-de-azevedo-medeiros",
@@ -743,7 +899,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "a-n-de-azevedo-medeiros",
@@ -757,7 +916,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "geferson-alan-dos-santos-silva",
@@ -771,7 +933,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "jayne-da-silva-panicio-limitada",
@@ -785,7 +950,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "noel-pereira-de-azevedo-confeccao",
@@ -799,7 +967,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "j-s-silva",
@@ -813,7 +984,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "tendencia-confeccoes",
@@ -827,7 +1001,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "soly-brasil",
@@ -841,7 +1018,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "a-n-de-azevedo-medeiros",
@@ -855,7 +1035,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-dalison-de-medeiros",
@@ -869,7 +1052,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-a-vieira-de-almeida",
@@ -883,7 +1069,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "a-s-empreendimentos",
@@ -897,7 +1086,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-w-de-souza-confeccoes",
@@ -911,7 +1103,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-f-empreendimentos",
@@ -925,7 +1120,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "lima-confeccoes",
@@ -939,7 +1137,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "faccao-santanense",
@@ -953,7 +1154,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-c-confeccoes",
@@ -967,7 +1171,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-silva-confeccoes",
@@ -981,7 +1188,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "ferreira-e-araujo-confeccoes",
@@ -995,7 +1205,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "lima-confeccoes",
@@ -1009,7 +1222,10 @@
       "modulo": "TOC",
       "ch": 67.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "faccao-santanense",
@@ -1023,7 +1239,10 @@
       "modulo": "TOC",
       "ch": 68.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-silva-confeccoes",
@@ -1037,7 +1256,10 @@
       "modulo": "TOC",
       "ch": 69.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "ferreira-e-araujo-confeccoes",
@@ -1051,7 +1273,10 @@
       "modulo": "TOC",
       "ch": 70.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-a-vieira-de-almeida",
@@ -1065,7 +1290,10 @@
       "modulo": "TOC",
       "ch": 71.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-dalison",
@@ -1079,7 +1307,10 @@
       "modulo": "TOC",
       "ch": 72.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-w-confeccao",
@@ -1093,7 +1324,10 @@
       "modulo": "TOC",
       "ch": 73.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-f-empreendimentos",
@@ -1107,7 +1341,10 @@
       "modulo": "TOC",
       "ch": 74.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "a-s-empreendimentos",
@@ -1121,7 +1358,10 @@
       "modulo": "TOC",
       "ch": 75.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-c-confeccoes",
@@ -1135,7 +1375,10 @@
       "modulo": "TOC",
       "ch": 76.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "faccao-f-sales",
@@ -1149,7 +1392,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "confeccoes-f-sales",
@@ -1163,7 +1409,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "faccao-ello",
@@ -1177,7 +1426,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "oficina-de-costura-santos",
@@ -1191,7 +1443,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "aguia-industria-textil",
@@ -1205,7 +1460,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "sete-montes-empreendimentos",
@@ -1219,7 +1477,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "maranatha-companhia-textil",
@@ -1233,7 +1494,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "araujo-camara",
@@ -1247,7 +1511,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "arca-fabril-industria-de-vestuario",
@@ -1261,7 +1528,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "industria-de-confeccoes-simao",
@@ -1275,7 +1545,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "canaa-companhia-textil",
@@ -1289,7 +1562,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "alianca-confeccoes",
@@ -1303,7 +1579,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "esperanca-confeccoes",
@@ -1317,7 +1596,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "dona-tica-confeccoes",
@@ -1331,7 +1613,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "ebenezer-industria-textil",
@@ -1345,7 +1630,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "progresso-industria-do-vestuario",
@@ -1359,7 +1647,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "marionete-m-de-a-camara",
@@ -1373,7 +1664,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "confianca-industria-textil",
@@ -1387,7 +1681,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "jucurutu-textil",
@@ -1401,7 +1698,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "triunfo-confeccoes",
@@ -1415,7 +1715,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "fortaleza-industria-de-vestuario",
@@ -1429,7 +1732,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "conquista-empreendimentos",
@@ -1443,7 +1749,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "redencao-industria-de-vestuario",
@@ -1457,7 +1766,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "tamareira-industria-e-comercio",
@@ -1471,7 +1783,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "g-c-empreendimentos-textil",
@@ -1485,7 +1800,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "confeccoes-franoelda-magneuda-de-medeiros-araujo",
@@ -1499,7 +1817,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "w-a-2-confeccoes",
@@ -1513,7 +1834,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "jm-textil",
@@ -1527,7 +1851,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "confeccoes-genesis",
@@ -1541,7 +1868,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-j-industria-e-comercio",
@@ -1555,7 +1885,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-m-comercio-e-industria",
@@ -1569,7 +1902,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "a-maria-dos-santos-silva-faccao",
@@ -1583,7 +1919,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "j-g-industria-e-comercio",
@@ -1597,7 +1936,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "dona-tica-confeccoes",
@@ -1611,7 +1953,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "lajedo-jeans-confeccoes",
@@ -1625,7 +1970,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "progresso-industria-do-vestuario",
@@ -1639,7 +1987,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "acaua-confeccoes",
@@ -1653,7 +2004,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "solis-confeccoes",
@@ -1667,7 +2021,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "vitalize-confeccoes",
@@ -1681,7 +2038,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "poest-industria-e-comercio-de-vestuario",
@@ -1695,7 +2055,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "amorim-pedro-confeccoes",
@@ -1709,7 +2072,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "flavia-georgia-braga-silva-confeccoes",
@@ -1723,7 +2089,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "cabugi-industria-e-comercio-de-confeccoes",
@@ -1737,7 +2106,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "b-n-silva-confeccoes",
@@ -1751,7 +2123,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "arara-confeccoes",
@@ -1765,7 +2140,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "evalber-de-castro-dantas",
@@ -1779,7 +2157,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-a-n-confeccoes",
@@ -1793,7 +2174,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "i-m-de-oliveira-silva",
@@ -1807,7 +2191,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "araujo-e-m-confeccoes",
@@ -1821,7 +2208,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-dalison-de-medeiros",
@@ -1835,7 +2225,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-a-vieira-de-almeida",
@@ -1849,7 +2242,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "a-s-empreendimentos",
@@ -1863,7 +2259,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "linea-industria-comercio-servicos-de-confeccoes",
@@ -1877,7 +2276,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "livia-reboucas-de-carvalho",
@@ -1891,7 +2293,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-w-de-souza-confeccoes",
@@ -1905,7 +2310,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-f-empreendimentos",
@@ -1919,7 +2327,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-j-de-azevedo",
@@ -1933,7 +2344,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "confeccoes-j-s",
@@ -1947,7 +2361,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "alves-trindade-confeccoes",
@@ -1961,7 +2378,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "danjan-confeccoes",
@@ -1975,7 +2395,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "dias-e-alves-confeccoes",
@@ -1989,7 +2412,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "clara-a-de-medeiros-leite",
@@ -2003,7 +2429,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "a-a-pereira-limitada",
@@ -2017,7 +2446,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "januncio-nobrega-de-azevedo",
@@ -2031,7 +2463,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "i-f-confeccoes",
@@ -2045,7 +2480,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "nobre-confeccoes",
@@ -2059,7 +2497,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "jakeline-f-de-azevedo",
@@ -2073,7 +2514,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
@@ -2087,7 +2531,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "i-m-de-araujo-f-nogueira",
@@ -2101,7 +2548,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 85.0,
       "ciclo": "2023/2024",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-k-faccao",
@@ -2115,7 +2565,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "ksw-confeccoes",
@@ -2129,7 +2582,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "n-s-constantino",
@@ -2143,7 +2599,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "di3-confeccoes",
@@ -2157,7 +2616,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "mansour-e-dantas-confec",
@@ -2171,7 +2633,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "helio-araujo-industria-de-confeccoes",
@@ -2185,7 +2650,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "dantas-e-paulino-confeccoes",
@@ -2199,7 +2667,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "ajg-confeccoes",
@@ -2213,7 +2684,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "uniao-confeccoes",
@@ -2227,7 +2701,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "lima-confeccoes",
@@ -2241,7 +2718,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "ferreira-e-araujo-confeccoes",
@@ -2255,7 +2735,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-w-confeccao",
@@ -2269,7 +2752,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-dalison",
@@ -2283,7 +2769,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "a-s-empreendimentos",
@@ -2297,7 +2786,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-a-vieira-de-almeida",
@@ -2311,7 +2803,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "m-f-empreendimentos",
@@ -2325,7 +2820,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "faccao-santanense",
@@ -2339,7 +2837,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "fsilva-confeccoes",
@@ -2353,7 +2854,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "alanis-queiroz",
@@ -2367,7 +2871,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "jm-confeccoes",
@@ -2381,7 +2888,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "jm-confeccoes",
@@ -2395,7 +2905,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "j-s-silva",
@@ -2409,7 +2922,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-l-azevedo-confeccao",
@@ -2423,7 +2939,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "ideal-confeccoes",
@@ -2437,7 +2956,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-l-azevedo-confeccao",
@@ -2451,7 +2973,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "i-m-araujo",
@@ -2465,7 +2990,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "confeccoes-js",
@@ -2479,7 +3007,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
@@ -2493,7 +3024,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "acari-textil",
@@ -2507,7 +3041,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "a-maria-dos-santos-silva-faccao",
@@ -2521,7 +3058,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "danjan-confeccoes",
@@ -2535,7 +3075,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "oficina-de-costura-santos",
@@ -2549,7 +3092,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "confeccoes-dona-dina",
@@ -2563,7 +3109,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "araujo-e-m-confeccoes",
@@ -2577,7 +3126,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "marionete-m-de-a-camara",
@@ -2591,7 +3143,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "alianca-confeccoes",
@@ -2605,7 +3160,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "joseni-maria-de-medeiros",
@@ -2619,7 +3177,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "zaja-confeccoes",
@@ -2633,7 +3194,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "jero-confeccoes-potengi-textil",
@@ -2647,7 +3211,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "poest-industria-e-comercio-de-vestuario",
@@ -2661,7 +3228,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "amorim-e-pedro",
@@ -2675,7 +3245,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "aline-rodrigues-de-lima-araujo",
@@ -2689,7 +3262,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "tropicalliz",
@@ -2703,7 +3279,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "linea-confeccoes",
@@ -2717,7 +3296,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "livia-reboucas-de-carvalho",
@@ -2731,7 +3313,10 @@
       "modulo": "Costura e Mecânica",
       "ch": 160.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "di3-confeccoes",
@@ -2745,7 +3330,10 @@
       "modulo": "TOC",
       "ch": 200.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "n-s-constantino",
@@ -2759,7 +3347,10 @@
       "modulo": "TOC",
       "ch": 200.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "mansour-e-dantas-confec",
@@ -2773,7 +3364,10 @@
       "modulo": "TOC",
       "ch": 200.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "f-k-faccao",
@@ -2787,7 +3381,10 @@
       "modulo": "TOC",
       "ch": 200.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "ksw-confeccoes",
@@ -2801,7 +3398,10 @@
       "modulo": "TOC",
       "ch": 200.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "confeccoes-js",
@@ -2815,7 +3415,10 @@
       "modulo": "TOC",
       "ch": 200.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "dantas-e-paulino-confeccoes",
@@ -2829,7 +3432,10 @@
       "modulo": "TOC",
       "ch": 200.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "ajg-confeccoes",
@@ -2843,7 +3449,10 @@
       "modulo": "TOC",
       "ch": 200.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": "uniao-confeccoes",
@@ -2857,7 +3466,10 @@
       "modulo": "TOC",
       "ch": 200.0,
       "ciclo": "2025",
-      "polo": null
+      "polo": null,
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -2871,7 +3483,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "50144042000174"
+      "polo": "50144042000174",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -2885,7 +3500,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "07 138 807 0001 34"
+      "polo": "07 138 807 0001 34",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -2899,7 +3517,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "56961028000140"
+      "polo": "56961028000140",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -2913,7 +3534,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "62895694000120"
+      "polo": "62895694000120",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -2927,7 +3551,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "18687778000186"
+      "polo": "18687778000186",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -2941,7 +3568,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "44213936000176"
+      "polo": "44213936000176",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -2955,7 +3585,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "19317992000103"
+      "polo": "19317992000103",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -2969,7 +3602,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "61.858.383/0001-28"
+      "polo": "61.858.383/0001-28",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -2983,7 +3619,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "63.376.915/0001-99"
+      "polo": "63.376.915/0001-99",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -2997,7 +3636,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "06287749000148"
+      "polo": "06287749000148",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3011,7 +3653,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "17894086000146"
+      "polo": "17894086000146",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3025,7 +3670,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "43645942000130"
+      "polo": "43645942000130",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3039,7 +3687,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "43645942000130"
+      "polo": "43645942000130",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3053,7 +3704,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "43645942000130"
+      "polo": "43645942000130",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3067,7 +3721,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "08534555000125"
+      "polo": "08534555000125",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3081,7 +3738,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "35.313.255/0001-99"
+      "polo": "35.313.255/0001-99",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3095,7 +3755,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "63376195/0001-99"
+      "polo": "63376195/0001-99",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3109,7 +3772,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "19171896000108"
+      "polo": "19171896000108",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3123,7 +3789,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "21268862000250"
+      "polo": "21268862000250",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3137,7 +3806,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "21268862000250"
+      "polo": "21268862000250",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3151,7 +3823,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "21268862000250"
+      "polo": "21268862000250",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3165,7 +3840,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "21268862000170"
+      "polo": "21268862000170",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3179,7 +3857,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "21268862000170"
+      "polo": "21268862000170",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3193,7 +3874,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "21268862000170"
+      "polo": "21268862000170",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3207,7 +3891,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "60.364.294/0001-62"
+      "polo": "60.364.294/0001-62",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3221,7 +3908,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "32885198000124"
+      "polo": "32885198000124",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3235,7 +3925,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "18759259000186"
+      "polo": "18759259000186",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3249,7 +3942,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "20953481000167"
+      "polo": "20953481000167",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3263,7 +3959,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "58.337.244/0001-44"
+      "polo": "58.337.244/0001-44",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3277,7 +3976,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "39471999000192"
+      "polo": "39471999000192",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3291,7 +3993,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "10539599000190"
+      "polo": "10539599000190",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3305,7 +4010,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "20.953.481/0001-67"
+      "polo": "20.953.481/0001-67",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3319,7 +4027,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "49145918000118"
+      "polo": "49145918000118",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3333,7 +4044,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "41210858000168"
+      "polo": "41210858000168",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3347,7 +4061,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "62470324000140"
+      "polo": "62470324000140",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3361,7 +4078,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "54944906000193"
+      "polo": "54944906000193",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3375,7 +4095,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "28593738000129"
+      "polo": "28593738000129",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3389,7 +4112,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "540180870001-53"
+      "polo": "540180870001-53",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3403,7 +4129,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "54018087000153"
+      "polo": "54018087000153",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3417,7 +4146,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "54018087000153"
+      "polo": "54018087000153",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3431,7 +4163,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "54018087000153"
+      "polo": "54018087000153",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3445,7 +4180,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "40.549.732/0001-50"
+      "polo": "40.549.732/0001-50",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3459,7 +4197,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "48.354.441/0001-18"
+      "polo": "48.354.441/0001-18",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3473,7 +4214,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "14.102.093/0001-70"
+      "polo": "14.102.093/0001-70",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3487,7 +4231,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "14.102.093/0001-70"
+      "polo": "14.102.093/0001-70",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3501,7 +4248,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "14.102.093/0001-70"
+      "polo": "14.102.093/0001-70",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3515,7 +4265,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "51.268.011/0001-98"
+      "polo": "51.268.011/0001-98",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3529,7 +4282,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "14.102 093/0001-70"
+      "polo": "14.102 093/0001-70",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3543,7 +4299,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "18.846.1380/00171"
+      "polo": "18.846.1380/00171",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3557,7 +4316,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "10630552000170"
+      "polo": "10630552000170",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3571,7 +4333,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "06287749000148"
+      "polo": "06287749000148",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3585,7 +4350,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "16.765.361 000169"
+      "polo": "16.765.361 000169",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3599,7 +4367,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "21016343000114"
+      "polo": "21016343000114",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3613,7 +4384,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "55628113000128"
+      "polo": "55628113000128",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3627,7 +4401,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "21820689000170"
+      "polo": "21820689000170",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3641,7 +4418,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "55628113000128"
+      "polo": "55628113000128",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3655,7 +4435,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "46.693.415/0001-99"
+      "polo": "46.693.415/0001-99",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3669,7 +4452,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "36681053000162"
+      "polo": "36681053000162",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3683,7 +4469,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "07589723000117"
+      "polo": "07589723000117",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3697,7 +4486,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "24.251.680/0001-84"
+      "polo": "24.251.680/0001-84",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3711,7 +4503,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "17.160.212/0001-39"
+      "polo": "17.160.212/0001-39",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3725,7 +4520,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "40549732000150"
+      "polo": "40549732000150",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3739,7 +4537,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "18116447000196"
+      "polo": "18116447000196",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3753,7 +4554,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "45303167000160"
+      "polo": "45303167000160",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3767,7 +4571,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "59225695000152"
+      "polo": "59225695000152",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3781,7 +4588,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "24.685.779/0001-94"
+      "polo": "24.685.779/0001-94",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3795,7 +4605,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "22013591000174"
+      "polo": "22013591000174",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3809,7 +4622,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "10561345/000178"
+      "polo": "10561345/000178",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3823,7 +4639,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "35.313.255/0001-99"
+      "polo": "35.313.255/0001-99",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3837,7 +4656,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "24.685.779/0001-94"
+      "polo": "24.685.779/0001-94",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3851,7 +4673,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "24.685.779/0001-94"
+      "polo": "24.685.779/0001-94",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3865,7 +4690,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "48986203000125"
+      "polo": "48986203000125",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3879,7 +4707,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "19.043.986/0001-05"
+      "polo": "19.043.986/0001-05",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3893,7 +4724,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "24685779000194"
+      "polo": "24685779000194",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3907,7 +4741,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "12.018.265/0001-04"
+      "polo": "12.018.265/0001-04",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3921,7 +4758,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "30562050000123"
+      "polo": "30562050000123",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3935,7 +4775,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "20946188000172"
+      "polo": "20946188000172",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3949,7 +4792,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "63523127000105"
+      "polo": "63523127000105",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3963,7 +4809,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "45.789.068/0001-30"
+      "polo": "45.789.068/0001-30",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3977,7 +4826,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "50144042000174"
+      "polo": "50144042000174",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -3991,7 +4843,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "32885198/0001-24"
+      "polo": "32885198/0001-24",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4005,7 +4860,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "59225695000152"
+      "polo": "59225695000152",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4019,7 +4877,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "40.689.260/0001-30"
+      "polo": "40.689.260/0001-30",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4033,7 +4894,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "30913713000107"
+      "polo": "30913713000107",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4047,7 +4911,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "30913713000298"
+      "polo": "30913713000298",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4061,7 +4928,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "19171896000108"
+      "polo": "19171896000108",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4075,7 +4945,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "16698559000177"
+      "polo": "16698559000177",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4089,7 +4962,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "59.225.695/0001-52"
+      "polo": "59.225.695/0001-52",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4103,7 +4979,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "19317992000103"
+      "polo": "19317992000103",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4117,7 +4996,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "07.211.336/0001-42"
+      "polo": "07.211.336/0001-42",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4131,7 +5013,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "07.211.336/0001-42"
+      "polo": "07.211.336/0001-42",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4145,7 +5030,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "07.211.336/0001-42"
+      "polo": "07.211.336/0001-42",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4159,7 +5047,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "07.211.336/0001-42"
+      "polo": "07.211.336/0001-42",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4173,7 +5064,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "13.977.134/0001-09"
+      "polo": "13.977.134/0001-09",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4187,7 +5081,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "13.977.134/0001-09"
+      "polo": "13.977.134/0001-09",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4201,7 +5098,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "13.977.134/0001-09"
+      "polo": "13.977.134/0001-09",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4215,7 +5115,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "19171896000108"
+      "polo": "19171896000108",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4229,7 +5132,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "19317992000103"
+      "polo": "19317992000103",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4243,7 +5149,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "36681053000162"
+      "polo": "36681053000162",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4257,7 +5166,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "63523127000105"
+      "polo": "63523127000105",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4271,7 +5183,10 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "30562050000123"
+      "polo": "30562050000123",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
     },
     {
       "oficina_id": null,
@@ -4285,7 +5200,2390 @@
       "modulo": "Lidera+ Gestão de Pessoas",
       "ch": null,
       "ciclo": null,
-      "polo": "63.523.127/0001-05"
+      "polo": "63.523.127/0001-05",
+      "data_inicio": null,
+      "data_fim": null,
+      "status": null
+    },
+    {
+      "oficina_id": "f-k-faccao",
+      "oficina_nome": "F & K FACÇÃO LTDA",
+      "mp": null,
+      "ano": 2025,
+      "mes": 5,
+      "semana_iso": 21,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-05-19",
+      "data_fim": "2025-05-23",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ksw-confeccoes",
+      "oficina_nome": "ksw confecções",
+      "mp": null,
+      "ano": 2025,
+      "mes": 5,
+      "semana_iso": 22,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-05-26",
+      "data_fim": "2025-05-30",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "n-s-constantino",
+      "oficina_nome": "N S CONSTANTINO",
+      "mp": null,
+      "ano": 2025,
+      "mes": 6,
+      "semana_iso": 23,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-06-02",
+      "data_fim": "2025-06-06",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "di3-confeccoes",
+      "oficina_nome": "DI3 Confecções",
+      "mp": null,
+      "ano": 2025,
+      "mes": 6,
+      "semana_iso": 24,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-06-09",
+      "data_fim": "2025-06-13",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "mansour-e-dantas-confec",
+      "oficina_nome": "Mansour e Dantas confec Ltda.",
+      "mp": null,
+      "ano": 2025,
+      "mes": 6,
+      "semana_iso": 25,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-06-16",
+      "data_fim": "2025-06-27",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "helio-araujo-industria-de-confeccoes",
+      "oficina_nome": "Helio araujo industria de confeccoes",
+      "mp": null,
+      "ano": 2025,
+      "mes": 6,
+      "semana_iso": 27,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-06-30",
+      "data_fim": "2025-07-09",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "dantas-e-paulino-confeccoes",
+      "oficina_nome": "Dantas e Paulino confeccoes",
+      "mp": null,
+      "ano": 2025,
+      "mes": 7,
+      "semana_iso": 29,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-07-14",
+      "data_fim": "2025-07-18",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ajg-confeccoes",
+      "oficina_nome": "AJG CONFECÇÕES LTDA",
+      "mp": null,
+      "ano": 2025,
+      "mes": 7,
+      "semana_iso": 30,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-07-21",
+      "data_fim": "2025-07-29",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "uniao-confeccoes",
+      "oficina_nome": "União confecções",
+      "mp": null,
+      "ano": 2025,
+      "mes": 7,
+      "semana_iso": 31,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-07-30",
+      "data_fim": "2025-08-06",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "lima-confeccoes",
+      "oficina_nome": "LIMA CONFECCOES LTDA",
+      "mp": null,
+      "ano": 2025,
+      "mes": 8,
+      "semana_iso": 33,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-08-11",
+      "data_fim": "2025-08-15",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ferreira-e-araujo-confeccoes",
+      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
+      "mp": null,
+      "ano": 2025,
+      "mes": 8,
+      "semana_iso": 34,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-08-18",
+      "data_fim": "2025-08-22",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "f-w-confeccao",
+      "oficina_nome": "F.W confecção",
+      "mp": null,
+      "ano": 2025,
+      "mes": 8,
+      "semana_iso": 34,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-08-19",
+      "data_fim": "2025-08-25",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "m-dalison",
+      "oficina_nome": "M dalison",
+      "mp": null,
+      "ano": 2025,
+      "mes": 8,
+      "semana_iso": 35,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-08-25",
+      "data_fim": "2025-08-29",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "a-s-empreendimentos",
+      "oficina_nome": "A. S. Empreendimentos",
+      "mp": null,
+      "ano": 2025,
+      "mes": 8,
+      "semana_iso": 35,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-08-26",
+      "data_fim": "2025-09-01",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "m-a-vieira-de-almeida",
+      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
+      "mp": null,
+      "ano": 2025,
+      "mes": 9,
+      "semana_iso": 36,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-09-01",
+      "data_fim": "2025-09-30",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "m-f-empreendimentos",
+      "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
+      "mp": null,
+      "ano": 2025,
+      "mes": 9,
+      "semana_iso": 36,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-09-02",
+      "data_fim": "2025-09-30",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "faccao-santanense",
+      "oficina_nome": "FACCAO SANTANENSE LTDA",
+      "mp": null,
+      "ano": 2025,
+      "mes": 9,
+      "semana_iso": 37,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-09-08",
+      "data_fim": "2025-09-12",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "fsilva-confeccoes",
+      "oficina_nome": "Fsilva Confecções",
+      "mp": null,
+      "ano": 2025,
+      "mes": 9,
+      "semana_iso": 37,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-09-08",
+      "data_fim": "2025-09-12",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "alanis-queiroz",
+      "oficina_nome": "ALANIS QUEIROZ LTDA",
+      "mp": null,
+      "ano": 2025,
+      "mes": 9,
+      "semana_iso": 38,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-09-15",
+      "data_fim": "2025-09-19",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "jm-confeccoes",
+      "oficina_nome": "JM confecções & cia ltda - MATRIZ",
+      "mp": null,
+      "ano": 2025,
+      "mes": 9,
+      "semana_iso": 38,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-09-15",
+      "data_fim": "2025-09-19",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "jm-confeccoes",
+      "oficina_nome": "JM confecções & cia ltda - FILIAL",
+      "mp": null,
+      "ano": 2025,
+      "mes": 9,
+      "semana_iso": 39,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-09-22",
+      "data_fim": "2025-09-26",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "j-s-silva",
+      "oficina_nome": "J S & Silva ltda",
+      "mp": null,
+      "ano": 2025,
+      "mes": 9,
+      "semana_iso": 39,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-09-22",
+      "data_fim": "2025-09-26",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "f-l-azevedo-confeccao",
+      "oficina_nome": "F & L Azevedo Confecção LTDA Filial",
+      "mp": null,
+      "ano": 2025,
+      "mes": 10,
+      "semana_iso": 41,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-10-06",
+      "data_fim": "2025-10-10",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ideal-confeccoes",
+      "oficina_nome": "IDEAL CONFECÇÕES LTDA",
+      "mp": null,
+      "ano": 2025,
+      "mes": 10,
+      "semana_iso": 41,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-10-06",
+      "data_fim": "2026-03-13",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "f-l-azevedo-confeccao",
+      "oficina_nome": "F & L Azevedo Confecção LTDA Matriz",
+      "mp": null,
+      "ano": 2025,
+      "mes": 10,
+      "semana_iso": 42,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-10-13",
+      "data_fim": "2026-03-20",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "i-m-araujo",
+      "oficina_nome": "I M ARAÚJO",
+      "mp": null,
+      "ano": 2025,
+      "mes": 10,
+      "semana_iso": 42,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-10-13",
+      "data_fim": "2025-10-17",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "confeccoes-js",
+      "oficina_nome": "Confecções JS Ltda",
+      "mp": null,
+      "ano": 2025,
+      "mes": 10,
+      "semana_iso": 43,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-10-20",
+      "data_fim": "2026-03-24",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
+      "oficina_nome": "S Ramos de Azevedo Neto confecções",
+      "mp": null,
+      "ano": 2025,
+      "mes": 10,
+      "semana_iso": 43,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-10-20",
+      "data_fim": "2025-10-24",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "acari-textil",
+      "oficina_nome": "Acari Têxtil",
+      "mp": null,
+      "ano": 2025,
+      "mes": 10,
+      "semana_iso": 44,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-10-27",
+      "data_fim": "2026-03-25",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "a-maria-dos-santos-silva-faccao",
+      "oficina_nome": "A. Maria dos Santos Silva Facção",
+      "mp": null,
+      "ano": 2025,
+      "mes": 10,
+      "semana_iso": 44,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-10-27",
+      "data_fim": "2025-10-31",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "danjan-confeccoes",
+      "oficina_nome": "danjan confecções Ltda me",
+      "mp": null,
+      "ano": 2025,
+      "mes": 11,
+      "semana_iso": 45,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-11-03",
+      "data_fim": "2026-03-24",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "oficina-de-costura-santos",
+      "oficina_nome": "OFICINA DE COSTURA SANTOS LTDA",
+      "mp": null,
+      "ano": 2025,
+      "mes": 11,
+      "semana_iso": 45,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-11-04",
+      "data_fim": "2026-02-13",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "confeccoes-dona-dina",
+      "oficina_nome": "Confecções Dona Dina",
+      "mp": null,
+      "ano": 2025,
+      "mes": 11,
+      "semana_iso": 46,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-11-10",
+      "data_fim": "2026-02-05",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "araujo-e-m-confeccoes",
+      "oficina_nome": "Araujo E M Confeccoes Ltda",
+      "mp": null,
+      "ano": 2025,
+      "mes": 11,
+      "semana_iso": 46,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-11-10",
+      "data_fim": "2026-04-30",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "marionete-m-de-a-camara",
+      "oficina_nome": "Marionete M de A Câmara",
+      "mp": null,
+      "ano": 2025,
+      "mes": 11,
+      "semana_iso": 47,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-11-17",
+      "data_fim": "2026-04-24",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "alianca-confeccoes",
+      "oficina_nome": "aliança confecções",
+      "mp": null,
+      "ano": 2025,
+      "mes": 11,
+      "semana_iso": 48,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-11-24",
+      "data_fim": "2025-11-28",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "joseni-maria-de-medeiros",
+      "oficina_nome": "Joseni Maria de Medeiros EPP",
+      "mp": null,
+      "ano": 2025,
+      "mes": 11,
+      "semana_iso": 48,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-11-24",
+      "data_fim": "2025-11-28",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "zaja-confeccoes",
+      "oficina_nome": "Zaja Confecções",
+      "mp": null,
+      "ano": 2025,
+      "mes": 12,
+      "semana_iso": 49,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-12-01",
+      "data_fim": "2025-12-05",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "jero-confeccoes-potengi-textil",
+      "oficina_nome": "JERO CONFECÇÕES/POTENGI TEXTIL",
+      "mp": null,
+      "ano": 2025,
+      "mes": 12,
+      "semana_iso": 50,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-12-08",
+      "data_fim": "2026-03-11",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "poest-industria-e-comercio-de-vestuario",
+      "oficina_nome": "POEST indústria e comércio de vestuário Ltda",
+      "mp": null,
+      "ano": 2025,
+      "mes": 12,
+      "semana_iso": 51,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-12-15",
+      "data_fim": "2025-12-19",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "amorim-e-pedro",
+      "oficina_nome": "AMORIM E PEDRO",
+      "mp": null,
+      "ano": 2026,
+      "mes": 2,
+      "semana_iso": 6,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-02-02",
+      "data_fim": "2026-03-17",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "aline-rodrigues-de-lima-araujo",
+      "oficina_nome": "Aline Rodrigues de Lima Araújo - ME",
+      "mp": null,
+      "ano": 2026,
+      "mes": 2,
+      "semana_iso": 7,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-02-09",
+      "data_fim": "2026-02-13",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "tropicalliz",
+      "oficina_nome": "Tropicalliz",
+      "mp": null,
+      "ano": 2026,
+      "mes": 2,
+      "semana_iso": 9,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-02-23",
+      "data_fim": "2026-02-27",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "linea-confeccoes",
+      "oficina_nome": "LÍNEA CONFECÇÕES",
+      "mp": null,
+      "ano": 2026,
+      "mes": 2,
+      "semana_iso": 9,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-02-23",
+      "data_fim": "2026-02-27",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "livia-reboucas-de-carvalho",
+      "oficina_nome": "Livia Rebouças de Carvalho -me",
+      "mp": null,
+      "ano": 2026,
+      "mes": 3,
+      "semana_iso": 10,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 1",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-03-02",
+      "data_fim": "2026-03-06",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "di3-confeccoes",
+      "oficina_nome": "DI3 Confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 4,
+      "semana_iso": 15,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-04-06",
+      "data_fim": "2026-04-10",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "lima-confeccoes",
+      "oficina_nome": "LIMA CONFECCOES LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 4,
+      "semana_iso": 18,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-04-27",
+      "data_fim": "2026-05-07",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ferreira-e-araujo-confeccoes",
+      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 5,
+      "semana_iso": 20,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-05-11",
+      "data_fim": "2026-05-15",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "faccao-santanense",
+      "oficina_nome": "FACCAO SANTANENSE LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 5,
+      "semana_iso": 20,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-05-11",
+      "data_fim": "2026-05-15",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "dantas-e-paulino-confeccoes",
+      "oficina_nome": "Dantas e Paulino confeccoes",
+      "mp": null,
+      "ano": 2026,
+      "mes": 5,
+      "semana_iso": 21,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-05-18",
+      "data_fim": "2026-06-24",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "f-k-faccao",
+      "oficina_nome": "F & K FACÇÃO LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 5,
+      "semana_iso": 21,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-05-18",
+      "data_fim": "2026-06-09",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "fsilva-confeccoes",
+      "oficina_nome": "Fsilva Confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 5,
+      "semana_iso": 21,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-05-18",
+      "data_fim": "2026-05-22",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "m-a-vieira-de-almeida",
+      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
+      "mp": null,
+      "ano": 2026,
+      "mes": 5,
+      "semana_iso": 22,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-05-25",
+      "data_fim": "2026-05-29",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "a-s-empreendimentos",
+      "oficina_nome": "A. S. Empreendimentos",
+      "mp": null,
+      "ano": 2026,
+      "mes": 5,
+      "semana_iso": 22,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-05-25",
+      "data_fim": "2026-05-29",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "m-dalison",
+      "oficina_nome": "M dalison",
+      "mp": null,
+      "ano": 2026,
+      "mes": 5,
+      "semana_iso": 22,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-05-25",
+      "data_fim": "2026-05-29",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "m-f-empreendimentos",
+      "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 23,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-01",
+      "data_fim": "2026-07-01",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "f-w-confeccao",
+      "oficina_nome": "F.W confecção",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 23,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-01",
+      "data_fim": "2026-07-03",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "uniao-confeccoes",
+      "oficina_nome": "União confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 24,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-08",
+      "data_fim": "2026-06-12",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ksw-confeccoes",
+      "oficina_nome": "ksw confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 24,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-09",
+      "data_fim": "2026-06-23",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ajg-confeccoes",
+      "oficina_nome": "AJG CONFECÇÕES LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 24,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-09",
+      "data_fim": "2026-06-25",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "n-s-constantino",
+      "oficina_nome": "N S CONSTANTINO",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 24,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-08",
+      "data_fim": "2026-06-12",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "mansour-e-dantas-confec",
+      "oficina_nome": "Mansour e Dantas confec Ltda.",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 25,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-15",
+      "data_fim": "2026-06-19",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ideal-confeccoes",
+      "oficina_nome": "IDEAL CONFECÇÕES LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 25,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-15",
+      "data_fim": "2026-06-19",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "alanis-queiroz",
+      "oficina_nome": "ALANIS QUEIROZ LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 25,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-15",
+      "data_fim": "2026-06-19",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "j-s-silva",
+      "oficina_nome": "J S & Silva ltda",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 25,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-15",
+      "data_fim": "2026-06-19",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "confeccoes-js",
+      "oficina_nome": "Confecções JS Ltda",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 26,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-23",
+      "data_fim": "2026-08-05",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "jm-confeccoes",
+      "oficina_nome": "JM confecções & cia ltda - FILIAL",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 26,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-23",
+      "data_fim": "2026-08-04",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "jm-confeccoes",
+      "oficina_nome": "JM confecções & cia ltda - MATRIZ",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 26,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-23",
+      "data_fim": "2026-08-03",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "acari-textil",
+      "oficina_nome": "Acari Têxtil",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 27,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-29",
+      "data_fim": "2026-07-31",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "joseni-maria-de-medeiros",
+      "oficina_nome": "Joseni Maria de Medeiros EPP",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 27,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-29",
+      "data_fim": "2026-07-03",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "zaja-confeccoes",
+      "oficina_nome": "Zaja Confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 27,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-29",
+      "data_fim": "2026-07-03",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "f-l-azevedo-confeccao",
+      "oficina_nome": "F & L Azevedo Confecção LTDA Filial",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 28,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-06",
+      "data_fim": "2026-07-10",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "f-l-azevedo-confeccao",
+      "oficina_nome": "F & L Azevedo Confecção LTDA Matriz",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 28,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-06",
+      "data_fim": "2026-07-10",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "danjan-confeccoes",
+      "oficina_nome": "danjan confecções Ltda me",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 28,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-06",
+      "data_fim": "2026-07-10",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "marionete-m-de-a-camara",
+      "oficina_nome": "Marionete M de A Câmara",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 28,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-06",
+      "data_fim": "2026-07-10",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
+      "oficina_nome": "S Ramos de Azevedo Neto confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 29,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-13",
+      "data_fim": "2026-08-07",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "confeccoes-dona-dina",
+      "oficina_nome": "Confecções Dona Dina",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 29,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-13",
+      "data_fim": "2026-07-16",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "poest-industria-e-comercio-de-vestuario",
+      "oficina_nome": "POEST indústria e comércio de vestuário Ltda",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 29,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-13",
+      "data_fim": "2026-07-16",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "amorim-e-pedro",
+      "oficina_nome": "AMORIM E PEDRO",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 29,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-13",
+      "data_fim": "2026-07-16",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "jero-confeccoes-potengi-textil",
+      "oficina_nome": "JERO CONFECÇÕES/POTENGI TEXTIL",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 30,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-20",
+      "data_fim": "2026-07-24",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "aline-rodrigues-de-lima-araujo",
+      "oficina_nome": "Aline Rodrigues de Lima Araújo - ME",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 30,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-20",
+      "data_fim": "2026-07-24",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "linea-confeccoes",
+      "oficina_nome": "LÍNEA CONFECÇÕES",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 30,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-20",
+      "data_fim": "2026-07-24",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "livia-reboucas-de-carvalho",
+      "oficina_nome": "Livia Rebouças de Carvalho -me",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 30,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-20",
+      "data_fim": "2026-07-24",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "tropicalliz",
+      "oficina_nome": "Tropicalliz",
+      "mp": null,
+      "ano": 2026,
+      "mes": 8,
+      "semana_iso": 32,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-08-03",
+      "data_fim": "2026-08-07",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "araujo-e-m-confeccoes",
+      "oficina_nome": "Araujo E M Confeccoes Ltda",
+      "mp": null,
+      "ano": 2026,
+      "mes": 8,
+      "semana_iso": 32,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-08-03",
+      "data_fim": "2026-08-07",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "oficina-de-costura-santos",
+      "oficina_nome": "OFICINA DE COSTURA SANTOS LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 8,
+      "semana_iso": 32,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_cm",
+      "modulo": "Costura e Mecânica - MÓDULO 2",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-08-03",
+      "data_fim": "2026-08-07",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "lima-confeccoes",
+      "oficina_nome": "LIMA CONFECCOES LTDA",
+      "mp": null,
+      "ano": 2025,
+      "mes": 10,
+      "semana_iso": 41,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-10-06",
+      "data_fim": "2025-10-10",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "lima-confeccoes",
+      "oficina_nome": "LIMA CONFECCOES LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 2,
+      "semana_iso": 6,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-02-02",
+      "data_fim": "2026-02-05",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "faccao-santanense",
+      "oficina_nome": "FACCAO SANTANENSE LTDA",
+      "mp": null,
+      "ano": 2025,
+      "mes": 10,
+      "semana_iso": 42,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-10-13",
+      "data_fim": "2025-10-17",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "faccao-santanense",
+      "oficina_nome": "FACCAO SANTANENSE LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 2,
+      "semana_iso": 6,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-02-05",
+      "data_fim": "2026-02-10",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "f-silva-confeccoes",
+      "oficina_nome": "F silva Confecções",
+      "mp": null,
+      "ano": 2025,
+      "mes": 10,
+      "semana_iso": 43,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-10-20",
+      "data_fim": "2025-10-24",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "f-silva-confeccoes",
+      "oficina_nome": "F silva Confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 2,
+      "semana_iso": 7,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-02-11",
+      "data_fim": "2026-02-13",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ferreira-e-araujo-confeccoes",
+      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
+      "mp": null,
+      "ano": 2025,
+      "mes": 10,
+      "semana_iso": 44,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-10-27",
+      "data_fim": "2025-10-31",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ferreira-e-araujo-confeccoes",
+      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 2,
+      "semana_iso": 8,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-02-19",
+      "data_fim": "2026-02-24",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "m-a-vieira-de-almeida",
+      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
+      "mp": null,
+      "ano": 2025,
+      "mes": 11,
+      "semana_iso": 45,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-11-03",
+      "data_fim": "2025-11-07",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "m-a-vieira-de-almeida",
+      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
+      "mp": null,
+      "ano": 2026,
+      "mes": 1,
+      "semana_iso": 2,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-01-05",
+      "data_fim": "2026-01-07",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "m-dalison",
+      "oficina_nome": "M dalison",
+      "mp": null,
+      "ano": 2025,
+      "mes": 11,
+      "semana_iso": 46,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-11-10",
+      "data_fim": "2025-11-14",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "m-dalison",
+      "oficina_nome": "M dalison",
+      "mp": null,
+      "ano": 2026,
+      "mes": 1,
+      "semana_iso": 2,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-01-08",
+      "data_fim": "2026-01-12",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "f-w-confeccao",
+      "oficina_nome": "F.W confecção",
+      "mp": null,
+      "ano": 2025,
+      "mes": 11,
+      "semana_iso": 47,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-11-17",
+      "data_fim": "2025-11-21",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "f-w-confeccao",
+      "oficina_nome": "F.W confecção",
+      "mp": null,
+      "ano": 2026,
+      "mes": 1,
+      "semana_iso": 3,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-01-13",
+      "data_fim": "2026-01-16",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "m-f-empreendimentos",
+      "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
+      "mp": null,
+      "ano": 2025,
+      "mes": 11,
+      "semana_iso": 48,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-11-24",
+      "data_fim": "2025-11-28",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "m-f-empreendimentos",
+      "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 1,
+      "semana_iso": 4,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-01-22",
+      "data_fim": "2026-01-26",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "a-s-empreendimentos",
+      "oficina_nome": "A. S. Empreendimentos",
+      "mp": null,
+      "ano": 2025,
+      "mes": 12,
+      "semana_iso": 49,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2025",
+      "polo": null,
+      "data_inicio": "2025-12-01",
+      "data_fim": "2025-12-05",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "a-s-empreendimentos",
+      "oficina_nome": "A. S. Empreendimentos",
+      "mp": null,
+      "ano": 2026,
+      "mes": 1,
+      "semana_iso": 5,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-01-27",
+      "data_fim": "2026-01-29",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "di3-confeccoes",
+      "oficina_nome": "DI3 Confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 3,
+      "semana_iso": 11,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-03-09",
+      "data_fim": "2026-03-17",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "di3-confeccoes",
+      "oficina_nome": "DI3 Confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 5,
+      "semana_iso": 21,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-05-18",
+      "data_fim": "2026-05-25",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "n-s-constantino",
+      "oficina_nome": "N S CONSTANTINO",
+      "mp": null,
+      "ano": 2026,
+      "mes": 3,
+      "semana_iso": 13,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-03-24",
+      "data_fim": "2026-03-30",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "n-s-constantino",
+      "oficina_nome": "N S CONSTANTINO",
+      "mp": null,
+      "ano": 2026,
+      "mes": 5,
+      "semana_iso": 22,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-05-25",
+      "data_fim": "2026-06-03",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "mansour-e-dantas-confec",
+      "oficina_nome": "Mansour e Dantas confec Ltda.",
+      "mp": null,
+      "ano": 2026,
+      "mes": 3,
+      "semana_iso": 12,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-03-18",
+      "data_fim": "2026-03-23",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "mansour-e-dantas-confec",
+      "oficina_nome": "Mansour e Dantas confec Ltda.",
+      "mp": null,
+      "ano": 2026,
+      "mes": 5,
+      "semana_iso": 22,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-05-26",
+      "data_fim": "2026-06-05",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "f-k-faccao",
+      "oficina_nome": "F & K FACÇÃO LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 3,
+      "semana_iso": 14,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-03-31",
+      "data_fim": "2026-04-07",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "f-k-faccao",
+      "oficina_nome": "F & K FACÇÃO LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 24,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-08",
+      "data_fim": "2026-06-17",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ksw-confeccoes",
+      "oficina_nome": "ksw confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 4,
+      "semana_iso": 15,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-04-08",
+      "data_fim": "2026-04-14",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ksw-confeccoes",
+      "oficina_nome": "ksw confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 25,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-18",
+      "data_fim": "2026-06-30",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "confeccoes-js",
+      "oficina_nome": "Confecções JS Ltda",
+      "mp": null,
+      "ano": 2026,
+      "mes": 5,
+      "semana_iso": 19,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-05-04",
+      "data_fim": "2026-05-08",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "confeccoes-js",
+      "oficina_nome": "Confecções JS Ltda",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 28,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-06",
+      "data_fim": "2026-07-15",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "dantas-e-paulino-confeccoes",
+      "oficina_nome": "Dantas e Paulino confeccoes",
+      "mp": null,
+      "ano": 2026,
+      "mes": 5,
+      "semana_iso": 20,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-05-11",
+      "data_fim": "2026-05-15",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "dantas-e-paulino-confeccoes",
+      "oficina_nome": "Dantas e Paulino confeccoes",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 24,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-08",
+      "data_fim": "2026-06-19",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ajg-confeccoes",
+      "oficina_nome": "AJG CONFECÇÕES LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 4,
+      "semana_iso": 17,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-04-23",
+      "data_fim": "2026-04-29",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "ajg-confeccoes",
+      "oficina_nome": "AJG CONFECÇÕES LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 27,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-02",
+      "data_fim": "2026-07-14",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "uniao-confeccoes",
+      "oficina_nome": "União confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 4,
+      "semana_iso": 16,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-04-15",
+      "data_fim": "2026-04-23",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "uniao-confeccoes",
+      "oficina_nome": "União confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 6,
+      "semana_iso": 26,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-06-22",
+      "data_fim": "2026-07-01",
+      "status": "Concluído"
+    },
+    {
+      "oficina_id": "di3-confeccoes",
+      "oficina_nome": "DI3 Confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 30,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-20",
+      "data_fim": "2026-07-24",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "di3-confeccoes",
+      "oficina_nome": "DI3 Confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 9,
+      "semana_iso": 38,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-09-16",
+      "data_fim": "2026-09-25",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "n-s-constantino",
+      "oficina_nome": "N S CONSTANTINO",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 31,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-27",
+      "data_fim": "2026-08-04",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "n-s-constantino",
+      "oficina_nome": "N S CONSTANTINO",
+      "mp": null,
+      "ano": 2026,
+      "mes": 9,
+      "semana_iso": 40,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-09-28",
+      "data_fim": "2026-10-07",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "mansour-e-dantas-confec",
+      "oficina_nome": "Mansour e Dantas confec Ltda.",
+      "mp": null,
+      "ano": 2026,
+      "mes": 8,
+      "semana_iso": 32,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-08-04",
+      "data_fim": "2026-08-14",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "mansour-e-dantas-confec",
+      "oficina_nome": "Mansour e Dantas confec Ltda.",
+      "mp": null,
+      "ano": 2026,
+      "mes": 10,
+      "semana_iso": 41,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-10-08",
+      "data_fim": "2026-10-20",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "f-k-faccao",
+      "oficina_nome": "F & K FACÇÃO LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 7,
+      "semana_iso": 31,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-07-30",
+      "data_fim": "2026-08-21",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "f-k-faccao",
+      "oficina_nome": "F & K FACÇÃO LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 8,
+      "semana_iso": 35,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-08-24",
+      "data_fim": "2026-08-28",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "ksw-confeccoes",
+      "oficina_nome": "ksw confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 8,
+      "semana_iso": 36,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-08-31",
+      "data_fim": "2026-09-04",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "ksw-confeccoes",
+      "oficina_nome": "ksw confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 9,
+      "semana_iso": 37,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-09-08",
+      "data_fim": "2026-09-15",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "confeccoes-js",
+      "oficina_nome": "Confecções JS Ltda",
+      "mp": null,
+      "ano": 2026,
+      "mes": 8,
+      "semana_iso": 33,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-08-11",
+      "data_fim": "2026-08-21",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "confeccoes-js",
+      "oficina_nome": "Confecções JS Ltda",
+      "mp": null,
+      "ano": 2026,
+      "mes": 12,
+      "semana_iso": 50,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-12-08",
+      "data_fim": "2026-12-10",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "dantas-e-paulino-confeccoes",
+      "oficina_nome": "Dantas e Paulino confeccoes",
+      "mp": null,
+      "ano": 2026,
+      "mes": 8,
+      "semana_iso": 35,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-08-24",
+      "data_fim": "2026-09-01",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "dantas-e-paulino-confeccoes",
+      "oficina_nome": "Dantas e Paulino confeccoes",
+      "mp": null,
+      "ano": 2026,
+      "mes": 11,
+      "semana_iso": 47,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-11-16",
+      "data_fim": "2026-11-23",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "ajg-confeccoes",
+      "oficina_nome": "AJG CONFECÇÕES LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 9,
+      "semana_iso": 36,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-09-02",
+      "data_fim": "2026-09-11",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "ajg-confeccoes",
+      "oficina_nome": "AJG CONFECÇÕES LTDA",
+      "mp": null,
+      "ano": 2026,
+      "mes": 11,
+      "semana_iso": 48,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-11-24",
+      "data_fim": "2026-11-30",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "uniao-confeccoes",
+      "oficina_nome": "União confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 9,
+      "semana_iso": 38,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 1ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-09-14",
+      "data_fim": "2026-09-23",
+      "status": "Em andamento"
+    },
+    {
+      "oficina_id": "uniao-confeccoes",
+      "oficina_nome": "União confecções",
+      "mp": null,
+      "ano": 2026,
+      "mes": 12,
+      "semana_iso": 49,
+      "rotulo_semana": null,
+      "fonte": "treino_ep2025_toc",
+      "modulo": "TOC - 2ª etapa",
+      "ch": null,
+      "ciclo": "2026",
+      "polo": null,
+      "data_inicio": "2026-12-01",
+      "data_fim": "2026-12-07",
+      "status": "Em andamento"
     }
   ]
 }

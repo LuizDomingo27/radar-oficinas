@@ -139,6 +139,35 @@ def consolidar(indice: Indice, base_dir: Path | None = None) -> Consolidado:
             polo=None,
         )
 
+    def treino_ep2025(fonte: str):
+        """Constrói o marco de treino da EP 2025, com mês/ano do início.
+
+        Descarta a linha (``None``) se o início não for uma data — sem mês não há
+        onde ancorar o marco no gráfico. O ciclo recebe o ano, para o marco
+        continuar comparável às fontes antigas na tela de Impacto.
+        """
+        def construir(linha: dict) -> FatoTreino | None:
+            periodo = periodos.periodo_de_data(linha["inicio"])
+            if periodo is None:
+                return None
+            d_ini = periodos.para_data(linha["inicio"])
+            d_fim = periodos.para_data(linha.get("fim"))
+            return FatoTreino(
+                oficina_id=_resolver(linha["nome"], indice, c),
+                oficina_nome=linha["nome"],
+                mp=None,
+                periodo=periodo,
+                fonte=fonte,
+                modulo=linha["modulo"],
+                ch=None,
+                ciclo=str(periodo.ano),
+                polo=None,
+                data_inicio=d_ini.isoformat() if d_ini else None,
+                data_fim=d_fim.isoformat() if d_fim else None,
+                status=linha.get("status"),
+            )
+        return construir
+
     def treino_lidera(linha: dict) -> FatoTreino:
         periodo = periodos.periodo_de_data(linha["data"]) or Periodo(ano=2026)
         return FatoTreino(
@@ -160,6 +189,16 @@ def consolidar(indice: Indice, base_dir: Path | None = None) -> Consolidado:
     )) + list(_consumir(
         leitor_fatos.ler_eficiencia_naojeans(base_dir), efic("estoque_naojeans")
     ))
-    c.treino = list(_consumir(leitor_fatos.ler_treino_ep(base_dir), treino_ep)) \
+    c.treino = (
+        list(_consumir(leitor_fatos.ler_treino_ep(base_dir), treino_ep))
         + list(_consumir(leitor_fatos.ler_treino_lidera(base_dir), treino_lidera))
+        + list(_consumir(
+            leitor_fatos.ler_treino_ep2025_cm(base_dir),
+            treino_ep2025("treino_ep2025_cm"),
+        ))
+        + list(_consumir(
+            leitor_fatos.ler_treino_ep2025_toc(base_dir),
+            treino_ep2025("treino_ep2025_toc"),
+        ))
+    )
     return c

@@ -153,7 +153,14 @@ function desenharFicha() {
     }).join("");
 
   const treinos = o.treinos.length
-    ? o.treinos.map((t) => `<span class="treino-chip">${icone("treino")}${escapar(t.modulo || "—")} · ${t.ano ?? "?"}${t.ciclo ? " (" + escapar(t.ciclo) + ")" : ""}</span>`).join("")
+    ? o.treinos.map((t) => {
+        // Com data (EP 2025), mostra mm/aaaa; sem data, cai no ano (+ ciclo, se
+        // ele acrescenta algo além do próprio ano — ex.: "2021/2022").
+        const quando = t.mes
+          ? `${String(t.mes).padStart(2, "0")}/${t.ano}`
+          : `${t.ano ?? "?"}${t.ciclo && t.ciclo !== String(t.ano) ? " (" + escapar(t.ciclo) + ")" : ""}`;
+        return `<span class="treino-chip">${icone("treino")}${escapar(t.modulo || "—")} · ${quando}</span>`;
+      }).join("")
     : `<span class="meta-linha">Sem treinamentos registrados.</span>`;
   $("#ficha-treinos").innerHTML = treinos;
 
