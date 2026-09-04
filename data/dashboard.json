@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-03T23:48:53+00:00",
+  "gerado_em": "2026-09-04T00:39:33+00:00",
   "total": 170,
   "meta": {
     "descricao": "payload único das três telas do dashboard (Fase 5)",
@@ -574,16 +574,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 10,
-          "semana_iso": 44,
-          "ciclo": "2025",
-          "inicio": "2025-10-27",
-          "fim": "2025-10-31",
-          "status": "Concluído"
         }
       ]
     },
@@ -1509,44 +1499,14 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 8,
-          "semana_iso": 35,
-          "ciclo": "2025",
-          "inicio": "2025-08-26",
-          "fim": "2025-09-01",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2025,
           "mes": 12,
           "semana_iso": 49,
           "ciclo": "2025",
           "inicio": "2025-12-01",
           "fim": "2025-12-05",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 1,
-          "semana_iso": 5,
-          "ciclo": "2026",
-          "inicio": "2026-01-27",
-          "fim": "2026-01-29",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 5,
-          "semana_iso": 22,
-          "ciclo": "2026",
-          "inicio": "2026-05-25",
-          "fim": "2026-05-29",
-          "status": "Concluído"
+          "status": "2026-01-29 00:00:00"
         }
       ]
     },
@@ -1879,26 +1839,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 10,
-          "semana_iso": 44,
-          "ciclo": "2025",
-          "inicio": "2025-10-27",
-          "fim": "2026-03-25",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 27,
-          "ciclo": "2026",
-          "inicio": "2026-06-29",
-          "fim": "2026-07-31",
-          "status": "Concluído"
         }
       ]
     },
@@ -2650,64 +2590,24 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 7,
-          "semana_iso": 30,
-          "ciclo": "2025",
-          "inicio": "2025-07-21",
-          "fim": "2025-07-29",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2026,
           "mes": 4,
           "semana_iso": 17,
           "ciclo": "2026",
           "inicio": "2026-04-23",
           "fim": "2026-04-29",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 24,
-          "ciclo": "2026",
-          "inicio": "2026-06-09",
-          "fim": "2026-06-25",
-          "status": "Concluído"
+          "status": "2026-07-14 00:00:00"
         },
         {
           "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 7,
-          "semana_iso": 27,
-          "ciclo": "2026",
-          "inicio": "2026-07-02",
-          "fim": "2026-07-14",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
           "ano": 2026,
           "mes": 9,
           "semana_iso": 36,
           "ciclo": "2026",
           "inicio": "2026-09-02",
           "fim": "2026-09-11",
-          "status": "Em andamento"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 11,
-          "semana_iso": 48,
-          "ciclo": "2026",
-          "inicio": "2026-11-24",
-          "fim": "2026-11-30",
-          "status": "Em andamento"
+          "status": "2026-11-30 00:00:00"
         }
       ]
     },
@@ -3028,26 +2928,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 9,
-          "semana_iso": 38,
-          "ciclo": "2025",
-          "inicio": "2025-09-15",
-          "fim": "2025-09-19",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 25,
-          "ciclo": "2026",
-          "inicio": "2026-06-15",
-          "fim": "2026-06-19",
-          "status": "Concluído"
         }
       ]
     },
@@ -3278,16 +3158,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 11,
-          "semana_iso": 48,
-          "ciclo": "2025",
-          "inicio": "2025-11-24",
-          "fim": "2025-11-28",
-          "status": "Concluído"
         }
       ]
     },
@@ -3632,26 +3502,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2026,
-          "mes": 2,
-          "semana_iso": 7,
-          "ciclo": "2026",
-          "inicio": "2026-02-09",
-          "fim": "2026-02-13",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 7,
-          "semana_iso": 30,
-          "ciclo": "2026",
-          "inicio": "2026-07-20",
-          "fim": "2026-07-24",
-          "status": "Concluído"
         }
       ]
     },
@@ -4331,26 +4181,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2026,
-          "mes": 2,
-          "semana_iso": 6,
-          "ciclo": "2026",
-          "inicio": "2026-02-02",
-          "fim": "2026-03-17",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 7,
-          "semana_iso": 29,
-          "ciclo": "2026",
-          "inicio": "2026-07-13",
-          "fim": "2026-07-16",
-          "status": "Concluído"
         }
       ]
     },
@@ -5295,26 +5125,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 11,
-          "semana_iso": 46,
-          "ciclo": "2025",
-          "inicio": "2025-11-10",
-          "fim": "2026-04-30",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 8,
-          "semana_iso": 32,
-          "ciclo": "2026",
-          "inicio": "2026-08-03",
-          "fim": "2026-08-07",
-          "status": "Concluído"
         }
       ]
     },
@@ -8843,26 +8653,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 11,
-          "semana_iso": 46,
-          "ciclo": "2025",
-          "inicio": "2025-11-10",
-          "fim": "2026-02-05",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 7,
-          "semana_iso": 29,
-          "ciclo": "2026",
-          "inicio": "2026-07-13",
-          "fim": "2026-07-16",
-          "status": "Concluído"
         }
       ]
     },
@@ -8900,64 +8690,24 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 10,
-          "semana_iso": 43,
-          "ciclo": "2025",
-          "inicio": "2025-10-20",
-          "fim": "2026-03-24",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2026,
           "mes": 5,
           "semana_iso": 19,
           "ciclo": "2026",
           "inicio": "2026-05-04",
           "fim": "2026-05-08",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 26,
-          "ciclo": "2026",
-          "inicio": "2026-06-23",
-          "fim": "2026-08-05",
-          "status": "Concluído"
+          "status": "2026-07-15 00:00:00"
         },
         {
           "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 7,
-          "semana_iso": 28,
-          "ciclo": "2026",
-          "inicio": "2026-07-06",
-          "fim": "2026-07-15",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
           "ano": 2026,
           "mes": 8,
           "semana_iso": 33,
           "ciclo": "2026",
           "inicio": "2026-08-11",
           "fim": "2026-08-21",
-          "status": "Em andamento"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 12,
-          "semana_iso": 50,
-          "ciclo": "2026",
-          "inicio": "2026-12-08",
-          "fim": "2026-12-10",
-          "status": "Em andamento"
+          "status": "2026-12-10 00:00:00"
         }
       ]
     },
@@ -9322,26 +9072,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 11,
-          "semana_iso": 45,
-          "ciclo": "2025",
-          "inicio": "2025-11-03",
-          "fim": "2026-03-24",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 7,
-          "semana_iso": 28,
-          "ciclo": "2026",
-          "inicio": "2026-07-06",
-          "fim": "2026-07-10",
-          "status": "Concluído"
         }
       ]
     },
@@ -9690,64 +9420,24 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 7,
-          "semana_iso": 29,
-          "ciclo": "2025",
-          "inicio": "2025-07-14",
-          "fim": "2025-07-18",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 5,
-          "semana_iso": 21,
-          "ciclo": "2026",
-          "inicio": "2026-05-18",
-          "fim": "2026-06-24",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2026,
           "mes": 5,
           "semana_iso": 20,
           "ciclo": "2026",
           "inicio": "2026-05-11",
           "fim": "2026-05-15",
-          "status": "Concluído"
+          "status": "2026-06-19 00:00:00"
         },
         {
           "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 24,
-          "ciclo": "2026",
-          "inicio": "2026-06-08",
-          "fim": "2026-06-19",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
           "ano": 2026,
           "mes": 8,
           "semana_iso": 35,
           "ciclo": "2026",
           "inicio": "2026-08-24",
           "fim": "2026-09-01",
-          "status": "Em andamento"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 11,
-          "semana_iso": 47,
-          "ciclo": "2026",
-          "inicio": "2026-11-16",
-          "fim": "2026-11-23",
-          "status": "Em andamento"
+          "status": "2026-11-23 00:00:00"
         }
       ]
     },
@@ -10104,64 +9794,24 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 6,
-          "semana_iso": 24,
-          "ciclo": "2025",
-          "inicio": "2025-06-09",
-          "fim": "2025-06-13",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2026,
           "mes": 3,
           "semana_iso": 11,
           "ciclo": "2026",
           "inicio": "2026-03-09",
           "fim": "2026-03-17",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 4,
-          "semana_iso": 15,
-          "ciclo": "2026",
-          "inicio": "2026-04-06",
-          "fim": "2026-04-10",
-          "status": "Concluído"
+          "status": "2026-05-25 00:00:00"
         },
         {
           "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 5,
-          "semana_iso": 21,
-          "ciclo": "2026",
-          "inicio": "2026-05-18",
-          "fim": "2026-05-25",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
           "ano": 2026,
           "mes": 7,
           "semana_iso": 30,
           "ciclo": "2026",
           "inicio": "2026-07-20",
           "fim": "2026-07-24",
-          "status": "Em andamento"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 9,
-          "semana_iso": 38,
-          "ciclo": "2026",
-          "inicio": "2026-09-16",
-          "fim": "2026-09-25",
-          "status": "Em andamento"
+          "status": "2026-09-25 00:00:00"
         }
       ]
     },
@@ -12099,64 +11749,24 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 5,
-          "semana_iso": 21,
-          "ciclo": "2025",
-          "inicio": "2025-05-19",
-          "fim": "2025-05-23",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2026,
           "mes": 3,
           "semana_iso": 14,
           "ciclo": "2026",
           "inicio": "2026-03-31",
           "fim": "2026-04-07",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 5,
-          "semana_iso": 21,
-          "ciclo": "2026",
-          "inicio": "2026-05-18",
-          "fim": "2026-06-09",
-          "status": "Concluído"
+          "status": "2026-06-17 00:00:00"
         },
         {
           "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 24,
-          "ciclo": "2026",
-          "inicio": "2026-06-08",
-          "fim": "2026-06-17",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
           "ano": 2026,
           "mes": 7,
           "semana_iso": 31,
           "ciclo": "2026",
           "inicio": "2026-07-30",
           "fim": "2026-08-21",
-          "status": "Em andamento"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 8,
-          "semana_iso": 35,
-          "ciclo": "2026",
-          "inicio": "2026-08-24",
-          "fim": "2026-08-28",
-          "status": "Em andamento"
+          "status": "2026-08-28 00:00:00"
         }
       ]
     },
@@ -12511,26 +12121,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 10,
-          "semana_iso": 41,
-          "ciclo": "2025",
-          "inicio": "2025-10-06",
-          "fim": "2025-10-10",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 7,
-          "semana_iso": 28,
-          "ciclo": "2026",
-          "inicio": "2026-07-06",
-          "fim": "2026-07-10",
-          "status": "Concluído"
         }
       ]
     },
@@ -13674,24 +13264,14 @@
           "status": null
         },
         {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2025,
           "mes": 10,
           "semana_iso": 43,
           "ciclo": "2025",
           "inicio": "2025-10-20",
           "fim": "2025-10-24",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 2,
-          "semana_iso": 7,
-          "ciclo": "2026",
-          "inicio": "2026-02-11",
-          "fim": "2026-02-13",
-          "status": "Concluído"
+          "status": "2026-02-13 00:00:00"
         }
       ]
     },
@@ -14089,44 +13669,14 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 8,
-          "semana_iso": 34,
-          "ciclo": "2025",
-          "inicio": "2025-08-19",
-          "fim": "2025-08-25",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2025,
           "mes": 11,
           "semana_iso": 47,
           "ciclo": "2025",
           "inicio": "2025-11-17",
           "fim": "2025-11-21",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 1,
-          "semana_iso": 3,
-          "ciclo": "2026",
-          "inicio": "2026-01-13",
-          "fim": "2026-01-16",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 23,
-          "ciclo": "2026",
-          "inicio": "2026-06-01",
-          "fim": "2026-07-03",
-          "status": "Concluído"
+          "status": "2026-01-16 00:00:00"
         }
       ]
     },
@@ -14837,44 +14387,14 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 9,
-          "semana_iso": 37,
-          "ciclo": "2025",
-          "inicio": "2025-09-08",
-          "fim": "2025-09-12",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2025,
           "mes": 10,
           "semana_iso": 42,
           "ciclo": "2025",
           "inicio": "2025-10-13",
           "fim": "2025-10-17",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 2,
-          "semana_iso": 6,
-          "ciclo": "2026",
-          "inicio": "2026-02-05",
-          "fim": "2026-02-10",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 5,
-          "semana_iso": 20,
-          "ciclo": "2026",
-          "inicio": "2026-05-11",
-          "fim": "2026-05-15",
-          "status": "Concluído"
+          "status": "2026-02-10 00:00:00"
         }
       ]
     },
@@ -15529,44 +15049,14 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 8,
-          "semana_iso": 34,
-          "ciclo": "2025",
-          "inicio": "2025-08-18",
-          "fim": "2025-08-22",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2025,
           "mes": 10,
           "semana_iso": 44,
           "ciclo": "2025",
           "inicio": "2025-10-27",
           "fim": "2025-10-31",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 2,
-          "semana_iso": 8,
-          "ciclo": "2026",
-          "inicio": "2026-02-19",
-          "fim": "2026-02-24",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 5,
-          "semana_iso": 20,
-          "ciclo": "2026",
-          "inicio": "2026-05-11",
-          "fim": "2026-05-15",
-          "status": "Concluído"
+          "status": "2026-02-24 00:00:00"
         }
       ]
     },
@@ -17067,26 +16557,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 9,
-          "semana_iso": 37,
-          "ciclo": "2025",
-          "inicio": "2025-09-08",
-          "fim": "2025-09-12",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 5,
-          "semana_iso": 21,
-          "ciclo": "2026",
-          "inicio": "2026-05-18",
-          "fim": "2026-05-22",
-          "status": "Concluído"
         }
       ]
     },
@@ -18088,16 +17558,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 6,
-          "semana_iso": 27,
-          "ciclo": "2025",
-          "inicio": "2025-06-30",
-          "fim": "2025-07-09",
-          "status": "Concluído"
         }
       ]
     },
@@ -18148,16 +17608,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 10,
-          "semana_iso": 42,
-          "ciclo": "2025",
-          "inicio": "2025-10-13",
-          "fim": "2025-10-17",
-          "status": "Concluído"
         }
       ]
     },
@@ -19055,26 +18505,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 10,
-          "semana_iso": 41,
-          "ciclo": "2025",
-          "inicio": "2025-10-06",
-          "fim": "2026-03-13",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 25,
-          "ciclo": "2026",
-          "inicio": "2026-06-15",
-          "fim": "2026-06-19",
-          "status": "Concluído"
         }
       ]
     },
@@ -20561,26 +19991,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 9,
-          "semana_iso": 39,
-          "ciclo": "2025",
-          "inicio": "2025-09-22",
-          "fim": "2025-09-26",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 25,
-          "ciclo": "2026",
-          "inicio": "2026-06-15",
-          "fim": "2026-06-19",
-          "status": "Concluído"
         }
       ]
     },
@@ -21411,26 +20821,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 12,
-          "semana_iso": 50,
-          "ciclo": "2025",
-          "inicio": "2025-12-08",
-          "fim": "2026-03-11",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 7,
-          "semana_iso": 30,
-          "ciclo": "2026",
-          "inicio": "2026-07-20",
-          "fim": "2026-07-24",
-          "status": "Concluído"
         }
       ]
     },
@@ -21970,26 +21360,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 9,
-          "semana_iso": 38,
-          "ciclo": "2025",
-          "inicio": "2025-09-15",
-          "fim": "2025-09-19",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 26,
-          "ciclo": "2026",
-          "inicio": "2026-06-23",
-          "fim": "2026-08-04",
-          "status": "Concluído"
         }
       ]
     },
@@ -22888,26 +22258,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 11,
-          "semana_iso": 48,
-          "ciclo": "2025",
-          "inicio": "2025-11-24",
-          "fim": "2025-11-28",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 27,
-          "ciclo": "2026",
-          "inicio": "2026-06-29",
-          "fim": "2026-07-03",
-          "status": "Concluído"
         }
       ]
     },
@@ -23584,64 +22934,24 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 5,
-          "semana_iso": 22,
-          "ciclo": "2025",
-          "inicio": "2025-05-26",
-          "fim": "2025-05-30",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2026,
           "mes": 4,
           "semana_iso": 15,
           "ciclo": "2026",
           "inicio": "2026-04-08",
           "fim": "2026-04-14",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 24,
-          "ciclo": "2026",
-          "inicio": "2026-06-09",
-          "fim": "2026-06-23",
-          "status": "Concluído"
+          "status": "2026-06-30 00:00:00"
         },
         {
           "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 25,
-          "ciclo": "2026",
-          "inicio": "2026-06-18",
-          "fim": "2026-06-30",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
           "ano": 2026,
           "mes": 8,
           "semana_iso": 36,
           "ciclo": "2026",
           "inicio": "2026-08-31",
           "fim": "2026-09-04",
-          "status": "Em andamento"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 9,
-          "semana_iso": 37,
-          "ciclo": "2026",
-          "inicio": "2026-09-08",
-          "fim": "2026-09-15",
-          "status": "Em andamento"
+          "status": "2026-09-15 00:00:00"
         }
       ]
     },
@@ -25166,44 +24476,14 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 8,
-          "semana_iso": 33,
-          "ciclo": "2025",
-          "inicio": "2025-08-11",
-          "fim": "2025-08-15",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2025,
           "mes": 10,
           "semana_iso": 41,
           "ciclo": "2025",
           "inicio": "2025-10-06",
           "fim": "2025-10-10",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 2,
-          "semana_iso": 6,
-          "ciclo": "2026",
-          "inicio": "2026-02-02",
-          "fim": "2026-02-05",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 4,
-          "semana_iso": 18,
-          "ciclo": "2026",
-          "inicio": "2026-04-27",
-          "fim": "2026-05-07",
-          "status": "Concluído"
+          "status": "2026-02-05 00:00:00"
         }
       ]
     },
@@ -25923,26 +25203,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2026,
-          "mes": 3,
-          "semana_iso": 10,
-          "ciclo": "2026",
-          "inicio": "2026-03-02",
-          "fim": "2026-03-06",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 7,
-          "semana_iso": 30,
-          "ciclo": "2026",
-          "inicio": "2026-07-20",
-          "fim": "2026-07-24",
-          "status": "Concluído"
         }
       ]
     },
@@ -26201,26 +25461,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2026,
-          "mes": 2,
-          "semana_iso": 9,
-          "ciclo": "2026",
-          "inicio": "2026-02-23",
-          "fim": "2026-02-27",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 7,
-          "semana_iso": 30,
-          "ciclo": "2026",
-          "inicio": "2026-07-20",
-          "fim": "2026-07-24",
-          "status": "Concluído"
         }
       ]
     },
@@ -27611,44 +26851,14 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 8,
-          "semana_iso": 35,
-          "ciclo": "2025",
-          "inicio": "2025-08-25",
-          "fim": "2025-08-29",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2025,
           "mes": 11,
           "semana_iso": 46,
           "ciclo": "2025",
           "inicio": "2025-11-10",
           "fim": "2025-11-14",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 1,
-          "semana_iso": 2,
-          "ciclo": "2026",
-          "inicio": "2026-01-08",
-          "fim": "2026-01-12",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 5,
-          "semana_iso": 22,
-          "ciclo": "2026",
-          "inicio": "2026-05-25",
-          "fim": "2026-05-29",
-          "status": "Concluído"
+          "status": "2026-01-12 00:00:00"
         }
       ]
     },
@@ -28019,44 +27229,14 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 9,
-          "semana_iso": 36,
-          "ciclo": "2025",
-          "inicio": "2025-09-02",
-          "fim": "2025-09-30",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2025,
           "mes": 11,
           "semana_iso": 48,
           "ciclo": "2025",
           "inicio": "2025-11-24",
           "fim": "2025-11-28",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 1,
-          "semana_iso": 4,
-          "ciclo": "2026",
-          "inicio": "2026-01-22",
-          "fim": "2026-01-26",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 23,
-          "ciclo": "2026",
-          "inicio": "2026-06-01",
-          "fim": "2026-07-01",
-          "status": "Concluído"
+          "status": "2026-01-26 00:00:00"
         }
       ]
     },
@@ -28429,44 +27609,14 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 9,
-          "semana_iso": 36,
-          "ciclo": "2025",
-          "inicio": "2025-09-01",
-          "fim": "2025-09-30",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2025,
           "mes": 11,
           "semana_iso": 45,
           "ciclo": "2025",
           "inicio": "2025-11-03",
           "fim": "2025-11-07",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 1,
-          "semana_iso": 2,
-          "ciclo": "2026",
-          "inicio": "2026-01-05",
-          "fim": "2026-01-07",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 5,
-          "semana_iso": 22,
-          "ciclo": "2026",
-          "inicio": "2026-05-25",
-          "fim": "2026-05-29",
-          "status": "Concluído"
+          "status": "2026-01-07 00:00:00"
         }
       ]
     },
@@ -29253,26 +28403,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 11,
-          "semana_iso": 47,
-          "ciclo": "2025",
-          "inicio": "2025-11-17",
-          "fim": "2026-04-24",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 7,
-          "semana_iso": 28,
-          "ciclo": "2026",
-          "inicio": "2026-07-06",
-          "fim": "2026-07-10",
-          "status": "Concluído"
         }
       ]
     },
@@ -29586,64 +28716,24 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 6,
-          "semana_iso": 25,
-          "ciclo": "2025",
-          "inicio": "2025-06-16",
-          "fim": "2025-06-27",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2026,
           "mes": 3,
           "semana_iso": 12,
           "ciclo": "2026",
           "inicio": "2026-03-18",
           "fim": "2026-03-23",
-          "status": "Concluído"
+          "status": "2026-06-05 00:00:00"
         },
         {
           "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 5,
-          "semana_iso": 22,
-          "ciclo": "2026",
-          "inicio": "2026-05-26",
-          "fim": "2026-06-05",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 25,
-          "ciclo": "2026",
-          "inicio": "2026-06-15",
-          "fim": "2026-06-19",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
           "ano": 2026,
           "mes": 8,
           "semana_iso": 32,
           "ciclo": "2026",
           "inicio": "2026-08-04",
           "fim": "2026-08-14",
-          "status": "Em andamento"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 10,
-          "semana_iso": 41,
-          "ciclo": "2026",
-          "inicio": "2026-10-08",
-          "fim": "2026-10-20",
-          "status": "Em andamento"
+          "status": "2026-10-20 00:00:00"
         }
       ]
     },
@@ -30010,64 +29100,24 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 6,
-          "semana_iso": 23,
-          "ciclo": "2025",
-          "inicio": "2025-06-02",
-          "fim": "2025-06-06",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2026,
           "mes": 3,
           "semana_iso": 13,
           "ciclo": "2026",
           "inicio": "2026-03-24",
           "fim": "2026-03-30",
-          "status": "Concluído"
+          "status": "2026-06-03 00:00:00"
         },
         {
           "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 5,
-          "semana_iso": 22,
-          "ciclo": "2026",
-          "inicio": "2026-05-25",
-          "fim": "2026-06-03",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 24,
-          "ciclo": "2026",
-          "inicio": "2026-06-08",
-          "fim": "2026-06-12",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
           "ano": 2026,
           "mes": 7,
           "semana_iso": 31,
           "ciclo": "2026",
           "inicio": "2026-07-27",
           "fim": "2026-08-04",
-          "status": "Em andamento"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 9,
-          "semana_iso": 40,
-          "ciclo": "2026",
-          "inicio": "2026-09-28",
-          "fim": "2026-10-07",
-          "status": "Em andamento"
+          "status": "2026-10-07 00:00:00"
         }
       ]
     },
@@ -31197,26 +30247,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 11,
-          "semana_iso": 45,
-          "ciclo": "2025",
-          "inicio": "2025-11-04",
-          "fim": "2026-02-13",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 8,
-          "semana_iso": 32,
-          "ciclo": "2026",
-          "inicio": "2026-08-03",
-          "fim": "2026-08-07",
-          "status": "Concluído"
         }
       ]
     },
@@ -32332,26 +31362,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 12,
-          "semana_iso": 51,
-          "ciclo": "2025",
-          "inicio": "2025-12-15",
-          "fim": "2025-12-19",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 7,
-          "semana_iso": 29,
-          "ciclo": "2026",
-          "inicio": "2026-07-13",
-          "fim": "2026-07-16",
-          "status": "Concluído"
         }
       ]
     },
@@ -33134,26 +32144,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 10,
-          "semana_iso": 43,
-          "ciclo": "2025",
-          "inicio": "2025-10-20",
-          "fim": "2025-10-24",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 7,
-          "semana_iso": 29,
-          "ciclo": "2026",
-          "inicio": "2026-07-13",
-          "fim": "2026-08-07",
-          "status": "Concluído"
         }
       ]
     },
@@ -35074,26 +34064,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2026,
-          "mes": 2,
-          "semana_iso": 9,
-          "ciclo": "2026",
-          "inicio": "2026-02-23",
-          "fim": "2026-02-27",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 8,
-          "semana_iso": 32,
-          "ciclo": "2026",
-          "inicio": "2026-08-03",
-          "fim": "2026-08-07",
-          "status": "Concluído"
         }
       ]
     },
@@ -35460,64 +34430,24 @@
           "status": null
         },
         {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 7,
-          "semana_iso": 31,
-          "ciclo": "2025",
-          "inicio": "2025-07-30",
-          "fim": "2025-08-06",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
+          "modulo": "TOC - 2ª etapa",
           "ano": 2026,
           "mes": 4,
           "semana_iso": 16,
           "ciclo": "2026",
           "inicio": "2026-04-15",
           "fim": "2026-04-23",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 24,
-          "ciclo": "2026",
-          "inicio": "2026-06-08",
-          "fim": "2026-06-12",
-          "status": "Concluído"
+          "status": "2026-07-01 00:00:00"
         },
         {
           "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 26,
-          "ciclo": "2026",
-          "inicio": "2026-06-22",
-          "fim": "2026-07-01",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "TOC - 1ª etapa",
           "ano": 2026,
           "mes": 9,
           "semana_iso": 38,
           "ciclo": "2026",
           "inicio": "2026-09-14",
           "fim": "2026-09-23",
-          "status": "Em andamento"
-        },
-        {
-          "modulo": "TOC - 2ª etapa",
-          "ano": 2026,
-          "mes": 12,
-          "semana_iso": 49,
-          "ciclo": "2026",
-          "inicio": "2026-12-01",
-          "fim": "2026-12-07",
-          "status": "Em andamento"
+          "status": "2026-12-07 00:00:00"
         }
       ]
     },
@@ -36293,26 +35223,6 @@
           "inicio": null,
           "fim": null,
           "status": null
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 1",
-          "ano": 2025,
-          "mes": 12,
-          "semana_iso": 49,
-          "ciclo": "2025",
-          "inicio": "2025-12-01",
-          "fim": "2025-12-05",
-          "status": "Concluído"
-        },
-        {
-          "modulo": "Costura e Mecânica - MÓDULO 2",
-          "ano": 2026,
-          "mes": 6,
-          "semana_iso": 27,
-          "ciclo": "2026",
-          "inicio": "2026-06-29",
-          "fim": "2026-07-03",
-          "status": "Concluído"
         }
       ]
     }
@@ -36475,54 +35385,6 @@
       "oficina_id": "a-maria-dos-santos-silva-faccao",
       "oficina_nome": "A MARIA DOS SANTOS SILVA FACCAO",
       "modulo": "Costura e Mecânica",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "a-maria-dos-santos-silva-faccao",
-      "oficina_nome": "A MARIA DOS SANTOS SILVA FACCAO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0513,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "a-maria-dos-santos-silva-faccao",
-      "oficina_nome": "A MARIA DOS SANTOS SILVA FACCAO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0484,
-      "pos_valor": 0.0153,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": -0.0331,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "a-maria-dos-santos-silva-faccao",
-      "oficina_nome": "A MARIA DOS SANTOS SILVA FACCAO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
       "ano_treino": 2025,
       "metrica": "eficiencia",
       "sentido": 1,
@@ -36774,101 +35636,6 @@
     {
       "oficina_id": "a-s-empreendimentos",
       "oficina_nome": "A. S. EMPREENDIMENTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0526,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "a-s-empreendimentos",
-      "oficina_nome": "A. S. EMPREENDIMENTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0591,
-      "pos_valor": 0.153,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.0939,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "a-s-empreendimentos",
-      "oficina_nome": "A. S. EMPREENDIMENTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.5432,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "a-s-empreendimentos",
-      "oficina_nome": "A. S. EMPREENDIMENTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "a-s-empreendimentos",
-      "oficina_nome": "A. S. EMPREENDIMENTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0866,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "a-s-empreendimentos",
-      "oficina_nome": "A. S. EMPREENDIMENTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "a-s-empreendimentos",
-      "oficina_nome": "A. S. EMPREENDIMENTOS LTDA",
       "modulo": "Lean Manufacturing",
       "ano_treino": 2022,
       "metrica": "produtividade",
@@ -36968,7 +35735,7 @@
     {
       "oficina_id": "a-s-empreendimentos",
       "oficina_nome": "A. S. EMPREENDIMENTOS LTDA",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "produtividade",
       "sentido": 1,
@@ -36984,7 +35751,7 @@
     {
       "oficina_id": "a-s-empreendimentos",
       "oficina_nome": "A. S. EMPREENDIMENTOS LTDA",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
@@ -37002,7 +35769,7 @@
     {
       "oficina_id": "a-s-empreendimentos",
       "oficina_nome": "A. S. EMPREENDIMENTOS LTDA",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "eficiencia",
       "sentido": 1,
@@ -37016,51 +35783,6 @@
       "status": "sem_pre"
     },
     {
-      "oficina_id": "a-s-empreendimentos",
-      "oficina_nome": "A. S. EMPREENDIMENTOS LTDA",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "a-s-empreendimentos",
-      "oficina_nome": "A. S. EMPREENDIMENTOS LTDA",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0866,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "a-s-empreendimentos",
-      "oficina_nome": "A. S. EMPREENDIMENTOS LTDA",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
       "oficina_id": "acari-textil",
       "oficina_nome": "ACARI TÊXTIL LTDA",
       "modulo": "Costura e Mecânica",
@@ -37109,101 +35831,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "acari-textil",
-      "oficina_nome": "ACARI TÊXTIL LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0512,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "acari-textil",
-      "oficina_nome": "ACARI TÊXTIL LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": -0.0734,
-      "pos_valor": 0.0103,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.0837,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "acari-textil",
-      "oficina_nome": "ACARI TÊXTIL LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.5656,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "acari-textil",
-      "oficina_nome": "ACARI TÊXTIL LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "acari-textil",
-      "oficina_nome": "ACARI TÊXTIL LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0367,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "acari-textil",
-      "oficina_nome": "ACARI TÊXTIL LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "acaua-confeccoes",
@@ -37391,101 +36018,6 @@
     {
       "oficina_id": "ajg-confeccoes",
       "oficina_nome": "AJG CONFECÇÕES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.1048,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "ajg-confeccoes",
-      "oficina_nome": "AJG CONFECÇÕES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.1263,
-      "pos_valor": 0.0701,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": -0.0562,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "ajg-confeccoes",
-      "oficina_nome": "AJG CONFECÇÕES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.4848,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "ajg-confeccoes",
-      "oficina_nome": "AJG CONFECÇÕES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "ajg-confeccoes",
-      "oficina_nome": "AJG CONFECÇÕES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.1101,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "ajg-confeccoes",
-      "oficina_nome": "AJG CONFECÇÕES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "ajg-confeccoes",
-      "oficina_nome": "AJG CONFECÇÕES LTDA",
       "modulo": "TOC",
       "ano_treino": 2025,
       "metrica": "produtividade",
@@ -37532,51 +36064,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "ajg-confeccoes",
-      "oficina_nome": "AJG CONFECÇÕES LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "ajg-confeccoes",
-      "oficina_nome": "AJG CONFECÇÕES LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.1101,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "ajg-confeccoes",
-      "oficina_nome": "AJG CONFECÇÕES LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "ajg-confeccoes",
@@ -37672,101 +36159,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "alanis-queiroz",
-      "oficina_nome": "ALANIS QUEIROZ LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.056,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "alanis-queiroz",
-      "oficina_nome": "ALANIS QUEIROZ LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0556,
-      "pos_valor": 0.0598,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.0042,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "alanis-queiroz",
-      "oficina_nome": "ALANIS QUEIROZ LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.4298,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "alanis-queiroz",
-      "oficina_nome": "ALANIS QUEIROZ LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "alanis-queiroz",
-      "oficina_nome": "ALANIS QUEIROZ LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.1137,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "alanis-queiroz",
-      "oficina_nome": "ALANIS QUEIROZ LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "alianca-confeccoes",
@@ -37846,50 +36238,6 @@
       "oficina_id": "alianca-confeccoes",
       "oficina_nome": "ALIANCA CONFECCOES LTDA",
       "modulo": "Costura e Mecânica",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "alianca-confeccoes",
-      "oficina_nome": "ALIANCA CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "alianca-confeccoes",
-      "oficina_nome": "ALIANCA CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0567,
-      "pos_valor": null,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "alianca-confeccoes",
-      "oficina_nome": "ALIANCA CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
       "ano_treino": 2025,
       "metrica": "eficiencia",
       "sentido": 1,
@@ -37995,96 +36343,6 @@
       "status": "sem_pre"
     },
     {
-      "oficina_id": "aline-rodrigues-de-lima-araujo",
-      "oficina_nome": "ALINE RODRIGUES DE LIMA ARAUJO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "aline-rodrigues-de-lima-araujo",
-      "oficina_nome": "ALINE RODRIGUES DE LIMA ARAUJO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.054,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "aline-rodrigues-de-lima-araujo",
-      "oficina_nome": "ALINE RODRIGUES DE LIMA ARAUJO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "aline-rodrigues-de-lima-araujo",
-      "oficina_nome": "ALINE RODRIGUES DE LIMA ARAUJO",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "aline-rodrigues-de-lima-araujo",
-      "oficina_nome": "ALINE RODRIGUES DE LIMA ARAUJO",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.054,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "aline-rodrigues-de-lima-araujo",
-      "oficina_nome": "ALINE RODRIGUES DE LIMA ARAUJO",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
       "oficina_id": "alves-trindade-confeccoes",
       "oficina_nome": "ALVES & TRINDADE CONFECCOES LTDA - ME",
       "modulo": "Costura e Mecânica",
@@ -38161,90 +36419,6 @@
       "oficina_nome": "AMORIM E PEDRO",
       "modulo": "Costura e Mecânica",
       "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "amorim-e-pedro",
-      "oficina_nome": "AMORIM E PEDRO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "amorim-e-pedro",
-      "oficina_nome": "AMORIM E PEDRO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "amorim-e-pedro",
-      "oficina_nome": "AMORIM E PEDRO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "amorim-e-pedro",
-      "oficina_nome": "AMORIM E PEDRO",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "amorim-e-pedro",
-      "oficina_nome": "AMORIM E PEDRO",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "amorim-e-pedro",
-      "oficina_nome": "AMORIM E PEDRO",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
       "metrica": "eficiencia",
       "sentido": 1,
       "pre_valor": null,
@@ -38543,101 +36717,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "araujo-e-m-confeccoes",
-      "oficina_nome": "ARAUJO E M CONFECCOES EIRELI",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0484,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "araujo-e-m-confeccoes",
-      "oficina_nome": "ARAUJO E M CONFECCOES EIRELI",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.1081,
-      "pos_valor": 0.0885,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": -0.0196,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "araujo-e-m-confeccoes",
-      "oficina_nome": "ARAUJO E M CONFECCOES EIRELI",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.5751,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "araujo-e-m-confeccoes",
-      "oficina_nome": "ARAUJO E M CONFECCOES EIRELI",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "araujo-e-m-confeccoes",
-      "oficina_nome": "ARAUJO E M CONFECCOES EIRELI",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.109,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "araujo-e-m-confeccoes",
-      "oficina_nome": "ARAUJO E M CONFECCOES EIRELI",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "arca-fabril-industria-de-vestuario",
@@ -39124,90 +37203,6 @@
       "status": "sem_dado"
     },
     {
-      "oficina_id": "confeccoes-dona-dina",
-      "oficina_nome": "Confecções Dona Dina",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-dona-dina",
-      "oficina_nome": "Confecções Dona Dina",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-dona-dina",
-      "oficina_nome": "Confecções Dona Dina",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-dona-dina",
-      "oficina_nome": "Confecções Dona Dina",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-dona-dina",
-      "oficina_nome": "Confecções Dona Dina",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-dona-dina",
-      "oficina_nome": "Confecções Dona Dina",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
       "oficina_id": "confeccoes-f-sales",
       "oficina_nome": "CONFECCOES F SALES CIA LTDA",
       "modulo": "Costura e Mecânica",
@@ -39436,90 +37431,6 @@
     {
       "oficina_id": "confeccoes-js",
       "oficina_nome": "Confecções JS Ltda",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-js",
-      "oficina_nome": "Confecções JS Ltda",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-js",
-      "oficina_nome": "Confecções JS Ltda",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-js",
-      "oficina_nome": "Confecções JS Ltda",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-js",
-      "oficina_nome": "Confecções JS Ltda",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-js",
-      "oficina_nome": "Confecções JS Ltda",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-js",
-      "oficina_nome": "Confecções JS Ltda",
       "modulo": "TOC",
       "ano_treino": 2025,
       "metrica": "produtividade",
@@ -39550,48 +37461,6 @@
       "oficina_nome": "Confecções JS Ltda",
       "modulo": "TOC",
       "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-js",
-      "oficina_nome": "Confecções JS Ltda",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-js",
-      "oficina_nome": "Confecções JS Ltda",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "confeccoes-js",
-      "oficina_nome": "Confecções JS Ltda",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
       "metrica": "eficiencia",
       "sentido": 1,
       "pre_valor": null,
@@ -39833,101 +37702,6 @@
     {
       "oficina_id": "danjan-confeccoes",
       "oficina_nome": "DANJAN CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0574,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "danjan-confeccoes",
-      "oficina_nome": "DANJAN CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.018,
-      "pos_valor": 0.0934,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.0754,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "danjan-confeccoes",
-      "oficina_nome": "DANJAN CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.7981,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "danjan-confeccoes",
-      "oficina_nome": "DANJAN CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "danjan-confeccoes",
-      "oficina_nome": "DANJAN CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0562,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "danjan-confeccoes",
-      "oficina_nome": "DANJAN CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "danjan-confeccoes",
-      "oficina_nome": "DANJAN CONFECCOES LTDA",
       "modulo": "Lean Manufacturing",
       "ano_treino": 2022,
       "metrica": "produtividade",
@@ -40028,101 +37802,6 @@
     {
       "oficina_id": "dantas-e-paulino-confeccoes",
       "oficina_nome": "DANTAS E PAULINO CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0556,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "dantas-e-paulino-confeccoes",
-      "oficina_nome": "DANTAS E PAULINO CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0602,
-      "pos_valor": 0.1166,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.0564,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "dantas-e-paulino-confeccoes",
-      "oficina_nome": "DANTAS E PAULINO CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.585,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "dantas-e-paulino-confeccoes",
-      "oficina_nome": "DANTAS E PAULINO CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "dantas-e-paulino-confeccoes",
-      "oficina_nome": "DANTAS E PAULINO CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0793,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "dantas-e-paulino-confeccoes",
-      "oficina_nome": "DANTAS E PAULINO CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "dantas-e-paulino-confeccoes",
-      "oficina_nome": "DANTAS E PAULINO CONFECCOES LTDA",
       "modulo": "TOC",
       "ano_treino": 2025,
       "metrica": "produtividade",
@@ -40173,51 +37852,6 @@
     {
       "oficina_id": "dantas-e-paulino-confeccoes",
       "oficina_nome": "DANTAS E PAULINO CONFECCOES LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "dantas-e-paulino-confeccoes",
-      "oficina_nome": "DANTAS E PAULINO CONFECCOES LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0793,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "dantas-e-paulino-confeccoes",
-      "oficina_nome": "DANTAS E PAULINO CONFECCOES LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "dantas-e-paulino-confeccoes",
-      "oficina_nome": "DANTAS E PAULINO CONFECCOES LTDA",
       "modulo": "TOC - 2ª etapa",
       "ano_treino": 2026,
       "metrica": "produtividade",
@@ -40313,101 +37947,6 @@
     {
       "oficina_id": "di3-confeccoes",
       "oficina_nome": "DI3 CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0979,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "di3-confeccoes",
-      "oficina_nome": "DI3 CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0301,
-      "pos_valor": 0.0714,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.0413,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "di3-confeccoes",
-      "oficina_nome": "DI3 CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.8743,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "di3-confeccoes",
-      "oficina_nome": "DI3 CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "di3-confeccoes",
-      "oficina_nome": "DI3 CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0383,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "di3-confeccoes",
-      "oficina_nome": "DI3 CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "di3-confeccoes",
-      "oficina_nome": "DI3 CONFECCOES LTDA",
       "modulo": "TOC",
       "ano_treino": 2025,
       "metrica": "produtividade",
@@ -40454,51 +37993,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "di3-confeccoes",
-      "oficina_nome": "DI3 CONFECCOES LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "di3-confeccoes",
-      "oficina_nome": "DI3 CONFECCOES LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0383,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "di3-confeccoes",
-      "oficina_nome": "DI3 CONFECCOES LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "di3-confeccoes",
@@ -41115,101 +38609,6 @@
     {
       "oficina_id": "f-k-faccao",
       "oficina_nome": "F & K FACCAO LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.169,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "f-k-faccao",
-      "oficina_nome": "F & K FACCAO LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0568,
-      "pos_valor": 0.0171,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": -0.0397,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "f-k-faccao",
-      "oficina_nome": "F & K FACCAO LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.212,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "f-k-faccao",
-      "oficina_nome": "F & K FACCAO LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-k-faccao",
-      "oficina_nome": "F & K FACCAO LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0621,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "f-k-faccao",
-      "oficina_nome": "F & K FACCAO LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-k-faccao",
-      "oficina_nome": "F & K FACCAO LTDA",
       "modulo": "TOC",
       "ano_treino": 2025,
       "metrica": "produtividade",
@@ -41256,51 +38655,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "f-k-faccao",
-      "oficina_nome": "F & K FACCAO LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-k-faccao",
-      "oficina_nome": "F & K FACCAO LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0621,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "f-k-faccao",
-      "oficina_nome": "F & K FACCAO LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "f-k-faccao",
@@ -41396,101 +38750,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "f-l-azevedo-confeccao",
-      "oficina_nome": "F & L AZEVEDO CONFECCAO LTDA - ME MATRIZ",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.1305,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "f-l-azevedo-confeccao",
-      "oficina_nome": "F & L AZEVEDO CONFECCAO LTDA - ME MATRIZ",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0463,
-      "pos_valor": 0.0873,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.041,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "f-l-azevedo-confeccao",
-      "oficina_nome": "F & L AZEVEDO CONFECCAO LTDA - ME MATRIZ",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.7222,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "f-l-azevedo-confeccao",
-      "oficina_nome": "F & L AZEVEDO CONFECCAO LTDA - ME MATRIZ",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-l-azevedo-confeccao",
-      "oficina_nome": "F & L AZEVEDO CONFECCAO LTDA - ME MATRIZ",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0888,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "f-l-azevedo-confeccao",
-      "oficina_nome": "F & L AZEVEDO CONFECCAO LTDA - ME MATRIZ",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "f-l-azevedo-confeccao",
@@ -41591,7 +38850,7 @@
     {
       "oficina_id": "f-silva-confeccoes",
       "oficina_nome": "F SILVA CONFECÇÕES LTDA",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "produtividade",
       "sentido": 1,
@@ -41607,7 +38866,7 @@
     {
       "oficina_id": "f-silva-confeccoes",
       "oficina_nome": "F SILVA CONFECÇÕES LTDA",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
@@ -41625,53 +38884,8 @@
     {
       "oficina_id": "f-silva-confeccoes",
       "oficina_nome": "F SILVA CONFECÇÕES LTDA",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-silva-confeccoes",
-      "oficina_nome": "F SILVA CONFECÇÕES LTDA",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-silva-confeccoes",
-      "oficina_nome": "F SILVA CONFECÇÕES LTDA",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0832,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "f-silva-confeccoes",
-      "oficina_nome": "F SILVA CONFECÇÕES LTDA",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
       "metrica": "eficiencia",
       "sentido": 1,
       "pre_valor": null,
@@ -41726,90 +38940,6 @@
     {
       "oficina_id": "f-w-confeccao",
       "oficina_nome": "F.W confecção",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-w-confeccao",
-      "oficina_nome": "F.W confecção",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-w-confeccao",
-      "oficina_nome": "F.W confecção",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-w-confeccao",
-      "oficina_nome": "F.W confecção",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-w-confeccao",
-      "oficina_nome": "F.W confecção",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-w-confeccao",
-      "oficina_nome": "F.W confecção",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-w-confeccao",
-      "oficina_nome": "F.W confecção",
       "modulo": "TOC",
       "ano_treino": 2024,
       "metrica": "produtividade",
@@ -41852,7 +38982,7 @@
     {
       "oficina_id": "f-w-confeccao",
       "oficina_nome": "F.W confecção",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "produtividade",
       "sentido": 1,
@@ -41866,7 +38996,7 @@
     {
       "oficina_id": "f-w-confeccao",
       "oficina_nome": "F.W confecção",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
@@ -41880,50 +39010,8 @@
     {
       "oficina_id": "f-w-confeccao",
       "oficina_nome": "F.W confecção",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-w-confeccao",
-      "oficina_nome": "F.W confecção",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-w-confeccao",
-      "oficina_nome": "F.W confecção",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "f-w-confeccao",
-      "oficina_nome": "F.W confecção",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
       "metrica": "eficiencia",
       "sentido": 1,
       "pre_valor": null,
@@ -42274,101 +39362,6 @@
     {
       "oficina_id": "faccao-santanense",
       "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0546,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "faccao-santanense",
-      "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0772,
-      "pos_valor": 0.0399,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": -0.0373,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "faccao-santanense",
-      "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.7098,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "faccao-santanense",
-      "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "faccao-santanense",
-      "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0665,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "faccao-santanense",
-      "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "faccao-santanense",
-      "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
       "modulo": "TOC",
       "ano_treino": 2024,
       "metrica": "produtividade",
@@ -42418,7 +39411,7 @@
     {
       "oficina_id": "faccao-santanense",
       "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "produtividade",
       "sentido": 1,
@@ -42434,7 +39427,7 @@
     {
       "oficina_id": "faccao-santanense",
       "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
@@ -42452,7 +39445,7 @@
     {
       "oficina_id": "faccao-santanense",
       "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "eficiencia",
       "sentido": 1,
@@ -42466,51 +39459,6 @@
       "status": "sem_pre"
     },
     {
-      "oficina_id": "faccao-santanense",
-      "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "faccao-santanense",
-      "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0665,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "faccao-santanense",
-      "oficina_nome": "FACCAO SANTANENSE LTDA - ME",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
       "oficina_id": "faccao-santos",
       "oficina_nome": "FACÇÃO SANTOS & CIA.LTDA - ME",
       "modulo": "Lean Manufacturing",
@@ -42601,101 +39549,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "ferreira-e-araujo-confeccoes",
-      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0563,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "ferreira-e-araujo-confeccoes",
-      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0518,
-      "pos_valor": 0.0225,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": -0.0293,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "ferreira-e-araujo-confeccoes",
-      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.7076,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "ferreira-e-araujo-confeccoes",
-      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "ferreira-e-araujo-confeccoes",
-      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0575,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "ferreira-e-araujo-confeccoes",
-      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "ferreira-e-araujo-confeccoes",
@@ -42749,7 +39602,7 @@
     {
       "oficina_id": "ferreira-e-araujo-confeccoes",
       "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "produtividade",
       "sentido": 1,
@@ -42765,7 +39618,7 @@
     {
       "oficina_id": "ferreira-e-araujo-confeccoes",
       "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
@@ -42783,7 +39636,7 @@
     {
       "oficina_id": "ferreira-e-araujo-confeccoes",
       "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "eficiencia",
       "sentido": 1,
@@ -42795,51 +39648,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "ferreira-e-araujo-confeccoes",
-      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "ferreira-e-araujo-confeccoes",
-      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0575,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "ferreira-e-araujo-confeccoes",
-      "oficina_nome": "FERREIRA E ARAUJO CONFECCOES LTDA",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "flavia-georgia-braga-silva",
@@ -43002,90 +39810,6 @@
       "oficina_nome": "Fsilva Confecções",
       "modulo": "Costura e Mecânica",
       "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "fsilva-confeccoes",
-      "oficina_nome": "Fsilva Confecções",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "fsilva-confeccoes",
-      "oficina_nome": "Fsilva Confecções",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "fsilva-confeccoes",
-      "oficina_nome": "Fsilva Confecções",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "fsilva-confeccoes",
-      "oficina_nome": "Fsilva Confecções",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "fsilva-confeccoes",
-      "oficina_nome": "Fsilva Confecções",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "fsilva-confeccoes",
-      "oficina_nome": "Fsilva Confecções",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
       "metrica": "eficiencia",
       "sentido": 1,
       "pre_valor": null,
@@ -43281,48 +40005,6 @@
       "status": "sem_dado"
     },
     {
-      "oficina_id": "helio-araujo-industria-de-confeccoes",
-      "oficina_nome": "Helio araujo industria de confeccoes",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "helio-araujo-industria-de-confeccoes",
-      "oficina_nome": "Helio araujo industria de confeccoes",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "helio-araujo-industria-de-confeccoes",
-      "oficina_nome": "Helio araujo industria de confeccoes",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
       "oficina_id": "i-f-confeccoes",
       "oficina_nome": "I F CONFECCOES LTDA",
       "modulo": "Costura e Mecânica",
@@ -43396,48 +40078,6 @@
       "oficina_id": "i-m-araujo",
       "oficina_nome": "I M ARAÚJO",
       "modulo": "Costura e Mecânica",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "i-m-araujo",
-      "oficina_nome": "I M ARAÚJO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "i-m-araujo",
-      "oficina_nome": "I M ARAÚJO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "i-m-araujo",
-      "oficina_nome": "I M ARAÚJO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
       "ano_treino": 2025,
       "metrica": "eficiencia",
       "sentido": 1,
@@ -43593,101 +40233,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "ideal-confeccoes",
-      "oficina_nome": "IDEAL CONFECCOES LTDA BÁSICO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0554,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "ideal-confeccoes",
-      "oficina_nome": "IDEAL CONFECCOES LTDA BÁSICO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0592,
-      "pos_valor": 0.0655,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.0063,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "ideal-confeccoes",
-      "oficina_nome": "IDEAL CONFECCOES LTDA BÁSICO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.4416,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "ideal-confeccoes",
-      "oficina_nome": "IDEAL CONFECCOES LTDA BÁSICO",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "ideal-confeccoes",
-      "oficina_nome": "IDEAL CONFECCOES LTDA BÁSICO",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0637,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "ideal-confeccoes",
-      "oficina_nome": "IDEAL CONFECCOES LTDA BÁSICO",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "ideal-confeccoes",
@@ -44005,101 +40550,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "j-s-silva",
-      "oficina_nome": "J. S. & SILVA LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0689,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "j-s-silva",
-      "oficina_nome": "J. S. & SILVA LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.1501,
-      "pos_valor": 0.0682,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": -0.0819,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "j-s-silva",
-      "oficina_nome": "J. S. & SILVA LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.5836,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "j-s-silva",
-      "oficina_nome": "J. S. & SILVA LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "j-s-silva",
-      "oficina_nome": "J. S. & SILVA LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.1399,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "j-s-silva",
-      "oficina_nome": "J. S. & SILVA LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "j-s-silva",
@@ -44478,90 +40928,6 @@
       "status": "sem_dado"
     },
     {
-      "oficina_id": "jero-confeccoes-potengi-textil",
-      "oficina_nome": "JERO CONFECÇÕES/POTENGI TEXTIL",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "jero-confeccoes-potengi-textil",
-      "oficina_nome": "JERO CONFECÇÕES/POTENGI TEXTIL",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "jero-confeccoes-potengi-textil",
-      "oficina_nome": "JERO CONFECÇÕES/POTENGI TEXTIL",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "jero-confeccoes-potengi-textil",
-      "oficina_nome": "JERO CONFECÇÕES/POTENGI TEXTIL",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "jero-confeccoes-potengi-textil",
-      "oficina_nome": "JERO CONFECÇÕES/POTENGI TEXTIL",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "jero-confeccoes-potengi-textil",
-      "oficina_nome": "JERO CONFECÇÕES/POTENGI TEXTIL",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
       "oficina_id": "jg-faccao",
       "oficina_nome": "JG FACÇÃO LTDA",
       "modulo": "Lean Manufacturing",
@@ -44636,90 +41002,6 @@
       "oficina_nome": "JM confecções & cia ltda - MATRIZ",
       "modulo": "Costura e Mecânica",
       "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "jm-confeccoes",
-      "oficina_nome": "JM confecções & cia ltda - MATRIZ",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "jm-confeccoes",
-      "oficina_nome": "JM confecções & cia ltda - MATRIZ",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "jm-confeccoes",
-      "oficina_nome": "JM confecções & cia ltda - MATRIZ",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "jm-confeccoes",
-      "oficina_nome": "JM confecções & cia ltda - MATRIZ",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "jm-confeccoes",
-      "oficina_nome": "JM confecções & cia ltda - MATRIZ",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "jm-confeccoes",
-      "oficina_nome": "JM confecções & cia ltda - MATRIZ",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
       "metrica": "eficiencia",
       "sentido": 1,
       "pre_valor": null,
@@ -44879,101 +41161,6 @@
     {
       "oficina_id": "joseni-maria-de-medeiros",
       "oficina_nome": "JOSENI MARIA DE MEDEIROS",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.088,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "joseni-maria-de-medeiros",
-      "oficina_nome": "JOSENI MARIA DE MEDEIROS",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.1269,
-      "pos_valor": 0.1007,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": -0.0262,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "joseni-maria-de-medeiros",
-      "oficina_nome": "JOSENI MARIA DE MEDEIROS",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.5745,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "joseni-maria-de-medeiros",
-      "oficina_nome": "JOSENI MARIA DE MEDEIROS",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "joseni-maria-de-medeiros",
-      "oficina_nome": "JOSENI MARIA DE MEDEIROS",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0664,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "joseni-maria-de-medeiros",
-      "oficina_nome": "JOSENI MARIA DE MEDEIROS",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "joseni-maria-de-medeiros",
-      "oficina_nome": "JOSENI MARIA DE MEDEIROS",
       "modulo": "Lean Manufacturing",
       "ano_treino": 2022,
       "metrica": "produtividade",
@@ -45123,101 +41310,6 @@
     {
       "oficina_id": "ksw-confeccoes",
       "oficina_nome": "KSW CONFECÇÕES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.2211,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "ksw-confeccoes",
-      "oficina_nome": "KSW CONFECÇÕES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0667,
-      "pos_valor": 0.0103,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": -0.0564,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "ksw-confeccoes",
-      "oficina_nome": "KSW CONFECÇÕES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "ksw-confeccoes",
-      "oficina_nome": "KSW CONFECÇÕES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "ksw-confeccoes",
-      "oficina_nome": "KSW CONFECÇÕES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0443,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "ksw-confeccoes",
-      "oficina_nome": "KSW CONFECÇÕES LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "ksw-confeccoes",
-      "oficina_nome": "KSW CONFECÇÕES LTDA",
       "modulo": "TOC",
       "ano_treino": 2025,
       "metrica": "produtividade",
@@ -45264,51 +41356,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "ksw-confeccoes",
-      "oficina_nome": "KSW CONFECÇÕES LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "ksw-confeccoes",
-      "oficina_nome": "KSW CONFECÇÕES LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0443,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "ksw-confeccoes",
-      "oficina_nome": "KSW CONFECÇÕES LTDA",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "ksw-confeccoes",
@@ -45457,101 +41504,6 @@
     {
       "oficina_id": "lima-confeccoes",
       "oficina_nome": "LIMA CONFECCOES LTDA-ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0531,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "lima-confeccoes",
-      "oficina_nome": "LIMA CONFECCOES LTDA-ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0421,
-      "pos_valor": 0.0556,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.0135,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "lima-confeccoes",
-      "oficina_nome": "LIMA CONFECCOES LTDA-ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.5771,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "lima-confeccoes",
-      "oficina_nome": "LIMA CONFECCOES LTDA-ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "lima-confeccoes",
-      "oficina_nome": "LIMA CONFECCOES LTDA-ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0543,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "lima-confeccoes",
-      "oficina_nome": "LIMA CONFECCOES LTDA-ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "lima-confeccoes",
-      "oficina_nome": "LIMA CONFECCOES LTDA-ME",
       "modulo": "TOC",
       "ano_treino": 2024,
       "metrica": "produtividade",
@@ -45601,7 +41553,7 @@
     {
       "oficina_id": "lima-confeccoes",
       "oficina_nome": "LIMA CONFECCOES LTDA-ME",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "produtividade",
       "sentido": 1,
@@ -45617,7 +41569,7 @@
     {
       "oficina_id": "lima-confeccoes",
       "oficina_nome": "LIMA CONFECCOES LTDA-ME",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
@@ -45635,7 +41587,7 @@
     {
       "oficina_id": "lima-confeccoes",
       "oficina_nome": "LIMA CONFECCOES LTDA-ME",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "eficiencia",
       "sentido": 1,
@@ -45649,51 +41601,6 @@
       "status": "sem_pre"
     },
     {
-      "oficina_id": "lima-confeccoes",
-      "oficina_nome": "LIMA CONFECCOES LTDA-ME",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "lima-confeccoes",
-      "oficina_nome": "LIMA CONFECCOES LTDA-ME",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0543,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "lima-confeccoes",
-      "oficina_nome": "LIMA CONFECCOES LTDA-ME",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
       "oficina_id": "linea-confeccoes",
       "oficina_nome": "LÍNEA CONFECÇÕES",
       "modulo": "Costura e Mecânica",
@@ -45726,90 +41633,6 @@
       "oficina_nome": "LÍNEA CONFECÇÕES",
       "modulo": "Costura e Mecânica",
       "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "linea-confeccoes",
-      "oficina_nome": "LÍNEA CONFECÇÕES",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "linea-confeccoes",
-      "oficina_nome": "LÍNEA CONFECÇÕES",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "linea-confeccoes",
-      "oficina_nome": "LÍNEA CONFECÇÕES",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "linea-confeccoes",
-      "oficina_nome": "LÍNEA CONFECÇÕES",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "linea-confeccoes",
-      "oficina_nome": "LÍNEA CONFECÇÕES",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "linea-confeccoes",
-      "oficina_nome": "LÍNEA CONFECÇÕES",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
       "metrica": "eficiencia",
       "sentido": 1,
       "pre_valor": null,
@@ -46011,96 +41834,6 @@
       "status": "sem_pre"
     },
     {
-      "oficina_id": "livia-reboucas-de-carvalho",
-      "oficina_nome": "LIVIA REBOUCAS DE CARVALHO - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "livia-reboucas-de-carvalho",
-      "oficina_nome": "LIVIA REBOUCAS DE CARVALHO - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.071,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "livia-reboucas-de-carvalho",
-      "oficina_nome": "LIVIA REBOUCAS DE CARVALHO - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "livia-reboucas-de-carvalho",
-      "oficina_nome": "LIVIA REBOUCAS DE CARVALHO - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "livia-reboucas-de-carvalho",
-      "oficina_nome": "LIVIA REBOUCAS DE CARVALHO - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.071,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "livia-reboucas-de-carvalho",
-      "oficina_nome": "LIVIA REBOUCAS DE CARVALHO - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
       "oficina_id": "luiz-lupercio-da-silva-junior",
       "oficina_nome": "LUIZ LUPERCIO DA SILVA JUNIOR",
       "modulo": "Lean Manufacturing",
@@ -46292,101 +42025,6 @@
     {
       "oficina_id": "m-a-vieira-de-almeida",
       "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0488,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "m-a-vieira-de-almeida",
-      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0438,
-      "pos_valor": 0.0891,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.0453,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "m-a-vieira-de-almeida",
-      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.59,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "m-a-vieira-de-almeida",
-      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-a-vieira-de-almeida",
-      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0849,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "m-a-vieira-de-almeida",
-      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-a-vieira-de-almeida",
-      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
       "modulo": "Lean Manufacturing",
       "ano_treino": 2022,
       "metrica": "produtividade",
@@ -46486,7 +42124,7 @@
     {
       "oficina_id": "m-a-vieira-de-almeida",
       "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "produtividade",
       "sentido": 1,
@@ -46502,7 +42140,7 @@
     {
       "oficina_id": "m-a-vieira-de-almeida",
       "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
@@ -46520,7 +42158,7 @@
     {
       "oficina_id": "m-a-vieira-de-almeida",
       "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "eficiencia",
       "sentido": 1,
@@ -46532,51 +42170,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "m-a-vieira-de-almeida",
-      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-a-vieira-de-almeida",
-      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0849,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "m-a-vieira-de-almeida",
-      "oficina_nome": "M. A. VIEIRA DE ALMEIDA - ME",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "m-c-confeccoes",
@@ -46670,90 +42263,6 @@
     {
       "oficina_id": "m-dalison",
       "oficina_nome": "M dalison",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-dalison",
-      "oficina_nome": "M dalison",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-dalison",
-      "oficina_nome": "M dalison",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-dalison",
-      "oficina_nome": "M dalison",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-dalison",
-      "oficina_nome": "M dalison",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-dalison",
-      "oficina_nome": "M dalison",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-dalison",
-      "oficina_nome": "M dalison",
       "modulo": "TOC",
       "ano_treino": 2024,
       "metrica": "produtividade",
@@ -46796,7 +42305,7 @@
     {
       "oficina_id": "m-dalison",
       "oficina_nome": "M dalison",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "produtividade",
       "sentido": 1,
@@ -46810,7 +42319,7 @@
     {
       "oficina_id": "m-dalison",
       "oficina_nome": "M dalison",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
@@ -46824,50 +42333,8 @@
     {
       "oficina_id": "m-dalison",
       "oficina_nome": "M dalison",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-dalison",
-      "oficina_nome": "M dalison",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-dalison",
-      "oficina_nome": "M dalison",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-dalison",
-      "oficina_nome": "M dalison",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
       "metrica": "eficiencia",
       "sentido": 1,
       "pre_valor": null,
@@ -47127,101 +42594,6 @@
     {
       "oficina_id": "m-f-empreendimentos",
       "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0511,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "m-f-empreendimentos",
-      "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0509,
-      "pos_valor": 0.1296,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.0787,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "m-f-empreendimentos",
-      "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.3032,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "m-f-empreendimentos",
-      "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-f-empreendimentos",
-      "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.066,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "m-f-empreendimentos",
-      "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-f-empreendimentos",
-      "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
       "modulo": "TOC",
       "ano_treino": 2024,
       "metrica": "produtividade",
@@ -47271,7 +42643,7 @@
     {
       "oficina_id": "m-f-empreendimentos",
       "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "produtividade",
       "sentido": 1,
@@ -47287,7 +42659,7 @@
     {
       "oficina_id": "m-f-empreendimentos",
       "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
@@ -47305,7 +42677,7 @@
     {
       "oficina_id": "m-f-empreendimentos",
       "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "eficiencia",
       "sentido": 1,
@@ -47319,51 +42691,6 @@
       "status": "sem_pre"
     },
     {
-      "oficina_id": "m-f-empreendimentos",
-      "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "m-f-empreendimentos",
-      "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.066,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "m-f-empreendimentos",
-      "oficina_nome": "M. & F. EMPREENDIMENTOS LTDA",
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
       "oficina_id": "m-j-industria-e-comercio",
       "oficina_nome": "M & J INDUSTRIA E COMERCIO LTDA",
       "modulo": "Costura e Mecânica",
@@ -47534,90 +42861,6 @@
     {
       "oficina_id": "mansour-e-dantas-confec",
       "oficina_nome": "Mansour e Dantas confec Ltda.",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "mansour-e-dantas-confec",
-      "oficina_nome": "Mansour e Dantas confec Ltda.",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "mansour-e-dantas-confec",
-      "oficina_nome": "Mansour e Dantas confec Ltda.",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "mansour-e-dantas-confec",
-      "oficina_nome": "Mansour e Dantas confec Ltda.",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "mansour-e-dantas-confec",
-      "oficina_nome": "Mansour e Dantas confec Ltda.",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "mansour-e-dantas-confec",
-      "oficina_nome": "Mansour e Dantas confec Ltda.",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "mansour-e-dantas-confec",
-      "oficina_nome": "Mansour e Dantas confec Ltda.",
       "modulo": "TOC",
       "ano_treino": 2025,
       "metrica": "produtividade",
@@ -47648,48 +42891,6 @@
       "oficina_nome": "Mansour e Dantas confec Ltda.",
       "modulo": "TOC",
       "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "mansour-e-dantas-confec",
-      "oficina_nome": "Mansour e Dantas confec Ltda.",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "mansour-e-dantas-confec",
-      "oficina_nome": "Mansour e Dantas confec Ltda.",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "mansour-e-dantas-confec",
-      "oficina_nome": "Mansour e Dantas confec Ltda.",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
       "metrica": "eficiencia",
       "sentido": 1,
       "pre_valor": null,
@@ -47927,101 +43128,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "marionete-m-de-a-camara",
-      "oficina_nome": "MARIONETE M DE A CAMARA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0455,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "marionete-m-de-a-camara",
-      "oficina_nome": "MARIONETE M DE A CAMARA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.05,
-      "pos_valor": 0.0329,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": -0.0171,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "marionete-m-de-a-camara",
-      "oficina_nome": "MARIONETE M DE A CAMARA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.5283,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "marionete-m-de-a-camara",
-      "oficina_nome": "MARIONETE M DE A CAMARA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "marionete-m-de-a-camara",
-      "oficina_nome": "MARIONETE M DE A CAMARA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0566,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "marionete-m-de-a-camara",
-      "oficina_nome": "MARIONETE M DE A CAMARA - ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "marionete-m-de-a-camara",
@@ -48175,101 +43281,6 @@
     {
       "oficina_id": "n-s-constantino",
       "oficina_nome": "N S CONSTANTINO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0973,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "n-s-constantino",
-      "oficina_nome": "N S CONSTANTINO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0341,
-      "pos_valor": 0.1348,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.1007,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "n-s-constantino",
-      "oficina_nome": "N S CONSTANTINO",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.5124,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "n-s-constantino",
-      "oficina_nome": "N S CONSTANTINO",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "n-s-constantino",
-      "oficina_nome": "N S CONSTANTINO",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0459,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "n-s-constantino",
-      "oficina_nome": "N S CONSTANTINO",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "n-s-constantino",
-      "oficina_nome": "N S CONSTANTINO",
       "modulo": "Lean Manufacturing",
       "ano_treino": 2022,
       "metrica": "produtividade",
@@ -48366,51 +43377,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "n-s-constantino",
-      "oficina_nome": "N S CONSTANTINO",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "n-s-constantino",
-      "oficina_nome": "N S CONSTANTINO",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0459,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "n-s-constantino",
-      "oficina_nome": "N S CONSTANTINO",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "n-s-constantino",
@@ -48692,101 +43658,6 @@
     {
       "oficina_id": "oficina-de-costura-santos",
       "oficina_nome": "OFICINA DE COSTURA SANTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.059,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "oficina-de-costura-santos",
-      "oficina_nome": "OFICINA DE COSTURA SANTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.051,
-      "pos_valor": 0.1245,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.0735,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "oficina-de-costura-santos",
-      "oficina_nome": "OFICINA DE COSTURA SANTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.5349,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "oficina-de-costura-santos",
-      "oficina_nome": "OFICINA DE COSTURA SANTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "oficina-de-costura-santos",
-      "oficina_nome": "OFICINA DE COSTURA SANTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.058,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "oficina-de-costura-santos",
-      "oficina_nome": "OFICINA DE COSTURA SANTOS LTDA",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "oficina-de-costura-santos",
-      "oficina_nome": "OFICINA DE COSTURA SANTOS LTDA",
       "modulo": "TOC",
       "ano_treino": 2024,
       "metrica": "produtividade",
@@ -48958,90 +43829,6 @@
       "oficina_nome": "POEST indústria e comércio de vestuário Ltda",
       "modulo": "Costura e Mecânica",
       "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "poest-industria-e-comercio-de-vestuario",
-      "oficina_nome": "POEST indústria e comércio de vestuário Ltda",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "poest-industria-e-comercio-de-vestuario",
-      "oficina_nome": "POEST indústria e comércio de vestuário Ltda",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "poest-industria-e-comercio-de-vestuario",
-      "oficina_nome": "POEST indústria e comércio de vestuário Ltda",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "poest-industria-e-comercio-de-vestuario",
-      "oficina_nome": "POEST indústria e comércio de vestuário Ltda",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "poest-industria-e-comercio-de-vestuario",
-      "oficina_nome": "POEST indústria e comércio de vestuário Ltda",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "poest-industria-e-comercio-de-vestuario",
-      "oficina_nome": "POEST indústria e comércio de vestuário Ltda",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
       "metrica": "eficiencia",
       "sentido": 1,
       "pre_valor": null,
@@ -49275,101 +44062,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
-      "oficina_nome": "S RAMOS DE AZEVEDO NETO CONFECCOES",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0615,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
-      "oficina_nome": "S RAMOS DE AZEVEDO NETO CONFECCOES",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0577,
-      "pos_valor": 0.0658,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": 0.0081,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
-      "oficina_nome": "S RAMOS DE AZEVEDO NETO CONFECCOES",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.6344,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
-      "oficina_nome": "S RAMOS DE AZEVEDO NETO CONFECCOES",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
-      "oficina_nome": "S RAMOS DE AZEVEDO NETO CONFECCOES",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.0632,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
-      "oficina_nome": "S RAMOS DE AZEVEDO NETO CONFECCOES",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
@@ -49879,90 +44571,6 @@
       "status": "sem_dado"
     },
     {
-      "oficina_id": "tropicalliz",
-      "oficina_nome": "Tropicalliz",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "tropicalliz",
-      "oficina_nome": "Tropicalliz",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "tropicalliz",
-      "oficina_nome": "Tropicalliz",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "tropicalliz",
-      "oficina_nome": "Tropicalliz",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "tropicalliz",
-      "oficina_nome": "Tropicalliz",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "tropicalliz",
-      "oficina_nome": "Tropicalliz",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
       "oficina_id": "uniao-confeccoes",
       "oficina_nome": "UNIAO CONFECCOES LTDA ME",
       "modulo": "Costura e Mecânica",
@@ -50011,101 +44619,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "uniao-confeccoes",
-      "oficina_nome": "UNIAO CONFECCOES LTDA ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.0466,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "uniao-confeccoes",
-      "oficina_nome": "UNIAO CONFECCOES LTDA ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.1594,
-      "pos_valor": 0.0503,
-      "pre_anos": [
-        2024
-      ],
-      "pos_anos": [
-        2026
-      ],
-      "delta": -0.1091,
-      "status": "ok"
-    },
-    {
-      "oficina_id": "uniao-confeccoes",
-      "oficina_nome": "UNIAO CONFECCOES LTDA ME",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": 0.5085,
-      "pre_anos": [],
-      "pos_anos": [
-        2026
-      ],
-      "delta": null,
-      "status": "sem_pre"
-    },
-    {
-      "oficina_id": "uniao-confeccoes",
-      "oficina_nome": "UNIAO CONFECCOES LTDA ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "uniao-confeccoes",
-      "oficina_nome": "UNIAO CONFECCOES LTDA ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.1268,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "uniao-confeccoes",
-      "oficina_nome": "UNIAO CONFECCOES LTDA ME",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "uniao-confeccoes",
@@ -50206,51 +44719,6 @@
       ],
       "delta": null,
       "status": "sem_pre"
-    },
-    {
-      "oficina_id": "uniao-confeccoes",
-      "oficina_nome": "UNIAO CONFECCOES LTDA ME",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "uniao-confeccoes",
-      "oficina_nome": "UNIAO CONFECCOES LTDA ME",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": 0.1268,
-      "pos_valor": null,
-      "pre_anos": [
-        2024,
-        2025
-      ],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_pos"
-    },
-    {
-      "oficina_id": "uniao-confeccoes",
-      "oficina_nome": "UNIAO CONFECCOES LTDA ME",
-      "modulo": "TOC - 1ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     },
     {
       "oficina_id": "uniao-confeccoes",
@@ -50436,90 +44904,6 @@
       "pos_anos": [],
       "delta": null,
       "status": "sem_dado"
-    },
-    {
-      "oficina_id": "zaja-confeccoes",
-      "oficina_nome": "Zaja Confecções",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "zaja-confeccoes",
-      "oficina_nome": "Zaja Confecções",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "zaja-confeccoes",
-      "oficina_nome": "Zaja Confecções",
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "zaja-confeccoes",
-      "oficina_nome": "Zaja Confecções",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "zaja-confeccoes",
-      "oficina_nome": "Zaja Confecções",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
-    },
-    {
-      "oficina_id": "zaja-confeccoes",
-      "oficina_nome": "Zaja Confecções",
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "pre_valor": null,
-      "pos_valor": null,
-      "pre_anos": [],
-      "pos_anos": [],
-      "delta": null,
-      "status": "sem_dado"
     }
   ],
   "impacto_coorte": [
@@ -50680,45 +45064,6 @@
       "status": "sem_pre"
     },
     {
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "n_treinadas": 38,
-      "n_delta_treinadas": 25,
-      "delta_medio_treinadas": 0.0086,
-      "n_controle": 56,
-      "delta_medio_controle": 0.0258,
-      "dif_em_dif": -0.0172,
-      "status": "ok"
-    },
-    {
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "n_treinadas": 38,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_pre"
-    },
-    {
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2025,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "n_treinadas": 38,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_pre"
-    },
-    {
       "modulo": "TOC",
       "ano_treino": 2025,
       "metrica": "absenteismo",
@@ -50758,7 +45103,7 @@
       "status": "sem_pre"
     },
     {
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
@@ -50771,7 +45116,7 @@
       "status": "ok"
     },
     {
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "eficiencia",
       "sentido": 1,
@@ -50784,7 +45129,7 @@
       "status": "sem_pre"
     },
     {
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2025,
       "metrica": "produtividade",
       "sentido": 1,
@@ -50797,85 +45142,7 @@
       "status": "sem_pre"
     },
     {
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "n_treinadas": 5,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_dado"
-    },
-    {
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "n_treinadas": 5,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_dado"
-    },
-    {
-      "modulo": "Costura e Mecânica - MÓDULO 1",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "n_treinadas": 5,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_dado"
-    },
-    {
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "n_treinadas": 39,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_pos"
-    },
-    {
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "n_treinadas": 39,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_dado"
-    },
-    {
-      "modulo": "Costura e Mecânica - MÓDULO 2",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "n_treinadas": 39,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_dado"
-    },
-    {
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2026,
       "metrica": "absenteismo",
       "sentido": -1,
@@ -50888,7 +45155,7 @@
       "status": "sem_pos"
     },
     {
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2026,
       "metrica": "eficiencia",
       "sentido": 1,
@@ -50901,50 +45168,11 @@
       "status": "sem_dado"
     },
     {
-      "modulo": "TOC - 1ª etapa",
+      "modulo": "TOC - 2ª etapa",
       "ano_treino": 2026,
       "metrica": "produtividade",
       "sentido": 1,
       "n_treinadas": 9,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_dado"
-    },
-    {
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "absenteismo",
-      "sentido": -1,
-      "n_treinadas": 18,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_pos"
-    },
-    {
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "eficiencia",
-      "sentido": 1,
-      "n_treinadas": 18,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_dado"
-    },
-    {
-      "modulo": "TOC - 2ª etapa",
-      "ano_treino": 2026,
-      "metrica": "produtividade",
-      "sentido": 1,
-      "n_treinadas": 18,
       "n_delta_treinadas": 0,
       "delta_medio_treinadas": null,
       "n_controle": 0,
