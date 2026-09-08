@@ -1,6 +1,6 @@
 {
-  "gerado_em": "2026-09-08T17:18:14+00:00",
-  "total": 176,
+  "gerado_em": "2026-09-08T17:41:24+00:00",
+  "total": 174,
   "meta": {
     "descricao": "payload único das três telas do dashboard (Fase 5)",
     "valor_ranking": "roll-up do ano mais recente com dado (fórmulas da Fase 3)"
@@ -10389,20 +10389,6 @@
       ]
     },
     {
-      "oficina_id": "exito-confeccoes",
-      "nome": "Exito confecções",
-      "papeis": [
-        "treino"
-      ],
-      "ranking": {},
-      "series": {
-        "pecas_mes": [],
-        "pecas_semana": [],
-        "absenteismo": []
-      },
-      "treinos": []
-    },
-    {
       "oficina_id": "f-k-faccao",
       "nome": "F & K FACCAO LTDA",
       "papeis": [
@@ -15445,8 +15431,7 @@
       "nome": "G. L. J. L. CONFECCÕES LTDA",
       "papeis": [
         "absenteismo",
-        "producao",
-        "treino"
+        "producao"
       ],
       "ranking": {
         "absenteismo": {
@@ -15994,20 +15979,6 @@
           "status": null
         }
       ]
-    },
-    {
-      "oficina_id": "helio-araujo",
-      "nome": "Helio Araujo",
-      "papeis": [
-        "treino"
-      ],
-      "ranking": {},
-      "series": {
-        "pecas_mes": [],
-        "pecas_semana": [],
-        "absenteismo": []
-      },
-      "treinos": []
     },
     {
       "oficina_id": "helio-araujo-industria-de-confeccoes",
@@ -28920,7 +28891,7 @@
           },
           {
             "periodo": "2025-06",
-            "valor": -0.3125
+            "valor": 0.0118
           },
           {
             "periodo": "2025-07",
@@ -32195,12 +32166,12 @@
     }
   ],
   "resumo": {
-    "oficinas": 176,
+    "oficinas": 174,
     "precisam_revisao": 27,
     "com_producao": 129,
     "com_absenteismo": 127,
     "com_eficiencia": 95,
-    "com_treino": 126,
+    "com_treino": 123,
     "cobertura_3_metricas": 95
   },
   "sentido": {
