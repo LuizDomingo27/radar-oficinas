@@ -28,6 +28,25 @@ Corrija a fonte e rode de novo.
 """
 
 
+class TestMontarHtml(unittest.TestCase):
+    """A SPA embutida não pode quebrar o build do HTML.
+
+    Regressão: o conteúdo de JS/CSS ia como STRING de reposição do ``re.sub``,
+    que interpreta escapes (``\\d``, ``\\n``…). Uma regex ``/\\d{4}/`` no
+    graficos_dashboard.js virava "bad escape" e derrubava o app. A reposição
+    passou a ser função (texto literal, sem interpretar escape).
+    """
+
+    def test_embute_js_e_injeta_dados_sem_bad_escape(self):
+        html = streamlit_app.montar_html()
+        # Scripts locais trocados pelo conteúdo embutido + dados injetados.
+        self.assertNotIn('src="assets/js/graficos_dashboard.js', html)
+        self.assertNotIn('src="assets/js/dashboard.js', html)
+        self.assertIn("window.__DASHBOARD__", html)
+        # Trechos do JS com escapes de regex chegam literais ao HTML.
+        self.assertIn("tituloPeriodo", html)
+
+
 class TestUltimoMotivo(unittest.TestCase):
     def test_prefere_a_causa_ao_passo_que_abortou(self):
         motivo = streamlit_app._ultimo_motivo(LOG_ABA_RENOMEADA)

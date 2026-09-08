@@ -51,18 +51,27 @@ def montar_html() -> str:
 
     # Troca os <link>/<script> locais (com ?v=) pelo conteúdo embutido. O CDN do
     # ECharts e as Google Fonts continuam como estão (carregam no iframe).
+    #
+    # IMPORTANTE: a reposição vai como FUNÇÃO (lambda), não como string. Numa
+    # string de reposição o re.sub interpreta escapes (``\d``, ``\n``, ``\g``…) e
+    # o JS/CSS/JSON embutido contém essas sequências (ex.: regex ``/\d{4}/`` no
+    # graficos_dashboard.js), o que quebrava o build com "bad escape". A função
+    # devolve o texto literal, sem qualquer interpretação de escape.
     import re
-    html = re.sub(r'<link rel="stylesheet" href="assets/css/estilo\.css[^"]*">',
-                  f"<style>{css_estilo}</style>", html)
-    html = re.sub(r'<link rel="stylesheet" href="assets/css/dashboard\.css[^"]*">',
-                  f"<style>{css_dash}</style>", html)
+    def troca(padrao: str, conteudo: str, alvo: str) -> str:
+        return re.sub(padrao, lambda _m: conteudo, alvo)
+
+    html = troca(r'<link rel="stylesheet" href="assets/css/estilo\.css[^"]*">',
+                 f"<style>{css_estilo}</style>", html)
+    html = troca(r'<link rel="stylesheet" href="assets/css/dashboard\.css[^"]*">',
+                 f"<style>{css_dash}</style>", html)
     # Injeta os dados ANTES dos scripts do app (dashboard.js os lê no load).
     injecao = (f"<script>window.__DASHBOARD__={dashboard_json};"
                f"window.__QUALIDADE__={qualidade_json};</script>")
-    html = re.sub(r'<script src="assets/js/graficos_dashboard\.js[^"]*"></script>',
-                  injecao + f"<script>{js_graf}</script>", html)
-    html = re.sub(r'<script src="assets/js/dashboard\.js[^"]*"></script>',
-                  f"<script>{js_dash}</script>", html)
+    html = troca(r'<script src="assets/js/graficos_dashboard\.js[^"]*"></script>',
+                 injecao + f"<script>{js_graf}</script>", html)
+    html = troca(r'<script src="assets/js/dashboard\.js[^"]*"></script>',
+                 f"<script>{js_dash}</script>", html)
     # Fixa o tema PRÓPRIO da SPA no embed — sem isso o iframe herda o
     # prefers-color-scheme do ambiente Streamlit e o dashboard "pega" o tema
     # errado. O botão de tema da própria SPA continua funcionando.
@@ -290,4 +299,22 @@ if st.sidebar.button("Atualizar dados", type="primary", use_container_width=True
             st.sidebar.error(msg)
 
 # --------------------------------------------------------------------- exibição
-components.html(montar_html(), height=2400, scrolling=True)
+# Blindagem (regra do AGENTS.md: o app não pode quebrar). Qualquer falha ao
+# montar ou renderizar a SPA exibe uma mensagem clara — o QUÊ e ONDE ocorreu —
+# em vez de derrubar a página inteira com um traceback.
+try:
+    _html_painel = montar_html()
+except Exception as exc:  # captura ampla proposital: é a última linha de defesa
+    st.error(
+        "Não foi possível montar o painel — etapa: montar_html "
+        "(inlining de HTML/CSS/JS e injeção dos dados de data/*.json). "
+        f"Detalhe: {type(exc).__name__}: {exc}")
+    st.info("A barra lateral continua ativa para reenviar planilhas e atualizar. "
+            "Se o erro persistir, confira data/dashboard.json e os arquivos em web/.")
+else:
+    try:
+        components.html(_html_painel, height=2400, scrolling=True)
+    except Exception as exc:  # falha na renderização do iframe
+        st.error(
+            "Falha ao renderizar o painel no navegador — etapa: components.html. "
+            f"Detalhe: {type(exc).__name__}: {exc}")
