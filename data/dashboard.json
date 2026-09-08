@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-08T17:41:24+00:00",
+  "gerado_em": "2026-09-08T17:58:33+00:00",
   "total": 174,
   "meta": {
     "descricao": "payload único das três telas do dashboard (Fase 5)",
@@ -26,6 +26,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.037
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0526
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0781
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0235
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.019
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.069
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1705
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1545
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0405
@@ -131,9 +163,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0679,
+          "valor": 0.0843,
           "ano": 2026,
-          "n": 6,
+          "n": 7,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -311,7 +343,7 @@
           },
           {
             "periodo": "2026-05",
-            "valor": 0.0471
+            "valor": 0.1474
           },
           {
             "periodo": "2026-06",
@@ -324,6 +356,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0909
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0435
           }
         ]
       },
@@ -359,10 +395,10 @@
           "periodo": "2026-W13"
         },
         "absenteismo": {
-          "valor": 0.0153,
+          "valor": 0.146,
           "ano": 2026,
           "n": 4,
-          "semaforo": "ok"
+          "semaforo": "critico"
         }
       },
       "series": {
@@ -428,6 +464,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0267
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0455
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0429
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0357
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1132
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.043
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0357
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1085
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.03
           },
@@ -486,6 +554,10 @@
           {
             "periodo": "2026-03",
             "valor": 0.0172
+          },
+          {
+            "periodo": "2026-04",
+            "valor": 1.0
           }
         ]
       },
@@ -553,9 +625,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0673,
+          "valor": 0.0652,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -744,6 +816,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0148
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0513
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0565
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0789
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0711
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0222
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0711
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0227
           },
@@ -822,6 +926,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -868,10 +976,10 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0406,
+          "valor": 0.0717,
           "ano": 2026,
-          "n": 6,
-          "semaforo": "ok"
+          "n": 7,
+          "semaforo": "alerta"
         },
         "eficiencia": {
           "valor": 0.3898,
@@ -1008,7 +1116,7 @@
         "absenteismo": [
           {
             "periodo": "2026-03",
-            "valor": 0.0
+            "valor": 0.5
           },
           {
             "periodo": "2026-04",
@@ -1029,6 +1137,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0217
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -1090,9 +1202,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.153,
+          "valor": 0.1627,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -1281,6 +1393,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1333
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0444
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0423
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0102
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0323
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0769
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1241
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.1275
           },
@@ -1346,7 +1490,7 @@
           },
           {
             "periodo": "2026-05",
-            "valor": 0.1333
+            "valor": 0.2
           },
           {
             "periodo": "2026-06",
@@ -1359,6 +1503,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1797
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1875
           }
         ]
       },
@@ -1436,9 +1584,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0103,
+          "valor": 0.01,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -1631,6 +1779,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": -0.2308
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.3333
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": -0.1356
           },
@@ -1709,6 +1889,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -1756,9 +1940,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0723,
+          "valor": 0.0752,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -1959,6 +2143,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1333
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.125
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0513
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1829
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0139
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.02
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.125
           },
@@ -2037,6 +2253,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0909
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.16
           }
         ]
       },
@@ -2119,9 +2339,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0701,
+          "valor": 0.0707,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -2310,6 +2530,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1333
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0727
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0244
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1382
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1813
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1172
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1406
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.125
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.125
           },
@@ -2388,6 +2640,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0809
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0882
           }
         ]
       },
@@ -2445,9 +2701,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0598,
+          "valor": 0.0622,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -2636,6 +2892,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.8571
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -2714,6 +3002,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.119
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1429
           }
         ]
       },
@@ -2762,7 +3054,7 @@
         "absenteismo": {
           "valor": 0.0,
           "ano": 2026,
-          "n": 3,
+          "n": 4,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -2829,6 +3121,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -2854,6 +3150,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0227
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.069
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.102
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0152
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0471
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0441
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1412
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0169
@@ -2968,9 +3296,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0243,
+          "valor": 0.0234,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -3163,6 +3491,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.125
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0476
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0385
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0244
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0303
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -3241,6 +3601,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -3277,6 +3641,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.037
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.04
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0282
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0362
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0388
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0374
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0074
+          },
           {
             "periodo": "2025-12",
             "valor": 0.0
@@ -3326,9 +3722,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0801,
+          "valor": 0.0798,
           "ano": 2026,
-          "n": 6,
+          "n": 7,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -3543,6 +3939,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1043
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0714
           }
         ]
       },
@@ -3579,9 +3979,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.052,
+          "valor": 0.0521,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -3766,6 +4166,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0364
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0119
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1333
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1267
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1333
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.075
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1133
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -3844,6 +4276,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.125
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0556
           }
         ]
       },
@@ -3915,9 +4351,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0296,
+          "valor": 0.0288,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -4094,8 +4530,36 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2025-01",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-02",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-03",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-04",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-05",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-06",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-07",
+            "valor": 1.0
+          },
+          {
             "periodo": "2025-08",
-            "valor": 0.0541
+            "valor": 0.1667
           },
           {
             "periodo": "2025-09",
@@ -4144,6 +4608,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -4180,9 +4648,9 @@
           "periodo": "2026-W35"
         },
         "absenteismo": {
-          "valor": 0.0504,
+          "valor": 0.0742,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -4339,6 +4807,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0435
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1045
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0417
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0208
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1146
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0833
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -4412,11 +4912,15 @@
           },
           {
             "periodo": "2026-07",
-            "valor": 0.0159
+            "valor": 0.1507
           },
           {
             "periodo": "2026-08",
             "valor": 0.0149
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1579
           }
         ]
       },
@@ -4474,9 +4978,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0885,
+          "valor": 0.088,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -4665,6 +5169,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0333
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0426
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0678
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0694
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.14
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1875
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.141
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1146
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.05
           },
@@ -4743,6 +5279,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0702
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0714
           }
         ]
       },
@@ -4779,7 +5319,7 @@
       ],
       "ranking": {
         "absenteismo": {
-          "valor": 0.1241,
+          "valor": 0.1307,
           "ano": 2025,
           "n": 12,
           "semaforo": "critico"
@@ -4789,6 +5329,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.4259
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.069
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0784
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.125
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1333
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.2361
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1944
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.3778
+          },
           {
             "periodo": "2025-01",
             "valor": 0.3651
@@ -4835,7 +5407,7 @@
           },
           {
             "periodo": "2025-12",
-            "valor": 0.2927
+            "valor": 0.3696
           }
         ]
       },
@@ -4892,9 +5464,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0466,
+          "valor": 0.0468,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -5079,6 +5651,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0556
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.098
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0536
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0274
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0667
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0167
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0267
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -5157,6 +5761,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1316
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0526
           }
         ]
       },
@@ -5182,6 +5790,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0833
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1111
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.125
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.2167
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0909
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1364
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1091
+          },
           {
             "periodo": "2025-12",
             "valor": -0.0606
@@ -5232,9 +5872,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0992,
+          "valor": 0.1,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -5423,6 +6063,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0984
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.04
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0137
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.06
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1066
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1739
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1848
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0714
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0854
           },
@@ -5501,6 +6173,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1263
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1304
           }
         ]
       },
@@ -5547,9 +6223,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0546,
+          "valor": 0.053,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -5742,6 +6418,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0317
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0211
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0698
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0417
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0667
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -5819,6 +6527,10 @@
           },
           {
             "periodo": "2026-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
             "valor": 0.0
           }
         ]
@@ -5921,6 +6633,38 @@
         "pecas_semana": [],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.2222
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0741
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1154
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1528
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0889
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0972
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1111
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1556
+          },
+          {
             "periodo": "2025-12",
             "valor": 0.2037
           }
@@ -5980,9 +6724,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0174,
+          "valor": 0.0169,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -6159,6 +6903,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0897
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0426
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.039
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0105
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0231
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0481
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0865
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0673
           },
@@ -6236,6 +7012,10 @@
           },
           {
             "periodo": "2026-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
             "valor": 0.0
           }
         ]
@@ -6350,10 +7130,10 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0889,
+          "valor": 0.1005,
           "ano": 2026,
-          "n": 8,
-          "semaforo": "alerta"
+          "n": 9,
+          "semaforo": "critico"
         },
         "eficiencia": {
           "valor": 0.6331,
@@ -6533,6 +7313,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0167
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0645
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0588
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.013
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0101
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.035
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0188
           },
@@ -6610,7 +7422,11 @@
           },
           {
             "periodo": "2026-08",
-            "valor": 0.0682
+            "valor": 0.1908
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0455
           }
         ]
       },
@@ -6662,6 +7478,38 @@
         "pecas_semana": [],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1313
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0392
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0506
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0807
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1362
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1905
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1726
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.2762
+          },
+          {
             "periodo": "2025-12",
             "valor": 0.25
           }
@@ -6710,9 +7558,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0453,
+          "valor": 0.0463,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -6897,6 +7745,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0385
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0417
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0139
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0167
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0309
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0481
           },
@@ -6975,6 +7855,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.08
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.08
           }
         ]
       },
@@ -7036,9 +7920,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0058,
+          "valor": 0.0056,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -7231,16 +8115,48 @@
         ],
         "absenteismo": [
           {
-            "periodo": "2025-01",
+            "periodo": "2024-01",
             "valor": 0.0
           },
           {
+            "periodo": "2024-05",
+            "valor": 0.08
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0286
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0625
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0208
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0333
+          },
+          {
+            "periodo": "2025-01",
+            "valor": 0.4167
+          },
+          {
             "periodo": "2025-02",
-            "valor": 0.1429
+            "valor": 0.5
           },
           {
             "periodo": "2025-03",
-            "valor": 0.0926
+            "valor": 0.4167
           },
           {
             "periodo": "2025-04",
@@ -7309,6 +8225,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0072
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -7356,9 +8276,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0697,
+          "valor": 0.0794,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -7539,6 +8459,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0526
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0476
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0769
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0513
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1222
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0278
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0111
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0526
           },
@@ -7612,11 +8564,15 @@
           },
           {
             "periodo": "2026-07",
-            "valor": 0.0938
+            "valor": 0.1792
           },
           {
             "periodo": "2026-08",
             "valor": 0.1261
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -7663,9 +8619,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0152,
+          "valor": 0.0493,
           "ano": 2026,
-          "n": 7,
+          "n": 8,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -7807,7 +8763,7 @@
         "absenteismo": [
           {
             "periodo": "2026-02",
-            "valor": 0.0476
+            "valor": 0.3548
           },
           {
             "periodo": "2026-03",
@@ -7827,10 +8783,14 @@
           },
           {
             "periodo": "2026-07",
-            "valor": 0.0
+            "valor": 0.1124
           },
           {
             "periodo": "2026-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
             "valor": 0.0
           }
         ]
@@ -7844,11 +8804,55 @@
         "absenteismo",
         "treino"
       ],
-      "ranking": {},
+      "ranking": {
+        "absenteismo": {
+          "valor": 1.0,
+          "ano": 2025,
+          "n": 1,
+          "semaforo": "critico"
+        }
+      },
       "series": {
         "pecas_mes": [],
         "pecas_semana": [],
-        "absenteismo": []
+        "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0588
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1053
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.25
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.3871
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-12",
+            "valor": 1.0
+          }
+        ]
       },
       "treinos": [
         {
@@ -7883,6 +8887,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0617
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0541
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0968
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1932
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1339
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0104
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0417
+          },
           {
             "periodo": "2025-12",
             "valor": 0.1111
@@ -7993,10 +9029,10 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0934,
+          "valor": 0.1065,
           "ano": 2026,
-          "n": 8,
-          "semaforo": "alerta"
+          "n": 9,
+          "semaforo": "critico"
         },
         "eficiencia": {
           "valor": 0.7247,
@@ -8180,6 +9216,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0278
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0526
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0185
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0682
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0857
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0333
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0347
           },
@@ -8245,7 +9313,7 @@
           },
           {
             "periodo": "2026-05",
-            "valor": 0.0584
+            "valor": 0.1667
           },
           {
             "periodo": "2026-06",
@@ -8258,6 +9326,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0596
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0526
           }
         ]
       },
@@ -8325,9 +9397,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1166,
+          "valor": 0.1153,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -8512,6 +9584,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0182
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0488
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0333
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0429
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0471
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1029
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0735
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0941
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0135
           },
@@ -8590,6 +9694,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0909
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0741
           }
         ]
       },
@@ -8647,9 +9755,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0714,
+          "valor": 0.0771,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -8834,6 +9942,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1078
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0635
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0392
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0584
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0128
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0956
           },
@@ -8847,7 +9987,7 @@
           },
           {
             "periodo": "2025-04",
-            "valor": 0.0364
+            "valor": 0.1167
           },
           {
             "periodo": "2025-05",
@@ -8899,7 +10039,7 @@
           },
           {
             "periodo": "2026-05",
-            "valor": 0.0476
+            "valor": 0.1011
           },
           {
             "periodo": "2026-06",
@@ -8912,6 +10052,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0506
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.025
           }
         ]
       },
@@ -8958,6 +10102,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0897
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0392
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.026
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.02
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.048
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0078
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0865
@@ -9064,9 +10240,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0724,
+          "valor": 0.0735,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         }
       },
@@ -9249,6 +10425,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": -0.3137
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.04
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0563
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1111
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1944
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.2222
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1807
+          },
+          {
             "periodo": "2025-01",
             "valor": -0.1948
           },
@@ -9327,6 +10535,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0962
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1111
           }
         ]
       },
@@ -9383,9 +10595,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1107,
+          "valor": 0.1113,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -9578,6 +10790,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1111
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0556
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.3095
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1864
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.375
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.4167
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.322
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.125
           },
@@ -9656,6 +10900,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.2167
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1333
           }
         ]
       },
@@ -9706,9 +10954,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0923,
+          "valor": 0.0922,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -9905,6 +11153,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0968
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.08
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -9983,6 +11263,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.125
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0909
           }
         ]
       },
@@ -10089,9 +11373,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0323,
+          "valor": 0.0342,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -10284,6 +11568,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0385
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0125
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0387
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -10362,6 +11678,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0645
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1
           }
         ]
       },
@@ -10419,9 +11739,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0171,
+          "valor": 0.0165,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -10610,6 +11930,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.125
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1429
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1304
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.2941
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.125
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.125
           },
@@ -10655,7 +12007,7 @@
           },
           {
             "periodo": "2025-12",
-            "valor": 0.1
+            "valor": 0.25
           },
           {
             "periodo": "2026-01",
@@ -10687,6 +12039,10 @@
           },
           {
             "periodo": "2026-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
             "valor": 0.0
           }
         ]
@@ -10745,9 +12101,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0873,
+          "valor": 0.087,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -10944,6 +12300,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1414
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0656
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0222
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0081
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0258
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0397
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0076
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0788
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.1212
           },
@@ -11022,6 +12410,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0641
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0769
           }
         ]
       },
@@ -11079,9 +12471,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.119,
+          "valor": 0.1186,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -11262,6 +12654,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0476
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0159
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.011
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0275
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0115
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0364
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -11340,6 +12764,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1121
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1034
           }
         ]
       },
@@ -11386,9 +12814,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0305,
+          "valor": 0.0295,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -11573,6 +13001,26 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2025-07",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-08",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-09",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-10",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-11",
+            "valor": 1.0
+          },
+          {
             "periodo": "2025-12",
             "valor": 0.0714
           },
@@ -11607,6 +13055,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.025
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -11643,9 +13095,9 @@
           "periodo": "2026-W35"
         },
         "absenteismo": {
-          "valor": 0.0882,
+          "valor": 0.0898,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -11826,6 +13278,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0169
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0128
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0208
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.05
           },
@@ -11904,6 +13388,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0241
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.15
           }
         ]
       },
@@ -12006,6 +13494,38 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.1556
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0667
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0444
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0167
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0267
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0167
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0833
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0533
+          },
           {
             "periodo": "2025-01",
             "valor": 0.1129
@@ -12124,9 +13644,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.1505,
+          "valor": 0.1498,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -12319,6 +13839,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1061
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0465
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0308
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0341
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0342
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0449
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0341
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0364
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0698
           },
@@ -12397,6 +13949,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1742
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.125
           }
         ]
       },
@@ -12499,9 +14055,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.096,
+          "valor": 0.0966,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -12690,6 +14246,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1183
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0392
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0595
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0536
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0643
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0789
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0424
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0903
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.121
           },
@@ -12768,6 +14356,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0876
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1176
           }
         ]
       },
@@ -12825,9 +14417,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0399,
+          "valor": 0.0388,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -13016,6 +14608,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1111
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0435
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0147
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0745
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0833
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0833
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.075
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.1042
           },
@@ -13093,6 +14717,10 @@
           },
           {
             "periodo": "2026-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
             "valor": 0.0
           }
         ]
@@ -13339,6 +14967,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.25
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.5
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.12
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.15
           },
@@ -13449,9 +15109,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0225,
+          "valor": 0.0218,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -13632,6 +15292,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0476
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0444
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0476
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0465
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0467
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0357
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0952
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0476
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0357
           },
@@ -13710,6 +15402,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -13766,9 +15462,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0091,
+          "valor": 0.0168,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -13969,8 +15665,36 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2025-01",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-02",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-03",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-04",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-05",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-06",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-07",
+            "valor": 1.0
+          },
+          {
             "periodo": "2025-08",
-            "valor": 0.0862
+            "valor": 0.3205
           },
           {
             "periodo": "2025-09",
@@ -13990,7 +15714,7 @@
           },
           {
             "periodo": "2026-01",
-            "valor": 0.0145
+            "valor": 0.1392
           },
           {
             "periodo": "2026-02",
@@ -14019,6 +15743,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0225
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0233
           }
         ]
       },
@@ -14054,9 +15782,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.053,
+          "valor": 0.0524,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -14249,6 +15977,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0333
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.01
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0732
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0341
           },
@@ -14327,6 +16087,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0345
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0345
           }
         ]
       },
@@ -14403,6 +16167,38 @@
         "pecas_semana": [],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1212
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0488
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0781
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1705
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0091
+          },
+          {
             "periodo": "2025-12",
             "valor": 0.0909
           }
@@ -14451,9 +16247,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.032,
+          "valor": 0.031,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -14650,16 +16446,48 @@
         ],
         "absenteismo": [
           {
-            "periodo": "2025-01",
+            "periodo": "2024-01",
             "valor": 0.0
           },
           {
+            "periodo": "2024-05",
+            "valor": 0.1053
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0333
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2025-01",
+            "valor": 0.4545
+          },
+          {
             "periodo": "2025-02",
-            "valor": 0.0227
+            "valor": 0.4189
           },
           {
             "periodo": "2025-03",
-            "valor": 0.05
+            "valor": 0.3667
           },
           {
             "periodo": "2025-04",
@@ -14728,6 +16556,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0672
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -14752,6 +16584,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.2444
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0476
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0164
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.68
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.7321
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0625
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1148
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1333
+          },
           {
             "periodo": "2025-12",
             "valor": 0.2
@@ -14790,9 +16654,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0432,
+          "valor": 0.0418,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -14973,6 +16837,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0667
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0625
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0385
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0278
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.046
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0556
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0263
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.011
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0667
           },
@@ -15051,6 +16947,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0333
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -15137,10 +17037,10 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.05,
+          "valor": 0.0697,
           "ano": 2026,
-          "n": 8,
-          "semaforo": "ok"
+          "n": 9,
+          "semaforo": "alerta"
         },
         "eficiencia": {
           "valor": 0.6355,
@@ -15332,6 +17232,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1429
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0455
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.3571
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.7143
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -15397,7 +17329,7 @@
           },
           {
             "periodo": "2026-05",
-            "valor": 0.0833
+            "valor": 0.2414
           },
           {
             "periodo": "2026-06",
@@ -15410,6 +17342,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0164
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -15445,6 +17381,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.125
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.125
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0938
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0357
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
           {
             "periodo": "2025-12",
             "valor": 0.0
@@ -15483,9 +17451,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0071,
+          "valor": 0.0066,
           "ano": 2026,
-          "n": 4,
+          "n": 5,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -15588,6 +17556,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.026
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -15624,9 +17596,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.1277,
+          "valor": 0.1281,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -15815,6 +17787,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0909
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0909
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.069
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.027
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0638
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.15
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0976
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1091
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0909
           },
@@ -15893,6 +17897,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0714
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1429
           }
         ]
       },
@@ -15919,16 +17927,48 @@
       ],
       "ranking": {
         "absenteismo": {
-          "valor": 0.042,
+          "valor": 0.1955,
           "ano": 2025,
           "n": 12,
-          "semaforo": "ok"
+          "semaforo": "critico"
         }
       },
       "series": {
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0488
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0484
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0091
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0455
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0227
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0
@@ -15962,8 +18002,20 @@
             "valor": 0.0333
           },
           {
+            "periodo": "2025-09",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-10",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-11",
+            "valor": 1.0
+          },
+          {
             "periodo": "2025-12",
-            "valor": 0.0
+            "valor": 0.2326
           }
         ]
       },
@@ -16085,10 +18137,10 @@
           "periodo": "2026-W11"
         },
         "absenteismo": {
-          "valor": 0.0643,
+          "valor": 0.276,
           "ano": 2026,
           "n": 4,
-          "semaforo": "alerta"
+          "semaforo": "critico"
         }
       },
       "series": {
@@ -16137,6 +18189,38 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0702
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1333
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0779
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0851
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1067
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1316
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0842
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0789
@@ -16195,7 +18279,11 @@
           },
           {
             "periodo": "2026-03",
-            "valor": 0.0526
+            "valor": 0.3793
+          },
+          {
+            "periodo": "2026-04",
+            "valor": 1.0
           }
         ]
       },
@@ -16243,9 +18331,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.048,
+          "valor": 0.0466,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -16430,6 +18518,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.2833
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0476
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0182
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0164
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.013
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.2
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.275
           },
@@ -16508,6 +18628,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -16555,9 +18679,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0655,
+          "valor": 0.0636,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -16742,6 +18866,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.2
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0426
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.027
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0159
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.09
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.072
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.18
           },
@@ -16820,6 +18976,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -16865,7 +19025,7 @@
       ],
       "ranking": {
         "absenteismo": {
-          "valor": 0.1189,
+          "valor": 0.2971,
           "ano": 2025,
           "n": 12,
           "semaforo": "critico"
@@ -16875,6 +19035,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0175
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0588
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0172
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0316
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0132
@@ -16905,11 +19097,23 @@
           },
           {
             "periodo": "2025-08",
-            "valor": 0.5556
+            "valor": 0.6098
+          },
+          {
+            "periodo": "2025-09",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-10",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-11",
+            "valor": 1.0
           },
           {
             "periodo": "2025-12",
-            "valor": 0.1053
+            "valor": 0.3377
           }
         ]
       },
@@ -16980,9 +19184,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0458,
+          "valor": 0.0446,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -17167,6 +19371,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0556
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0185
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0192
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -17245,6 +19481,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -17305,9 +19545,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1194,
+          "valor": 0.1181,
           "ano": 2026,
-          "n": 4,
+          "n": 5,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -17410,6 +19650,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.087
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1
           }
         ]
       },
@@ -17459,6 +19703,38 @@
         "pecas_semana": [],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0303
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.6667
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1111
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-12",
             "valor": -0.1379
           }
@@ -17496,9 +19772,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0448,
+          "valor": 0.0447,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -17699,6 +19975,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0476
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0488
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0379
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0398
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0755
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0732
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0387
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0103
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0476
           },
@@ -17777,6 +20085,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0104
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0417
           }
         ]
       },
@@ -17811,10 +20123,10 @@
           "periodo": "2026-W12"
         },
         "absenteismo": {
-          "valor": 0.0526,
+          "valor": 0.4433,
           "ano": 2026,
           "n": 4,
-          "semaforo": "alerta"
+          "semaforo": "critico"
         }
       },
       "series": {
@@ -17868,8 +20180,28 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2025-07",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-08",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-09",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-10",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-11",
+            "valor": 1.0
+          },
+          {
             "periodo": "2025-12",
-            "valor": 0.0
+            "valor": 0.625
           },
           {
             "periodo": "2026-01",
@@ -17881,7 +20213,11 @@
           },
           {
             "periodo": "2026-03",
-            "valor": 0.1333
+            "valor": 0.48
+          },
+          {
+            "periodo": "2026-04",
+            "valor": 1.0
           }
         ]
       },
@@ -17918,9 +20254,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0682,
+          "valor": 0.0781,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -18101,6 +20437,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1667
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.069
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.2623
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0875
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1398
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.2222
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0256
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.2
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.175
           },
@@ -18174,10 +20542,14 @@
           },
           {
             "periodo": "2026-07",
-            "valor": 0.087
+            "valor": 0.1765
           },
           {
             "periodo": "2026-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
             "valor": 0.0
           }
         ]
@@ -18246,9 +20618,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0846,
+          "valor": 0.082,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -18429,6 +20801,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.3067
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.04
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0128
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.008
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.2
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.19
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.112
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.2333
           },
@@ -18507,6 +20911,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0093
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -18554,9 +20962,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1101,
+          "valor": 0.1221,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -18725,6 +21133,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0263
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0091
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0048
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0417
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0595
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0099
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0563
           },
@@ -18790,7 +21230,7 @@
           },
           {
             "periodo": "2026-05",
-            "valor": 0.0741
+            "valor": 0.1525
           },
           {
             "periodo": "2026-06",
@@ -18803,6 +21243,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1518
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1852
           }
         ]
       },
@@ -18874,6 +21318,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0417
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0714
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0238
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0248
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0067
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0625
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0625
@@ -19005,9 +21481,9 @@
           "periodo": "2026-W34"
         },
         "absenteismo": {
-          "valor": 0.1482,
+          "valor": 0.1585,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -19148,6 +21624,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0476
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0149
+          },
+          {
+            "periodo": "2024-07",
+            "valor": -0.0233
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.01
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -19213,7 +21721,7 @@
           },
           {
             "periodo": "2026-05",
-            "valor": 0.1034
+            "valor": 0.1746
           },
           {
             "periodo": "2026-06",
@@ -19226,6 +21734,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1792
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1923
           }
         ]
       },
@@ -19261,10 +21773,10 @@
           "periodo": "2026-W11"
         },
         "absenteismo": {
-          "valor": 0.0776,
+          "valor": 0.1974,
           "ano": 2026,
           "n": 4,
-          "semaforo": "alerta"
+          "semaforo": "critico"
         }
       },
       "series": {
@@ -19326,6 +21838,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0152
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0435
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0145
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0109
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0089
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0727
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0227
           },
@@ -19383,7 +21927,11 @@
           },
           {
             "periodo": "2026-03",
-            "valor": 0.0513
+            "valor": 0.2449
+          },
+          {
+            "periodo": "2026-04",
+            "valor": 1.0
           }
         ]
       },
@@ -19455,10 +22003,10 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0466,
+          "valor": 0.0896,
           "ano": 2026,
-          "n": 7,
-          "semaforo": "ok"
+          "n": 8,
+          "semaforo": "alerta"
         },
         "eficiencia": {
           "valor": 0.5861,
@@ -19598,6 +22146,10 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2026-02",
+            "valor": 1.0
+          },
+          {
             "periodo": "2026-03",
             "valor": 0.0357
           },
@@ -19620,6 +22172,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0294
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -19656,9 +22212,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.1091,
+          "valor": 0.1092,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -19851,6 +22407,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.2937
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0325
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0364
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0857
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1667
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1607
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1333
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.256
           },
@@ -19929,6 +22517,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0571
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1143
           }
         ]
       },
@@ -19976,10 +22568,10 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1007,
+          "valor": 0.0999,
           "ano": 2026,
-          "n": 8,
-          "semaforo": "critico"
+          "n": 9,
+          "semaforo": "alerta"
         },
         "eficiencia": {
           "valor": 0.4362,
@@ -20167,36 +22759,68 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1515
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.037
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0455
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0455
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1636
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.2045
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1364
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1636
+          },
+          {
             "periodo": "2025-01",
-            "valor": -0.1765
+            "valor": 0.3939
           },
           {
             "periodo": "2025-02",
-            "valor": 0.0566
+            "valor": 0.2063
           },
           {
             "periodo": "2025-03",
-            "valor": 0.0729
+            "valor": 0.2328
           },
           {
             "periodo": "2025-04",
-            "valor": 0.0417
+            "valor": 0.2069
           },
           {
             "periodo": "2025-05",
-            "valor": 0.0417
+            "valor": 0.2069
           },
           {
             "periodo": "2025-06",
-            "valor": 0.0259
+            "valor": 0.1931
           },
           {
             "periodo": "2025-07",
-            "valor": 0.0678
+            "valor": 0.2396
           },
           {
             "periodo": "2025-08",
-            "valor": 0.0465
+            "valor": 0.0821
           },
           {
             "periodo": "2025-09",
@@ -20245,6 +22869,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0794
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0741
           }
         ]
       },
@@ -20302,9 +22930,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1425,
+          "valor": 0.1518,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -20493,6 +23121,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0317
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0556
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1667
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1519
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1474
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0101
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0238
           },
@@ -20566,11 +23226,15 @@
           },
           {
             "periodo": "2026-07",
-            "valor": 0.0105
+            "valor": 0.1048
           },
           {
             "periodo": "2026-08",
             "valor": 0.0312
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0833
           }
         ]
       },
@@ -20618,9 +23282,9 @@
           "periodo": "2026-W35"
         },
         "absenteismo": {
-          "valor": 0.0103,
+          "valor": 0.0312,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -20785,6 +23449,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0909
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1818
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0909
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1818
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0364
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -20862,6 +23558,10 @@
           },
           {
             "periodo": "2026-08",
+            "valor": 0.2241
+          },
+          {
+            "periodo": "2026-09",
             "valor": 0.0625
           }
         ]
@@ -20920,9 +23620,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1918,
+          "valor": 0.1991,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -21107,6 +23807,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0909
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0746
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1818
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1636
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1591
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1477
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1182
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0909
           },
@@ -21185,6 +23917,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.49
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.44
           }
         ]
       },
@@ -21231,9 +23967,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0308,
+          "valor": 0.0304,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -21426,6 +24162,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1053
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0357
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0556
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -21504,6 +24272,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -21539,9 +24311,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1649,
+          "valor": 0.1567,
           "ano": 2026,
-          "n": 3,
+          "n": 4,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -21688,6 +24460,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1071
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.087
           }
         ]
       },
@@ -21723,9 +24499,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0577,
+          "valor": 0.058,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -21910,6 +24686,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0417
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0548
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1224
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.045
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0909
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.101
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -21988,6 +24796,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1466
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.069
           }
         ]
       },
@@ -22024,9 +24836,9 @@
           "periodo": "2026-W35"
         },
         "absenteismo": {
-          "valor": 0.0556,
+          "valor": 0.0541,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -22207,6 +25019,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0625
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0392
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0469
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0484
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0667
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0256
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0156
           },
@@ -22285,6 +25129,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0526
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -22342,10 +25190,10 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0411,
+          "valor": 0.0529,
           "ano": 2026,
-          "n": 8,
-          "semaforo": "ok"
+          "n": 9,
+          "semaforo": "alerta"
         },
         "eficiencia": {
           "valor": 0.562,
@@ -22529,6 +25377,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0625
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0667
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0444
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.069
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1205
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1447
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1111
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0513
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0625
           },
@@ -22594,7 +25474,7 @@
           },
           {
             "periodo": "2026-05",
-            "valor": 0.0202
+            "valor": 0.1101
           },
           {
             "periodo": "2026-06",
@@ -22607,6 +25487,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1042
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0417
           }
         ]
       },
@@ -22679,9 +25563,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0762,
+          "valor": 0.0797,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -22870,6 +25754,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0741
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0444
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0152
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1111
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0222
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0222
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0694
           },
@@ -22948,6 +25864,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1827
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1923
           }
         ]
       },
@@ -23004,10 +25924,10 @@
           "periodo": "2026-W28"
         },
         "absenteismo": {
-          "valor": 0.0737,
+          "valor": 0.3367,
           "ano": 2026,
           "n": 4,
-          "semaforo": "alerta"
+          "semaforo": "critico"
         }
       },
       "series": {
@@ -23097,6 +26017,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.08
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0385
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0137
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0119
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0227
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0538
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.024
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.07
           },
@@ -23122,19 +26074,19 @@
           },
           {
             "periodo": "2025-07",
-            "valor": 0.082
+            "valor": 0.2632
           },
           {
             "periodo": "2025-08",
-            "valor": 0.0612
+            "valor": 0.262
           },
           {
             "periodo": "2025-09",
-            "valor": 0.069
+            "valor": 0.3077
           },
           {
             "periodo": "2025-10",
-            "valor": 0.0667
+            "valor": 0.2632
           },
           {
             "periodo": "2025-11",
@@ -23146,19 +26098,19 @@
           },
           {
             "periodo": "2026-01",
-            "valor": 0.0988
+            "valor": 0.3423
           },
           {
             "periodo": "2026-02",
-            "valor": 0.0714
+            "valor": 0.3158
           },
           {
             "periodo": "2026-03",
-            "valor": 0.0556
+            "valor": 0.3108
           },
           {
             "periodo": "2026-04",
-            "valor": 0.0769
+            "valor": 0.4146
           }
         ]
       },
@@ -23445,6 +26397,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.2308
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0444
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0423
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0833
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0833
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.12
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.125
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.2
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.2308
           },
@@ -23570,10 +26554,10 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0494,
+          "valor": 0.0597,
           "ano": 2026,
-          "n": 8,
-          "semaforo": "ok"
+          "n": 9,
+          "semaforo": "alerta"
         },
         "eficiencia": {
           "valor": 0.4877,
@@ -23761,6 +26745,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.16
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0556
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.06
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0312
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0156
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0256
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.22
           },
@@ -23826,7 +26842,7 @@
           },
           {
             "periodo": "2026-05",
-            "valor": 0.0536
+            "valor": 0.1311
           },
           {
             "periodo": "2026-06",
@@ -23839,6 +26855,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.037
           }
         ]
       },
@@ -23905,9 +26925,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0095,
+          "valor": 0.0092,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -24100,6 +27120,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0833
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.04
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0164
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0625
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.14
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.025
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.04
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.075
           },
@@ -24178,6 +27230,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -24213,9 +27269,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0133,
+          "valor": 0.0243,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -24389,7 +27445,7 @@
         "absenteismo": [
           {
             "periodo": "2026-01",
-            "valor": 0.0833
+            "valor": 0.3529
           },
           {
             "periodo": "2026-02",
@@ -24417,6 +27473,10 @@
           },
           {
             "periodo": "2026-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
             "valor": 0.0
           }
         ]
@@ -24539,9 +27599,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1296,
+          "valor": 0.1283,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -24730,6 +27790,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0758
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0377
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0128
+          },
+          {
+            "periodo": "2024-07",
+            "valor": -0.0105
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0088
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1364
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1494
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0189
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0568
           },
@@ -24808,6 +27900,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.2393
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0938
           }
         ]
       },
@@ -24875,9 +27971,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0891,
+          "valor": 0.0889,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -25066,6 +28162,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1014
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0385
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0128
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0288
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0086
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0227
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0116
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1217
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.1087
           },
@@ -25144,6 +28272,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0811
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0833
           }
         ]
       },
@@ -25220,9 +28352,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0629,
+          "valor": 0.0785,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -25411,6 +28543,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1111
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0667
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -25476,7 +28640,7 @@
           },
           {
             "periodo": "2026-05",
-            "valor": 0.0469
+            "valor": 0.1757
           },
           {
             "periodo": "2026-06",
@@ -25488,6 +28652,10 @@
           },
           {
             "periodo": "2026-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
             "valor": 0.0
           }
         ]
@@ -25504,10 +28672,10 @@
       ],
       "ranking": {
         "absenteismo": {
-          "valor": 0.0949,
+          "valor": 0.1894,
           "ano": 2025,
           "n": 12,
-          "semaforo": "alerta"
+          "semaforo": "critico"
         }
       },
       "series": {
@@ -25515,28 +28683,60 @@
         "pecas_semana": [],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0175
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0625
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1296
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1316
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1368
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1447
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1184
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1368
+          },
+          {
             "periodo": "2025-01",
-            "valor": 0.0132
+            "valor": 0.3534
           },
           {
             "periodo": "2025-02",
-            "valor": 0.0519
+            "valor": 0.3178
           },
           {
             "periodo": "2025-03",
-            "valor": 0.1548
+            "valor": 0.4274
           },
           {
             "periodo": "2025-04",
-            "valor": 0.1429
+            "valor": 0.4194
           },
           {
             "periodo": "2025-05",
-            "valor": 0.117
+            "valor": 0.3806
           },
           {
             "periodo": "2025-06",
-            "valor": 0.0694
+            "valor": 0.1658
           },
           {
             "periodo": "2025-07",
@@ -25618,10 +28818,10 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0329,
+          "valor": 0.0711,
           "ano": 2026,
-          "n": 8,
-          "semaforo": "ok"
+          "n": 9,
+          "semaforo": "alerta"
         },
         "eficiencia": {
           "valor": 0.552,
@@ -25773,6 +28973,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0882
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0256
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0125
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0233
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0086
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1562
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0833
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0787
           },
@@ -25838,7 +29070,7 @@
           },
           {
             "periodo": "2026-05",
-            "valor": 0.0172
+            "valor": 0.1618
           },
           {
             "periodo": "2026-06",
@@ -25846,11 +29078,15 @@
           },
           {
             "periodo": "2026-07",
-            "valor": 0.0
+            "valor": 0.137
           },
           {
             "periodo": "2026-08",
             "valor": 0.0312
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -25927,10 +29163,10 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0446,
+          "valor": 0.0832,
           "ano": 2026,
-          "n": 8,
-          "semaforo": "ok"
+          "n": 9,
+          "semaforo": "alerta"
         },
         "eficiencia": {
           "valor": 0.4291,
@@ -26122,8 +29358,16 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2025-07",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-08",
+            "valor": 1.0
+          },
+          {
             "periodo": "2025-09",
-            "valor": 0.0
+            "valor": 0.4545
           },
           {
             "periodo": "2025-10",
@@ -26163,10 +29407,14 @@
           },
           {
             "periodo": "2026-07",
-            "valor": 0.0606
+            "valor": 0.2791
           },
           {
             "periodo": "2026-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
             "valor": 0.0
           }
         ]
@@ -26239,9 +29487,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1348,
+          "valor": 0.1406,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -26426,6 +29674,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0909
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0588
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0288
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0072
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0875
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0229
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0985
           },
@@ -26491,7 +29771,7 @@
           },
           {
             "periodo": "2026-05",
-            "valor": 0.1288
+            "valor": 0.1792
           },
           {
             "periodo": "2026-06",
@@ -26504,6 +29784,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.141
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1026
           }
         ]
       },
@@ -26606,9 +29890,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0836,
+          "valor": 0.0825,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -26797,6 +30081,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0267
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0488
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0469
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0795
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0708
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0326
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0319
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.03
           },
@@ -26875,6 +30191,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0632
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0435
           }
         ]
       },
@@ -26900,7 +30220,7 @@
       ],
       "ranking": {
         "absenteismo": {
-          "valor": 0.1341,
+          "valor": 0.4518,
           "ano": 2025,
           "n": 12,
           "semaforo": "critico"
@@ -26940,7 +30260,23 @@
           },
           {
             "periodo": "2025-08",
-            "valor": 0.4103
+            "valor": 0.5306
+          },
+          {
+            "periodo": "2025-09",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-10",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-11",
+            "valor": 1.0
+          },
+          {
+            "periodo": "2025-12",
+            "valor": 1.0
           }
         ]
       },
@@ -26976,9 +30312,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1106,
+          "valor": 0.1085,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -27163,6 +30499,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0488
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0545
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1316
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0814
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0149
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0263
           },
@@ -27241,6 +30609,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0404
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.04
           }
         ]
       },
@@ -27277,9 +30649,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1245,
+          "valor": 0.1244,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -27472,6 +30844,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0588
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0741
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0682
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0526
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0267
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0441
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0941
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0588
           },
@@ -27550,6 +30954,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.11
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.12
           }
         ]
       },
@@ -27616,9 +31024,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1297,
+          "valor": 0.1394,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -27807,6 +31215,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0933
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0408
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0139
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0111
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0208
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.024
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.07
           },
@@ -27885,6 +31325,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.3561
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.4545
           }
         ]
       },
@@ -27920,9 +31364,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.142,
+          "valor": 0.1786,
           "ano": 2026,
-          "n": 7,
+          "n": 8,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -28072,7 +31516,7 @@
         "absenteismo": [
           {
             "periodo": "2026-02",
-            "valor": 0.2
+            "valor": 0.7333
           },
           {
             "periodo": "2026-03",
@@ -28097,6 +31541,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1471
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -28132,10 +31580,10 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0436,
+          "valor": 0.0785,
           "ano": 2026,
-          "n": 7,
-          "semaforo": "ok"
+          "n": 8,
+          "semaforo": "alerta"
         },
         "eficiencia": {
           "valor": 0.5742,
@@ -28276,7 +31724,7 @@
         "absenteismo": [
           {
             "periodo": "2026-02",
-            "valor": 0.0
+            "valor": 0.2083
           },
           {
             "periodo": "2026-03",
@@ -28301,6 +31749,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.05
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 1.0
           }
         ]
       },
@@ -28337,9 +31789,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.1931,
+          "valor": 0.1901,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -28516,6 +31968,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0926
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0556
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0392
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0303
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0471
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0294
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0833
           },
@@ -28594,6 +32078,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0326
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.087
           }
         ]
       },
@@ -28677,7 +32165,7 @@
         "absenteismo": {
           "valor": 0.0435,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -28891,7 +32379,7 @@
           },
           {
             "periodo": "2025-06",
-            "valor": 0.0118
+            "valor": -0.3125
           },
           {
             "periodo": "2025-07",
@@ -28948,6 +32436,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0269
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0426
           }
         ]
       },
@@ -29007,6 +32499,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0833
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.069
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0882
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.2014
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.2045
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.2031
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1641
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1125
+          },
           {
             "periodo": "2025-12",
             "valor": 0.1875
@@ -29071,9 +32595,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0658,
+          "valor": 0.0638,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -29258,6 +32782,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1111
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0435
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0676
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0385
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1077
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0392
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.048
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.1193
           },
@@ -29336,6 +32892,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0179
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -29404,7 +32964,7 @@
         "absenteismo": {
           "valor": 0.0,
           "ano": 2026,
-          "n": 5,
+          "n": 6,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -29539,6 +33099,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -29564,6 +33128,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0667
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0588
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1053
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1125
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.07
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0625
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.07
+          },
           {
             "periodo": "2025-12",
             "valor": 0.0833
@@ -29624,9 +33220,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.119,
+          "valor": 0.1148,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -29823,6 +33419,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0714
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0476
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0893
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0714
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0714
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.125
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0274
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -29901,6 +33529,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.5125
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -29948,9 +33580,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0433,
+          "valor": 0.042,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "ok"
         },
         "eficiencia": {
@@ -30143,6 +33775,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.08
+          },
+          {
+            "periodo": "2024-06",
+            "valor": -0.2903
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.05
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0192
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -30221,6 +33885,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0125
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -30257,6 +33925,38 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0625
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0612
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0556
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0556
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0972
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0222
+          },
           {
             "periodo": "2025-12",
             "valor": 0.0
@@ -30306,9 +34006,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0564,
+          "valor": 0.0594,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -30489,6 +34189,10 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2025-12",
+            "valor": 1.0
+          },
+          {
             "periodo": "2026-01",
             "valor": 0.0857
           },
@@ -30519,6 +34223,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.1607
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.1429
           }
         ]
       },
@@ -30555,9 +34263,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.0702,
+          "valor": 0.0682,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -30742,6 +34450,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0745
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0635
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0426
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0476
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.125
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1094
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1172
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1062
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.072
           },
@@ -30820,6 +34560,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -30892,6 +34636,38 @@
         "pecas_semana": [],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.12
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0556
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0926
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1266
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.256
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.12
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.11
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.144
+          },
+          {
             "periodo": "2025-12",
             "valor": 0.1467
           }
@@ -30940,9 +34716,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0693,
+          "valor": 0.096,
           "ano": 2026,
-          "n": 5,
+          "n": 6,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -31093,6 +34869,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0411
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 1.0
           }
         ]
       },
@@ -31154,10 +34934,10 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0503,
+          "valor": 0.0487,
           "ano": 2026,
-          "n": 8,
-          "semaforo": "alerta"
+          "n": 9,
+          "semaforo": "ok"
         },
         "eficiencia": {
           "valor": 0.7434,
@@ -31345,6 +35125,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1449
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0465
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0175
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1548
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.2124
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.163
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1739
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.2174
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.1413
           },
@@ -31423,6 +35235,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -31478,6 +35294,38 @@
         "pecas_semana": [],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0541
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0182
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-12",
             "valor": 0.0
           }
@@ -31530,9 +35378,9 @@
           "periodo": "2026-W37"
         },
         "absenteismo": {
-          "valor": 0.0556,
+          "valor": 0.0541,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "alerta"
         },
         "eficiencia": {
@@ -31733,6 +35581,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1111
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0417
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.2381
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0
           },
@@ -31811,6 +35691,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.0357
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.0
           }
         ]
       },
@@ -31858,9 +35742,9 @@
           "periodo": "2026-W36"
         },
         "absenteismo": {
-          "valor": 0.1159,
+          "valor": 0.12,
           "ano": 2026,
-          "n": 8,
+          "n": 9,
           "semaforo": "critico"
         },
         "eficiencia": {
@@ -32045,6 +35929,38 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0323
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.037
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0588
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1333
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.15
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0667
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0581
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0323
           },
@@ -32123,6 +36039,10 @@
           {
             "periodo": "2026-08",
             "valor": 0.2296
+          },
+          {
+            "periodo": "2026-09",
+            "valor": 0.2353
           }
         ]
       },
@@ -32262,7 +36182,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0389,
+      "pos_valor": 0.0585,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -32308,14 +36228,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0153,
-      "pre_anos": [],
+      "pre_valor": 0.0617,
+      "pos_valor": 0.146,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0843,
+      "status": "ok"
     },
     {
       "oficina_id": "a-maria-dos-santos-silva-faccao",
@@ -32355,9 +36277,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0389,
+      "pos_valor": 0.0596,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -32444,7 +36367,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0734,
+      "pos_valor": 0.0723,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -32493,7 +36416,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1228,
+      "pos_valor": 0.1273,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -32541,14 +36464,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.153,
-      "pre_anos": [],
+      "pre_valor": 0.0591,
+      "pos_valor": 0.1627,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.1036,
+      "status": "ok"
     },
     {
       "oficina_id": "a-s-empreendimentos",
@@ -32590,9 +36515,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1228,
+      "pos_valor": 0.1105,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -32639,7 +36565,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1228,
+      "pos_valor": 0.1273,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -32687,14 +36613,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0103,
-      "pre_anos": [],
+      "pre_valor": 0.3408,
+      "pos_valor": 0.01,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.3308,
+      "status": "ok"
     },
     {
       "oficina_id": "acari-textil",
@@ -32736,7 +36664,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0746,
+      "pos_valor": 0.0758,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -32868,14 +36796,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0701,
-      "pre_anos": [],
+      "pre_valor": 0.1263,
+      "pos_valor": 0.0707,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0556,
+      "status": "ok"
     },
     {
       "oficina_id": "ajg-confeccoes",
@@ -32916,14 +36846,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0701,
-      "pre_anos": [],
+      "pre_valor": 0.1263,
+      "pos_valor": 0.0707,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0556,
+      "status": "ok"
     },
     {
       "oficina_id": "ajg-confeccoes",
@@ -32964,14 +36896,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0598,
-      "pre_anos": [],
+      "pre_valor": 0.8851,
+      "pos_valor": 0.0622,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.8229,
+      "status": "ok"
     },
     {
       "oficina_id": "alanis-queiroz",
@@ -33054,12 +36988,14 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0567,
       "pos_valor": null,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [],
       "delta": null,
-      "status": "sem_dado"
+      "status": "sem_pos"
     },
     {
       "oficina_id": "alianca-confeccoes",
@@ -33142,14 +37078,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0243,
-      "pre_anos": [],
+      "pre_valor": 0.0245,
+      "pos_valor": 0.0234,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0011,
+      "status": "ok"
     },
     {
       "oficina_id": "aline-rodrigues-de-lima-araujo",
@@ -33277,7 +37215,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0599,
+      "pos_valor": 0.0598,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -33370,7 +37308,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.071,
+      "pos_valor": 0.0782,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -33419,7 +37357,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.071,
+      "pos_valor": 0.0782,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -33468,7 +37406,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1003,
+      "pos_valor": 0.0999,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -33516,14 +37454,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0885,
-      "pre_anos": [],
+      "pre_valor": 0.1081,
+      "pos_valor": 0.088,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0201,
+      "status": "ok"
     },
     {
       "oficina_id": "araujo-e-m-confeccoes",
@@ -33563,7 +37503,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1241,
+      "pos_valor": 0.1307,
       "pre_anos": [],
       "pos_anos": [
         2025
@@ -33607,7 +37547,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1241,
+      "pos_valor": 0.1307,
       "pre_anos": [],
       "pos_anos": [
         2025
@@ -33653,7 +37593,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0921,
+      "pos_valor": 0.0925,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -33916,7 +37856,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0481,
+      "pos_valor": 0.0475,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -34135,7 +38075,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0347,
+      "pos_valor": 0.0865,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -34184,7 +38124,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0851,
+      "pos_valor": 0.0889,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -34315,13 +38255,13 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": null,
+      "pos_valor": 1.0,
       "pre_anos": [],
       "pos_anos": [
         2025
       ],
       "delta": null,
-      "status": "sem_dado"
+      "status": "sem_pre"
     },
     {
       "oficina_id": "confianca-industria-textil",
@@ -34405,7 +38345,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0845,
+      "pos_valor": 0.0901,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -34453,14 +38393,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0934,
-      "pre_anos": [],
+      "pre_valor": 0.0362,
+      "pos_valor": 0.1065,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0703,
+      "status": "ok"
     },
     {
       "oficina_id": "danjan-confeccoes",
@@ -34502,9 +38444,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0845,
+      "pos_valor": 0.0761,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -34550,14 +38493,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.1166,
-      "pre_anos": [],
+      "pre_valor": 0.0602,
+      "pos_valor": 0.1153,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0551,
+      "status": "ok"
     },
     {
       "oficina_id": "dantas-e-paulino-confeccoes",
@@ -34598,14 +38543,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.1166,
-      "pre_anos": [],
+      "pre_valor": 0.0602,
+      "pos_valor": 0.1153,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0551,
+      "status": "ok"
     },
     {
       "oficina_id": "dantas-e-paulino-confeccoes",
@@ -34646,14 +38593,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0714,
-      "pre_anos": [],
+      "pre_valor": 0.0301,
+      "pos_valor": 0.0771,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.047,
+      "status": "ok"
     },
     {
       "oficina_id": "di3-confeccoes",
@@ -34694,14 +38643,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0714,
-      "pre_anos": [],
+      "pre_valor": 0.0301,
+      "pos_valor": 0.0771,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.047,
+      "status": "ok"
     },
     {
       "oficina_id": "di3-confeccoes",
@@ -34788,7 +38739,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0887,
+      "pos_valor": 0.089,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -34835,7 +38786,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0887,
+      "pos_valor": 0.089,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -34882,7 +38833,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0839,
+      "pos_valor": 0.084,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -34931,7 +38882,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0839,
+      "pos_valor": 0.084,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -35064,7 +39015,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0411,
+      "pos_valor": 0.0418,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -35113,7 +39064,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0411,
+      "pos_valor": 0.0418,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -35162,7 +39113,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0885,
+      "pos_valor": 0.0887,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -35211,7 +39162,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0725,
+      "pos_valor": 0.0734,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -35259,14 +39210,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0171,
-      "pre_anos": [],
+      "pre_valor": 0.0962,
+      "pos_valor": 0.0165,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0797,
+      "status": "ok"
     },
     {
       "oficina_id": "f-k-faccao",
@@ -35307,14 +39260,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0171,
-      "pre_anos": [],
+      "pre_valor": 0.0962,
+      "pos_valor": 0.0165,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0797,
+      "status": "ok"
     },
     {
       "oficina_id": "f-k-faccao",
@@ -35355,14 +39310,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0873,
-      "pre_anos": [],
+      "pre_valor": 0.0463,
+      "pos_valor": 0.087,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0407,
+      "status": "ok"
     },
     {
       "oficina_id": "f-l-azevedo-confeccao",
@@ -35404,7 +39361,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1006,
+      "pos_valor": 0.1003,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -35584,7 +39541,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1395,
+      "pos_valor": 0.1393,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -35633,9 +39590,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1395,
+      "pos_valor": 0.1196,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -35682,7 +39640,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1395,
+      "pos_valor": 0.1393,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -35731,7 +39689,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0785,
+      "pos_valor": 0.0789,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -35780,7 +39738,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0785,
+      "pos_valor": 0.0789,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -35870,14 +39828,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0399,
-      "pre_anos": [],
+      "pre_valor": 0.0772,
+      "pos_valor": 0.0388,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0384,
+      "status": "ok"
     },
     {
       "oficina_id": "faccao-santanense",
@@ -35919,7 +39879,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0521,
+      "pos_valor": 0.0515,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -36009,14 +39969,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0225,
-      "pre_anos": [],
+      "pre_valor": 0.0518,
+      "pos_valor": 0.0218,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.03,
+      "status": "ok"
     },
     {
       "oficina_id": "ferreira-e-araujo-confeccoes",
@@ -36058,7 +40020,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0456,
+      "pos_valor": 0.0451,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -36277,7 +40239,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0744,
+      "pos_valor": 0.0836,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -36326,7 +40288,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1215,
+      "pos_valor": 0.1218,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -36373,9 +40335,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.042,
+      "pos_valor": 0.1227,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025
       ],
       "delta": null,
@@ -36545,7 +40508,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0935,
+      "pos_valor": 0.1311,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -36592,7 +40555,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0768,
+      "pos_valor": 0.0758,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -36640,14 +40603,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0655,
-      "pre_anos": [],
+      "pre_valor": 0.0592,
+      "pos_valor": 0.0636,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0044,
+      "status": "ok"
     },
     {
       "oficina_id": "ideal-confeccoes",
@@ -36689,9 +40654,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0652,
+      "pos_valor": 0.0636,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -36738,7 +40704,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0652,
+      "pos_valor": 0.0644,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -36954,14 +40920,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0682,
-      "pre_anos": [],
+      "pre_valor": 0.1501,
+      "pos_valor": 0.0781,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.072,
+      "status": "ok"
     },
     {
       "oficina_id": "j-s-silva",
@@ -37003,9 +40971,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1038,
+      "pos_valor": 0.1185,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -37052,7 +41021,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1038,
+      "pos_valor": 0.1077,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -37101,7 +41070,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0692,
+      "pos_valor": 0.0683,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -37150,7 +41119,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.077,
+      "pos_valor": 0.082,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -37199,9 +41168,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.077,
+      "pos_valor": 0.0607,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -37288,9 +41258,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.049,
+      "pos_valor": 0.0323,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025
       ],
       "delta": null,
@@ -37460,7 +41431,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0707,
+      "pos_valor": 0.091,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -37507,9 +41478,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0892,
+      "pos_valor": 0.0982,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -37555,14 +41527,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.1007,
-      "pre_anos": [],
+      "pre_valor": 0.1269,
+      "pos_valor": 0.0999,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.027,
+      "status": "ok"
     },
     {
       "oficina_id": "joseni-maria-de-medeiros",
@@ -37604,9 +41578,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0705,
+      "pos_valor": 0.138,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -37653,7 +41628,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1156,
+      "pos_valor": 0.1199,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -37701,14 +41676,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0103,
-      "pre_anos": [],
+      "pre_valor": 0.0667,
+      "pos_valor": 0.0312,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0355,
+      "status": "ok"
     },
     {
       "oficina_id": "ksw-confeccoes",
@@ -37749,14 +41726,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0103,
-      "pre_anos": [],
+      "pre_valor": 0.0667,
+      "pos_valor": 0.0312,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0355,
+      "status": "ok"
     },
     {
       "oficina_id": "ksw-confeccoes",
@@ -37798,7 +41777,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1317,
+      "pos_valor": 0.1356,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -37846,14 +41825,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0556,
-      "pre_anos": [],
+      "pre_valor": 0.0421,
+      "pos_valor": 0.0541,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.012,
+      "status": "ok"
     },
     {
       "oficina_id": "lima-confeccoes",
@@ -37895,7 +41876,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0584,
+      "pos_valor": 0.0577,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -37986,9 +41967,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0421,
+      "pos_valor": 0.0565,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -38077,7 +42059,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0856,
+      "pos_valor": 0.087,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -38125,14 +42107,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0762,
-      "pre_anos": [],
+      "pre_valor": 0.0267,
+      "pos_valor": 0.0797,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.053,
+      "status": "ok"
     },
     {
       "oficina_id": "livia-reboucas-de-carvalho",
@@ -38174,9 +42158,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.066,
+      "pos_valor": 0.1543,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -38263,7 +42248,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0987,
+      "pos_valor": 0.0985,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -38311,14 +42296,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0891,
-      "pre_anos": [],
+      "pre_valor": 0.0438,
+      "pos_valor": 0.0889,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0451,
+      "status": "ok"
     },
     {
       "oficina_id": "m-a-vieira-de-almeida",
@@ -38360,9 +42347,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0987,
+      "pos_valor": 0.0864,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -38409,7 +42397,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0987,
+      "pos_valor": 0.0985,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -38589,7 +42577,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0975,
+      "pos_valor": 0.1011,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -38638,9 +42626,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0975,
+      "pos_valor": 0.0897,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -38687,7 +42676,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0975,
+      "pos_valor": 0.1011,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -38784,14 +42773,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.1296,
-      "pre_anos": [],
+      "pre_valor": 0.0509,
+      "pos_valor": 0.1283,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0774,
+      "status": "ok"
     },
     {
       "oficina_id": "m-f-empreendimentos",
@@ -39090,7 +43081,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0949,
+      "pos_valor": 0.1894,
       "pre_anos": [],
       "pos_anos": [
         2025
@@ -39134,7 +43125,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0949,
+      "pos_valor": 0.1894,
       "pre_anos": [],
       "pos_anos": [
         2025
@@ -39180,7 +43171,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0525,
+      "pos_valor": 0.0648,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -39228,14 +43219,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0329,
-      "pre_anos": [],
+      "pre_valor": 0.05,
+      "pos_valor": 0.0711,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0211,
+      "status": "ok"
     },
     {
       "oficina_id": "marionete-m-de-a-camara",
@@ -39277,9 +43270,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0525,
+      "pos_valor": 0.0599,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -39326,7 +43320,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0525,
+      "pos_valor": 0.0648,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -39374,14 +43368,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.1348,
-      "pre_anos": [],
+      "pre_valor": 0.0341,
+      "pos_valor": 0.1406,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.1065,
+      "status": "ok"
     },
     {
       "oficina_id": "n-s-constantino",
@@ -39423,9 +43419,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0878,
+      "pos_valor": 0.0766,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -39471,14 +43468,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.1348,
-      "pre_anos": [],
+      "pre_valor": 0.0341,
+      "pos_valor": 0.1406,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.1065,
+      "status": "ok"
     },
     {
       "oficina_id": "n-s-constantino",
@@ -39604,7 +43603,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0689,
+      "pos_valor": 0.0687,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -39653,7 +43652,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0891,
+      "pos_valor": 0.0895,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -39701,14 +43700,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.1245,
-      "pre_anos": [],
+      "pre_valor": 0.051,
+      "pos_valor": 0.1244,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0734,
+      "status": "ok"
     },
     {
       "oficina_id": "oficina-de-costura-santos",
@@ -39750,7 +43751,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0891,
+      "pos_valor": 0.0895,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -39799,9 +43800,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1718,
+      "pos_valor": 0.1404,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -40058,7 +44060,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0661,
+      "pos_valor": 0.0653,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -40106,14 +44108,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0658,
-      "pre_anos": [],
+      "pre_valor": 0.0577,
+      "pos_valor": 0.0638,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0061,
+      "status": "ok"
     },
     {
       "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
@@ -40155,9 +44159,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0661,
+      "pos_valor": 0.0634,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -40292,7 +44297,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0998,
+      "pos_valor": 0.0982,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -40341,7 +44346,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0482,
+      "pos_valor": 0.0476,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -40434,9 +44439,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.058,
+      "pos_valor": 0.0657,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -40483,7 +44489,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.058,
+      "pos_valor": 0.0572,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -40659,14 +44665,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0503,
-      "pre_anos": [],
+      "pre_valor": 0.1594,
+      "pos_valor": 0.0487,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.1107,
+      "status": "ok"
     },
     {
       "oficina_id": "uniao-confeccoes",
@@ -40708,9 +44716,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0847,
+      "pos_valor": 0.1029,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -40756,14 +44765,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
-      "pos_valor": 0.0503,
-      "pre_anos": [],
+      "pre_valor": 0.1594,
+      "pos_valor": 0.0487,
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.1107,
+      "status": "ok"
     },
     {
       "oficina_id": "uniao-confeccoes",
@@ -40805,7 +44816,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0729,
+      "pos_valor": 0.072,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -40854,7 +44865,7 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1017,
+      "pos_valor": 0.1035,
       "pre_anos": [],
       "pos_anos": [
         2025,
@@ -41046,12 +45057,12 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "n_treinadas": 43,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_pre"
+      "n_delta_treinadas": 27,
+      "delta_medio_treinadas": -0.0305,
+      "n_controle": 57,
+      "delta_medio_controle": 0.0231,
+      "dif_em_dif": -0.0536,
+      "status": "ok"
     },
     {
       "modulo": "Costura e Mecânica",
@@ -41085,12 +45096,12 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "n_treinadas": 9,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_pre"
+      "n_delta_treinadas": 7,
+      "delta_medio_treinadas": -0.0104,
+      "n_controle": 57,
+      "delta_medio_controle": 0.0231,
+      "dif_em_dif": -0.0335,
+      "status": "ok"
     },
     {
       "modulo": "TOC",
