@@ -97,6 +97,27 @@ class TestRankingVolume(unittest.TestCase):
         # 1 - (90+80)/(100+100) = 1 - 0.85 = 0.15
         self.assertEqual(cel["valor"], 0.15)
 
+    def test_min_mes_e_media_de_minutos_do_ano_recente(self):
+        ofs = dashboard.montar_oficinas(
+            [oficina("of", "OF", ["producao"])],
+            [prod_mes("of", 2026, 1, 300, minutos=2000),
+             prod_mes("of", 2026, 2, 500, minutos=4000)],
+            [], [], [], [],
+        )
+        cel = ofs[0]["ranking"]["min_mes"]
+        self.assertEqual(cel["valor"], 3000.0)   # (2000 + 4000) / 2
+        self.assertEqual(cel["n"], 2)
+        self.assertNotIn("semaforo", cel)        # minutos são volume
+
+    def test_min_semana_e_media_de_minutos(self):
+        ofs = dashboard.montar_oficinas(
+            [oficina("of", "OF", ["producao"])],
+            [], [prod_sem("of", 2026, 1, 200, minutos=1500),
+                 prod_sem("of", 2026, 2, 400, minutos=2500)],
+            [], [], [],
+        )
+        self.assertEqual(ofs[0]["ranking"]["min_semana"]["valor"], 2000.0)
+
     def test_eficiencia_e_a_pct_oficial(self):
         ofs = dashboard.montar_oficinas(
             [oficina("of", "OF", ["eficiencia"])],
@@ -148,6 +169,33 @@ class TestSeriesETreinos(unittest.TestCase):
         serie = ofs[0]["series"]["pecas_semana"]
         self.assertEqual([p["periodo"] for p in serie], ["2026-W01", "2026-W03"])
         self.assertEqual([p["valor"] for p in serie], [100.0, 150.0])
+
+    def test_serie_mensal_de_pecas_carrega_minutos_e_dias_uteis(self):
+        ofs = dashboard.montar_oficinas(
+            [oficina("of", "OF", ["producao"])],
+            [prod_mes("of", 2026, 1, 300, minutos=2500)],
+            [], [], [], [],
+        )
+        ponto = ofs[0]["series"]["pecas_mes"][0]
+        self.assertEqual(ponto["minutos"], 2500.0)
+        self.assertEqual(ponto["dias_uteis"], 22)   # jan/2026 = 22 dias úteis
+
+    def test_serie_semanal_de_pecas_carrega_minutos(self):
+        ofs = dashboard.montar_oficinas(
+            [oficina("of", "OF", ["producao"])],
+            [], [prod_sem("of", 2026, 1, 200, minutos=1800)],
+            [], [], [],
+        )
+        ponto = ofs[0]["series"]["pecas_semana"][0]
+        self.assertEqual(ponto["minutos"], 1800.0)
+        self.assertNotIn("dias_uteis", ponto)       # semana não tem dias úteis
+
+    def test_serie_mensal_de_absenteismo_carrega_dias_uteis(self):
+        ofs = dashboard.montar_oficinas(
+            [oficina("of", "OF", ["absenteismo"])],
+            [], [], [absen("of", 2026, 1, 100, 90)], [], [],
+        )
+        self.assertEqual(ofs[0]["series"]["absenteismo"][0]["dias_uteis"], 22)
 
     def test_eficiencia_nao_tem_serie(self):
         # A eficiência é um valor único (KPI), não série temporal.

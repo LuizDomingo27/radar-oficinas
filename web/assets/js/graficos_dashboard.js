@@ -39,8 +39,17 @@ const GraficosDash = (() => {
   };
   const CORES_SEMAFORO = { ok: "--ok", alerta: "--alerta", critico: "--critico", neutro: "--faint" };
 
-  // Métricas em fração 0..1 (%). O resto é volume de peças (inteiro).
+  // Métricas em fração 0..1 (%). O resto é volume (peças ou minutos, inteiro).
   const ehPercentual = (metrica) => metrica === "absenteismo" || metrica === "eficiencia";
+  // Unidade do volume, para rótulos/tooltip (minutos vs peças).
+  const unidadeVolume = (metrica) => metrica.startsWith("min") ? "min" : "peças";
+
+  /* Semáforo do desempenho contra a meta global (espelha o do controlador):
+     na meta = ok; até 10 pontos abaixo = alerta; senão crítico. */
+  const semDesempenho = (valor, meta) =>
+    valor == null ? "neutro"
+      : valor >= meta ? "ok"
+      : valor >= meta - 0.10 ? "alerta" : "critico";
 
   const base = () => ({
     grid: { left: 8, right: 18, top: 16, bottom: 8, containLabel: true },
@@ -52,8 +61,9 @@ const GraficosDash = (() => {
   function pctFmt(v) { return (v * 100).toFixed(1) + "%"; }
   function intFmt(v) { return Math.round(v).toLocaleString("pt-BR"); }
 
-  /** Tela 1 — barras horizontais do top-N por métrica (cor = semáforo). */
-  function renderRanking(el, oficinas, metrica) {
+  /** Tela 1 — barras horizontais do top-N por métrica (cor = semáforo).
+   *  ``meta`` (fração 0..1) colore o desempenho ao vivo contra a meta global. */
+  function renderRanking(el, oficinas, metrica, meta = 0.70) {
     if (!window.echarts) return;
     const menorMelhor = metrica === "absenteismo";
     const linhas = oficinas
@@ -63,6 +73,7 @@ const GraficosDash = (() => {
       ? a.cel.valor - b.cel.valor : b.cel.valor - a.cel.valor);
     const top = linhas.slice(0, 12).reverse(); // reverse: maior no topo do eixo Y
     const ehPct = ehPercentual(metrica);
+    const unidade = unidadeVolume(metrica);
     const fmt = (v) => ehPct ? pctFmt(v) : intFmt(v);
     const g = inst(el);
     g.setOption({
@@ -70,7 +81,7 @@ const GraficosDash = (() => {
       grid: { left: 8, right: 52, top: 10, bottom: 8, containLabel: true },
       tooltip: {
         trigger: "axis", axisPointer: { type: "shadow" },
-        valueFormatter: (v) => ehPct ? pctFmt(v) : intFmt(v) + " peças",
+        valueFormatter: (v) => ehPct ? pctFmt(v) : intFmt(v) + " " + unidade,
       },
       xAxis: {
         type: "value", axisLabel: { ...eixoTexto(),
@@ -84,11 +95,16 @@ const GraficosDash = (() => {
       },
       series: [{
         type: "bar", barWidth: "62%",
-        data: top.map((l) => ({
-          value: l.cel.valor,
-          // Volume não tem semáforo — usa a cor da produção; % usa o semáforo.
-          itemStyle: { color: corTema(CORES_SEMAFORO[l.cel.semaforo] || "--producao"), borderRadius: [0, 3, 3, 0] },
-        })),
+        data: top.map((l) => {
+          // Desempenho: semáforo pela meta global; absenteísmo: faixa do backend;
+          // volume (peças/min): sem semáforo, usa a cor da produção.
+          const sem = metrica === "eficiencia"
+            ? semDesempenho(l.cel.valor, meta) : l.cel.semaforo;
+          return {
+            value: l.cel.valor,
+            itemStyle: { color: corTema(CORES_SEMAFORO[sem] || "--producao"), borderRadius: [0, 3, 3, 0] },
+          };
+        }),
         label: { show: true, position: "right", color: corTema("--muted"),
           fontFamily: "IBM Plex Sans", fontSize: 10.5,
           formatter: (p) => fmt(p.value) },
@@ -172,14 +188,41 @@ const GraficosDash = (() => {
     const cor = corTema(COR_METRICA[metrica] || "--producao");
     const ehPct = ehPercentual(metrica);
     const markLines = marcasTreino(serie, treinos);
+    const ehProducao = metrica === "pecas_mes" || metrica === "pecas_semana";
+    // Tooltip da produção mostra o contexto (minutos, peças/min e, no mensal, os
+    // dias úteis do mês — a sazonalidade de calendário). Demais métricas usam o
+    // formato simples de valor.
+    const tooltip = ehProducao
+      ? { trigger: "axis", formatter: (params) => {
+          const p = params[0];
+          const item = serie[p.dataIndex] || {};
+          const linhas = [`<b>${p.axisValue}</b>`, `${intFmt(item.valor)} peças`];
+          if (item.minutos != null) {
+            linhas.push(`${intFmt(item.minutos)} min`);
+            if (item.minutos > 0) linhas.push(`${(item.valor / item.minutos).toFixed(3)} peças/min`);
+          }
+          if (item.dias_uteis != null) linhas.push(`${item.dias_uteis} dias úteis`);
+          return linhas.join("<br>");
+        } }
+      : { trigger: "axis",
+          valueFormatter: (v) => v == null ? "—" : (ehPct ? pctFmt(v) : intFmt(v) + " peças") };
     g.setOption({
       ...base(),
       grid: { left: 8, right: 48, top: 42, bottom: 8, containLabel: true }, // topo folgado p/ chips de treino; direita p/ a etiqueta da meta
-      tooltip: { trigger: "axis",
-        valueFormatter: (v) => v == null ? "—" : (ehPct ? pctFmt(v) : intFmt(v) + " peças") },
+      tooltip,
       xAxis: {
         type: "category", data: serie.map((p) => p.periodo), boundaryGap: false,
-        axisLabel: { ...eixoTexto(), fontSize: 9.5, hideOverlap: true },
+        axisLabel: { ...eixoTexto(), fontSize: 9.5, hideOverlap: true,
+          // No mensal com dias úteis, mostra o período e, abaixo, os dias úteis
+          // do mês — sazonalidade de calendário visível sem precisar do tooltip.
+          formatter: metrica === "pecas_mes" && serie[0] && serie[0].dias_uteis != null
+            ? (periodo, i) => {
+                const du = serie[i] && serie[i].dias_uteis;
+                return du != null ? `${periodo}\n{du|${du}d úteis}` : periodo;
+              }
+            : undefined,
+          rich: { du: { fontSize: 8, color: corTema("--faint"), padding: [2, 0, 0, 0] } },
+        },
         axisLine: linhaEixo(), axisTick: { show: false },
       },
       yAxis: {

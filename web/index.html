@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="assets/css/estilo.css?v=22">
-  <link rel="stylesheet" href="assets/css/dashboard.css?v=22">
+  <link rel="stylesheet" href="assets/css/estilo.css?v=23">
+  <link rel="stylesheet" href="assets/css/dashboard.css?v=23">
 </head>
 <body>
   <!-- Sprite de ícones SVG (sem emojis) -->
@@ -47,6 +47,18 @@
       <button class="nav-tab" data-view="qualidade">
         <svg class="icon" aria-hidden="true"><use href="#ic-qualidade"></use></svg>Qualidade</button>
     </nav>
+    <div class="meta-global" title="Linha de corte do desempenho (produção ÷ capacidade). Não altera a capacidade nem recalcula a eficiência — só reclassifica quem está acima/abaixo da meta.">
+      <label for="meta-desempenho">Meta desemp.</label>
+      <select id="meta-desempenho" class="inline-select" aria-label="Meta de desempenho">
+        <option value="0.55">55%</option>
+        <option value="0.60">60%</option>
+        <option value="0.65">65%</option>
+        <option value="0.70" selected>70%</option>
+        <option value="0.75">75%</option>
+        <option value="0.80">80%</option>
+        <option value="0.85">85%</option>
+      </select>
+    </div>
     <button class="theme-btn" id="tema" title="Alternar tema" aria-label="Alternar tema">
       <svg class="icon" aria-hidden="true"><use href="#ic-tema"></use></svg>
     </button>
@@ -67,7 +79,9 @@
             <option value="pecas_mes_total">total do mês</option>
             <option value="pecas_semana">peças/semana (média)</option>
             <option value="pecas_semana_total">total da semana</option>
-            <option value="eficiencia">eficiência</option>
+            <option value="min_mes">minutos/mês (média)</option>
+            <option value="min_semana">minutos/semana (média)</option>
+            <option value="eficiencia">desempenho (prod./capac.)</option>
           </select>
         </h2>
         <div id="grafico-ranking"></div>
@@ -85,8 +99,9 @@
           <button class="chip-btn" data-ord="pecas_mes_total" aria-pressed="false">Total mês</button>
           <button class="chip-btn" data-ord="pecas_semana" aria-pressed="false">Peças/sem</button>
           <button class="chip-btn" data-ord="pecas_semana_total" aria-pressed="false">Total sem</button>
+          <button class="chip-btn" data-ord="min_mes" aria-pressed="false">Min/mês</button>
           <button class="chip-btn" data-ord="absenteismo" aria-pressed="false">Absenteísmo</button>
-          <button class="chip-btn" data-ord="eficiencia" aria-pressed="false">Eficiência</button>
+          <button class="chip-btn" data-ord="eficiencia" aria-pressed="false">Desempenho</button>
         </div>
       </div>
 
@@ -99,8 +114,9 @@
               <th class="col-metrica">Total mês<small>mais recente</small></th>
               <th class="col-metrica">Peças/sem<small>média</small></th>
               <th class="col-metrica">Total sem<small>mais recente</small></th>
+              <th class="col-metrica">Min/mês<small>média</small></th>
               <th class="col-metrica">Absenteísmo<small>1 − trab/efet</small></th>
-              <th class="col-metrica">Eficiência<small>entrega/capac. · meta 65%</small></th>
+              <th class="col-metrica">Desempenho<small id="th-efic-sub">prod./capac. · meta 70%</small></th>
             </tr>
           </thead>
           <tbody id="rank-corpo"></tbody>
@@ -113,6 +129,30 @@
     <section class="view" id="view-ficha">
       <div class="intro">
         <h1>Ficha da oficina</h1>
+      </div>
+
+      <h3 class="secao-titulo">Desempenho geral (produção ÷ capacidade)
+        <span id="top-meta-resumo" class="secao-nota"></span>
+      </h3>
+      <div class="top-desempenho">
+        <div class="card top-card">
+          <h2><svg class="icon" aria-hidden="true"><use href="#ic-check"></use></svg>Top 10 melhores</h2>
+          <div class="tabela-wrap">
+            <table class="tabela-top">
+              <thead><tr><th class="col-pos">#</th><th>Oficina</th><th class="num">Desemp.</th></tr></thead>
+              <tbody id="top-melhores"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card top-card">
+          <h2><svg class="icon" aria-hidden="true"><use href="#ic-alerta"></use></svg>Top 10 piores</h2>
+          <div class="tabela-wrap">
+            <table class="tabela-top">
+              <thead><tr><th class="col-pos">#</th><th>Oficina</th><th class="num">Desemp.</th></tr></thead>
+              <tbody id="top-piores"></tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
       <div class="ficha-selector">
@@ -147,7 +187,7 @@
             <div class="grafico-serie" id="grafico-abse"></div>
           </div>
           <div class="card">
-            <h2><span class="dot-metrica m-efic"></span>Eficiência</h2>
+            <h2><span class="dot-metrica m-efic"></span>Desempenho<small class="sub">prod. ÷ capac.</small></h2>
             <div class="efic-kpi" id="ficha-efic"></div>
           </div>
         </div>
@@ -258,7 +298,7 @@
   <div id="erro-carga"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
-  <script src="assets/js/graficos_dashboard.js?v=22"></script>
-  <script src="assets/js/dashboard.js?v=22"></script>
+  <script src="assets/js/graficos_dashboard.js?v=23"></script>
+  <script src="assets/js/dashboard.js?v=23"></script>
 </body>
 </html>

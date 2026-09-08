@@ -16,7 +16,18 @@ const estado = {
   view: "ranking",
   rank: { termo: "", ordena: "nome", metricaGrafico: "pecas_mes" },
   fichaId: null,
+  // Linha de corte do desempenho (produção ÷ capacidade). O gerente ajusta pelo
+  // seletor global; reclassifica o semáforo ao vivo, sem recalcular a métrica.
+  meta: 0.70,
 };
+
+/* Semáforo do desempenho (produção ÷ capacidade) contra a meta escolhida:
+   na meta ou acima = ok; até 10 pontos abaixo = alerta; senão crítico.
+   A folga de 10 pontos espelha a faixa original (65%→55%). */
+const semaforoDesempenho = (valor, meta) =>
+  valor == null ? "neutro"
+    : valor >= meta ? "ok"
+    : valor >= meta - 0.10 ? "alerta" : "critico";
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => document.querySelectorAll(s);
@@ -67,10 +78,13 @@ function celulaMetrica(o, metrica) {
   const cel = o.ranking[metrica];
   if (!cel) return `<td class="cel-metrica vazio">—</td>`;
   const txt = fmtValor(metrica, cel.valor);
-  // Volume (peças/mês, peças/sem) não tem semáforo — só eficiência e absenteísmo.
-  const semaforo = cel.semaforo
-    ? `<span class="semaforo ${cel.semaforo}" title="${cel.semaforo} · ano ${cel.ano}"></span>`
-    : "";
+  // Desempenho (eficiência) usa a meta global ao vivo; absenteísmo mantém a faixa
+  // fixa do backend. Volume (peças/min) não tem semáforo.
+  const semaforo = metrica === "eficiencia"
+    ? `<span class="semaforo ${semaforoDesempenho(cel.valor, estado.meta)}" title="meta ${Math.round(estado.meta * 100)}% · ano ${cel.ano}"></span>`
+    : cel.semaforo
+      ? `<span class="semaforo ${cel.semaforo}" title="${cel.semaforo} · ano ${cel.ano}"></span>`
+      : "";
   // Totais mostram o período de origem (mês/semana mais recente) no tooltip.
   const titulo = cel.periodo ? ` title="${escapar(cel.periodo)}"`
     : cel.ano ? ` title="ano ${cel.ano}"` : "";
@@ -100,7 +114,7 @@ function renderRankingTabela() {
   const lista = oficinasOrdenadas();
   const tbody = $("#rank-corpo");
   if (!lista.length) {
-    tbody.innerHTML = `<tr><td colspan="7" class="vazio-tabela">${icone("busca")} Nenhuma oficina encontrada.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="8" class="vazio-tabela">${icone("busca")} Nenhuma oficina encontrada.</td></tr>`;
     $("#rank-contador").textContent = "0 oficinas";
     return;
   }
@@ -111,6 +125,7 @@ function renderRankingTabela() {
       ${celulaMetrica(o, "pecas_mes_total")}
       ${celulaMetrica(o, "pecas_semana")}
       ${celulaMetrica(o, "pecas_semana_total")}
+      ${celulaMetrica(o, "min_mes")}
       ${celulaMetrica(o, "absenteismo")}
       ${celulaMetrica(o, "eficiencia")}
     </tr>`).join("");
@@ -118,7 +133,8 @@ function renderRankingTabela() {
 }
 
 function desenharGraficoRanking() {
-  GraficosDash.renderRanking($("#grafico-ranking"), estado.dados.oficinas, estado.rank.metricaGrafico);
+  GraficosDash.renderRanking($("#grafico-ranking"), estado.dados.oficinas,
+    estado.rank.metricaGrafico, estado.meta);
 }
 
 /* ---------------- Tela 2: Ficha ---------------- */
@@ -140,6 +156,7 @@ function selecionarFicha(id) {
 }
 
 function desenharFicha() {
+  renderTopDesempenho(); // leaderboard independe da oficina selecionada
   const o = estado.dados.oficinas.find((x) => x.oficina_id === estado.fichaId);
   const conteudo = $("#ficha-conteudo"), vazio = $("#ficha-vazio");
   if (!o) { conteudo.hidden = true; vazio.style.display = ""; return; }
@@ -175,15 +192,54 @@ function renderFichaEfic(o) {
   const el = $("#ficha-efic");
   const cel = o.ranking.eficiencia;
   if (!cel) {
-    el.innerHTML = `<div class="serie-vazia">Sem eficiência registrada na planilha para esta oficina.</div>`;
+    el.innerHTML = `<div class="serie-vazia">Sem desempenho registrado na planilha para esta oficina.</div>`;
     return;
   }
-  const rotulo = { ok: "na meta (≥ 65%)", alerta: "abaixo da meta (55–65%)", critico: "crítico (< 65%)" }[cel.semaforo] || "";
+  const meta = estado.meta;
+  const sem = semaforoDesempenho(cel.valor, meta);
+  const metaPct = Math.round(meta * 100);
+  const rotulo = {
+    ok: `na meta (≥ ${metaPct}%)`,
+    alerta: `abaixo da meta (${metaPct - 10}–${metaPct}%)`,
+    critico: `crítico (< ${metaPct - 10}%)`,
+  }[sem] || "";
   el.innerHTML = `
-    <div class="efic-num ${cel.semaforo}">${fmtPct(cel.valor)}</div>
-    <div class="efic-tag"><span class="semaforo ${cel.semaforo}"></span>${rotulo}</div>
-    <div class="efic-nota">Valor oficial da planilha de estoque — média das últimas 4 semanas de
-      entrega ÷ capacidade 100%. Referência ${cel.ano}.</div>`;
+    <div class="efic-num ${sem}">${fmtPct(cel.valor)}</div>
+    <div class="efic-tag"><span class="semaforo ${sem}"></span>${rotulo}</div>
+    <div class="efic-nota">Desempenho oficial da planilha de estoque — média das últimas 4 semanas
+      de entrega ÷ capacidade. Comparado à meta global de ${metaPct}%. Referência ${cel.ano}.</div>`;
+}
+
+/* ---- Top 10 melhores/piores por desempenho (produção ÷ capacidade) ---- */
+function renderTopDesempenho() {
+  const comEfic = estado.dados.oficinas
+    .filter((o) => o.ranking.eficiencia && o.ranking.eficiencia.valor != null)
+    .map((o) => ({ nome: o.nome, id: o.oficina_id, valor: o.ranking.eficiencia.valor }));
+  comEfic.sort((a, b) => b.valor - a.valor);
+
+  const melhores = comEfic.slice(0, 10);
+  const piores = comEfic.slice(-10).reverse(); // piores primeiro (menor no topo)
+
+  const linha = (r, pos) => `
+    <tr class="linha-top" data-id="${r.id}">
+      <td class="col-pos">${pos}</td>
+      <td>${escapar(r.nome)}</td>
+      <td class="num"><span class="val">${fmtPct(r.valor)}</span>
+        <span class="semaforo ${semaforoDesempenho(r.valor, estado.meta)}"></span></td>
+    </tr>`;
+
+  $("#top-melhores").innerHTML = melhores.length
+    ? melhores.map((r, i) => linha(r, i + 1)).join("")
+    : `<tr><td colspan="3" class="vazio-tabela">Sem dados de desempenho.</td></tr>`;
+  $("#top-piores").innerHTML = piores.length
+    ? piores.map((r, i) => linha(r, i + 1)).join("")
+    : `<tr><td colspan="3" class="vazio-tabela">Sem dados de desempenho.</td></tr>`;
+
+  const metaPct = Math.round(estado.meta * 100);
+  const acima = comEfic.filter((r) => r.valor >= estado.meta).length;
+  $("#top-meta-resumo").textContent = comEfic.length
+    ? `meta ${metaPct}% · ${acima} de ${comEfic.length} oficinas na meta`
+    : "";
 }
 
 function desenharSerie(sel, serie, metrica, treinos) {
@@ -257,6 +313,18 @@ function ligarEventos() {
     if (o) { estado.fichaId = o.oficina_id; desenharFicha(); }
   });
 
+  // Clique numa linha do Top 10 abre a ficha daquela oficina.
+  $(".top-desempenho").addEventListener("click", (e) => {
+    const linha = e.target.closest("tr.linha-top");
+    if (linha) selecionarFicha(linha.dataset.id);
+  });
+
+  // Seletor global da meta de desempenho: reclassifica tudo ao vivo.
+  $("#meta-desempenho").addEventListener("change", (e) => {
+    estado.meta = +e.target.value;
+    aplicarMeta();
+  });
+
   [["q-ano", "ano"], ["q-mes", "mes"], ["q-min", "min"], ["q-top", "top"], ["q-setor", "setor"]]
     .forEach(([id, chave]) => {
       const el = document.getElementById(id);
@@ -269,6 +337,19 @@ function ligarEventos() {
     });
 
   $("#tema").addEventListener("click", alternarTema);
+}
+
+/* Reaplica a meta global: atualiza o rótulo do cabeçalho e redesenha o que
+   depende dela (tabela de ranking, gráfico de desempenho e a tela de ficha). */
+function aplicarMeta() {
+  const metaPct = Math.round(estado.meta * 100);
+  const sub = $("#th-efic-sub");
+  if (sub) sub.textContent = `prod./capac. · meta ${metaPct}%`;
+  renderRankingTabela();
+  if (estado.view === "ranking" && estado.rank.metricaGrafico === "eficiencia") {
+    desenharGraficoRanking();
+  }
+  if (estado.view === "ficha") desenharFicha();
 }
 
 function alternarTema() {

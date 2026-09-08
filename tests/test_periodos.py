@@ -6,6 +6,22 @@ from datetime import date, datetime
 from app_oficinas.services import periodos
 
 
+class TestDiasUteis(unittest.TestCase):
+    def test_conta_apenas_segunda_a_sexta(self):
+        # Jan/2026 tem 31 dias; 1º é quinta. Dias úteis conhecidos = 22.
+        self.assertEqual(periodos.dias_uteis(2026, 1), 22)
+
+    def test_fevereiro_bissexto(self):
+        # Fev/2024 (bissexto, 29 dias) começa numa quinta: 21 dias úteis.
+        self.assertEqual(periodos.dias_uteis(2024, 2), 21)
+
+    def test_mes_invalido_levanta(self):
+        with self.assertRaises(ValueError):
+            periodos.dias_uteis(2026, 0)
+        with self.assertRaises(ValueError):
+            periodos.dias_uteis(2026, 13)
+
+
 class TestParaData(unittest.TestCase):
     def test_datetime_vira_date(self):
         self.assertEqual(periodos.para_data(datetime(2026, 1, 2, 9, 30)), date(2026, 1, 2))

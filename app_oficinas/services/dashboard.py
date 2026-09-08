@@ -36,6 +36,8 @@ from __future__ import annotations
 from collections import defaultdict
 from typing import Iterable
 
+from app_oficinas.services.periodos import dias_uteis
+
 # Sentido de cada métrica: +1 se subir é bom, -1 se subir é ruim.
 SENTIDO = {"eficiencia": +1, "absenteismo": -1}
 
@@ -51,11 +53,43 @@ def _mes_periodo(reg: dict) -> str:
 
 
 def _serie_mensal(registros: Iterable[dict], campo_valor: str) -> list[dict]:
-    """Série ordenada ``[{periodo, valor}]`` a partir de registros mensais."""
+    """Série ordenada ``[{periodo, valor, dias_uteis}]`` de registros mensais.
+
+    ``dias_uteis`` acompanha cada ponto para dar contexto de sazonalidade nos
+    gráficos mensais (um mês com menos dias úteis produz menos por calendário).
+    """
     itens = [
-        {"periodo": _mes_periodo(r), "valor": round(r[campo_valor], 4)}
+        {"periodo": _mes_periodo(r), "valor": round(r[campo_valor], 4),
+         "dias_uteis": dias_uteis(r["ano"], r["mes"])}
         for r in registros
         if r.get(campo_valor) is not None
+    ]
+    return sorted(itens, key=lambda x: x["periodo"])
+
+
+def _serie_producao_mensal(registros: Iterable[dict]) -> list[dict]:
+    """Série mensal de produção ``[{periodo, valor, minutos, dias_uteis}]``.
+
+    Além das peças (``valor``), carrega os ``minutos`` trabalhados no mês — o
+    volume de esforço — e os ``dias_uteis``, para leitura de sazonalidade.
+    """
+    itens = [
+        {"periodo": _mes_periodo(r), "valor": round(r["pecas"], 4),
+         "minutos": round(r.get("minutos") or 0, 1),
+         "dias_uteis": dias_uteis(r["ano"], r["mes"])}
+        for r in registros
+        if r.get("pecas") is not None
+    ]
+    return sorted(itens, key=lambda x: x["periodo"])
+
+
+def _serie_producao_semanal(registros: Iterable[dict]) -> list[dict]:
+    """Série semanal de produção ``[{periodo, valor, minutos}]``."""
+    itens = [
+        {"periodo": _semana_periodo(r), "valor": round(r["pecas"], 4),
+         "minutos": round(r.get("minutos") or 0, 1)}
+        for r in registros
+        if r.get("pecas") is not None
     ]
     return sorted(itens, key=lambda x: x["periodo"])
 
@@ -63,16 +97,6 @@ def _serie_mensal(registros: Iterable[dict], campo_valor: str) -> list[dict]:
 def _semana_periodo(reg: dict) -> str:
     """Rótulo de período semanal ``AAAA-Www`` a partir de um registro."""
     return f"{reg['ano']:04d}-W{reg['semana']:02d}"
-
-
-def _serie_semanal(registros: Iterable[dict], campo_valor: str) -> list[dict]:
-    """Série ordenada ``[{periodo, valor}]`` a partir de registros semanais."""
-    itens = [
-        {"periodo": _semana_periodo(r), "valor": round(r[campo_valor], 4)}
-        for r in registros
-        if r.get(campo_valor) is not None
-    ]
-    return sorted(itens, key=lambda x: x["periodo"])
 
 
 def _media_volume(registros: list[dict]) -> tuple[float, int] | None:
@@ -86,6 +110,18 @@ def _media_volume(registros: list[dict]) -> tuple[float, int] | None:
     if not pecas:
         return None
     return round(sum(pecas) / len(pecas), 1), len(pecas)
+
+
+def _media_minutos(registros: list[dict]) -> tuple[float, int] | None:
+    """Média de minutos trabalhados por período (mês/semana) do conjunto.
+
+    Espelha :func:`_media_volume`, mas no esforço (minutos) em vez do resultado
+    (peças) — quanto tempo, em média, a oficina produz por período.
+    """
+    minutos = [r["minutos"] for r in registros if r.get("minutos") is not None]
+    if not minutos:
+        return None
+    return round(sum(minutos) / len(minutos), 1), len(minutos)
 
 
 def _rollup_absenteismo(registros: list[dict]) -> tuple[float, int] | None:
@@ -171,6 +207,8 @@ def _ranking_metricas(
 
     preencher(prod_mes, "pecas_mes", _media_volume)
     preencher(prod_sem, "pecas_semana", _media_volume)
+    preencher(prod_mes, "min_mes", _media_minutos)
+    preencher(prod_sem, "min_semana", _media_minutos)
     preencher_total(prod_mes, "pecas_mes_total", "mes")
     preencher_total(prod_sem, "pecas_semana_total", "semana")
     preencher(absent, "absenteismo", _rollup_absenteismo)
@@ -280,8 +318,8 @@ def montar_oficinas(
             # ranking). Produtividade vira volume em duas linhas do tempo
             # (peças/mês e peças/semana); absenteísmo é mensal.
             "series": {
-                "pecas_mes": _serie_mensal(prod_mes_g.get(oid, []), "pecas"),
-                "pecas_semana": _serie_semanal(prod_sem_g.get(oid, []), "pecas"),
+                "pecas_mes": _serie_producao_mensal(prod_mes_g.get(oid, [])),
+                "pecas_semana": _serie_producao_semanal(prod_sem_g.get(oid, [])),
                 "absenteismo": _serie_mensal(absent_g.get(oid, []), "absenteismo_pct"),
             },
             "treinos": treinos_g.get(oid, []),
@@ -315,6 +353,8 @@ def montar_payload(
             "pecas_semana": "sem semáforo (volume de produção)",
             "pecas_mes_total": "sem semáforo (total do mês recente)",
             "pecas_semana_total": "sem semáforo (total da semana recente)",
+            "min_mes": "sem semáforo (média de minutos/mês)",
+            "min_semana": "sem semáforo (média de minutos/semana)",
         },
         "oficinas": oficinas,
         "impacto_por_oficina": impacto_por_oficina,

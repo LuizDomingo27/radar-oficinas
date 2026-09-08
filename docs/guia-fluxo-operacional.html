@@ -240,8 +240,8 @@
   <p>
     Na <b>Ficha da oficina</b>, cada gráfico com linha do tempo — Peças por mês,
     Peças por semana e Absenteísmo — recebe uma <b>linha vertical tracejada</b>
-    marcando quando a oficina participou de um treinamento. A Eficiência é um
-    valor único (KPI), então não leva marcador.
+    marcando quando a oficina participou de um treinamento. O Desempenho
+    (produção ÷ capacidade) é um valor único (KPI), então não leva marcador.
   </p>
   <ul>
     <li><b>No mês exato.</b> Para as turmas com data (planilha EP 2025), o
@@ -259,6 +259,39 @@
       aquele ano; o marcador por mês vale para as turmas datadas da EP 2025.</li>
     <li><b>Duas etapas do TOC.</b> Cada etapa (1ª e 2ª) vira um marcador próprio,
       no seu respectivo mês.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Indicadores de tempo, sazonalidade e meta de desempenho</h2>
+  <p>
+    Além das peças, o painel agora expõe o <b>tempo</b> (minutos), o
+    <b>calendário</b> (dias úteis) e uma <b>meta de desempenho</b> ajustável.
+  </p>
+  <ul>
+    <li><b>Minutos de produção.</b> A tabela <b>Ranking</b> ganhou a coluna
+      <b>Min/mês</b> (média de minutos trabalhados por mês, no ano mais recente
+      com dado) e o gráfico de barras aceita ordenar por <b>minutos/mês</b> e
+      <b>minutos/semana</b>. Na <b>Ficha</b>, o tooltip dos gráficos de Peças por
+      mês/semana mostra os <b>minutos</b> e o <b>peças/min</b> de cada ponto — a
+      relação entre esforço (tempo) e resultado (peças).</li>
+    <li><b>Dias úteis no mês (sazonalidade).</b> Nos gráficos <b>mensais</b>, sob
+      cada mês aparece a quantidade de <b>dias úteis</b> (segunda a sexta;
+      feriados não são descontados, pois variam por município e não estão nas
+      planilhas). Serve para ler a sazonalidade de calendário: um mês com menos
+      dias úteis tende a produzir menos por efeito do calendário, não de
+      desempenho.</li>
+    <li><b>Meta de desempenho (seletor global).</b> No topo da tela há o seletor
+      <b>Meta desemp.</b>, que inicia em <b>70%</b>. O desempenho de cada oficina
+      é <b>produção ÷ capacidade</b> (o valor oficial que já vem das planilhas de
+      estoque — antes de 65%). O seletor é apenas a <b>linha de corte</b>: muda
+      quem fica verde (na meta), amarelo (até 10 pontos abaixo) ou vermelho, ao
+      vivo, <b>sem alterar a capacidade nem recalcular a eficiência</b>. Afeta a
+      coluna Desempenho do Ranking, o KPI da Ficha e as tabelas Top 10.</li>
+    <li><b>Top 10 melhores e piores (Ficha).</b> No alto da <b>Ficha</b>, duas
+      tabelas listam as oficinas de melhor e pior desempenho (produção ÷
+      capacidade), com o semáforo pela meta escolhida e um resumo de quantas
+      oficinas estão na meta. Clicar numa linha abre a ficha daquela oficina.</li>
   </ul>
 </section>
 

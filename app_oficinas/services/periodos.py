@@ -8,12 +8,31 @@ parte, no próprio ``Periodo.rotulo_semana``.
 
 from __future__ import annotations
 
+import calendar
 import re
 from datetime import date, datetime
 
 from app_oficinas.domain.models import Periodo
 
 _ANO_NO_TEXTO = re.compile(r"(19|20)\d{2}")
+
+
+def dias_uteis(ano: int, mes: int) -> int:
+    """Quantidade de dias úteis (segunda a sexta) de um mês.
+
+    Serve de contexto para os gráficos de sazonalidade mensal: um mês com menos
+    dias úteis produz menos por efeito de calendário, não de desempenho. **Não
+    desconta feriados** — o calendário de feriados varia por município/ano e não
+    está nas planilhas; considerar só o fim de semana é a regra estável possível.
+
+    Levanta ``ValueError`` se o mês estiver fora de 1..12, evitando gerar um
+    número silenciosamente errado.
+    """
+    if not 1 <= mes <= 12:
+        raise ValueError(f"mês inválido: {mes!r} (esperado 1..12)")
+    total = calendar.monthrange(ano, mes)[1]
+    # weekday(): segunda=0 … domingo=6; <5 exclui sábado (5) e domingo (6).
+    return sum(1 for dia in range(1, total + 1) if date(ano, mes, dia).weekday() < 5)
 
 
 def para_data(valor: object) -> date | None:
