@@ -94,7 +94,7 @@
 
 <section>
   <h2>Dados de entrada</h2>
-  <p>Oito planilhas alimentam o painel completo:</p>
+  <p>Nove planilhas alimentam o painel completo:</p>
   <table>
     <tr><th>Planilha</th><th>Alimenta</th></tr>
     <tr><td>RECEBIMENTO</td><td>Produtividade (peças e minutos por dia)</td></tr>
@@ -105,6 +105,7 @@
     <tr><td>EP 2025</td><td>Treinamentos com <b>datas</b> — aba CM (Costura e Mecânica) e TOC — o mês de cada turma</td></tr>
     <tr><td>Inscrições Lidera+ Gestão de Pessoas</td><td>Treinamentos (Lidera+)</td></tr>
     <tr><td>Indicador geral</td><td>Qualidade (nota, 2ª qualidade e causas)</td></tr>
+    <tr><td>FATURAMENTO CONSOLIDADO</td><td>Faturamento (por oficina, mês e semana-do-mês)</td></tr>
   </table>
 
   <h3>Nome exato, abas e colunas de cada planilha</h3>
@@ -163,6 +164,11 @@
         AC Data · <b>DEFEITOS:</b> G Qntd · I Descrição do defeito · L Tipo de
         inspeção · P Setor · S Mês · T Ano</td>
     </tr>
+    <tr>
+      <td><code>FATURAMENTO_CONSOLIDADO.xlsx</code></td><td>faturamento</td>
+      <td><code>Faturamento</code> (cabeçalho na linha 1, dados a partir da 2)</td>
+      <td>A Nome do fornecedor (oficina) · B Data vencimento líq. · C Montante</td>
+    </tr>
   </table>
   <p class="nota">
     <b>“Indicador geral”:</b> o mês no nome pode variar (“_Julho”, “_Agosto”); o
@@ -218,13 +224,13 @@
   <h2>Fluxo completo, do envio ao painel</h2>
   <ol class="passos">
     <li><b>Selecionar as planilhas.</b> Juntas ou uma por vez — os envios se
-      acumulam na sessão até completar as oito.</li>
+      acumulam na sessão até completar as nove.</li>
     <li><b>Clicar em Atualizar dados.</b> Sem nenhum arquivo selecionado, o
       sistema avisa e não faz nada.</li>
     <li><b>Gravação.</b> Cada arquivo é salvo com o nome canônico na pasta de
       onde o processamento lê. Um envio novo substitui o anterior.</li>
-    <li><b>Processamento (6 passos).</b> De-Para de nomes → Fatos → Métricas →
-      Impacto → Dashboard → Qualidade.</li>
+    <li><b>Processamento (7 passos).</b> De-Para de nomes → Fatos → Métricas →
+      Impacto → Dashboard → Qualidade → Faturamento.</li>
     <li><b>Conferência do que falta.</b> O sistema lista as bases ausentes para
       o painel completo.</li>
     <li><b>Publicação.</b> Com o processamento concluído, os arquivos de
@@ -263,6 +269,56 @@
 </section>
 
 <section>
+  <h2>Tela de Faturamento</h2>
+  <p>
+    A tela <b>Faturamento</b> lê a planilha <b>FATURAMENTO CONSOLIDADO</b> (cada
+    linha é um título a receber de uma oficina, com <b>data de vencimento
+    líquido</b> e <b>montante</b>) e responde três perguntas: quem fatura mais e
+    menos, como o faturamento evolui mês a mês e como ele se distribui pelas
+    semanas de um mês. Valores em reais (R$).
+  </p>
+  <h3>Filtros (ano e mês) em cascata</h3>
+  <ul>
+    <li><b>Ano.</b> Ao escolher um ano, o gráfico <b>mensal</b> passa a mostrar os
+      meses daquele ano; com <b>Todos</b>, mostra todos os meses do período em
+      ordem cronológica.</li>
+    <li><b>Mês.</b> Só fica disponível depois de escolher um ano (a semana
+      pertence a um mês de um ano). Ao escolher um mês, todos os gráficos e
+      cards passam a usar somente aquele mês: os rankings de maiores e menores
+      faturamentos, o gráfico mensal (com a coluna do mês escolhido) e o
+      gráfico semanal (com as semanas daquele mês). Sem mês, os dados seguem o
+      ano escolhido; o semanal pede que se selecione ano e mês.</li>
+  </ul>
+  <h3>Gráficos</h3>
+  <ul>
+    <li><b>Maiores e menores faturamentos.</b> As 10 oficinas que mais e que menos
+      faturaram, respeitando o filtro de ano e, quando informado, de mês.</li>
+    <li><b>Faturamento mensal.</b> Uma coluna por mês, seguindo o ano filtrado;
+      com mês selecionado, mostra apenas a coluna desse mês.</li>
+    <li><b>Faturamento semanal.</b> Uma coluna por semana-do-mês do mês filtrado.</li>
+  </ul>
+  <h3>Cards de resumo</h3>
+  <ul>
+    <li><b>Total acumulado.</b> Soma do ano filtrado; sem filtro de ano, soma de
+      todo o período.</li>
+    <li><b>Média mensal.</b> Total do escopo dividido pelo número de meses com
+      dado nesse escopo.</li>
+    <li><b>Semana com maior faturamento.</b> Segue o filtro de mês: com um mês
+      escolhido, a melhor semana daquele mês; sem mês, a maior semana de todo o
+      período (ou do ano, quando um ano está filtrado).</li>
+  </ul>
+  <p class="nota">
+    <b>Definição de semana:</b> semana-do-mês por calendário — dias 1–7 (semana 1),
+    8–14 (2), 15–21 (3), 22–28 (4), 29–fim (5). Cada título cai em exatamente uma
+    semana de um mês, então a “maior semana” é sempre comparável entre meses e
+    entre todo o período. A tela carrega de forma tolerante: se
+    <code>data/faturamento.json</code> faltar, a aba mostra um aviso pedindo
+    <code>python -m scripts.build_faturamento</code> e o resto do painel segue
+    funcionando.
+  </p>
+</section>
+
+<section>
   <h2>Indicadores de tempo, sazonalidade e meta de desempenho</h2>
   <p>
     Além das peças, o painel agora expõe o <b>tempo</b> (minutos), o
@@ -291,9 +347,12 @@
       vivo, <b>sem alterar a capacidade nem recalcular a eficiência</b>. Afeta a
       coluna Desempenho do Ranking, o KPI da Ficha e as tabelas Top 10.</li>
     <li><b>Top 10 melhores e piores (Ficha).</b> No alto da <b>Ficha</b>, duas
-      tabelas listam as oficinas de melhor e pior desempenho (produção ÷
-      capacidade), com o semáforo pela meta escolhida e um resumo de quantas
-      oficinas estão na meta. Clicar numa linha abre a ficha daquela oficina.</li>
+      tabelas centralizadas listam as oficinas de melhor e pior desempenho
+      (produção ÷ capacidade), com o semáforo pela meta escolhida e um resumo
+      de quantas oficinas estão na meta. Em telas largas elas aparecem lado a
+      lado; em telas estreitas, uma abaixo da outra. As posições e os valores
+      de desempenho permanecem em uma única linha para manter a leitura do
+      ranking. Clicar numa linha abre a ficha daquela oficina.</li>
   </ul>
 </section>
 
@@ -364,6 +423,8 @@
         <td>Ranking, ficha por oficina, séries e impacto — o que a tela lê</td></tr>
     <tr><td><code>data/qualidade.json</code></td>
         <td>Nota de qualidade, 2ª qualidade e principais causas</td></tr>
+    <tr><td><code>data/faturamento.json</code></td>
+        <td>Faturamento por oficina, mês e semana-do-mês — o que a tela de Faturamento lê</td></tr>
     <tr><td><code>data/fato_*.json</code>, <code>data/metricas_*.json</code></td>
         <td>Etapas intermediárias, para auditoria e reprocessamento</td></tr>
   </table>

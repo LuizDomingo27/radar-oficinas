@@ -93,6 +93,30 @@ def ler_producao(base_dir: Path | None = None) -> Iterator[dict]:
         wb.close()
 
 
+def ler_faturamento(base_dir: Path | None = None) -> Iterator[dict]:
+    """Títulos de faturamento: uma linha = (oficina, data de vencimento, valor).
+
+    Emite dicionários crus; o serviço de faturamento deriva ano/mês/semana da
+    data e agrega. Linhas sem oficina são ignoradas; a data e o valor seguem
+    crus (o serviço decide como tratar ausências).
+    """
+    f = config.FATURAMENTO
+    wb = _abrir((base_dir or config.PLANILHAS_DIR) / f.arquivo)
+    try:
+        ws = _aba(wb, f.aba, f.arquivo)
+        for linha in ws.iter_rows(min_row=f.primeira_linha, values_only=True):
+            nome = _texto(_celula(linha, f.col_nome))
+            if not nome:
+                continue
+            yield {
+                "nome": nome,
+                "data": _celula(linha, f.col_data),
+                "valor": _num(_celula(linha, f.col_valor)),
+            }
+    finally:
+        wb.close()
+
+
 def ler_absenteismo(base_dir: Path | None = None) -> Iterator[dict]:
     f = config.ABSENTEISMO
     wb = _abrir((base_dir or config.PLANILHAS_DIR) / f.arquivo)

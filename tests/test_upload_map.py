@@ -56,6 +56,11 @@ class TestNomeCanonicoUpload(unittest.TestCase):
             config.nome_canonico_upload("Histórico de Atendimento EP.xlsx"),
             config.TREINO_EP.arquivo)
 
+    def test_faturamento(self):
+        self.assertEqual(
+            config.nome_canonico_upload("Faturamento consolidado 2026.xlsx"),
+            config.FATURAMENTO.arquivo)
+
     def test_ep_2025(self):
         self.assertEqual(
             config.nome_canonico_upload("EP 2025 atualizada.xlsx"),
@@ -72,9 +77,9 @@ class TestNomeCanonicoUpload(unittest.TestCase):
 
 
 class TestArquivosEsperados(unittest.TestCase):
-    def test_cobre_oito_fontes_distintas(self):
-        self.assertEqual(len(config.ARQUIVOS_ESPERADOS), 8)
-        self.assertEqual(len(set(config.ARQUIVOS_ESPERADOS)), 8)
+    def test_cobre_nove_fontes_distintas(self):
+        self.assertEqual(len(config.ARQUIVOS_ESPERADOS), 9)
+        self.assertEqual(len(set(config.ARQUIVOS_ESPERADOS)), 9)
 
     def test_toda_regra_aponta_para_arquivo_esperado(self):
         for _tokens, canonico in config.REGRAS_UPLOAD:

@@ -81,7 +81,7 @@ main{max-width:min(1840px, 97vw)}
 .grafico-q{width:100%;height:clamp(360px,48vw,560px)}
 #view-qualidade .grafico-card h2{flex-wrap:wrap;gap:8px}
 /* O .banner tem display:flex, que vence o atributo [hidden] — reforça o oculto. */
-#q-alerta[hidden]{display:none}
+#q-alerta[hidden],#fat-alerta[hidden]{display:none}
 /* Séries da ficha: mais altas e ocupando a largura toda do card. A altura
    acompanha a viewport para aproveitar telas largas sem ficar espremida. */
 .grafico-serie{width:100%;height:clamp(240px,26vw,320px)}
@@ -115,15 +115,22 @@ tr.linha-rank:hover .ir{opacity:1}
 
 /* ---- Tela 2: Top 10 desempenho (leaderboard da ficha) ---- */
 .secao-nota{font-family:var(--mono);font-size:.72rem;color:var(--faint);font-weight:400;margin-left:8px}
-.top-desempenho{display:grid;gap:16px;margin-bottom:26px}
-@media(min-width:820px){.top-desempenho{grid-template-columns:1fr 1fr}}
+.top-desempenho{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;
+  width:min(100%,1080px);margin:0 auto 26px}
+@media(min-width:720px){.top-desempenho{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* min-width:0 evita o "estouro" do grid: sem ele os nomes longos forçam a
+   coluna a crescer além do container e empurram o 2º card para fora. */
+.top-card{min-width:0}
 .top-card h2{align-items:center;gap:7px}
-.tabela-top{width:100%;border-collapse:collapse}
+/* anula o min-width:760px global — estas tabelas são estreitas e cabem no card */
+.tabela-top{width:100%;min-width:0;border-collapse:collapse}
+.top-card .tabela-wrap{overflow:visible;max-height:none;border:0;border-radius:0;box-shadow:none}
 .tabela-top th,.tabela-top td{padding:7px 10px;border-bottom:1px solid var(--line);font-size:.86rem}
 .tabela-top th{text-align:left;font-family:var(--mono);font-size:.7rem;color:var(--faint);
   text-transform:uppercase;letter-spacing:.03em}
-.tabela-top th.num,.tabela-top td.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono)}
-.tabela-top .col-pos{width:34px;color:var(--faint);font-family:var(--mono);text-align:right}
+.tabela-top th.num,.tabela-top td.num{text-align:right;font-variant-numeric:tabular-nums;
+  font-family:var(--mono);white-space:nowrap}
+.tabela-top .col-pos{width:34px;color:var(--faint);font-family:var(--mono);text-align:right;white-space:nowrap}
 .tabela-top td.num .val{color:var(--ink)}
 tr.linha-top{cursor:pointer}
 tr.linha-top:hover{background:var(--surface-2)}
@@ -143,7 +150,6 @@ tr.linha-top:hover{background:var(--surface-2)}
   border:1px solid color-mix(in srgb,var(--treino) 30%,var(--line))}
 .treino-chip .icon{font-size:.9rem}
 .ficha-graficos{display:grid;gap:16px}
-@media(min-width:900px){.ficha-graficos{grid-template-columns:1fr 1fr}}
 .dot-metrica{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:2px}
 .dot-metrica.m-prod{background:var(--producao)}
 .dot-metrica.m-abse{background:var(--absenteismo)}
@@ -159,7 +165,20 @@ tr.linha-top:hover{background:var(--surface-2)}
   font-variant-numeric:tabular-nums;color:var(--eficiencia)}
 .efic-num.ok{color:var(--ok)} .efic-num.alerta{color:var(--alerta)} .efic-num.critico{color:var(--critico)}
 .efic-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.82rem;color:var(--muted)}
-.efic-nota{font-size:.78rem;color:var(--faint);max-width:46ch;margin-top:2px}
+
+/* ---- Tela 5: faturamento ---- */
+/* KPIs em cima; dois "tops" lado a lado; mensal e semanal em largura cheia. */
+#fat-kpis{margin-bottom:22px}
+/* Faixa de destaque única (verde) para todos os cards de faturamento. */
+#fat-kpis .kpi{--kc:var(--ok)}
+.fat-tops{display:grid;gap:16px;margin-bottom:16px}
+@media(min-width:900px){.fat-tops{grid-template-columns:1fr 1fr}}
+.grafico-fat-top{width:100%;height:clamp(300px,34vw,400px)}
+.grafico-fat{width:100%;height:clamp(280px,30vw,380px)}
+.fat-tops .card h2 .sub,.grafico-card h2 .sub{margin-left:auto;font-family:var(--mono);
+  font-size:.72rem;color:var(--faint)}
+/* Mês desabilitado (sem ano escolhido): fica visivelmente inerte. */
+#fat-mes:disabled{opacity:.5;cursor:not-allowed}
 
 /* ---- Tela 3: impacto ---- */
 .delta-bom{color:var(--ok);font-weight:600}

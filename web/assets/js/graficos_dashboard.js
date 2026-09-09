@@ -339,7 +339,9 @@ const GraficosDash = (() => {
   }
 
   /** Aba Qualidade — barras horizontais genéricas (maior no topo do eixo Y).
-   *  itens: [{rotulo, valor}] já ordenados desc. opts: {cor, ehPct, sufixo}. */
+   *  itens: [{rotulo, valor}] já ordenados desc.
+   *  opts: {cor, ehPct, casas, sufixo} OU um formatador próprio via
+   *  {fmt, fmtEixo} (funções valor→texto) — usado, por ex., para moeda. */
   function renderBarras(el, itens, opts = {}) {
     if (!window.echarts) return;
     const cor = opts.cor && opts.cor.startsWith("--") ? corTema(opts.cor)
@@ -347,11 +349,11 @@ const GraficosDash = (() => {
     const ehPct = !!opts.ehPct;
     const casas = opts.casas;               // nº de casas decimais (ex.: nota)
     const sufixo = opts.sufixo || "";
-    const fmt = (v) => ehPct ? pctFmt(v)
+    const fmt = opts.fmt || ((v) => ehPct ? pctFmt(v)
       : casas != null ? v.toFixed(casas)
-      : intFmt(v) + (sufixo ? " " + sufixo : "");
-    const fmtEixo = (v) => ehPct ? Math.round(v * 100) + "%"
-      : casas != null ? v.toFixed(casas) : intFmt(v);
+      : intFmt(v) + (sufixo ? " " + sufixo : ""));
+    const fmtEixo = opts.fmtEixo || ((v) => ehPct ? Math.round(v * 100) + "%"
+      : casas != null ? v.toFixed(casas) : intFmt(v));
     const dados = itens.slice().reverse(); // maior no topo
     const g = inst(el);
     g.setOption({
@@ -379,6 +381,49 @@ const GraficosDash = (() => {
     }, true);
   }
 
+  /** Tela Faturamento — barras VERTICAIS (colunas) para séries mês/semana.
+   *  itens: [{rotulo, valor, tip?}] na ordem do eixo X (cronológica).
+   *  opts: {cor, fmt, fmtEixo} — ``fmt`` formata rótulo e tooltip (ex.: moeda),
+   *  ``fmtEixo`` formata o eixo Y. ``tip`` (opcional) vira o título do tooltip. */
+  function renderColunas(el, itens, opts = {}) {
+    if (!window.echarts) return;
+    const cor = opts.cor && opts.cor.startsWith("--") ? corTema(opts.cor)
+      : (opts.cor || corTema("--accent"));
+    const fmt = opts.fmt || intFmt;
+    const fmtEixo = opts.fmtEixo || fmt;
+    const fz = escalaRotulo(el);
+    const g = inst(el);
+    g.setOption({
+      ...base(),
+      grid: { left: 8, right: 18, top: 30, bottom: 8, containLabel: true },
+      tooltip: { ...tipBaseAxis(),
+        formatter: (params) => {
+          const p = params[0];
+          const it = itens[p.dataIndex] || {};
+          return caixaTip(it.tip || p.axisValue, [{ cor, rot: "Faturamento", val: fmt(p.value) }]);
+        } },
+      xAxis: {
+        type: "category", data: itens.map((l) => l.rotulo),
+        axisLabel: { ...eixoTexto(), fontSize: fz.eixo, hideOverlap: true, interval: 0 },
+        axisLine: linhaEixo(), axisTick: { show: false },
+      },
+      yAxis: {
+        type: "value",
+        axisLabel: { ...eixoTexto(), fontSize: fz.eixo, formatter: fmtEixo },
+        axisLine: { show: false }, splitLine: { show: false },
+      },
+      series: [{
+        type: "bar", barWidth: "58%", barMaxWidth: 46,
+        data: itens.map((l) => ({ value: l.valor,
+          itemStyle: { color: cor, borderRadius: [3, 3, 0, 0] } })),
+        label: { show: true, position: "top", distance: 5, color: corTema("--muted"),
+          fontFamily: "IBM Plex Sans", fontSize: fz.valor - 1.5, fontWeight: 600,
+          formatter: (p) => fmt(p.value) },
+        labelLayout: { hideOverlap: true },
+      }],
+    }, true);
+  }
+
   function redimensionar() {
     conhecidos.forEach((el) => {
       const g = window.echarts.getInstanceByDom(el);
@@ -386,7 +431,7 @@ const GraficosDash = (() => {
     });
   }
 
-  return { renderRanking, renderSerie, renderBarras, redimensionar, inst, temInstancia, descartar };
+  return { renderRanking, renderSerie, renderBarras, renderColunas, redimensionar, inst, temInstancia, descartar };
 })();
 
 window.addEventListener("resize", () => GraficosDash.redimensionar());

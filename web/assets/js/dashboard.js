@@ -41,6 +41,16 @@ const fmtInt = (v) => v == null ? "—" : Math.round(v).toLocaleString("pt-BR");
 const PCT_METRICAS = new Set(["absenteismo", "eficiencia"]);
 const fmtValor = (metrica, v) =>
   v == null ? "—" : PCT_METRICAS.has(metrica) ? fmtPct(v) : fmtInt(v);
+// Moeda (R$): valor cheio para tooltips/cards e compacto (mi/mil) para eixos e
+// rótulos de barra — o faturamento é da ordem de milhões.
+const fmtBRL = (v) => v == null ? "—"
+  : v.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
+const fmtBRLcurto = (v) => {
+  if (v == null) return "—";
+  if (v >= 1e6) return "R$ " + (v / 1e6).toFixed(1).replace(".", ",") + " mi";
+  if (v >= 1e3) return "R$ " + Math.round(v / 1e3) + " mil";
+  return "R$ " + Math.round(v);
+};
 
 /* ---------------- carga ---------------- */
 async function carregar() {
@@ -70,6 +80,7 @@ function mostrarView(nome) {
   if (nome === "ranking") desenharGraficoRanking();
   if (nome === "ficha") desenharFicha();
   if (nome === "qualidade") desenharQualidade();
+  if (nome === "faturamento") desenharFaturamento();
   requestAnimationFrame(() => GraficosDash.redimensionar());
 }
 
@@ -205,9 +216,7 @@ function renderFichaEfic(o) {
   }[sem] || "";
   el.innerHTML = `
     <div class="efic-num ${sem}">${fmtPct(cel.valor)}</div>
-    <div class="efic-tag"><span class="semaforo ${sem}"></span>${rotulo}</div>
-    <div class="efic-nota">Desempenho oficial da planilha de estoque — média das últimas 4 semanas
-      de entrega ÷ capacidade. Comparado à meta global de ${metaPct}%. Referência ${cel.ano}.</div>`;
+    <div class="efic-tag"><span class="semaforo ${sem}"></span>${rotulo}</div>`;
 }
 
 /* ---- Top 10 melhores/piores por desempenho (produção ÷ capacidade) ---- */
@@ -336,6 +345,17 @@ function ligarEventos() {
       });
     });
 
+  // Filtros do Faturamento: ano preenche o gráfico mensal; mês, o semanal.
+  $("#fat-ano").addEventListener("change", (e) => {
+    estadoF.ano = e.target.value;
+    atualizarMesDisponivel();
+    desenharFaturamento();
+  });
+  $("#fat-mes").addEventListener("change", (e) => {
+    estadoF.mes = e.target.value;
+    desenharFaturamento();
+  });
+
   $("#tema").addEventListener("click", alternarTema);
 }
 
@@ -361,6 +381,7 @@ function alternarTema() {
   if (estado.view === "ranking") desenharGraficoRanking();
   if (estado.view === "ficha") desenharFicha();
   if (estado.view === "qualidade") desenharQualidade();
+  if (estado.view === "faturamento") desenharFaturamento();
 }
 
 /* ---------------- Tela 4: Qualidade ---------------- */
@@ -466,6 +487,191 @@ function desenharQualidade() {
   requestAnimationFrame(() => GraficosDash.redimensionar());
 }
 
+/* ---------------- Tela 5: Faturamento ----------------
+   Dados em data/faturamento.json (gerado por build_faturamento):
+     meses:    [{ano, mes, total}]                         (cronológico)
+     semanas:  [{ano, mes, semana, ini, fim, total}]       (semana-do-mês)
+     oficinas: {todos:[{nome,total}], "<ano>":[...]}       (desc por total)
+     oficinas_mes: {"<ano>-<mm>":[{nome,total}]}            (desc por total)
+   O controlador só filtra por ano/mês e formata — o backend já agregou. */
+const estadoF = { dados: null, ano: "todos", mes: "todos" };
+
+async function carregarFaturamento() {
+  if (window.__FATURAMENTO__) return window.__FATURAMENTO__;
+  const cands = ["../data/faturamento.json", "data/faturamento.json", "/data/faturamento.json"];
+  for (const url of cands) {
+    try { const r = await fetch(url, { cache: "no-store" }); if (r.ok) return await r.json(); }
+    catch (_) { /* tenta o próximo */ }
+  }
+  return null;
+}
+
+function iniciarFaturamento() {
+  const d = estadoF.dados;
+  $("#fat-ano").innerHTML = `<option value="todos">Todos</option>` +
+    d.anos.map((a) => `<option value="${a}">${a}</option>`).join("");
+  $("#fat-mes").innerHTML = `<option value="todos">Todos</option>` +
+    MESES_Q.slice(1).map((rot, i) => `<option value="${i + 1}">${rot}</option>`).join("");
+  atualizarMesDisponivel();
+}
+
+/* Mês só faz sentido com um ano escolhido (a semana pertence a um mês de um
+   ano). Sem ano, o seletor de mês fica travado em "Todos". */
+function atualizarMesDisponivel() {
+  const semAno = estadoF.ano === "todos";
+  const sel = $("#fat-mes");
+  sel.disabled = semAno;
+  if (semAno && estadoF.mes !== "todos") { sel.value = "todos"; estadoF.mes = "todos"; }
+}
+
+const escopoAno = () => estadoF.ano === "todos" ? "todo o período" : `ano ${estadoF.ano}`;
+const escopoF = () => estadoF.mes === "todos"
+  ? escopoAno()
+  : `${MESES_Q[+estadoF.mes]}/${estadoF.ano}`;
+
+// Faixa "dd–dd/mm" de uma semana a partir das datas ISO ini/fim.
+function faixaSemana(s) {
+  return `${s.ini.slice(8, 10)}–${s.fim.slice(8, 10)}/${s.ini.slice(5, 7)}`;
+}
+const rotuloSemana = (s) => `Sem ${s.semana} · ${MESES_Q[s.mes]}/${s.ano} (${faixaSemana(s)})`;
+
+function mesesEscopoF() {
+  const { dados, ano, mes } = estadoF;
+  return dados.meses.filter((m) =>
+    (ano === "todos" || m.ano === +ano) && (mes === "todos" || m.mes === +mes));
+}
+
+function semanasEscopoF() {
+  const { dados, ano, mes } = estadoF;
+  return dados.semanas.filter((s) =>
+    (ano === "todos" || s.ano === +ano) && (mes === "todos" || s.mes === +mes));
+}
+
+function setKpi(idNum, valor, titulo) {
+  const el = $(idNum);
+  el.textContent = valor == null ? "—" : fmtBRLcurto(valor);
+  el.title = valor == null ? "" : (titulo || fmtBRL(valor));
+}
+
+function renderKpisF() {
+  const meses = mesesEscopoF();
+  const total = meses.reduce((s, m) => s + m.total, 0);
+  setKpi("#fat-kpi-total", meses.length ? total : null, fmtBRL(total));
+  $("#fat-kpi-total-l").textContent = `Total acumulado · ${escopoF()}`;
+
+  const media = meses.length ? total / meses.length : null;
+  setKpi("#fat-kpi-media", media);
+
+  // Melhor mês: o maior do escopo do ano; sem ano escolhido, o maior de todo
+  // o período. Segue o mesmo recorte usado nos demais KPIs (mesesEscopoF).
+  if (meses.length) {
+    const melhorMes = meses.reduce((a, b) => b.total > a.total ? b : a);
+    setKpi("#fat-kpi-mes", melhorMes.total);
+    $("#fat-kpi-mes-l").textContent = estadoF.mes === "todos"
+      ? `Maior mês · ${MESES_Q[melhorMes.mes]}/${melhorMes.ano}`
+      : `Faturamento do mês · ${MESES_Q[melhorMes.mes]}/${melhorMes.ano}`;
+  } else {
+    setKpi("#fat-kpi-mes", null);
+    $("#fat-kpi-mes-l").textContent = "Mês com maior faturamento";
+  }
+
+  // Melhor semana: segue o filtro de mês; sem mês, a maior do escopo do ano
+  // (ou de todo o período quando não há ano).
+  const semanas = semanasEscopoF();
+  if (semanas.length) {
+    const melhor = semanas.reduce((a, b) => b.total > a.total ? b : a);
+    setKpi("#fat-kpi-semana", melhor.total);
+    $("#fat-kpi-semana-l").textContent = "Maior semana · " + rotuloSemana(melhor);
+  } else {
+    setKpi("#fat-kpi-semana", null);
+    $("#fat-kpi-semana-l").textContent = "Semana com maior faturamento";
+  }
+}
+
+function renderTopsF() {
+  const mesFiltrado = estadoF.mes !== "todos";
+  const chave = estadoF.ano === "todos" ? "todos" : String(estadoF.ano);
+  const chaveMes = `${estadoF.ano}-${String(estadoF.mes).padStart(2, "0")}`;
+  const lista = mesFiltrado
+    ? (estadoF.dados.oficinas_mes?.[chaveMes] || [])
+    : (estadoF.dados.oficinas[chave] || []);
+  const maiores = lista.slice(0, 10).map((o) => ({ rotulo: o.nome, valor: o.total }));
+  const menores = lista.slice(-10).map((o) => ({ rotulo: o.nome, valor: o.total }));
+  const escopo = `top 10 · ${escopoF()}`;
+  $("#fat-tops-escopo").textContent = escopo;
+  $("#fat-tops-escopo2").textContent = escopo;
+  const opts = { fmt: fmtBRLcurto, fmtEixo: fmtBRLcurto };
+  desenharBarrasF("#fat-g-maiores", maiores, { ...opts, cor: "--ok" });
+  desenharBarrasF("#fat-g-menores", menores, { ...opts, cor: "--critico" });
+}
+
+function renderMensalF() {
+  const meses = mesesEscopoF();
+  const anoTodos = estadoF.ano === "todos";
+  const itens = meses.map((m) => ({
+    rotulo: anoTodos ? `${MESES_Q[m.mes]}/${String(m.ano).slice(2)}` : MESES_Q[m.mes],
+    valor: m.total,
+    tip: `${MESES_Q[m.mes]}/${m.ano}`,
+  }));
+  $("#fat-mensal-escopo").textContent = escopoF();
+  desenharColunasF("#fat-g-mensal", itens, { cor: "--accent", fmt: fmtBRL, fmtEixo: fmtBRLcurto },
+    "Sem dados de faturamento para o período.");
+}
+
+function renderSemanalF() {
+  const rot = $("#fat-semanal-escopo");
+  if (estadoF.ano === "todos" || estadoF.mes === "todos") {
+    rot.textContent = "selecione ano e mês";
+    desenharColunasF("#fat-g-semanal", [], {},
+      "Selecione um ano e um mês para ver o faturamento semanal.");
+    return;
+  }
+  const itens = semanasEscopoF().map((s) => ({
+    rotulo: `S${s.semana}`, valor: s.total, tip: rotuloSemana(s),
+  }));
+  rot.textContent = `${MESES_Q[+estadoF.mes]}/${estadoF.ano}`;
+  desenharColunasF("#fat-g-semanal", itens, { cor: "--eficiencia", fmt: fmtBRL, fmtEixo: fmtBRLcurto },
+    "Sem faturamento registrado neste mês.");
+}
+
+function desenharBarrasF(sel, itens, opts) {
+  const el = $(sel);
+  if (!itens.length) {
+    GraficosDash.descartar(el);
+    el.innerHTML = `<div class="serie-vazia">Sem dados para o filtro selecionado.</div>`;
+    return;
+  }
+  if (!GraficosDash.temInstancia(el)) el.innerHTML = "";
+  GraficosDash.renderBarras(el, itens, opts);
+}
+
+function desenharColunasF(sel, itens, opts, msgVazio) {
+  const el = $(sel);
+  if (!itens.length) {
+    GraficosDash.descartar(el);
+    el.innerHTML = `<div class="serie-vazia">${escapar(msgVazio || "Sem dados.")}</div>`;
+    return;
+  }
+  if (!GraficosDash.temInstancia(el)) el.innerHTML = "";
+  GraficosDash.renderColunas(el, itens, opts);
+}
+
+function desenharFaturamento() {
+  const alerta = $("#fat-alerta");
+  if (!estadoF.dados) {
+    alerta.hidden = false;
+    $("#fat-alerta-txt").textContent =
+      "Não foi possível carregar data/faturamento.json. Rode: python -m scripts.build_faturamento";
+    return;
+  }
+  alerta.hidden = true;
+  renderKpisF();
+  renderTopsF();
+  renderMensalF();
+  renderSemanalF();
+  requestAnimationFrame(() => GraficosDash.redimensionar());
+}
+
 /* ---------------- init ---------------- */
 async function iniciar() {
   ligarEventos();
@@ -491,9 +697,14 @@ async function iniciar() {
   estadoQ.dados = await carregarQualidade();
   if (estadoQ.dados) iniciarQualidade();
 
-  // Rota inicial: aceita #ficha / #impacto / #qualidade vindos de links externos.
+  // Faturamento carrega em separado (tolerante): a falta do seu JSON não derruba
+  // o resto do dashboard — a aba mostra um aviso pedindo o build.
+  estadoF.dados = await carregarFaturamento();
+  if (estadoF.dados) iniciarFaturamento();
+
+  // Rota inicial: aceita #ficha / #impacto / #qualidade / #faturamento.
   const hash = (location.hash || "").replace("#", "");
-  mostrarView(["ficha", "impacto", "qualidade"].includes(hash) ? hash : "ranking");
+  mostrarView(["ficha", "impacto", "qualidade", "faturamento"].includes(hash) ? hash : "ranking");
 }
 
 document.addEventListener("DOMContentLoaded", iniciar);

@@ -48,6 +48,7 @@ def montar_html() -> str:
     js_dash = _ler(WEB / "assets/js/dashboard.js", "")
     dashboard_json = _ler(DATA / "dashboard.json", "null")
     qualidade_json = _ler(DATA / "qualidade.json", "null")
+    faturamento_json = _ler(DATA / "faturamento.json", "null")
 
     # Troca os <link>/<script> locais (com ?v=) pelo conteúdo embutido. O CDN do
     # ECharts e as Google Fonts continuam como estão (carregam no iframe).
@@ -67,7 +68,8 @@ def montar_html() -> str:
                  f"<style>{css_dash}</style>", html)
     # Injeta os dados ANTES dos scripts do app (dashboard.js os lê no load).
     injecao = (f"<script>window.__DASHBOARD__={dashboard_json};"
-               f"window.__QUALIDADE__={qualidade_json};</script>")
+               f"window.__QUALIDADE__={qualidade_json};"
+               f"window.__FATURAMENTO__={faturamento_json};</script>")
     html = troca(r'<script src="assets/js/graficos_dashboard\.js[^"]*"></script>',
                  injecao + f"<script>{js_graf}</script>", html)
     html = troca(r'<script src="assets/js/dashboard\.js[^"]*"></script>',
@@ -275,6 +277,7 @@ if st.sidebar.button("Atualizar dados", type="primary", use_container_width=True
             with st.spinner("Publicando no GitHub..."):
                 cok, cmsg = _commitar_dados([
                     "data/dashboard.json", "data/qualidade.json",
+                    "data/faturamento.json",
                 ])
             extra = ""
             if faltando:

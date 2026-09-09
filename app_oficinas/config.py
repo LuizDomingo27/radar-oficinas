@@ -237,6 +237,23 @@ class FonteEficienciaNaoJeans:
     ano: int = 2026
 
 
+# --------------------------------------------------------------------------- #
+# Fonte de FATURAMENTO — planilha consolidada (fornecedor, vencimento, valor). #
+# --------------------------------------------------------------------------- #
+# Uma linha = um título a receber de uma oficina, com data de vencimento e
+# montante. É a base da tela de Faturamento: totais por oficina, série mensal e
+# série semanal. Colunas conferidas na sondagem (aba única "Faturamento",
+# cabeçalho na linha 1, dados a partir da 2).
+@dataclass(frozen=True)
+class FonteFaturamento:
+    arquivo: str = "FATURAMENTO_CONSOLIDADO.xlsx"
+    aba: str = "Faturamento"
+    primeira_linha: int = 2
+    col_nome: int = 0     # Nome do fornecedor (oficina)
+    col_data: int = 1     # Data vencimento líq.
+    col_valor: int = 2    # Montante (ME)
+
+
 PRODUCAO = FonteProducao()
 ABSENTEISMO = FonteAbsenteismo()
 TREINO_EP = FonteTreinoEP()
@@ -245,6 +262,7 @@ TREINO_EP2025_TOC = FonteTreinoEP2025TOC()
 TREINO_LIDERA = FonteTreinoLidera()
 EFIC_JEANS = FonteEficienciaJeans()
 EFIC_NAOJEANS = FonteEficienciaNaoJeans()
+FATURAMENTO = FonteFaturamento()
 
 
 # --------------------------------------------------------------------------- #
@@ -323,6 +341,7 @@ ARQUIVOS_ESPERADOS: tuple[str, ...] = (
     TREINO_EP2025_CM.arquivo,  # EP 2025.xlsx (abas CM e TOC — mesmo arquivo)
     TREINO_LIDERA.arquivo,     # Inscrições Lidera+ Gestão de Pessoas.xlsx
     QUALIDADE_RESUMO.arquivo,  # Indicador geral_*.xlsx
+    FATURAMENTO.arquivo,       # FATURAMENTO_CONSOLIDADO.xlsx
 )
 
 # Regras (tokens que precisam TODOS aparecer no nome enviado, já sem acento e em
@@ -340,6 +359,7 @@ REGRAS_UPLOAD: tuple[tuple[tuple[str, ...], str], ...] = (
     (("ep", "2025"), TREINO_EP2025_CM.arquivo),
     (("atendimento",), TREINO_EP.arquivo),
     (("lidera",), TREINO_LIDERA.arquivo),
+    (("faturamento",), FATURAMENTO.arquivo),
 )
 
 
@@ -412,6 +432,9 @@ ABAS_ESPERADAS: dict[tuple[str, str], AbaEsperada] = {
     (QUALIDADE_DEFEITOS.arquivo, QUALIDADE_DEFEITOS.aba): AbaEsperada(
         assinatura=("qntd", "descricao do defeito", "tipo de inspecao", "setor"),
         linha_cabecalho=2,
+    ),
+    (FATURAMENTO.arquivo, FATURAMENTO.aba): AbaEsperada(
+        assinatura=("fornecedor", "vencimento", "montante"),
     ),
 }
 
