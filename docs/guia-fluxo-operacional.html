@@ -329,7 +329,11 @@
     <li><b>Faturamento mensal.</b> Uma coluna por mês, seguindo o ano filtrado
       (todos os meses do período quando o ano é <b>Todos</b>). Não muda com o
       filtro de mês.</li>
-    <li><b>Faturamento semanal.</b> Uma coluna por semana-do-mês do mês filtrado.</li>
+    <li><b>Faturamento semanal.</b> Uma coluna por semana-do-mês do mês filtrado,
+      rotulada com a <b>semana do ano</b> (ISO) em que ela começa — “S9” a “S13”
+      para março/2025, e não “S1” a “S5” —, para situar o período no calendário.
+      A dica de cada coluna traz as duas leituras: “Semana 9 do ano · 1ª de
+      Mar/2025 (01–07/03)”.</li>
   </ul>
   <h3>Cards de resumo</h3>
   <ul>
@@ -348,7 +352,11 @@
     <b>Definição de semana:</b> semana-do-mês por calendário — dias 1–7 (semana 1),
     8–14 (2), 15–21 (3), 22–28 (4), 29–fim (5). Cada título cai em exatamente uma
     semana de um mês, então a “maior semana” é sempre comparável entre meses e
-    entre todo o período. A tela carrega de forma tolerante: se
+    entre todo o período. O <b>número da semana do ano</b> mostrado no gráfico é a
+    semana ISO em que o bloco começa: serve para localizar o período no
+    calendário, não é uma reagregação por semana ISO (que vai de segunda a
+    domingo e atravessaria a virada do mês). O card <b>Maior semana</b> segue com
+    a leitura do mês (“Sem 1 · Mar/2025”), que é a pergunta que ele responde. A tela carrega de forma tolerante: se
     <code>data/faturamento.json</code> faltar, a aba mostra um aviso pedindo
     <code>python -m scripts.build_faturamento</code> e o resto do painel segue
     funcionando.

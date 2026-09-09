@@ -535,6 +535,14 @@ function faixaSemana(s) {
 }
 const rotuloSemana = (s) => `Sem ${s.semana} · ${MESES_Q[s.mes]}/${s.ano} (${faixaSemana(s)})`;
 
+/* No eixo do gráfico semanal vale a semana do ano (ISO), que situa o bloco no
+   calendário — "S30" em vez de "S1". Payloads antigos, sem semana_ano, caem no
+   número da semana-do-mês para a tela não sair quebrada. */
+const rotuloEixoSemana = (s) => s.semana_ano ? `S${s.semana_ano}` : `S${s.semana}`;
+const tooltipSemana = (s) => s.semana_ano
+  ? `Semana ${s.semana_ano} do ano · ${s.semana}ª de ${MESES_Q[s.mes]}/${s.ano} (${faixaSemana(s)})`
+  : rotuloSemana(s);
+
 function mesesEscopoF() {
   const { dados, ano, mes } = estadoF;
   return dados.meses.filter((m) =>
@@ -638,7 +646,7 @@ function renderSemanalF() {
     return;
   }
   const itens = semanasEscopoF().map((s) => ({
-    rotulo: `S${s.semana}`, valor: s.total, tip: rotuloSemana(s),
+    rotulo: rotuloEixoSemana(s), valor: s.total, tip: tooltipSemana(s),
   }));
   rot.textContent = `${MESES_Q[+estadoF.mes]}/${estadoF.ano}`;
   desenharColunasF("#fat-g-semanal", itens, { cor: "--eficiencia", fmt: fmtBRL, fmtEixo: fmtBRLcurto },

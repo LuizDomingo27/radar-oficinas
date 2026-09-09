@@ -47,6 +47,28 @@ class TestConsolidar(unittest.TestCase):
         # A semana 5 de janeiro (31 dias) vai do dia 29 ao 31.
         self.assertEqual((s5["ini"], s5["fim"]), ("2025-01-29", "2025-01-31"))
 
+    def test_semana_iso_do_inicio_do_bloco(self):
+        p = faturamento.consolidar(self.registros)
+        jan = {s["semana"]: s["semana_ano"] for s in p["semanas"]
+               if s["ano"] == 2025 and s["mes"] == 1}
+        # 01/01/2025 (qua) cai na semana ISO 1; 08/01 na 2; 29/01 na 5.
+        self.assertEqual(jan, {1: 1, 2: 2, 5: 5})
+
+    def test_semana_iso_cresce_dentro_do_mes(self):
+        """Blocos são 7 dias apart: o número ISO nunca repete dentro do mês."""
+        registros = [_reg("OFICINA A", date(2025, 3, dia), 10.0)
+                     for dia in (1, 8, 15, 22, 29)]
+        p = faturamento.consolidar(registros)
+        marco = [s["semana_ano"] for s in p["semanas"] if s["mes"] == 3]
+        self.assertEqual(marco, [9, 10, 11, 12, 13])
+        self.assertEqual(marco, sorted(set(marco)))
+
+    def test_semana_iso_na_virada_do_ano(self):
+        """Dez/2025 começa numa segunda: o bloco 29–31 já é a semana ISO 1."""
+        p = faturamento.consolidar([_reg("OFICINA A", date(2025, 12, 30), 10.0)])
+        s = p["semanas"][0]
+        self.assertEqual((s["semana"], s["semana_ano"]), (5, 1))
+
     def test_oficinas_por_ano_e_total_ordenadas_desc(self):
         p = faturamento.consolidar(self.registros)
         self.assertEqual(

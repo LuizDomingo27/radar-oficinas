@@ -10,6 +10,12 @@ pedido "semanas de acordo com o mês" (cada título cai em exatamente uma semana
 de um mês, sem semana atravessando a virada), e torna a "maior semana" sempre
 comparável entre meses e entre todo o período.
 
+Cada semana também carrega ``semana_ano``: a semana ISO (1..53) do calendário
+anual em que ela **começa**, para situar no ano a semana-do-mês que a tela
+mostra. Os blocos de 7 dias não coincidem com a semana ISO (que vai de segunda
+a domingo), então é uma referência de posição no ano, não uma reagregação — os
+totais continuam sendo os do bloco do mês.
+
 Tudo é feito em uma única passagem pelos títulos (o arquivo tem dezenas de
 milhares de linhas), agregando em dicionários e materializando as listas
 ordenadas só no fim.
@@ -31,12 +37,22 @@ def _semana_do_mes(dia: int) -> int:
     return (dia - 1) // 7 + 1
 
 
-def _intervalo_semana(ano: int, mes: int, semana: int) -> tuple[str, str]:
-    """Datas (ISO) de início e fim da semana-do-mês, com o fim preso ao mês."""
+def _intervalo_semana(ano: int, mes: int, semana: int) -> tuple[date, date]:
+    """Datas de início e fim da semana-do-mês, com o fim preso ao mês."""
     ultimo_dia = calendar.monthrange(ano, mes)[1]
     ini_dia = (semana - 1) * 7 + 1
     fim_dia = min(semana * 7, ultimo_dia)
-    return date(ano, mes, ini_dia).isoformat(), date(ano, mes, fim_dia).isoformat()
+    return date(ano, mes, ini_dia), date(ano, mes, fim_dia)
+
+
+def _semana_iso(dia: date) -> int:
+    """Semana ISO (1..53) do ano em que a data cai.
+
+    Os blocos do mês começam sempre 7 dias depois do anterior, então dentro de
+    um mesmo mês a sequência de semanas ISO é estritamente crescente — o eixo do
+    gráfico semanal não repete número.
+    """
+    return dia.isocalendar()[1]
 
 
 def consolidar(registros: Iterable[dict]) -> dict:
@@ -51,7 +67,8 @@ def consolidar(registros: Iterable[dict]) -> dict:
           - ``moeda``: rótulo da moeda (``"R$"``);
           - ``anos``: anos com dado, crescente;
           - ``meses``: ``[{ano, mes, total}]`` por (ano, mês), cronológico;
-          - ``semanas``: ``[{ano, mes, semana, ini, fim, total}]``, cronológico;
+          - ``semanas``: ``[{ano, mes, semana, semana_ano, ini, fim, total}]``,
+            cronológico (``semana_ano`` é a semana ISO em que o bloco começa);
           - ``oficinas``: ``{"todos": [...], "<ano>": [...]}`` cada lista com
             ``{nome, total}`` em ordem decrescente de total;
           - ``oficinas_mes``: ``{"<ano>-<mm>": [...]}`` para atualizar os
@@ -106,7 +123,8 @@ def consolidar(registros: Iterable[dict]) -> dict:
         ini, fim = _intervalo_semana(ano, mes, semana)
         semanas.append({
             "ano": ano, "mes": mes, "semana": semana,
-            "ini": ini, "fim": fim,
+            "semana_ano": _semana_iso(ini),
+            "ini": ini.isoformat(), "fim": fim.isoformat(),
             "total": round(por_semana[(ano, mes, semana)], 2),
         })
 
