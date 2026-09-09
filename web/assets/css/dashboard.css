@@ -56,22 +56,16 @@ main{max-width:min(1840px, 97vw)}
   .view.ativa .intro h1,.view.ativa .intro h1::after{animation:none}
   .intro h1::after{transform:scaleX(1)}}
 
-/* ---- Nota de rodapé da página (aviso informativo) ---- */
-.pagina-nota{display:flex;gap:12px;align-items:flex-start;margin-top:30px;padding:14px 16px;
-  border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:var(--radius);
-  background:var(--surface-2);color:var(--muted);font-size:.86rem;line-height:1.55}
-.pagina-nota .icon{color:var(--accent);font-size:1.2rem;margin-top:1px;flex:none}
-.pagina-nota strong{color:var(--ink)}
 .secao-titulo{font-family:var(--display);font-size:1.05rem;margin:30px 0 12px;
   padding-bottom:8px;border-bottom:1px solid var(--line)}
 .filtro-label{font-family:var(--mono);font-size:.75rem;color:var(--faint);align-self:center;margin-right:2px}
 .chip-btn.ativa,.chip-btn[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent-ink);
   border-color:var(--accent)}
-.rodape-geral{margin-top:34px}
-.rodape code,.banner code{font-family:var(--mono);font-size:.9em;
-  background:var(--surface-2);padding:1px 5px;border-radius:4px}
 
-/* ---- Gráficos ---- */
+/* ---- Gráficos ----
+   Cartões empilhados numa mesma tela mantêm o respiro das grades (16px);
+   sem isso as bordas se encostam e os blocos parecem um só. */
+.view > .card + .card{margin-top:16px}
 .grafico-card h2{align-items:baseline}
 .inline-select{font-family:var(--mono);font-size:.92rem;color:var(--accent-ink);
   background:var(--surface-2);border:1px solid var(--line);border-radius:7px;

@@ -162,7 +162,6 @@ async function iniciar() {
     const dados = await carregarDados();
     estado.oficinas = dados.oficinas;
     renderKpis(dados.resumo);
-    $("#gerado-em").textContent = dados.gerado_em?.replace("T", " ").replace("+00:00", " UTC") || "";
     Graficos.renderCobertura($("#grafico-cobertura"), estado.oficinas);
     render();
   } catch (err) {

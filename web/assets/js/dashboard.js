@@ -697,8 +697,6 @@ async function iniciar() {
       <p style="color:var(--muted)">Detalhe: ${escapar(err.message)}</p></div>`;
     return;
   }
-  $("#gerado-em").textContent =
-    estado.dados.gerado_em?.replace("T", " ").replace("+00:00", " UTC") || "";
   preencherDatalist();
   renderRankingTabela();
   renderImpactoOficinaTabela();
