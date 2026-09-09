@@ -541,6 +541,13 @@ function mesesEscopoF() {
     (ano === "todos" || m.ano === +ano) && (mes === "todos" || m.mes === +mes));
 }
 
+/* Recorte apenas anual: Total acumulado, Média mensal e o gráfico mensal
+   respondem só ao filtro de ano — escolher um mês não muda esses números. */
+function mesesAnoF() {
+  const { dados, ano } = estadoF;
+  return dados.meses.filter((m) => ano === "todos" || m.ano === +ano);
+}
+
 function semanasEscopoF() {
   const { dados, ano, mes } = estadoF;
   return dados.semanas.filter((s) =>
@@ -554,16 +561,19 @@ function setKpi(idNum, valor, titulo) {
 }
 
 function renderKpisF() {
-  const meses = mesesEscopoF();
-  const total = meses.reduce((s, m) => s + m.total, 0);
-  setKpi("#fat-kpi-total", meses.length ? total : null, fmtBRL(total));
-  $("#fat-kpi-total-l").textContent = `Total acumulado · ${escopoF()}`;
+  // Total e média são consolidados do ano (ou de todo o período): o filtro de
+  // mês não entra nesse recorte.
+  const mesesAno = mesesAnoF();
+  const total = mesesAno.reduce((s, m) => s + m.total, 0);
+  setKpi("#fat-kpi-total", mesesAno.length ? total : null, fmtBRL(total));
+  $("#fat-kpi-total-l").textContent = `Total acumulado · ${escopoAno()}`;
 
-  const media = meses.length ? total / meses.length : null;
+  const media = mesesAno.length ? total / mesesAno.length : null;
   setKpi("#fat-kpi-media", media);
 
-  // Melhor mês: o maior do escopo do ano; sem ano escolhido, o maior de todo
-  // o período. Segue o mesmo recorte usado nos demais KPIs (mesesEscopoF).
+  // Melhor mês: segue o filtro de mês; sem mês, o maior do ano escolhido (ou
+  // de todo o período quando não há ano).
+  const meses = mesesEscopoF();
   if (meses.length) {
     const melhorMes = meses.reduce((a, b) => b.total > a.total ? b : a);
     setKpi("#fat-kpi-mes", melhorMes.total);
@@ -606,14 +616,15 @@ function renderTopsF() {
 }
 
 function renderMensalF() {
-  const meses = mesesEscopoF();
+  // A série mensal é a leitura do ano inteiro — filtrar um mês não a reduz.
+  const meses = mesesAnoF();
   const anoTodos = estadoF.ano === "todos";
   const itens = meses.map((m) => ({
     rotulo: anoTodos ? `${MESES_Q[m.mes]}/${String(m.ano).slice(2)}` : MESES_Q[m.mes],
     valor: m.total,
     tip: `${MESES_Q[m.mes]}/${m.ano}`,
   }));
-  $("#fat-mensal-escopo").textContent = escopoF();
+  $("#fat-mensal-escopo").textContent = escopoAno();
   desenharColunasF("#fat-g-mensal", itens, { cor: "--accent", fmt: fmtBRL, fmtEixo: fmtBRLcurto },
     "Sem dados de faturamento para o período.");
 }

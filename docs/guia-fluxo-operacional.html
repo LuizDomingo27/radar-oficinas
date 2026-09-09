@@ -283,26 +283,34 @@
       meses daquele ano; com <b>Todos</b>, mostra todos os meses do período em
       ordem cronológica.</li>
     <li><b>Mês.</b> Só fica disponível depois de escolher um ano (a semana
-      pertence a um mês de um ano). Ao escolher um mês, todos os gráficos e
-      cards passam a usar somente aquele mês: os rankings de maiores e menores
-      faturamentos, o gráfico mensal (com a coluna do mês escolhido) e o
-      gráfico semanal (com as semanas daquele mês). Sem mês, os dados seguem o
-      ano escolhido; o semanal pede que se selecione ano e mês.</li>
+      pertence a um mês de um ano). Ao escolher um mês, mudam apenas os
+      rankings de maiores e menores faturamentos, o card do mês e o gráfico
+      semanal (com as semanas daquele mês). Sem mês, os dados seguem o ano
+      escolhido; o semanal pede que se selecione ano e mês.</li>
+    <li><b>O que o mês não afeta.</b> <b>Total acumulado</b>, <b>Média mensal</b>
+      e o gráfico <b>Faturamento mensal</b> são leituras consolidadas do ano
+      (ou de todo o período, sem ano escolhido) e respondem somente ao filtro
+      de ano — assim o mês selecionado pode ser comparado com o consolidado sem
+      que os dois mudem juntos.</li>
   </ul>
   <h3>Gráficos</h3>
   <ul>
     <li><b>Maiores e menores faturamentos.</b> As 10 oficinas que mais e que menos
       faturaram, respeitando o filtro de ano e, quando informado, de mês.</li>
-    <li><b>Faturamento mensal.</b> Uma coluna por mês, seguindo o ano filtrado;
-      com mês selecionado, mostra apenas a coluna desse mês.</li>
+    <li><b>Faturamento mensal.</b> Uma coluna por mês, seguindo o ano filtrado
+      (todos os meses do período quando o ano é <b>Todos</b>). Não muda com o
+      filtro de mês.</li>
     <li><b>Faturamento semanal.</b> Uma coluna por semana-do-mês do mês filtrado.</li>
   </ul>
   <h3>Cards de resumo</h3>
   <ul>
     <li><b>Total acumulado.</b> Soma do ano filtrado; sem filtro de ano, soma de
-      todo o período.</li>
-    <li><b>Média mensal.</b> Total do escopo dividido pelo número de meses com
-      dado nesse escopo.</li>
+      todo o período. Ignora o filtro de mês.</li>
+    <li><b>Média mensal.</b> Total do ano (ou do período) dividido pelo número de
+      meses com dado nesse recorte. Ignora o filtro de mês.</li>
+    <li><b>Mês com maior faturamento.</b> Segue o filtro de mês: com um mês
+      escolhido, mostra o faturamento daquele mês; sem mês, o maior mês do ano
+      filtrado (ou de todo o período).</li>
     <li><b>Semana com maior faturamento.</b> Segue o filtro de mês: com um mês
       escolhido, a melhor semana daquele mês; sem mês, a maior semana de todo o
       período (ou do ano, quando um ano está filtrado).</li>
