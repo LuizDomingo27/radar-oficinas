@@ -17,12 +17,27 @@ faça commit dos ``data/*.json`` regerados (arquivos pequenos).
 """
 from __future__ import annotations
 
+import io
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
 import streamlit as st
 import streamlit.components.v1 as components
 
 from app_oficinas import config
+from app_oficinas.errors import RadarError
+# O pipeline é importado AQUI, junto com o ``config``, de propósito.
+#
+# Antes ele era importado lá dentro de ``_rodar_build`` (só no 1º clique em
+# "Atualizar dados"). No Streamlit Cloud o processo fica vivo por horas e o
+# ``/mount/src`` é atualizado por trás (o próprio app comita os data/*.json e o
+# Cloud faz o pull). Com o import tardio, o ``config`` já estava na memória com
+# o código ANTIGO enquanto ``scripts``/``infra`` eram lidos do disco JÁ NOVO —
+# metades de commits diferentes no mesmo processo. Foi assim que
+# ``leitor_fatos.ler_faturamento`` (novo) morreu num ``config.FATURAMENTO``
+# (atributo que só existe no config novo). Importando tudo no mesmo instante, o
+# processo inteiro fica coerente com um único commit.
+from scripts import build_qualidade, build_tudo
 
 RAIZ = Path(__file__).resolve().parent
 WEB = RAIZ / "web"
@@ -133,6 +148,30 @@ def _ultimo_motivo(log: str) -> str:
     return "verifique se todas as planilhas foram enviadas com os nomes esperados"
 
 
+def _falha_inesperada(erro: BaseException) -> str:
+    """Mensagem para um erro que NÃO é ``RadarError`` (falha não prevista).
+
+    ``RadarError`` é a família de problemas que o pipeline sabe explicar (aba
+    renomeada, planilha ausente, coluna sumida) — esses viram texto de ajuda. O
+    que sobra é defeito de código ou ambiente: em vez de derrubar a página com
+    um traceback (e perder os uploads da sessão), devolvemos o tipo e a
+    mensagem do erro, que é o que permite diagnosticar.
+
+    ``AttributeError`` ganha uma dica extra: no Streamlit Cloud ele costuma
+    significar que o processo está com módulos de commits diferentes (o
+    ``/mount/src`` mudou embaixo do app já rodando). Reiniciar resolve.
+    """
+    detalhe = f"{type(erro).__name__}: {erro}"
+    if isinstance(erro, AttributeError):
+        return ("Falha inesperada ao atualizar — nada foi alterado. "
+                f"Detalhe: {detalhe}. Isso costuma ser o app rodando com uma "
+                "versão antiga do código em memória: reinicie a aplicação "
+                "(Manage app › Reboot) e envie as planilhas de novo.")
+    return ("Falha inesperada ao atualizar — nada foi alterado. "
+            f"Detalhe: {detalhe}. Se persistir, reinicie a aplicação "
+            "(Manage app › Reboot) e tente de novo.")
+
+
 def _rodar_build() -> tuple[bool, str]:
     """Roda o pipeline completo; se ele falhar, cai para Qualidade-só.
 
@@ -142,16 +181,18 @@ def _rodar_build() -> tuple[bool, str]:
     (planilha faltando/renomeada) era relatado como sucesso e os JSONs nunca eram
     regerados: a origem do "sincronizado mas sem mudança nos valores". Agora o
     código de saída é conferido de verdade.
+
+    Nada que aconteça aqui pode derrubar a página: qualquer exceção fora da
+    família ``RadarError`` vira mensagem (ver ``_falha_inesperada``). Um
+    traceback na tela apagaria o resultado do upload e não diria ao usuário o
+    que fazer.
     """
-    import io
-    from contextlib import redirect_stderr, redirect_stdout
-
-    from app_oficinas.errors import RadarError
-    from scripts import build_qualidade, build_tudo
-
     log = io.StringIO()
-    with redirect_stdout(log), redirect_stderr(log):
-        codigo = build_tudo.main()
+    try:
+        with redirect_stdout(log), redirect_stderr(log):
+            codigo = build_tudo.main()
+    except Exception as erro:  # noqa: BLE001 — o app não pode quebrar
+        return False, _falha_inesperada(erro)
     if codigo == 0:
         return True, "Pipeline completo atualizado (Ranking, Ficha, Impacto e Qualidade)."
 
@@ -165,6 +206,9 @@ def _rodar_build() -> tuple[bool, str]:
         return False, (f"Falha ao atualizar — nada foi alterado. Motivo: {motivo}. "
                        f"(Qualidade também falhou: {erro2}.) Reenvie as planilhas "
                        f"com os nomes esperados e tente de novo.")
+    except Exception as erro2:  # noqa: BLE001 — o app não pode quebrar
+        return False, (f"Falha ao atualizar — nada foi alterado. Motivo: {motivo}. "
+                       f"({_falha_inesperada(erro2)})")
     return True, (f"Apenas a Qualidade foi atualizada. O restante do dashboard NÃO "
                   f"mudou porque o pipeline completo falhou: {motivo}. Confira se "
                   f"TODAS as planilhas necessárias foram enviadas com os nomes "
@@ -201,17 +245,25 @@ def _commitar_dados(arquivos: list[str]) -> tuple[bool, str]:
         if not caminho.exists():
             continue
         url = f"https://api.github.com/repos/{repo}/contents/{rel}"
-        r = requests.get(url, headers=headers, params={"ref": branch}, timeout=30)
-        sha = r.json().get("sha") if r.status_code == 200 else None
-        payload = {"message": f"Atualiza {rel} via app",
-                   "content": base64.b64encode(caminho.read_bytes()).decode(),
-                   "branch": branch}
-        if sha:
-            payload["sha"] = sha
-        pr = requests.put(url, headers=headers, json=payload, timeout=30)
-        ok_arquivo = pr.status_code in (200, 201)
+        # A rede é a parte que mais falha e a que menos justifica derrubar a
+        # página: os JSONs JÁ foram regerados em disco. Um timeout/DNS vira
+        # linha de erro no relatório, com o app de pé.
+        try:
+            r = requests.get(url, headers=headers, params={"ref": branch}, timeout=30)
+            sha = r.json().get("sha") if r.status_code == 200 else None
+            payload = {"message": f"Atualiza {rel} via app",
+                       "content": base64.b64encode(caminho.read_bytes()).decode(),
+                       "branch": branch}
+            if sha:
+                payload["sha"] = sha
+            pr = requests.put(url, headers=headers, json=payload, timeout=30)
+            ok_arquivo = pr.status_code in (200, 201)
+            estado = "ok" if ok_arquivo else f"erro {pr.status_code}"
+        except (requests.RequestException, OSError, ValueError) as erro:
+            ok_arquivo = False
+            estado = f"erro de rede ({type(erro).__name__})"
         falhou = falhou or not ok_arquivo
-        linhas.append(f"{rel}: {'ok' if ok_arquivo else 'erro ' + str(pr.status_code)}")
+        linhas.append(f"{rel}: {estado}")
     # Nunca relatar sucesso quando o PUT falhou (ex.: 403 = token sem permissão
     # 'Contents: Read and write') — senão o app mostraria "publicado" e os dados
     # não teriam persistido no repositório.
