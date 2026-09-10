@@ -127,6 +127,84 @@ def _bases_presentes() -> tuple[list[str], list[str]]:
     return presentes, faltando
 
 
+def _canonicos_no_disco() -> set[str]:
+    """Nomes canônicos das planilhas já salvas na pasta da sessão."""
+    return {arq for arq in config.ARQUIVOS_ESPERADOS
+            if (config.PLANILHAS_DIR / arq).exists()}
+
+
+def _canonicos_selecionados(uploads) -> set[str]:
+    """Nomes canônicos reconhecidos na seleção ATUAL do file_uploader.
+
+    Mapeia cada arquivo escolhido pelo nome canônico (por palavras-chave), para
+    a checklist já refletir o que está prestes a ser enviado — antes mesmo de
+    clicar em "Atualizar dados". Arquivos que não casam nenhuma regra são
+    ignorados aqui (aparecem à parte, como "não reconhecidos").
+    """
+    canonicos = set()
+    for up in uploads or []:
+        canonico = config.nome_canonico_upload(up.name)
+        if canonico:
+            canonicos.add(canonico)
+    return canonicos
+
+
+def _uploads_nao_reconhecidos(uploads) -> list[str]:
+    """Nomes de arquivos selecionados que não casam nenhuma planilha esperada."""
+    return [up.name for up in (uploads or [])
+            if config.nome_canonico_upload(up.name) is None]
+
+
+def _render_checklist(disponiveis: set[str]) -> None:
+    """Desenha a checklist visual das planilhas: prontas x faltando.
+
+    ``disponiveis`` = canônicos no disco ∪ selecionados agora. As que faltam
+    ganham cor e ícone DIFERENTES (âmbar, contorno tracejado) para saltar aos
+    olhos em meio às muitas bases. Renderizado com HTML/CSS inline (o embed já
+    fixa tema escuro), sem depender de componentes extras do Streamlit.
+    """
+    situacao = config.situacao_planilhas(disponiveis)
+    prontas = sum(1 for *_, ok in situacao if ok)
+    total = len(situacao)
+    itens = []
+    for _arq, rotulo, ok in situacao:
+        if ok:
+            cor, borda, fundo, icone, estado = (
+                "#22c55e", "#22c55e55", "#22c55e14", "✓", "pronta")
+        else:
+            cor, borda, fundo, icone, estado = (
+                "#f59e0b", "#f59e0b", "#f59e0b1f", "!", "falta enviar")
+        estilo_borda = "solid" if ok else "dashed"
+        itens.append(
+            f'<li style="display:flex;align-items:center;gap:.6rem;'
+            f'padding:.55rem .8rem;border:1.5px {estilo_borda} {borda};'
+            f'border-radius:.6rem;background:{fundo};">'
+            f'<span style="flex:0 0 auto;width:1.5rem;height:1.5rem;'
+            f'display:inline-flex;align-items:center;justify-content:center;'
+            f'border-radius:50%;background:{cor};color:#0b0f19;font-weight:800;'
+            f'font-size:.9rem;">{icone}</span>'
+            f'<span style="flex:1 1 auto;color:#e5e7eb;font-weight:600;">{rotulo}'
+            f'</span>'
+            f'<span style="flex:0 0 auto;color:{cor};font-weight:700;'
+            f'font-size:.8rem;text-transform:uppercase;letter-spacing:.03em;">'
+            f'{estado}</span></li>')
+
+    concluido = prontas == total
+    cor_topo = "#22c55e" if concluido else "#f59e0b"
+    resumo = ("Todas as planilhas prontas — pode atualizar."
+              if concluido else f"Faltam {total - prontas} de {total} planilhas.")
+    st.markdown(
+        f'<div style="margin:.2rem 0 1rem;">'
+        f'<div style="display:flex;align-items:baseline;justify-content:space-between;'
+        f'margin-bottom:.5rem;">'
+        f'<strong style="color:#e5e7eb;">Planilhas necessárias</strong>'
+        f'<span style="color:{cor_topo};font-weight:700;">{prontas}/{total} — {resumo}'
+        f'</span></div>'
+        f'<ul style="list-style:none;margin:0;padding:0;display:grid;gap:.4rem;">'
+        + "".join(itens) + "</ul></div>",
+        unsafe_allow_html=True)
+
+
 # Pistas do log, da MAIS específica para a mais genérica. A ordem é o que
 # importa: o pipeline termina sempre com "FALHOU em '1/7 ...'. Abortando o
 # restante." — uma linha que só diz ONDE parou. A causa real ("Aba 'Dados' não
@@ -325,8 +403,26 @@ def render_atualizacao() -> None:
         if _aviso:
             getattr(st, _aviso[0])(_aviso[1])
 
+        st.caption(
+            "Envie as planilhas .xlsx abaixo. Pode subir todas de uma vez ou "
+            "uma a uma — elas se acumulam na sessão. O nome do arquivo é "
+            "reconhecido automaticamente (ano/mês/acento diferentes não "
+            "atrapalham). Acompanhe pela checklist o que ainda falta.")
+
         uploads = st.file_uploader(
             "Planilhas (.xlsx)", type=["xlsx"], accept_multiple_files=True)
+
+        # Checklist AO VIVO: já refletindo o que está no disco da sessão + o que
+        # acabou de ser selecionado no uploader (o Streamlit re-executa a cada
+        # arquivo escolhido). As bases faltando aparecem em cor/ícone distintos.
+        disponiveis = _canonicos_no_disco() | _canonicos_selecionados(uploads)
+        _render_checklist(disponiveis)
+
+        nao_reconhecidos = _uploads_nao_reconhecidos(uploads)
+        if nao_reconhecidos:
+            st.warning(
+                "Não reconheci estes arquivos como uma das planilhas esperadas "
+                "(confira o nome): " + "; ".join(nao_reconhecidos))
 
         if st.button("Atualizar dados", type="primary"):
             if not uploads:

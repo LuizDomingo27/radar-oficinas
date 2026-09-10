@@ -365,6 +365,41 @@ ARQUIVOS_ESPERADOS: tuple[str, ...] = (
     ENDIVIDAMENTO.arquivo,     # Endividamento_Oficinas_*.xlsx
 )
 
+# Rótulo amigável de cada planilha esperada, para a checklist de upload. O nome
+# canônico do arquivo é técnico (tem ano/mês/acento); o rótulo diz, em linguagem
+# de negócio, QUAL base é aquela. A checklist mostra o rótulo em destaque e o
+# nome do arquivo como legenda. Toda chave DEVE estar em ``ARQUIVOS_ESPERADOS``.
+ROTULOS_ARQUIVOS: dict[str, str] = {
+    PRODUCAO.arquivo: "Produção — Recebimento",
+    ABSENTEISMO.arquivo: "Absenteísmo — Postos",
+    EFIC_JEANS.arquivo: "Eficiência — Estoque Jeans",
+    EFIC_NAOJEANS.arquivo: "Eficiência — Estoque Não Jeans",
+    TREINO_EP.arquivo: "Treinamento — Histórico de Atendimento EP",
+    TREINO_EP2025_CM.arquivo: "Treinamento — EP 2025 (CM e TOC)",
+    TREINO_LIDERA.arquivo: "Treinamento — Lidera+ Gestão de Pessoas",
+    QUALIDADE_RESUMO.arquivo: "Qualidade — Indicador geral",
+    FATURAMENTO.arquivo: "Faturamento — Consolidado",
+    ENDIVIDAMENTO.arquivo: "Dívidas — Endividamento das oficinas",
+}
+
+
+def rotulo_arquivo(arquivo: str) -> str:
+    """Rótulo de negócio de uma planilha esperada; o próprio nome se não houver."""
+    return ROTULOS_ARQUIVOS.get(arquivo, arquivo)
+
+
+def situacao_planilhas(disponiveis: set[str]) -> list[tuple[str, str, bool]]:
+    """Checklist das planilhas esperadas, na ordem de ``ARQUIVOS_ESPERADOS``.
+
+    ``disponiveis`` é o conjunto de nomes CANÔNICOS já cobertos (arquivos no
+    disco da sessão somados aos selecionados no envio atual). Devolve, para cada
+    base esperada, ``(arquivo, rotulo, presente)`` — a camada de UI decide como
+    destacar as que ainda faltam.
+    """
+    return [(arq, rotulo_arquivo(arq), arq in disponiveis)
+            for arq in ARQUIVOS_ESPERADOS]
+
+
 # Regras (tokens que precisam TODOS aparecer no nome enviado, já sem acento e em
 # minúsculas) → nome canônico. Ordem importa: a mais específica vem primeiro
 # ("nao jeans" antes de "jeans"). A 1ª regra que casar vence.

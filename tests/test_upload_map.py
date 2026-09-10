@@ -91,5 +91,47 @@ class TestArquivosEsperados(unittest.TestCase):
             self.assertIn(canonico, config.ARQUIVOS_ESPERADOS)
 
 
+class TestRotulosArquivos(unittest.TestCase):
+    def test_todo_arquivo_esperado_tem_rotulo(self):
+        # Sem rótulo faltando (senão a checklist mostra o nome técnico do arquivo).
+        for arq in config.ARQUIVOS_ESPERADOS:
+            self.assertIn(arq, config.ROTULOS_ARQUIVOS)
+            self.assertTrue(config.ROTULOS_ARQUIVOS[arq])
+
+    def test_rotulo_arquivo_conhecido(self):
+        self.assertEqual(
+            config.rotulo_arquivo(config.PRODUCAO.arquivo), "Produção — Recebimento")
+
+    def test_rotulo_arquivo_desconhecido_devolve_o_proprio_nome(self):
+        self.assertEqual(config.rotulo_arquivo("qualquer.xlsx"), "qualquer.xlsx")
+
+
+class TestSituacaoPlanilhas(unittest.TestCase):
+    def test_ordem_segue_arquivos_esperados(self):
+        situacao = config.situacao_planilhas(set())
+        self.assertEqual(
+            [arq for arq, _rot, _ok in situacao], list(config.ARQUIVOS_ESPERADOS))
+
+    def test_nenhuma_disponivel_marca_tudo_faltando(self):
+        situacao = config.situacao_planilhas(set())
+        self.assertTrue(all(not ok for *_r, ok in situacao))
+
+    def test_marca_presentes_e_faltando(self):
+        disponiveis = {config.PRODUCAO.arquivo, config.FATURAMENTO.arquivo}
+        situacao = dict((arq, ok) for arq, _rot, ok in
+                        [(a, r, o) for a, r, o in config.situacao_planilhas(disponiveis)])
+        self.assertTrue(situacao[config.PRODUCAO.arquivo])
+        self.assertTrue(situacao[config.FATURAMENTO.arquivo])
+        self.assertFalse(situacao[config.ABSENTEISMO.arquivo])
+
+    def test_todas_disponiveis_marca_tudo_pronto(self):
+        situacao = config.situacao_planilhas(set(config.ARQUIVOS_ESPERADOS))
+        self.assertTrue(all(ok for *_r, ok in situacao))
+
+    def test_rotulo_acompanha_o_arquivo(self):
+        for arq, rotulo, _ok in config.situacao_planilhas(set()):
+            self.assertEqual(rotulo, config.rotulo_arquivo(arq))
+
+
 if __name__ == "__main__":
     unittest.main()
