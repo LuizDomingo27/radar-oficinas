@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-10T23:20:16+00:00",
+  "gerado_em": "2026-09-10T23:41:32+00:00",
   "total": 175,
   "meta": {
     "descricao": "payload único das três telas do dashboard (Fase 5)",
@@ -350,6 +350,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.037,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0526,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0781,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0235,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.019,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.069,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1705,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1545,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0405,
@@ -1253,6 +1293,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0267,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0455,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0429,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0357,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0208,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.043,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0357,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1085,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.03,
             "dias_uteis": 23
@@ -1957,6 +2037,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0148,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0513,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0565,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0789,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0711,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0222,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0711,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0227,
@@ -2952,6 +3072,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1333,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0444,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0423,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0102,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0323,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0769,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1241,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.1275,
             "dias_uteis": 23
@@ -3707,6 +3867,21 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": -0.2308,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": -0.1356,
             "dias_uteis": 23
@@ -4456,6 +4631,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.1333,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.05,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.125,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0513,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0694,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0139,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.02,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.125,
@@ -5207,6 +5422,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1333,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0727,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0244,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1382,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1813,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1172,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1406,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.125,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.125,
             "dias_uteis": 23
@@ -5922,6 +6177,16 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.2222,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -6510,6 +6775,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0227,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.069,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.102,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0152,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0471,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0441,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1412,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0169,
@@ -7226,6 +7531,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.125,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0476,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0385,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0244,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0303,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -7579,6 +7924,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.037,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.04,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0282,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0362,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0388,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0374,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0074,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-12",
             "valor": 0.0,
@@ -8535,6 +8920,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0364,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0119,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1333,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1267,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1333,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.075,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1133,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0,
@@ -9655,6 +10080,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0435,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1045,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0417,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0208,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1146,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0833,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -10375,6 +10840,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0333,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0426,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0678,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0694,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.14,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1875,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.141,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1146,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.05,
             "dias_uteis": 23
@@ -10833,6 +11338,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.4259,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.069,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0784,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.125,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1333,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.2361,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1944,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.3778,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.3651,
@@ -11513,6 +12058,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0556,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.098,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0536,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0274,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0667,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0167,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0267,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -11764,6 +12349,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0833,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1111,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.125,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.2167,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0909,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1364,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1091,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-12",
             "valor": -0.0606,
@@ -12359,6 +12984,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0984,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.04,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0137,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.06,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1066,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1739,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1848,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0714,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0854,
@@ -13084,6 +13749,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0317,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0211,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0698,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0417,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0667,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -13461,6 +14166,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.2222,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0741,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1154,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1528,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0889,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0972,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1111,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1556,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-12",
             "valor": 0.2037,
@@ -14076,6 +14821,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0897,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0426,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.039,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0105,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0231,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0481,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0865,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0673,
@@ -14929,6 +15714,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0167,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0645,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0588,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.013,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0101,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.035,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0188,
             "dias_uteis": 23
@@ -15125,6 +15950,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.1313,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0392,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0506,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0807,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1362,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1905,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1726,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.2762,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-12",
             "valor": 0.25,
@@ -15734,6 +16599,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0385,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0417,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0139,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0167,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0309,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0481,
@@ -16484,6 +17389,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.08,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0286,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0625,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0208,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0333,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -17174,6 +18119,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0526,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0476,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0769,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0513,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1222,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0278,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0111,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0526,
             "dias_uteis": 23
@@ -17568,7 +18553,28 @@
       "series": {
         "pecas_mes": [],
         "pecas_semana": [],
-        "absenteismo": []
+        "absenteismo": [
+          {
+            "periodo": "2024-05",
+            "valor": 0.0588,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1053,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.25,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.2692,
+            "dias_uteis": 22
+          }
+        ]
       },
       "treinos": [
         {
@@ -17735,6 +18741,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0617,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0541,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0968,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1932,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1339,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0104,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0417,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-12",
             "valor": 0.1111,
@@ -18420,6 +19466,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0278,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0526,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0185,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.012,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0154,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0333,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0347,
@@ -19145,6 +20231,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0182,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0488,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0333,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0429,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0471,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1029,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0735,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0941,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0135,
@@ -19876,6 +21002,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1078,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0635,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0392,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0584,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0128,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0956,
             "dias_uteis": 23
@@ -20369,6 +21535,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0897,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0392,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.026,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.02,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.048,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0078,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0865,
@@ -21048,6 +22254,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": -0.3137,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.04,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0563,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1111,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1944,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.2222,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1807,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": -0.1948,
@@ -21797,6 +23043,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.1111,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0556,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.3095,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1864,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.375,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.4167,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.322,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.125,
@@ -22605,6 +23891,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0968,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.08,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0,
@@ -23434,6 +24760,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0385,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0125,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0387,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -24138,6 +25504,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.125,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1429,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1304,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.125,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.125,
@@ -24884,6 +26290,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1414,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0656,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0222,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0081,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0258,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0397,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0076,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0788,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.1212,
             "dias_uteis": 23
@@ -25598,6 +27044,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0476,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0159,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.011,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0275,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0115,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0364,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0,
@@ -26645,6 +28131,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.05,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.05,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0169,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0128,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0208,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.05,
             "dias_uteis": 23
@@ -27181,6 +28707,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.1556,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0667,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0444,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0167,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0267,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0167,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0833,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0533,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.1129,
@@ -27886,6 +29452,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.1061,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0465,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0308,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0341,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0342,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0449,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0341,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0364,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0698,
@@ -28672,6 +30278,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1183,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0392,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0595,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0536,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0643,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0789,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0424,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0903,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.121,
             "dias_uteis": 23
@@ -29401,6 +31047,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.1111,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0435,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0147,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0745,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0833,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0833,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.075,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.1042,
@@ -30138,6 +31824,21 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.25,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-10",
+            "valor": -1.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.12,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.15,
             "dias_uteis": 23
@@ -30816,6 +32517,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0476,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0444,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0476,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0465,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0467,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0357,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0952,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0476,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0357,
@@ -32052,6 +33793,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.05,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0333,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.01,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.05,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0732,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0341,
             "dias_uteis": 23
@@ -32299,6 +34080,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.1212,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0488,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0781,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1705,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0091,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-12",
             "valor": 0.0909,
@@ -32934,6 +34755,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1053,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0333,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -33104,6 +34965,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.2444,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0476,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0164,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.2,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0625,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0625,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1148,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1333,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-12",
             "valor": 0.2,
@@ -33682,6 +35583,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0667,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0625,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0385,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0278,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.046,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0556,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0263,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.011,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0667,
@@ -34462,6 +36403,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1429,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0455,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.05,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -34747,6 +36728,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.125,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.125,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0938,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0357,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-12",
             "valor": 0.0,
@@ -35544,6 +37565,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0909,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0909,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.069,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.027,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0638,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.15,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0976,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1091,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0909,
             "dias_uteis": 23
@@ -35923,6 +37984,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0488,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0484,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0091,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0455,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0227,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0,
@@ -36465,6 +38566,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0702,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.05,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1333,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0779,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0851,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1067,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1316,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0842,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0789,
@@ -37150,6 +39291,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.2833,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0476,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0182,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0164,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.013,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.2,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.275,
@@ -37856,6 +40037,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.2,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0426,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.027,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0159,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.09,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.05,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.072,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.18,
             "dias_uteis": 23
@@ -38199,6 +40420,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0175,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0588,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0172,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0316,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0132,
@@ -38868,6 +41129,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0556,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0185,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0192,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -39225,6 +41526,26 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0303,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1111,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1111,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-12",
             "valor": -0.1379,
@@ -39863,6 +42184,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0476,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0488,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0379,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0398,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0755,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0732,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0387,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0103,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0476,
@@ -40686,6 +43047,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1667,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.069,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.2623,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0875,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1398,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.2222,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0256,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.2,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.175,
             "dias_uteis": 23
@@ -41416,6 +43817,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.3067,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.04,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0128,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.008,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0933,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.19,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.112,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.2333,
             "dias_uteis": 23
@@ -42096,6 +44537,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0263,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0091,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0048,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0417,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0595,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0099,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0563,
             "dias_uteis": 23
@@ -42313,6 +44794,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0417,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0714,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0238,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0248,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0067,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0625,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0625,
@@ -42922,6 +45443,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0476,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0149,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": -0.0233,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.01,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -43457,6 +46018,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0152,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0435,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0145,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0109,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0089,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0727,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0227,
@@ -44437,6 +47038,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.2937,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.05,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0325,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0364,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0857,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1667,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1607,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1333,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.256,
             "dias_uteis": 23
@@ -45156,6 +47797,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.1515,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.037,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0455,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0455,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1636,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.2045,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1364,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1636,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": -0.1765,
@@ -45887,6 +48568,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0317,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0556,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1667,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1519,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1474,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.05,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0101,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0238,
             "dias_uteis": 23
@@ -46550,6 +49271,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0909,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1818,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0909,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1818,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0364,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0,
@@ -47250,6 +50011,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0909,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.05,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0746,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1818,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1636,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1591,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1477,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1182,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0909,
@@ -47974,6 +50775,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1053,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0357,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0556,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0,
@@ -48907,6 +51748,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0417,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0548,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1224,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.045,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0909,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.101,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -49604,6 +52485,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0625,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0392,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0469,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.05,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0484,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0667,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0256,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0156,
@@ -50324,6 +53245,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0625,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0667,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0444,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.069,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1205,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1447,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1111,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0513,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0625,
@@ -51065,6 +54026,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0741,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0444,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0152,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1111,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0222,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": -0.0222,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0694,
             "dias_uteis": 23
@@ -51659,6 +54660,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.08,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0385,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0137,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0119,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0227,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0538,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.024,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.07,
@@ -52397,6 +55438,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.2308,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0444,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0423,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0833,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0833,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.12,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.125,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.2,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.2308,
             "dias_uteis": 23
@@ -53111,6 +56192,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.16,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0556,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.06,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0312,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0156,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0256,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.22,
@@ -53855,6 +56976,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0833,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.04,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0164,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0625,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.14,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.025,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.04,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.075,
@@ -54946,6 +58107,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0758,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0377,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0128,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": -0.0105,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0088,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1364,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1494,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0189,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0568,
             "dias_uteis": 23
@@ -55675,6 +58876,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.1014,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0385,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0128,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0288,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0086,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0227,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0116,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1217,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.1087,
@@ -56425,6 +59666,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1111,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0667,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -56867,6 +60148,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0175,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0625,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1296,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1316,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1368,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1447,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1184,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1368,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0132,
@@ -57467,6 +60788,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0882,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0256,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0125,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0233,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0086,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1562,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0833,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0787,
@@ -58713,6 +62074,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0909,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0588,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0288,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0072,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0875,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0229,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0985,
             "dias_uteis": 23
@@ -59417,6 +62818,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0267,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0488,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0469,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0795,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0708,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0326,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0319,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.03,
@@ -60389,6 +63830,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0488,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0545,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1316,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0814,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0149,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0263,
             "dias_uteis": 23
@@ -61107,6 +64588,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0588,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0741,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0682,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0526,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0267,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0441,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0941,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0588,
@@ -61841,6 +65362,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0933,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0408,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0139,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0111,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0208,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.024,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.07,
@@ -63055,6 +66616,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0926,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0556,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0392,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0303,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0471,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0294,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0833,
             "dias_uteis": 23
@@ -64180,6 +67781,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0833,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.069,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0882,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.2014,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.2045,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.2031,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1641,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1125,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-12",
             "valor": 0.1875,
             "dias_uteis": 23
@@ -64819,6 +68460,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1111,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0435,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0676,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0385,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1077,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0392,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.048,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.1193,
             "dias_uteis": 23
@@ -65370,6 +69051,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0667,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0588,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.1053,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1125,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.07,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0625,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.05,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.07,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-12",
             "valor": 0.0833,
@@ -66020,6 +69741,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0714,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0476,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0893,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0714,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0714,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.125,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0274,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0,
@@ -66751,6 +70512,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.08,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": -0.2903,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.05,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0192,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0,
             "dias_uteis": 23
@@ -67042,6 +70843,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0625,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0612,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0556,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0556,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0972,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0222,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-12",
             "valor": 0.0,
@@ -67984,6 +71825,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0745,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0635,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0426,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0476,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.125,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.1094,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1172,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.1062,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.072,
             "dias_uteis": 23
@@ -68295,6 +72176,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.12,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0556,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0926,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1266,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.256,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.12,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.11,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.144,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-12",
             "valor": 0.1467,
@@ -69164,6 +73085,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.1449,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0465,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0175,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1548,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.2124,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.163,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.1739,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.2174,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.1413,
             "dias_uteis": 23
@@ -69321,6 +73282,46 @@
         "pecas_mes": [],
         "pecas_semana": [],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.0541,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0182,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-12",
             "valor": 0.0,
@@ -70018,6 +74019,46 @@
           }
         ],
         "absenteismo": [
+          {
+            "periodo": "2024-01",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.1111,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0417,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.0,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0,
+            "dias_uteis": 21
+          },
           {
             "periodo": "2025-01",
             "valor": 0.0,
@@ -70724,6 +74765,46 @@
         ],
         "absenteismo": [
           {
+            "periodo": "2024-01",
+            "valor": 0.0323,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-05",
+            "valor": 0.037,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-06",
+            "valor": 0.0588,
+            "dias_uteis": 20
+          },
+          {
+            "periodo": "2024-07",
+            "valor": 0.1,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-08",
+            "valor": 0.1333,
+            "dias_uteis": 22
+          },
+          {
+            "periodo": "2024-09",
+            "valor": 0.15,
+            "dias_uteis": 21
+          },
+          {
+            "periodo": "2024-10",
+            "valor": 0.0667,
+            "dias_uteis": 23
+          },
+          {
+            "periodo": "2024-11",
+            "valor": 0.0581,
+            "dias_uteis": 21
+          },
+          {
             "periodo": "2025-01",
             "valor": 0.0323,
             "dias_uteis": 23
@@ -71017,14 +75098,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0484,
       "pos_valor": 0.0153,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0331,
+      "status": "ok"
     },
     {
       "oficina_id": "a-maria-dos-santos-silva-faccao",
@@ -71065,9 +75148,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0389,
+      "pos_valor": 0.042,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -71253,14 +75337,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0591,
       "pos_valor": 0.1542,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0951,
+      "status": "ok"
     },
     {
       "oficina_id": "a-s-empreendimentos",
@@ -71303,9 +75389,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1236,
+      "pos_valor": 0.1077,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -71401,14 +75488,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": -0.0734,
       "pos_valor": 0.01,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0834,
+      "status": "ok"
     },
     {
       "oficina_id": "acari-textil",
@@ -71583,14 +75672,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.1263,
       "pos_valor": 0.0707,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0556,
+      "status": "ok"
     },
     {
       "oficina_id": "ajg-confeccoes",
@@ -71631,14 +75722,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.1263,
       "pos_valor": 0.0707,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0556,
+      "status": "ok"
     },
     {
       "oficina_id": "ajg-confeccoes",
@@ -71679,14 +75772,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0556,
       "pos_valor": 0.0622,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0066,
+      "status": "ok"
     },
     {
       "oficina_id": "alanis-queiroz",
@@ -71771,12 +75866,14 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0567,
       "pos_valor": null,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [],
       "delta": null,
-      "status": "sem_dado"
+      "status": "sem_pos"
     },
     {
       "oficina_id": "alianca-confeccoes",
@@ -71861,14 +75958,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0245,
       "pos_valor": 0.0234,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0011,
+      "status": "ok"
     },
     {
       "oficina_id": "aline-rodrigues-de-lima-araujo",
@@ -72243,14 +76342,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.1081,
       "pos_valor": 0.088,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0201,
+      "status": "ok"
     },
     {
       "oficina_id": "araujo-e-m-confeccoes",
@@ -73197,14 +77298,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.018,
       "pos_valor": 0.0921,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0741,
+      "status": "ok"
     },
     {
       "oficina_id": "danjan-confeccoes",
@@ -73247,9 +77350,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0841,
+      "pos_valor": 0.0671,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -73295,14 +77399,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0602,
       "pos_valor": 0.1153,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0551,
+      "status": "ok"
     },
     {
       "oficina_id": "dantas-e-paulino-confeccoes",
@@ -73343,14 +77449,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0602,
       "pos_valor": 0.1153,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0551,
+      "status": "ok"
     },
     {
       "oficina_id": "dantas-e-paulino-confeccoes",
@@ -73391,14 +77499,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0301,
       "pos_valor": 0.0699,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0398,
+      "status": "ok"
     },
     {
       "oficina_id": "di3-confeccoes",
@@ -73439,14 +77549,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0301,
       "pos_valor": 0.0699,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0398,
+      "status": "ok"
     },
     {
       "oficina_id": "di3-confeccoes",
@@ -74014,14 +78126,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0568,
       "pos_valor": 0.0165,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0403,
+      "status": "ok"
     },
     {
       "oficina_id": "f-k-faccao",
@@ -74062,14 +78176,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0568,
       "pos_valor": 0.0165,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0403,
+      "status": "ok"
     },
     {
       "oficina_id": "f-k-faccao",
@@ -74110,14 +78226,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0463,
       "pos_valor": 0.087,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0407,
+      "status": "ok"
     },
     {
       "oficina_id": "f-l-azevedo-confeccao",
@@ -74392,9 +78510,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1393,
+      "pos_valor": 0.1196,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -74632,14 +78751,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0772,
       "pos_valor": 0.0388,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0384,
+      "status": "ok"
     },
     {
       "oficina_id": "faccao-santanense",
@@ -74772,14 +78893,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0518,
       "pos_valor": 0.0218,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.03,
+      "status": "ok"
     },
     {
       "oficina_id": "ferreira-e-araujo-confeccoes",
@@ -75143,9 +79266,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.042,
+      "pos_valor": 0.0313,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025
       ],
       "delta": null,
@@ -75412,14 +79536,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0592,
       "pos_valor": 0.0636,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0044,
+      "status": "ok"
     },
     {
       "oficina_id": "ideal-confeccoes",
@@ -75462,9 +79588,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0644,
+      "pos_valor": 0.0636,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -75728,14 +79855,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.1501,
       "pos_valor": 0.0661,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.084,
+      "status": "ok"
     },
     {
       "oficina_id": "j-s-silva",
@@ -75778,9 +79907,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1024,
+      "pos_valor": 0.1146,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -75978,9 +80108,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0782,
+      "pos_valor": 0.0581,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -76069,9 +80200,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.049,
+      "pos_valor": 0.0323,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025
       ],
       "delta": null,
@@ -76290,9 +80422,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0894,
+      "pos_valor": 0.0982,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -76338,14 +80471,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.1269,
       "pos_valor": 0.0999,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.027,
+      "status": "ok"
     },
     {
       "oficina_id": "joseni-maria-de-medeiros",
@@ -76388,9 +80523,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0706,
+      "pos_valor": 0.0787,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -76486,14 +80622,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0667,
       "pos_valor": 0.012,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0547,
+      "status": "ok"
     },
     {
       "oficina_id": "ksw-confeccoes",
@@ -76534,14 +80672,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0667,
       "pos_valor": 0.012,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0547,
+      "status": "ok"
     },
     {
       "oficina_id": "ksw-confeccoes",
@@ -76632,14 +80772,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0421,
       "pos_valor": 0.0541,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.012,
+      "status": "ok"
     },
     {
       "oficina_id": "lima-confeccoes",
@@ -76774,9 +80916,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0421,
+      "pos_valor": 0.0524,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -76914,14 +81057,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0267,
       "pos_valor": 0.0797,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.053,
+      "status": "ok"
     },
     {
       "oficina_id": "livia-reboucas-de-carvalho",
@@ -76964,9 +81109,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.066,
+      "pos_valor": 0.0556,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -77102,14 +81248,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0438,
       "pos_valor": 0.0889,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0451,
+      "status": "ok"
     },
     {
       "oficina_id": "m-a-vieira-de-almeida",
@@ -77152,9 +81300,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0985,
+      "pos_valor": 0.0864,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -77434,9 +81583,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0967,
+      "pos_valor": 0.0861,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -77582,14 +81732,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0509,
       "pos_valor": 0.1283,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0774,
+      "status": "ok"
     },
     {
       "oficina_id": "m-f-empreendimentos",
@@ -78032,14 +82184,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.05,
       "pos_valor": 0.0318,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.0182,
+      "status": "ok"
     },
     {
       "oficina_id": "marionete-m-de-a-camara",
@@ -78082,9 +82236,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0519,
+      "pos_valor": 0.0513,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -78180,14 +82335,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0341,
       "pos_valor": 0.1338,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0997,
+      "status": "ok"
     },
     {
       "oficina_id": "n-s-constantino",
@@ -78230,9 +82387,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.088,
+      "pos_valor": 0.0742,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -78278,14 +82436,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0341,
       "pos_valor": 0.1338,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0997,
+      "status": "ok"
     },
     {
       "oficina_id": "n-s-constantino",
@@ -78510,14 +82670,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.051,
       "pos_valor": 0.1244,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0734,
+      "status": "ok"
     },
     {
       "oficina_id": "oficina-de-costura-santos",
@@ -78610,9 +82772,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.1707,
+      "pos_valor": 0.1404,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -78918,14 +83081,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.0577,
       "pos_valor": 0.0638,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": 0.0061,
+      "status": "ok"
     },
     {
       "oficina_id": "s-ramos-de-azevedo-neto-confeccoes",
@@ -78968,9 +83133,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0653,
+      "pos_valor": 0.0634,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -79256,9 +83422,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0572,
+      "pos_valor": 0.0657,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -79484,14 +83651,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.1594,
       "pos_valor": 0.0487,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.1107,
+      "status": "ok"
     },
     {
       "oficina_id": "uniao-confeccoes",
@@ -79534,9 +83703,10 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "pre_valor": null,
-      "pos_valor": 0.0836,
+      "pos_valor": 0.1029,
       "pre_anos": [],
       "pos_anos": [
+        2024,
         2025,
         2026
       ],
@@ -79582,14 +83752,16 @@
       "ano_treino": 2025,
       "metrica": "absenteismo",
       "sentido": -1,
-      "pre_valor": null,
+      "pre_valor": 0.1594,
       "pos_valor": 0.0487,
-      "pre_anos": [],
+      "pre_anos": [
+        2024
+      ],
       "pos_anos": [
         2026
       ],
-      "delta": null,
-      "status": "sem_pre"
+      "delta": -0.1107,
+      "status": "ok"
     },
     {
       "oficina_id": "uniao-confeccoes",
@@ -79874,12 +84046,12 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "n_treinadas": 43,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_pre"
+      "n_delta_treinadas": 27,
+      "delta_medio_treinadas": 0.0094,
+      "n_controle": 57,
+      "delta_medio_controle": 0.0254,
+      "dif_em_dif": -0.016,
+      "status": "ok"
     },
     {
       "modulo": "Costura e Mecânica",
@@ -79913,12 +84085,12 @@
       "metrica": "absenteismo",
       "sentido": -1,
       "n_treinadas": 9,
-      "n_delta_treinadas": 0,
-      "delta_medio_treinadas": null,
-      "n_controle": 0,
-      "delta_medio_controle": null,
-      "dif_em_dif": null,
-      "status": "sem_pre"
+      "n_delta_treinadas": 7,
+      "delta_medio_treinadas": -0.0095,
+      "n_controle": 57,
+      "delta_medio_controle": 0.0254,
+      "dif_em_dif": -0.0349,
+      "status": "ok"
     },
     {
       "modulo": "TOC",
