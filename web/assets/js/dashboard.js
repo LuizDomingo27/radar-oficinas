@@ -81,6 +81,7 @@ function mostrarView(nome) {
   if (nome === "ficha") desenharFicha();
   if (nome === "qualidade") desenharQualidade();
   if (nome === "faturamento") desenharFaturamento();
+  if (nome === "dividas") desenharDividas();
   requestAnimationFrame(() => GraficosDash.redimensionar());
 }
 
@@ -346,14 +347,34 @@ function ligarEventos() {
     });
 
   // Filtros do Faturamento: ano preenche o gráfico mensal; mês, o semanal.
+  // Trocar de filtro reinicia a paginação da tabela (o conjunto muda).
   $("#fat-ano").addEventListener("change", (e) => {
     estadoF.ano = e.target.value;
+    estadoF.pagina = 1;
     atualizarMesDisponivel();
     desenharFaturamento();
   });
   $("#fat-mes").addEventListener("change", (e) => {
     estadoF.mes = e.target.value;
+    estadoF.pagina = 1;
     desenharFaturamento();
+  });
+  $("#fat-pag-anterior").addEventListener("click", () => {
+    if (estadoF.pagina > 1) { estadoF.pagina--; renderTabelaF(); }
+  });
+  $("#fat-pag-proxima").addEventListener("click", () => {
+    estadoF.pagina++; renderTabelaF();
+  });
+
+  // Tela de Dívidas: busca filtra a tabela e volta à 1ª página; paginação.
+  $("#div-busca").addEventListener("input", (e) => {
+    estadoD.termo = e.target.value; estadoD.pagina = 1; renderTabelaD();
+  });
+  $("#div-pag-anterior").addEventListener("click", () => {
+    if (estadoD.pagina > 1) { estadoD.pagina--; renderTabelaD(); }
+  });
+  $("#div-pag-proxima").addEventListener("click", () => {
+    estadoD.pagina++; renderTabelaD();
   });
 
   $("#tema").addEventListener("click", alternarTema);
@@ -382,6 +403,7 @@ function alternarTema() {
   if (estado.view === "ficha") desenharFicha();
   if (estado.view === "qualidade") desenharQualidade();
   if (estado.view === "faturamento") desenharFaturamento();
+  if (estado.view === "dividas") desenharDividas();
 }
 
 /* ---------------- Tela 4: Qualidade ---------------- */
@@ -494,7 +516,10 @@ function desenharQualidade() {
      oficinas: {todos:[{nome,total}], "<ano>":[...]}       (desc por total)
      oficinas_mes: {"<ano>-<mm>":[{nome,total}]}            (desc por total)
    O controlador só filtra por ano/mês e formata — o backend já agregou. */
-const estadoF = { dados: null, ano: "todos", mes: "todos" };
+// Linhas por página da tabela "Faturamento completo" (e do detalhamento de
+// dívidas): mantém a tabela curta mesmo com dezenas de oficinas.
+const POR_PAGINA = 15;
+const estadoF = { dados: null, ano: "todos", mes: "todos", pagina: 1 };
 
 async function carregarFaturamento() {
   if (window.__FATURAMENTO__) return window.__FATURAMENTO__;
@@ -606,21 +631,77 @@ function renderKpisF() {
   }
 }
 
-function renderTopsF() {
-  const mesFiltrado = estadoF.mes !== "todos";
+/* Lista de oficinas do escopo atual (ano/mês), decrescente por faturamento —
+   base tanto dos "tops" quanto da tabela completa. */
+function listaFaturamentoEscopo() {
   const chave = estadoF.ano === "todos" ? "todos" : String(estadoF.ano);
   const chaveMes = `${estadoF.ano}-${String(estadoF.mes).padStart(2, "0")}`;
-  const lista = mesFiltrado
+  return estadoF.mes !== "todos"
     ? (estadoF.dados.oficinas_mes?.[chaveMes] || [])
     : (estadoF.dados.oficinas[chave] || []);
-  const maiores = lista.slice(0, 10).map((o) => ({ rotulo: o.nome, valor: o.total }));
-  const menores = lista.slice(-10).map((o) => ({ rotulo: o.nome, valor: o.total }));
+}
+
+/* Linhas extra do tooltip com a dívida da oficina (tributos + encargos), quando
+   ela consta na planilha de endividamento. Sem correspondência, uma nota. */
+function extraDividaTooltip(nome) {
+  const d = dividaDe(nome);
+  if (!d) return [{ sep: true }, { rot: "Dívida", val: "sem registro" }];
+  return [
+    { sep: true },
+    { rot: "Dívida total", val: fmtBRL(d.divida_total), destaque: true },
+    { rot: "Tributos", val: fmtBRL(d.tributos) },
+    { rot: "Encargos", val: fmtBRL(d.encargos) },
+  ];
+}
+
+function renderTopsF() {
+  const lista = listaFaturamentoEscopo();
+  const comExtra = (o) => ({
+    rotulo: o.nome, valor: o.total, extra: extraDividaTooltip(o.nome),
+  });
+  const maiores = lista.slice(0, 10).map(comExtra);
+  const menores = lista.slice(-10).map(comExtra);
   const escopo = `top 10 · ${escopoF()}`;
   $("#fat-tops-escopo").textContent = escopo;
   $("#fat-tops-escopo2").textContent = escopo;
-  const opts = { fmt: fmtBRLcurto, fmtEixo: fmtBRLcurto };
+  const opts = { fmt: fmtBRLcurto, fmtEixo: fmtBRLcurto, rotulo: "Faturamento" };
   desenharBarrasF("#fat-g-maiores", maiores, { ...opts, cor: "--ok" });
   desenharBarrasF("#fat-g-menores", menores, { ...opts, cor: "--critico" });
+}
+
+/* Tabela "Faturamento completo": todas as oficinas do escopo, 15 por página. */
+function renderTabelaF() {
+  const lista = listaFaturamentoEscopo();
+  const tbody = $("#fat-tabela-corpo");
+  $("#fat-tabela-escopo").textContent = escopoF();
+  if (!lista.length) {
+    tbody.innerHTML = `<tr><td colspan="3" class="vazio-tabela">Sem faturamento para o filtro selecionado.</td></tr>`;
+    aplicarPaginacao("#fat-paginacao", "#fat-pag-status", "#fat-pag-anterior", "#fat-pag-proxima", 0, 1);
+    return;
+  }
+  const totalPag = Math.max(1, Math.ceil(lista.length / POR_PAGINA));
+  estadoF.pagina = Math.min(Math.max(1, estadoF.pagina), totalPag);
+  const ini = (estadoF.pagina - 1) * POR_PAGINA;
+  const pagina = lista.slice(ini, ini + POR_PAGINA);
+  tbody.innerHTML = pagina.map((o, i) => `
+    <tr>
+      <td class="col-pos">${ini + i + 1}</td>
+      <td>${escapar(o.nome)}</td>
+      <td class="num"><span class="val">${fmtBRL(o.total)}</span></td>
+    </tr>`).join("");
+  aplicarPaginacao("#fat-paginacao", "#fat-pag-status", "#fat-pag-anterior",
+    "#fat-pag-proxima", lista.length, estadoF.pagina);
+}
+
+/* Ajusta os controles de paginação (status + botões) e mostra/esconde a barra.
+   ``total`` é o nº de linhas filtradas; ``pagina`` a página atual (1-based). */
+function aplicarPaginacao(selBarra, selStatus, selAnt, selProx, total, pagina) {
+  const barra = $(selBarra);
+  const totalPag = Math.max(1, Math.ceil(total / POR_PAGINA));
+  barra.hidden = total <= POR_PAGINA;
+  $(selStatus).textContent = `Página ${pagina} de ${totalPag} · ${total} oficinas`;
+  $(selAnt).disabled = pagina <= 1;
+  $(selProx).disabled = pagina >= totalPag;
 }
 
 function renderMensalF() {
@@ -688,6 +769,192 @@ function desenharFaturamento() {
   renderTopsF();
   renderMensalF();
   renderSemanalF();
+  renderTabelaF();
+  requestAnimationFrame(() => GraficosDash.redimensionar());
+}
+
+/* ---------------- Tela 6: Dívidas ----------------
+   Dados em data/dividas.json (gerado por build_dividas):
+     total_divida / total_tributos / total_encargos : somas gerais
+     oficinas: [{nome, divida_total, tributos, encargos}]  (desc por dívida)
+   O controlador só filtra por texto, pagina e formata — o backend já somou. */
+const estadoD = { dados: null, termo: "", pagina: 1, index: null };
+
+async function carregarDividas() {
+  if (window.__DIVIDAS__) return window.__DIVIDAS__;
+  const cands = ["../data/dividas.json", "data/dividas.json", "/data/dividas.json"];
+  for (const url of cands) {
+    try { const r = await fetch(url, { cache: "no-store" }); if (r.ok) return await r.json(); }
+    catch (_) { /* tenta o próximo */ }
+  }
+  return null;
+}
+
+/* Forma comparável de uma razão social: maiúsculas, sem acento, só letras/
+   números/espaço (espelha ``services.normalizacao.limpar`` do backend). É a
+   chave que casa o nome do fornecedor (faturamento) com a razão social da
+   planilha de dívidas, que costuma ser o começo do nome do fornecedor. */
+function limparNome(t) {
+  return (t || "").normalize("NFKD").replace(/[̀-ͯ]/g, "")
+    .toUpperCase().replace(/[^0-9A-Z ]+/g, " ").replace(/\s+/g, " ").trim();
+}
+
+/* Palavras genéricas do ramo têxtil: presentes em quase toda razão social, não
+   servem para distinguir uma oficina de outra no casamento aproximado. */
+const DIV_GENERICOS = new Set(["CONFECCOES", "CONFECAO", "CONFECCAO", "TEXTIL",
+  "INDUSTRIA", "COMERCIO", "LTDA", "ME", "EPP", "EIRELI", "CIA", "LTD",
+  "SERVICOS", "PRODUCAO", "EMPREENDIMENTOS", "FACCAO", "VESTUARIO", "IND",
+  "COM", "ROUPAS"]);
+
+/* Índice das dívidas por nome limpo, para o join com o faturamento. Guarda o
+   nome limpo, seus tokens e o registro, ordenado do nome MAIS longo para o mais
+   curto — assim o casamento por prefixo prefere a correspondência mais
+   específica. */
+function construirIndiceDividas(dados) {
+  const exato = new Map();
+  const pares = [];
+  for (const o of dados.oficinas) {
+    const chave = limparNome(o.nome);
+    if (!chave) continue;
+    if (!exato.has(chave)) exato.set(chave, o);
+    pares.push({ chave, tokens: chave.split(" "), o });
+  }
+  pares.sort((a, b) => b.chave.length - a.chave.length);
+  return { exato, pares };
+}
+
+/* Alinhamento de dois nomes por tokens, do início para o fim. Conta os tokens
+   que alinham (iguais, ou um prefixo do outro) e, entre eles, os "fortes":
+   palavras reais (≥3 letras) e não genéricas — as que de fato identificam a
+   oficina. Um token inicial (1–2 letras) casando com uma palavra longa
+   (ex.: "B"→"BRAGA") é aceito no MEIO do nome, mas nunca como 1º token, senão
+   uma inicial casaria com qualquer nome ("J"→"JOSENI"). */
+function alinhamentoDivida(ft, dt) {
+  const n = Math.min(ft.length, dt.length);
+  let aligned = 0, fortes = 0;
+  for (let i = 0; i < n; i++) {
+    const a = ft[i], b = dt[i];
+    let kind;
+    if (a === b) kind = "exact";
+    else if ((a.length >= 3 && b.startsWith(a)) || (b.length >= 3 && a.startsWith(b))) kind = "strong";
+    else if (b.startsWith(a) || a.startsWith(b)) kind = "initial";
+    else break;
+    if (i === 0 && kind === "initial") break;
+    aligned++;
+    if (kind !== "initial" && Math.max(a.length, b.length) >= 3
+        && !DIV_GENERICOS.has(a) && !DIV_GENERICOS.has(b)) fortes++;
+  }
+  return { aligned, fortes };
+}
+
+/* Dívida de uma oficina pelo nome (do faturamento ou da própria tela), ou
+   ``null`` se ela não estiver na planilha de endividamento. Três níveis, do
+   mais seguro ao mais tolerante: (1) nome limpo idêntico; (2) a razão social da
+   dívida é o começo do nome do fornecedor; (3) alinhamento de tokens, para
+   nomes que divergem no meio (ex.: "FLAVIA GEORGIA B SILVA…" no faturamento vs
+   "FLAVIA GEORGIA BRAGA SILVA…" na dívida). Exige ≥2 tokens alinhados e ≥1
+   forte para não casar oficinas diferentes que só compartilham iniciais. */
+function dividaDe(nome) {
+  if (!estadoD.index) return null;
+  const alvo = limparNome(nome);
+  if (!alvo) return null;
+  const hit = estadoD.index.exato.get(alvo);
+  if (hit) return hit;
+  for (const { chave, o } of estadoD.index.pares) {
+    if (alvo === chave || alvo.startsWith(chave + " ")) return o;
+  }
+  const ft = alvo.split(" ");
+  let melhor = null;
+  for (const { tokens, o } of estadoD.index.pares) {
+    const { aligned, fortes } = alinhamentoDivida(ft, tokens);
+    if (aligned >= 2 && fortes >= 1) {
+      const nota = fortes * 1000 + aligned;   // + fortes, depois + tokens
+      if (!melhor || nota > melhor.nota) melhor = { nota, o };
+    }
+  }
+  return melhor ? melhor.o : null;
+}
+
+function iniciarDividas() {
+  estadoD.index = construirIndiceDividas(estadoD.dados);
+}
+
+function renderKpisD() {
+  const d = estadoD.dados;
+  const set = (id, v) => {
+    const el = $(id); el.textContent = fmtBRLcurto(v); el.title = fmtBRL(v);
+  };
+  set("#div-kpi-total", d.total_divida);
+  set("#div-kpi-tributos", d.total_tributos);
+  set("#div-kpi-encargos", d.total_encargos);
+  const on = $("#div-kpi-oficinas");
+  on.textContent = String(d.oficinas.length); on.title = "";
+}
+
+function renderMaioresD() {
+  const top = estadoD.dados.oficinas.slice(0, 12).map((o) => ({
+    rotulo: o.nome, valor: o.divida_total,
+    extra: [
+      { rot: "Tributos", val: fmtBRL(o.tributos) },
+      { rot: "Encargos", val: fmtBRL(o.encargos) },
+    ],
+  }));
+  desenharBarrasF("#div-g-maiores", top,
+    { cor: "--critico", fmt: fmtBRLcurto, fmtEixo: fmtBRLcurto, rotulo: "Dívida total" });
+}
+
+/* Tabela de detalhamento: filtra por texto, 15 por página, com linha de total
+   do conjunto FILTRADO ao pé da última página. */
+function renderTabelaD() {
+  const termo = norm(estadoD.termo);
+  const lista = estadoD.dados.oficinas.filter((o) => !termo || norm(o.nome).includes(termo));
+  const tbody = $("#div-tabela-corpo");
+  $("#div-tabela-escopo").textContent = termo
+    ? `${lista.length} de ${estadoD.dados.oficinas.length} oficinas`
+    : `${lista.length} oficinas`;
+  if (!lista.length) {
+    tbody.innerHTML = `<tr><td colspan="4" class="vazio-tabela">${icone("busca")} Nenhuma oficina encontrada.</td></tr>`;
+    aplicarPaginacao("#div-paginacao", "#div-pag-status", "#div-pag-anterior", "#div-pag-proxima", 0, 1);
+    return;
+  }
+  const totalPag = Math.max(1, Math.ceil(lista.length / POR_PAGINA));
+  estadoD.pagina = Math.min(Math.max(1, estadoD.pagina), totalPag);
+  const ini = (estadoD.pagina - 1) * POR_PAGINA;
+  const pagina = lista.slice(ini, ini + POR_PAGINA);
+  let html = pagina.map((o) => `
+    <tr>
+      <td>${escapar(o.nome)}</td>
+      <td class="num"><span class="val">${fmtBRL(o.divida_total)}</span></td>
+      <td class="num">${fmtBRL(o.tributos)}</td>
+      <td class="num">${fmtBRL(o.encargos)}</td>
+    </tr>`).join("");
+  if (estadoD.pagina === totalPag) {
+    const soma = (f) => lista.reduce((s, o) => s + o[f], 0);
+    html += `
+      <tr class="linha-total">
+        <td>Total${termo ? " (filtrado)" : ""}</td>
+        <td class="num">${fmtBRL(soma("divida_total"))}</td>
+        <td class="num">${fmtBRL(soma("tributos"))}</td>
+        <td class="num">${fmtBRL(soma("encargos"))}</td>
+      </tr>`;
+  }
+  tbody.innerHTML = html;
+  aplicarPaginacao("#div-paginacao", "#div-pag-status", "#div-pag-anterior",
+    "#div-pag-proxima", lista.length, estadoD.pagina);
+}
+
+function desenharDividas() {
+  const alerta = $("#div-alerta");
+  if (!estadoD.dados) {
+    alerta.hidden = false;
+    $("#div-alerta-txt").textContent =
+      "Não foi possível carregar data/dividas.json. Rode: python -m scripts.build_dividas";
+    return;
+  }
+  alerta.hidden = true;
+  renderKpisD();
+  renderMaioresD();
+  renderTabelaD();
   requestAnimationFrame(() => GraficosDash.redimensionar());
 }
 
@@ -719,9 +986,15 @@ async function iniciar() {
   estadoF.dados = await carregarFaturamento();
   if (estadoF.dados) iniciarFaturamento();
 
-  // Rota inicial: aceita #ficha / #impacto / #qualidade / #faturamento.
+  // Dívidas carrega em separado (tolerante): a falta do seu JSON não derruba o
+  // resto do dashboard — a aba mostra um aviso pedindo o build. O índice fica
+  // pronto aqui para enriquecer também os tooltips do Faturamento.
+  estadoD.dados = await carregarDividas();
+  if (estadoD.dados) iniciarDividas();
+
+  // Rota inicial: aceita #ficha / #impacto / #qualidade / #faturamento / #dividas.
   const hash = (location.hash || "").replace("#", "");
-  mostrarView(["ficha", "impacto", "qualidade", "faturamento"].includes(hash) ? hash : "ranking");
+  mostrarView(["ficha", "impacto", "qualidade", "faturamento", "dividas"].includes(hash) ? hash : "ranking");
 }
 
 document.addEventListener("DOMContentLoaded", iniciar);

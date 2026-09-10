@@ -94,7 +94,7 @@
 
 <section>
   <h2>Dados de entrada</h2>
-  <p>Nove planilhas alimentam o painel completo:</p>
+  <p>Dez planilhas alimentam o painel completo:</p>
   <table>
     <tr><th>Planilha</th><th>Alimenta</th></tr>
     <tr><td>RECEBIMENTO</td><td>Produtividade (peças e minutos por dia)</td></tr>
@@ -106,6 +106,7 @@
     <tr><td>Inscrições Lidera+ Gestão de Pessoas</td><td>Treinamentos (Lidera+)</td></tr>
     <tr><td>Indicador geral</td><td>Qualidade (nota, 2ª qualidade e causas)</td></tr>
     <tr><td>FATURAMENTO CONSOLIDADO</td><td>Faturamento (por oficina, mês e semana-do-mês)</td></tr>
+    <tr><td>Endividamento Oficinas</td><td>Dívidas das oficinas (dívida total, tributos e encargos)</td></tr>
   </table>
 
   <h3>Nome exato, abas e colunas de cada planilha</h3>
@@ -169,6 +170,13 @@
       <td><code>Faturamento</code> (cabeçalho na linha 1, dados a partir da 2)</td>
       <td>A Nome do fornecedor (oficina) · B Data vencimento líq. · C Montante</td>
     </tr>
+    <tr>
+      <td><code>Endividamento_Oficinas_07.2026.xlsx</code></td><td>endividamento</td>
+      <td><code>Endividamento Oficinas</code> (cabeçalho na linha 1, dados a partir da 2)</td>
+      <td>A Razão Social (oficina) · B Dívida Total (R$) · C Encargos (R$) ·
+        D Tributos (R$). A <b>última linha</b> é um rodapé de totais (sem razão
+        social) e é ignorada — não conta como oficina.</td>
+    </tr>
   </table>
   <p class="nota">
     <b>“Indicador geral”:</b> o mês no nome pode variar (“_Julho”, “_Agosto”); o
@@ -224,13 +232,13 @@
   <h2>Fluxo completo, do envio ao painel</h2>
   <ol class="passos">
     <li><b>Selecionar as planilhas.</b> Juntas ou uma por vez — os envios se
-      acumulam na sessão até completar as nove.</li>
+      acumulam na sessão até completar as dez.</li>
     <li><b>Clicar em Atualizar dados.</b> Sem nenhum arquivo selecionado, o
       sistema avisa e não faz nada.</li>
     <li><b>Gravação.</b> Cada arquivo é salvo com o nome canônico na pasta de
       onde o processamento lê. Um envio novo substitui o anterior.</li>
-    <li><b>Processamento (7 passos).</b> De-Para de nomes → Fatos → Métricas →
-      Impacto → Dashboard → Qualidade → Faturamento.</li>
+    <li><b>Processamento (8 passos).</b> De-Para de nomes → Fatos → Métricas →
+      Impacto → Dashboard → Qualidade → Faturamento → Dívidas.</li>
     <li><b>Conferência do que falta.</b> O sistema lista as bases ausentes para
       o painel completo.</li>
     <li><b>Publicação.</b> Com o processamento concluído, os arquivos de
@@ -325,7 +333,10 @@
   <h3>Gráficos</h3>
   <ul>
     <li><b>Maiores e menores faturamentos.</b> As 10 oficinas que mais e que menos
-      faturaram, respeitando o filtro de ano e, quando informado, de mês.</li>
+      faturaram, respeitando o filtro de ano e, quando informado, de mês. A dica
+      de cada barra, além do faturamento, traz a <b>dívida</b> da oficina (dívida
+      total, tributos e encargos) quando ela consta na planilha de endividamento;
+      se não constar, mostra “Dívida — sem registro”.</li>
     <li><b>Faturamento mensal.</b> Uma coluna por mês, seguindo o ano filtrado
       (todos os meses do período quando o ano é <b>Todos</b>). Não muda com o
       filtro de mês.</li>
@@ -360,6 +371,57 @@
     <code>data/faturamento.json</code> faltar, a aba mostra um aviso pedindo
     <code>python -m scripts.build_faturamento</code> e o resto do painel segue
     funcionando.
+  </p>
+  <h3>Tabela “Faturamento completo”</h3>
+  <p>
+    Abaixo do gráfico semanal, a tabela <b>Faturamento completo</b> lista
+    <b>todas</b> as oficinas do recorte selecionado (ano e, quando informado,
+    mês), em ordem decrescente de faturamento. Para não ficar longa, é
+    <b>paginada em 15 oficinas por página</b> — os botões <b>Anterior</b> e
+    <b>Próxima</b> navegam e o rótulo mostra “Página X de Y · N oficinas”. Trocar
+    o filtro de ano/mês volta para a 1ª página.
+  </p>
+</section>
+
+<section>
+  <h2>Tela de Dívidas</h2>
+  <p>
+    A tela <b>Dívidas</b> lê a planilha <b>Endividamento Oficinas</b> (cada linha
+    é uma oficina, com a dívida total decomposta em <b>tributos</b> e
+    <b>encargos</b>) e responde à pergunta: quanto cada oficina deve, e o quanto
+    isso pesa diante do restante. A última linha da planilha é um <b>rodapé de
+    totais</b> (sem razão social) e é descartada — não conta como oficina nem soma
+    o total em dobro. Cada linha da planilha vira uma oficina na tela (a contagem
+    exibida bate com as oficinas listadas na planilha).
+  </p>
+  <h3>Cards de resumo</h3>
+  <ul>
+    <li><b>Dívida total.</b> Soma da dívida de todas as oficinas (confere com o
+      rodapé de totais da planilha).</li>
+    <li><b>Tributos</b> e <b>Encargos.</b> As duas parcelas que compõem a dívida
+      total.</li>
+    <li><b>Oficinas com dívida.</b> Quantas oficinas constam na planilha.</li>
+  </ul>
+  <h3>Gráfico e tabela</h3>
+  <ul>
+    <li><b>Maiores dívidas.</b> As 12 oficinas mais endividadas; a dica de cada
+      barra traz também os tributos e os encargos.</li>
+    <li><b>Detalhamento por oficina.</b> Tabela com dívida total, tributos e
+      encargos de cada oficina, em ordem decrescente de dívida.
+      <b>Paginada em 15 por página</b>, com um campo de <b>busca</b> por nome e
+      uma linha de <b>total</b> (do conjunto filtrado) ao pé da última página.</li>
+  </ul>
+  <p class="nota">
+    A dívida também aparece nas dicas dos gráficos de maiores e menores
+    faturamentos. O nome do fornecedor (faturamento) e a razão social (dívida)
+    nem sempre são idênticos, então o cruzamento casa por nome de três formas, do
+    mais seguro ao mais tolerante: nome idêntico, razão social como início do
+    nome do fornecedor e, por fim, alinhamento de palavras — que reconhece, por
+    exemplo, “FLAVIA GEORGIA B SILVA…” (faturamento) como “FLAVIA GEORGIA BRAGA
+    SILVA…” (dívida) sem confundir oficinas que só compartilham as iniciais. A
+    tela carrega de forma tolerante: se <code>data/dividas.json</code> faltar, a
+    aba mostra um aviso pedindo <code>python -m scripts.build_dividas</code> e o
+    resto do painel segue funcionando.
   </p>
 </section>
 
@@ -481,6 +543,8 @@
         <td>Nota de qualidade, 2ª qualidade e principais causas</td></tr>
     <tr><td><code>data/faturamento.json</code></td>
         <td>Faturamento por oficina, mês e semana-do-mês — o que a tela de Faturamento lê</td></tr>
+    <tr><td><code>data/dividas.json</code></td>
+        <td>Dívida total, tributos e encargos por oficina — o que a tela de Dívidas lê</td></tr>
     <tr><td><code>data/fato_*.json</code>, <code>data/metricas_*.json</code></td>
         <td>Etapas intermediárias, para auditoria e reprocessamento</td></tr>
   </table>

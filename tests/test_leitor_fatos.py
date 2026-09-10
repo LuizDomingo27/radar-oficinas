@@ -1,7 +1,12 @@
 """Testes da leitura de fatos — foco na eficiência achada pelo cabeçalho."""
 
+import tempfile
 import unittest
+from pathlib import Path
 
+import openpyxl
+
+from app_oficinas import config
 from app_oficinas.errors import FonteInvalida
 from app_oficinas.infra import leitor_fatos as L
 
@@ -47,6 +52,34 @@ class TestColunaEficienciaPorCabecalho(unittest.TestCase):
         cab = ("OFICINA", "Méd. últimas 4W", "Situação")
         with self.assertRaises(FonteInvalida):
             L._achar_col_efic(cab, "x.xlsx", "ESTOQUE")
+
+
+class TestLerEndividamento(unittest.TestCase):
+    """A leitura de dívidas ignora o rodapé de totais (linha sem razão social)."""
+
+    def _planilha(self, dir_, linhas):
+        wb = openpyxl.Workbook()
+        ws = wb.active
+        ws.title = config.ENDIVIDAMENTO.aba
+        ws.append(("Razão Social", "Dívida Total (R$)", "Encargos (R$)", "Tributos (R$)"))
+        for linha in linhas:
+            ws.append(linha)
+        caminho = Path(dir_) / config.ENDIVIDAMENTO.arquivo
+        wb.save(caminho)
+        return caminho
+
+    def test_ignora_rodape_sem_nome_e_le_valores(self):
+        with tempfile.TemporaryDirectory() as d:
+            self._planilha(d, [
+                ("OFICINA A", 100, 30, 70),
+                ("OFICINA B", 500, 100, 400),
+                (None, 600, 130, 470),  # rodapé de totais: sem razão social
+            ])
+            regs = list(L.ler_endividamento(base_dir=Path(d)))
+        self.assertEqual(len(regs), 2)  # o rodapé NÃO vira oficina
+        self.assertEqual(regs[0], {"nome": "OFICINA A", "divida_total": 100.0,
+                                   "encargos": 30.0, "tributos": 70.0})
+        self.assertEqual(regs[1]["nome"], "OFICINA B")
 
 
 if __name__ == "__main__":

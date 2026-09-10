@@ -75,7 +75,7 @@ main{max-width:min(1840px, 97vw)}
 .grafico-q{width:100%;height:clamp(360px,48vw,560px)}
 #view-qualidade .grafico-card h2{flex-wrap:wrap;gap:8px}
 /* O .banner tem display:flex, que vence o atributo [hidden] — reforça o oculto. */
-#q-alerta[hidden],#fat-alerta[hidden]{display:none}
+#q-alerta[hidden],#fat-alerta[hidden],#div-alerta[hidden]{display:none}
 /* Séries da ficha: mais altas e ocupando a largura toda do card. A altura
    acompanha a viewport para aproveitar telas largas sem ficar espremida. */
 .grafico-serie{width:100%;height:clamp(240px,26vw,320px)}
@@ -173,6 +173,29 @@ tr.linha-top:hover{background:var(--surface-2)}
   font-size:.72rem;color:var(--faint)}
 /* Mês desabilitado (sem ano escolhido): fica visivelmente inerte. */
 #fat-mes:disabled{opacity:.5;cursor:not-allowed}
+
+/* ---- Tabela simples + paginação (Faturamento completo e Dívidas) ---- */
+/* Tabela enxuta (poucas colunas): não herda o min-width largo da de ranking. */
+.tabela-simples{width:100%;min-width:0;border-collapse:collapse}
+.tabela-simples th,.tabela-simples td{padding:8px 12px;border-bottom:1px solid var(--line);font-size:.86rem}
+.tabela-simples th{text-align:left;font-family:var(--mono);font-size:.7rem;color:var(--faint);
+  text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+.tabela-simples th.num,.tabela-simples td.num{text-align:right;font-variant-numeric:tabular-nums;
+  font-family:var(--mono)}
+.tabela-simples td.num .val{color:var(--ink)}
+.tabela-simples .col-pos{width:44px;color:var(--faint);font-family:var(--mono);text-align:right;white-space:nowrap}
+.tabela-simples tbody tr:hover{background:var(--surface-2)}
+.tabela-simples tr.linha-total{font-weight:700}
+.tabela-simples tr.linha-total td{border-top:2px solid var(--line);border-bottom:0;color:var(--ink)}
+.paginacao{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px}
+.paginacao .chip-btn:disabled{opacity:.4;cursor:not-allowed}
+.pag-status{font-family:var(--mono);font-size:.78rem;color:var(--muted);min-width:130px;text-align:center}
+
+/* ---- Tela 6: dívidas ---- */
+/* Faixa vermelha nos KPIs (é um painel de risco/passivo). */
+#div-kpis{margin-bottom:22px}
+#div-kpis .kpi{--kc:var(--critico)}
+#div-g-maiores{width:100%;height:clamp(360px,48vw,560px)}
 
 /* ---- Tela 3: impacto ---- */
 .delta-bom{color:var(--ok);font-weight:600}

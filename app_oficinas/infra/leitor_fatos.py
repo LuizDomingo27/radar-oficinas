@@ -117,6 +117,31 @@ def ler_faturamento(base_dir: Path | None = None) -> Iterator[dict]:
         wb.close()
 
 
+def ler_endividamento(base_dir: Path | None = None) -> Iterator[dict]:
+    """Dívida de cada oficina: uma linha = (razão social, dívida, encargos, tributos).
+
+    Emite dicionários crus com os três valores em reais. Linhas sem razão social
+    são ignoradas — é o que descarta o RODAPÉ de totais da planilha (última
+    linha, sem nome), evitando contá-lo como oficina ou somar o total em dobro.
+    """
+    f = config.ENDIVIDAMENTO
+    wb = _abrir((base_dir or config.PLANILHAS_DIR) / f.arquivo)
+    try:
+        ws = _aba(wb, f.aba, f.arquivo)
+        for linha in ws.iter_rows(min_row=f.primeira_linha, values_only=True):
+            nome = _texto(_celula(linha, f.col_nome))
+            if not nome:
+                continue
+            yield {
+                "nome": nome,
+                "divida_total": _num(_celula(linha, f.col_divida)),
+                "encargos": _num(_celula(linha, f.col_encargos)),
+                "tributos": _num(_celula(linha, f.col_tributos)),
+            }
+    finally:
+        wb.close()
+
+
 def ler_absenteismo(base_dir: Path | None = None) -> Iterator[dict]:
     f = config.ABSENTEISMO
     wb = _abrir((base_dir or config.PLANILHAS_DIR) / f.arquivo)

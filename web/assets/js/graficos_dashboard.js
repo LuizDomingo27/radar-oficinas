@@ -341,7 +341,11 @@ const GraficosDash = (() => {
   /** Aba Qualidade — barras horizontais genéricas (maior no topo do eixo Y).
    *  itens: [{rotulo, valor}] já ordenados desc.
    *  opts: {cor, ehPct, casas, sufixo} OU um formatador próprio via
-   *  {fmt, fmtEixo} (funções valor→texto) — usado, por ex., para moeda. */
+   *  {fmt, fmtEixo} (funções valor→texto) — usado, por ex., para moeda.
+   *  ``opts.rotulo`` troca o rótulo da 1ª linha do tooltip (padrão "Valor").
+   *  Cada item pode trazer ``extra``: linhas adicionais no tooltip no formato
+   *  aceito por ``caixaTip`` ({rot, val, cor?} ou {sep:true}) — usado, por ex.,
+   *  para anexar tributos/encargos/dívida ao faturamento de cada oficina. */
   function renderBarras(el, itens, opts = {}) {
     if (!window.echarts) return;
     const cor = opts.cor && opts.cor.startsWith("--") ? corTema(opts.cor)
@@ -349,6 +353,7 @@ const GraficosDash = (() => {
     const ehPct = !!opts.ehPct;
     const casas = opts.casas;               // nº de casas decimais (ex.: nota)
     const sufixo = opts.sufixo || "";
+    const rotulo = opts.rotulo || "Valor";
     const fmt = opts.fmt || ((v) => ehPct ? pctFmt(v)
       : casas != null ? v.toFixed(casas)
       : intFmt(v) + (sufixo ? " " + sufixo : ""));
@@ -360,7 +365,12 @@ const GraficosDash = (() => {
       ...base(),
       grid: { left: 8, right: 64, top: 10, bottom: 8, containLabel: true },
       tooltip: { ...tipBaseItem(),
-        formatter: (p) => caixaTip(p.name, [{ cor, rot: "Valor", val: fmt(p.value) }]) },
+        formatter: (p) => {
+          const it = dados[p.dataIndex] || {};
+          const linhas = [{ cor, rot: rotulo, val: fmt(p.value) }];
+          if (Array.isArray(it.extra)) linhas.push(...it.extra);
+          return caixaTip(p.name, linhas);
+        } },
       xAxis: {
         type: "value",
         axisLabel: { ...eixoTexto(), formatter: fmtEixo },

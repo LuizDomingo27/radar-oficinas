@@ -3,10 +3,11 @@
 Uso:
     python -m scripts.build_tudo
 
-Executa os sete passos em sequência — De-Para → Fatos → Métricas → Impacto →
-Dashboard → Qualidade → Faturamento —, cada um lendo a saída do anterior. Para
-na primeira falha (devolve o código de erro do passo). É o comando para
-atualizar a aplicação depois de substituir as planilhas na raiz do projeto.
+Executa os oito passos em sequência — De-Para → Fatos → Métricas → Impacto →
+Dashboard → Qualidade → Faturamento → Dívidas —, cada um lendo a saída do
+anterior. Para na primeira falha (devolve o código de erro do passo). É o
+comando para atualizar a aplicação depois de substituir as planilhas na raiz do
+projeto.
 """
 
 from __future__ import annotations
@@ -15,6 +16,7 @@ from app_oficinas.errors import RadarError
 from scripts import (
     build_dashboard,
     build_depara,
+    build_dividas,
     build_faturamento,
     build_fatos,
     build_impacto,
@@ -26,16 +28,17 @@ from scripts import (
 # Chamamos ``executar`` (não ``main``): ``main`` reprocessa ``argparse`` sobre o
 # ``sys.argv`` do processo — inofensivo na CLI, mas frágil quando o app Streamlit
 # chama o pipeline (o argv é o do Streamlit). ``executar`` roda o trabalho puro e
-# devolve o código de saída (0 = ok). Qualidade e Faturamento são independentes
-# (leem só a própria planilha), então fecham a fila.
+# devolve o código de saída (0 = ok). Qualidade, Faturamento e Dívidas são
+# independentes (leem só a própria planilha), então fecham a fila.
 PASSOS = (
-    ("1/7 De-Para", build_depara.executar),
-    ("2/7 Fatos (ETL)", build_fatos.executar),
-    ("3/7 Métricas", build_metricas.executar),
-    ("4/7 Impacto", build_impacto.executar),
-    ("5/7 Dashboard", build_dashboard.executar),
-    ("6/7 Qualidade", build_qualidade.executar),
-    ("7/7 Faturamento", build_faturamento.executar),
+    ("1/8 De-Para", build_depara.executar),
+    ("2/8 Fatos (ETL)", build_fatos.executar),
+    ("3/8 Métricas", build_metricas.executar),
+    ("4/8 Impacto", build_impacto.executar),
+    ("5/8 Dashboard", build_dashboard.executar),
+    ("6/8 Qualidade", build_qualidade.executar),
+    ("7/8 Faturamento", build_faturamento.executar),
+    ("8/8 Dívidas", build_dividas.executar),
 )
 
 

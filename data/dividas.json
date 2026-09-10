@@ -1,0 +1,346 @@
+{
+  "moeda": "R$",
+  "total_divida": 8985265.39,
+  "total_tributos": 7650766.39,
+  "total_encargos": 1334499.0,
+  "oficinas": [
+    {
+      "nome": "DONA TICA CONFECÇÕES",
+      "divida_total": 823660.0,
+      "tributos": 660000.0,
+      "encargos": 163660.0
+    },
+    {
+      "nome": "FACCAO ELLO LTDA",
+      "divida_total": 720000.0,
+      "tributos": 700000.0,
+      "encargos": 20000.0
+    },
+    {
+      "nome": "ACARI TEXTIL LTDA",
+      "divida_total": 563772.0,
+      "tributos": 454501.0,
+      "encargos": 109271.0
+    },
+    {
+      "nome": "EVALBER DE CASTRO DANTAS - ME",
+      "divida_total": 399729.0,
+      "tributos": 272548.0,
+      "encargos": 127181.0
+    },
+    {
+      "nome": "J M CONFECCOES & CIA LTDA",
+      "divida_total": 379802.0,
+      "tributos": 379802.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "CLARA A DE MEDEIROS LEITE",
+      "divida_total": 353493.0,
+      "tributos": 294775.0,
+      "encargos": 58718.0
+    },
+    {
+      "nome": "POTENGI TEXTIL LTDA",
+      "divida_total": 345379.0,
+      "tributos": 62000.0,
+      "encargos": 283379.0
+    },
+    {
+      "nome": "LAJEDO JEANS CONFECCOES LTDA",
+      "divida_total": 344577.0,
+      "tributos": 289276.0,
+      "encargos": 55301.0
+    },
+    {
+      "nome": "NOEL PEREIRA DE AZEVEDO CONFECCAO",
+      "divida_total": 311802.0,
+      "tributos": 263165.0,
+      "encargos": 48637.0
+    },
+    {
+      "nome": "ALVES CONFECCOES LIMITADA",
+      "divida_total": 297047.0,
+      "tributos": 297047.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "M DALISON DE MEDEIROS",
+      "divida_total": 291457.0,
+      "tributos": 205422.0,
+      "encargos": 86035.0
+    },
+    {
+      "nome": "W A 2 CONFECCOES LTDA",
+      "divida_total": 289831.0,
+      "tributos": 233611.0,
+      "encargos": 56220.0
+    },
+    {
+      "nome": "LIMA CONFECCOES LTDA",
+      "divida_total": 285327.0,
+      "tributos": 258039.0,
+      "encargos": 27288.0
+    },
+    {
+      "nome": "FENIX INDUSTRIA TEXTIL LTDA",
+      "divida_total": 281781.0,
+      "tributos": 268146.0,
+      "encargos": 13635.0
+    },
+    {
+      "nome": "EBENEZER INDUSTRIA TEXTIL LTDA",
+      "divida_total": 263533.0,
+      "tributos": 175000.0,
+      "encargos": 88533.0
+    },
+    {
+      "nome": "CONFECÇAO G. B. DA SILVA JUNIOR & CIA LTDA",
+      "divida_total": 255650.0,
+      "tributos": 254650.0,
+      "encargos": 1000.0
+    },
+    {
+      "nome": "B E N SILVA CONFECÇÕES LTDA",
+      "divida_total": 245777.0,
+      "tributos": 228632.0,
+      "encargos": 17145.0
+    },
+    {
+      "nome": "LUIZ LUPERCIO DA SILVA JUNIOR**",
+      "divida_total": 218685.0,
+      "tributos": 218685.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "J. S. & SILVA LTDA",
+      "divida_total": 174781.0,
+      "tributos": 146845.0,
+      "encargos": 27936.0
+    },
+    {
+      "nome": "OFICINA DE COSTURA SANTOS LTDA",
+      "divida_total": 160000.0,
+      "tributos": 160000.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "M C CONFECCOES LTDA",
+      "divida_total": 158813.0,
+      "tributos": 135900.0,
+      "encargos": 22913.0
+    },
+    {
+      "nome": "P E A CONFECÇÕES LTDA EPP",
+      "divida_total": 157000.0,
+      "tributos": 157000.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "KSW CONFECCOES LTDA",
+      "divida_total": 140150.0,
+      "tributos": 130000.0,
+      "encargos": 10150.0
+    },
+    {
+      "nome": "M A P FORTE FORTEX PRODUCAO TEXTIL",
+      "divida_total": 128496.0,
+      "tributos": 105742.0,
+      "encargos": 22754.0
+    },
+    {
+      "nome": "GEFERSON ALAN DOS SANTOS SILVA",
+      "divida_total": 127497.0,
+      "tributos": 120964.0,
+      "encargos": 6533.0
+    },
+    {
+      "nome": "N S CONSTANTINO",
+      "divida_total": 119570.0,
+      "tributos": 119570.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "FLAVIA GEORGIA BRAGA SILVA CONFECCOES LTD",
+      "divida_total": 100435.0,
+      "tributos": 100435.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "TENDENCIA CONFECCOES LTDA",
+      "divida_total": 97570.0,
+      "tributos": 85000.0,
+      "encargos": 12570.0
+    },
+    {
+      "nome": "S RAMOS DE AZEVEDO NETO CONFECCOES",
+      "divida_total": 96290.0,
+      "tributos": 90250.0,
+      "encargos": 6040.0
+    },
+    {
+      "nome": "AMORIM & PEDRO CONFECÇÕES LTDA ME",
+      "divida_total": 88000.0,
+      "tributos": 88000.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "CABUGI INDÚSTRIA E COMÉRCIO DE CONFECÇÕES",
+      "divida_total": 79920.0,
+      "tributos": 62871.0,
+      "encargos": 17049.0
+    },
+    {
+      "nome": "A S CONFECCOES LTDA",
+      "divida_total": 67760.0,
+      "tributos": 67760.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "A DE M DIAS ALVES LIMITADA",
+      "divida_total": 58145.0,
+      "tributos": 58145.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "ALANIS QUEIROZ LTDA",
+      "divida_total": 55500.0,
+      "tributos": 44000.0,
+      "encargos": 11500.0
+    },
+    {
+      "nome": "ANTONIO IGOR DANTAS DE SOUZA",
+      "divida_total": 44053.0,
+      "tributos": 29578.0,
+      "encargos": 14475.0
+    },
+    {
+      "nome": "ARAUJO E M CONFECCOES LTDA",
+      "divida_total": 43706.0,
+      "tributos": 42603.0,
+      "encargos": 1103.0
+    },
+    {
+      "nome": "M & F EMPREENDIMENTOS LTDA",
+      "divida_total": 42337.51,
+      "tributos": 42337.51,
+      "encargos": 0.0
+    },
+    {
+      "nome": "G&C EMPREENDIMENTOS TEXTIL LTDA",
+      "divida_total": 39369.0,
+      "tributos": 39369.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "ASA CONFECÇÕES LTDA ME",
+      "divida_total": 38301.0,
+      "tributos": 38301.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "LD CONFECCOES LTDA",
+      "divida_total": 37000.0,
+      "tributos": 37000.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "JUCURUTU TEXTIL LTDA",
+      "divida_total": 36218.0,
+      "tributos": 32664.0,
+      "encargos": 3554.0
+    },
+    {
+      "nome": "MAXWELA ARAÚJO SILVA LTDA",
+      "divida_total": 34890.0,
+      "tributos": 28714.0,
+      "encargos": 6176.0
+    },
+    {
+      "nome": "F. W. DE SOUZA CONFECCOES",
+      "divida_total": 32800.0,
+      "tributos": 32800.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "ALINE RODRIGUES DE LIMA ARAUJO",
+      "divida_total": 28967.0,
+      "tributos": 28967.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "ACAUA CONFECCOES LTDA",
+      "divida_total": 25135.0,
+      "tributos": 25135.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "M K DE AZEVEDO MEDEIROS INDUSTRIA TEXTIL",
+      "divida_total": 24229.0,
+      "tributos": 24229.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "FIOS DO SERTÃO LTDA",
+      "divida_total": 22854.0,
+      "tributos": 13504.0,
+      "encargos": 9350.0
+    },
+    {
+      "nome": "DI3 CONFECCOES LTDA",
+      "divida_total": 17215.0,
+      "tributos": 17215.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "LC TEXTIL LTDA",
+      "divida_total": 15658.0,
+      "tributos": 11266.0,
+      "encargos": 4392.0
+    },
+    {
+      "nome": "F & K FACCAO LTDA",
+      "divida_total": 8450.88,
+      "tributos": 8450.88,
+      "encargos": 0.0
+    },
+    {
+      "nome": "JOLI TEXTIL SERVICOS E COMERCIO LTDA",
+      "divida_total": 5103.0,
+      "tributos": 3103.0,
+      "encargos": 2000.0
+    },
+    {
+      "nome": "CONFECCOES GENESIS LTDA",
+      "divida_total": 3823.0,
+      "tributos": 3823.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "I M DE OLIVEIRA SILVA",
+      "divida_total": 2708.0,
+      "tributos": 2708.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "H I CONFECCOES LTDA",
+      "divida_total": 1217.0,
+      "tributos": 1217.0,
+      "encargos": 0.0
+    },
+    {
+      "nome": "FIOS DO SERTÃO LTDA FILIAL",
+      "divida_total": 1.0,
+      "tributos": 0.0,
+      "encargos": 1.0
+    },
+    {
+      "nome": "J M CONFECCOES & CIA LTDA",
+      "divida_total": 1.0,
+      "tributos": 1.0,
+      "encargos": 0.0
+    }
+  ],
+  "linhas": 56,
+  "gerado_em": "2026-09-10T09:42:15+00:00"
+}

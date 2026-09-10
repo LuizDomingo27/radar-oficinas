@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="assets/css/estilo.css?v=31">
-  <link rel="stylesheet" href="assets/css/dashboard.css?v=31">
+  <link rel="stylesheet" href="assets/css/estilo.css?v=32">
+  <link rel="stylesheet" href="assets/css/dashboard.css?v=32">
 </head>
 <body>
   <!-- Sprite de ícones SVG (sem emojis) -->
@@ -29,6 +29,7 @@
       <g id="ic-arrow"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></g>
       <g id="ic-qualidade"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></g>
       <g id="ic-dinheiro"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 9v6M18 9v6"/></g>
+      <g id="ic-divida"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h5"/></g>
     </defs>
   </svg>
 
@@ -48,6 +49,8 @@
         <svg class="icon" aria-hidden="true"><use href="#ic-qualidade"></use></svg>Qualidade</button>
       <button class="nav-tab" data-view="faturamento">
         <svg class="icon" aria-hidden="true"><use href="#ic-dinheiro"></use></svg>Faturamento</button>
+      <button class="nav-tab" data-view="dividas">
+        <svg class="icon" aria-hidden="true"><use href="#ic-divida"></use></svg>Dívidas</button>
     </nav>
     <div class="meta-global" title="Linha de corte do desempenho (produção ÷ capacidade). Não altera a capacidade nem recalcula a eficiência — só reclassifica quem está acima/abaixo da meta.">
       <label for="meta-desempenho">Meta desemp.</label>
@@ -336,6 +339,89 @@
         <div id="fat-g-semanal" class="grafico-fat"></div>
       </div>
 
+      <!-- Tabela completa de faturamento por oficina (paginada, 15 por página).
+           Segue o filtro de ano/mês dos controles acima. -->
+      <div class="card grafico-card">
+        <h2><svg class="icon" aria-hidden="true"><use href="#ic-rank"></use></svg>Faturamento completo<small class="sub" id="fat-tabela-escopo"></small></h2>
+        <div class="tabela-wrap">
+          <table class="tabela-simples">
+            <thead>
+              <tr><th class="col-pos">#</th><th>Oficina</th><th class="num">Faturamento</th></tr>
+            </thead>
+            <tbody id="fat-tabela-corpo"></tbody>
+          </table>
+        </div>
+        <div class="paginacao" id="fat-paginacao" hidden>
+          <button class="chip-btn" id="fat-pag-anterior" aria-label="Página anterior">‹ Anterior</button>
+          <span class="pag-status" id="fat-pag-status">—</span>
+          <button class="chip-btn" id="fat-pag-proxima" aria-label="Próxima página">Próxima ›</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== TELA 6 · DÍVIDAS DAS OFICINAS ===================== -->
+    <section class="view" id="view-dividas">
+      <div class="intro">
+        <h1>Dívidas das oficinas</h1>
+      </div>
+
+      <p class="banner" id="div-alerta" hidden>
+        <svg class="icon" aria-hidden="true"><use href="#ic-alerta"></use></svg>
+        <span id="div-alerta-txt"></span>
+      </p>
+
+      <div class="kpis" id="div-kpis">
+        <div class="kpi k-rev">
+          <div class="n" id="div-kpi-total">—</div>
+          <div class="l">Dívida total</div>
+        </div>
+        <div class="kpi k-abse">
+          <div class="n" id="div-kpi-tributos">—</div>
+          <div class="l">Tributos</div>
+        </div>
+        <div class="kpi k-mes">
+          <div class="n" id="div-kpi-encargos">—</div>
+          <div class="l">Encargos</div>
+        </div>
+        <div class="kpi k-prod">
+          <div class="n" id="div-kpi-oficinas">—</div>
+          <div class="l">Oficinas com dívida</div>
+        </div>
+      </div>
+
+      <div class="card grafico-card">
+        <h2><svg class="icon" aria-hidden="true"><use href="#ic-rank"></use></svg>Maiores dívidas<small class="sub">top 12 · dívida total</small></h2>
+        <div id="div-g-maiores" class="grafico-q"></div>
+      </div>
+
+      <div class="toolbar">
+        <div class="busca">
+          <svg class="icon" aria-hidden="true"><use href="#ic-busca"></use></svg>
+          <input id="div-busca" type="search" placeholder="Buscar oficina…" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="card grafico-card">
+        <h2><svg class="icon" aria-hidden="true"><use href="#ic-divida"></use></svg>Detalhamento por oficina<small class="sub" id="div-tabela-escopo"></small></h2>
+        <div class="tabela-wrap">
+          <table class="tabela-simples">
+            <thead>
+              <tr>
+                <th>Oficina</th>
+                <th class="num">Dívida total</th><th class="num">Tributos</th><th class="num">Encargos</th>
+              </tr>
+            </thead>
+            <tbody id="div-tabela-corpo"></tbody>
+          </table>
+        </div>
+        <div class="paginacao" id="div-paginacao" hidden>
+          <button class="chip-btn" id="div-pag-anterior" aria-label="Página anterior">‹ Anterior</button>
+          <span class="pag-status" id="div-pag-status">—</span>
+          <button class="chip-btn" id="div-pag-proxima" aria-label="Próxima página">Próxima ›</button>
+        </div>
+      </div>
+
     </section>
 
   </main>
@@ -343,7 +429,7 @@
   <div id="erro-carga"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
-  <script src="assets/js/graficos_dashboard.js?v=31"></script>
-  <script src="assets/js/dashboard.js?v=31"></script>
+  <script src="assets/js/graficos_dashboard.js?v=32"></script>
+  <script src="assets/js/dashboard.js?v=32"></script>
 </body>
 </html>

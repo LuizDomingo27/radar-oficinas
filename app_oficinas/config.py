@@ -254,6 +254,25 @@ class FonteFaturamento:
     col_valor: int = 2    # Montante (ME)
 
 
+# --------------------------------------------------------------------------- #
+# Fonte de ENDIVIDAMENTO — dívida de cada oficina (tributos + encargos).       #
+# --------------------------------------------------------------------------- #
+# Uma linha = uma oficina, com a dívida total e sua decomposição em tributos e
+# encargos. Aba única "Endividamento Oficinas", cabeçalho na linha 1 e dados a
+# partir da 2. A ÚLTIMA linha da planilha é um RODAPÉ de totais (sem razão
+# social) — como não tem nome, o leitor a descarta naturalmente, sem inflar a
+# contagem de oficinas nem somar o total duas vezes.
+@dataclass(frozen=True)
+class FonteEndividamento:
+    arquivo: str = "Endividamento_Oficinas_07.2026.xlsx"
+    aba: str = "Endividamento Oficinas"
+    primeira_linha: int = 2
+    col_nome: int = 0       # Razão Social
+    col_divida: int = 1     # Dívida Total (R$)
+    col_encargos: int = 2   # Encargos (R$)
+    col_tributos: int = 3   # Tributos (R$)
+
+
 PRODUCAO = FonteProducao()
 ABSENTEISMO = FonteAbsenteismo()
 TREINO_EP = FonteTreinoEP()
@@ -263,6 +282,7 @@ TREINO_LIDERA = FonteTreinoLidera()
 EFIC_JEANS = FonteEficienciaJeans()
 EFIC_NAOJEANS = FonteEficienciaNaoJeans()
 FATURAMENTO = FonteFaturamento()
+ENDIVIDAMENTO = FonteEndividamento()
 
 
 # --------------------------------------------------------------------------- #
@@ -342,6 +362,7 @@ ARQUIVOS_ESPERADOS: tuple[str, ...] = (
     TREINO_LIDERA.arquivo,     # Inscrições Lidera+ Gestão de Pessoas.xlsx
     QUALIDADE_RESUMO.arquivo,  # Indicador geral_*.xlsx
     FATURAMENTO.arquivo,       # FATURAMENTO_CONSOLIDADO.xlsx
+    ENDIVIDAMENTO.arquivo,     # Endividamento_Oficinas_*.xlsx
 )
 
 # Regras (tokens que precisam TODOS aparecer no nome enviado, já sem acento e em
@@ -360,6 +381,7 @@ REGRAS_UPLOAD: tuple[tuple[tuple[str, ...], str], ...] = (
     (("atendimento",), TREINO_EP.arquivo),
     (("lidera",), TREINO_LIDERA.arquivo),
     (("faturamento",), FATURAMENTO.arquivo),
+    (("endividamento",), ENDIVIDAMENTO.arquivo),
 )
 
 
@@ -435,6 +457,9 @@ ABAS_ESPERADAS: dict[tuple[str, str], AbaEsperada] = {
     ),
     (FATURAMENTO.arquivo, FATURAMENTO.aba): AbaEsperada(
         assinatura=("fornecedor", "vencimento", "montante"),
+    ),
+    (ENDIVIDAMENTO.arquivo, ENDIVIDAMENTO.aba): AbaEsperada(
+        assinatura=("razao social", "encargos (r$)", "tributos (r$)"),
     ),
 }
 
