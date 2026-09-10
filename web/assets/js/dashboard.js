@@ -899,12 +899,18 @@ function renderKpisD() {
   const on = $("#div-kpi-oficinas");
   on.textContent = String(d.oficinas.length); on.title = "";
   // Percentual das oficinas com dívida sobre o total da rede (dataset do
-  // ranking). Sem esse dataset carregado, mostra só o rótulo — nunca quebra.
+  // ranking), com destaque de pílula. Sem esse dataset carregado, mostra só o
+  // rótulo — nunca quebra. O conteúdo da pílula é numérico (fmtPct), sem risco
+  // de injeção no innerHTML.
   const totalRede = estado.dados && estado.dados.oficinas
     ? estado.dados.oficinas.length : null;
-  $("#div-kpi-oficinas-l").textContent = totalRede
-    ? `Oficinas com dívida · ${fmtPct(d.oficinas.length / totalRede)} da rede`
-    : "Oficinas com dívida";
+  const lbl = $("#div-kpi-oficinas-l");
+  if (totalRede) {
+    const pct = fmtPct(d.oficinas.length / totalRede);
+    lbl.innerHTML = `Oficinas com dívida <span class="pct-pill">${pct}</span> da rede`;
+  } else {
+    lbl.textContent = "Oficinas com dívida";
+  }
 }
 
 function renderMaioresD() {

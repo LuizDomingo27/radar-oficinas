@@ -195,6 +195,11 @@ tr.linha-top:hover{background:var(--surface-2)}
 /* Faixa vermelha nos KPIs (é um painel de risco/passivo). */
 #div-kpis{margin-bottom:22px}
 #div-kpis .kpi{--kc:var(--critico)}
+/* Destaque em pílula do percentual de oficinas com dívida (mesma linguagem do
+   painel de risco: vermelho suave). */
+.pct-pill{display:inline-block;padding:1px 8px;border-radius:999px;font-family:var(--mono);
+  font-size:.72rem;font-weight:700;background:var(--critico-soft);color:var(--critico);
+  letter-spacing:.02em;white-space:nowrap;vertical-align:middle}
 #div-g-maiores{width:100%;height:clamp(360px,48vw,560px)}
 
 /* ---- Tela 3: impacto ---- */

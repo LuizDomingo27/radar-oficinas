@@ -21,6 +21,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 INDEX = (RAIZ / "web" / "index.html").read_text(encoding="utf-8")
 JS = (RAIZ / "web" / "assets" / "js" / "dashboard.js").read_text(encoding="utf-8")
+CSS = (RAIZ / "web" / "assets" / "css" / "dashboard.css").read_text(encoding="utf-8")
 
 
 class TestRotulosIndex(unittest.TestCase):
@@ -65,6 +66,12 @@ class TestComportamentoJs(unittest.TestCase):
         self.assertIn("estado.dados.oficinas.length", JS)
         self.assertIn("fmtPct(d.oficinas.length / totalRede)", JS)
         self.assertIn("da rede", JS)
+
+    def test_percentual_em_pilula(self):
+        # O percentual vai dentro de um <span class="pct-pill"> e a classe tem
+        # estilo próprio — o destaque não pode virar texto sem formatação.
+        self.assertIn('class="pct-pill"', JS)
+        self.assertIn(".pct-pill{", CSS)
 
     def test_tooltip_de_faturamento_reordenado_e_renomeado(self):
         i_desc = JS.index('{ rot: "Descontos", val: fmtBRL(d.encargos) }')
