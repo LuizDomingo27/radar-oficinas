@@ -45,6 +45,11 @@ const fmtValor = (metrica, v) =>
 // rótulos de barra — o faturamento é da ordem de milhões.
 const fmtBRL = (v) => v == null ? "—"
   : v.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
+// Moeda com 2 casas decimais — usada nos cards da tela de Dívidas (o negócio
+// pediu o centavo à mostra nesses KPIs).
+const fmtBRL2 = (v) => v == null ? "—"
+  : v.toLocaleString("pt-BR", { style: "currency", currency: "BRL",
+    minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const fmtBRLcurto = (v) => {
   if (v == null) return "—";
   if (v >= 1e6) return "R$ " + (v / 1e6).toFixed(1).replace(".", ",") + " mi";
@@ -641,16 +646,16 @@ function listaFaturamentoEscopo() {
     : (estadoF.dados.oficinas[chave] || []);
 }
 
-/* Linhas extra do tooltip com a dívida da oficina (tributos + encargos), quando
-   ela consta na planilha de endividamento. Sem correspondência, uma nota. */
+/* Linhas extra do tooltip com a dívida da oficina (Descontos + Valor líquido),
+   quando ela consta na planilha de endividamento. Sem correspondência, uma nota. */
 function extraDividaTooltip(nome) {
   const d = dividaDe(nome);
   if (!d) return [{ sep: true }, { rot: "Dívida", val: "sem registro" }];
   return [
     { sep: true },
-    { rot: "Dívida total", val: fmtBRL(d.divida_total), destaque: true },
-    { rot: "Tributos", val: fmtBRL(d.tributos) },
-    { rot: "Encargos", val: fmtBRL(d.encargos) },
+    { rot: "Dívida", val: fmtBRL(d.divida_total), destaque: true },
+    { rot: "Descontos", val: fmtBRL(d.encargos) },
+    { rot: "Valor líquido", val: fmtBRL(d.tributos) },
   ];
 }
 
@@ -777,6 +782,8 @@ function desenharFaturamento() {
    Dados em data/dividas.json (gerado por build_dividas):
      total_divida / total_tributos / total_encargos : somas gerais
      oficinas: [{nome, divida_total, tributos, encargos}]  (desc por dívida)
+   Rótulos de tela (só a apresentação; as chaves do payload seguem as mesmas):
+     divida_total → "Dívida" · encargos → "Descontos" · tributos → "Valor líquido"
    O controlador só filtra por texto, pagina e formata — o backend já somou. */
 const estadoD = { dados: null, termo: "", pagina: 1, index: null };
 
@@ -882,25 +889,34 @@ function iniciarDividas() {
 function renderKpisD() {
   const d = estadoD.dados;
   const set = (id, v) => {
-    const el = $(id); el.textContent = fmtBRLcurto(v); el.title = fmtBRL(v);
+    const el = $(id); el.textContent = fmtBRL2(v); el.title = fmtBRL(v);
   };
+  // Ordem de negócio: Dívida · Descontos · Valor líquido (Descontos = encargos;
+  // Valor líquido = tributos, só o rótulo mudou — as chaves do payload seguem).
   set("#div-kpi-total", d.total_divida);
-  set("#div-kpi-tributos", d.total_tributos);
   set("#div-kpi-encargos", d.total_encargos);
+  set("#div-kpi-tributos", d.total_tributos);
   const on = $("#div-kpi-oficinas");
   on.textContent = String(d.oficinas.length); on.title = "";
+  // Percentual das oficinas com dívida sobre o total da rede (dataset do
+  // ranking). Sem esse dataset carregado, mostra só o rótulo — nunca quebra.
+  const totalRede = estado.dados && estado.dados.oficinas
+    ? estado.dados.oficinas.length : null;
+  $("#div-kpi-oficinas-l").textContent = totalRede
+    ? `Oficinas com dívida · ${fmtPct(d.oficinas.length / totalRede)} da rede`
+    : "Oficinas com dívida";
 }
 
 function renderMaioresD() {
   const top = estadoD.dados.oficinas.slice(0, 12).map((o) => ({
     rotulo: o.nome, valor: o.divida_total,
     extra: [
-      { rot: "Tributos", val: fmtBRL(o.tributos) },
-      { rot: "Encargos", val: fmtBRL(o.encargos) },
+      { rot: "Descontos", val: fmtBRL(o.encargos) },
+      { rot: "Valor líquido", val: fmtBRL(o.tributos) },
     ],
   }));
   desenharBarrasF("#div-g-maiores", top,
-    { cor: "--critico", fmt: fmtBRLcurto, fmtEixo: fmtBRLcurto, rotulo: "Dívida total" });
+    { cor: "--critico", fmt: fmtBRLcurto, fmtEixo: fmtBRLcurto, rotulo: "Dívida" });
 }
 
 /* Tabela de detalhamento: filtra por texto, 15 por página, com linha de total
@@ -925,8 +941,8 @@ function renderTabelaD() {
     <tr>
       <td>${escapar(o.nome)}</td>
       <td class="num"><span class="val">${fmtBRL(o.divida_total)}</span></td>
-      <td class="num">${fmtBRL(o.tributos)}</td>
       <td class="num">${fmtBRL(o.encargos)}</td>
+      <td class="num">${fmtBRL(o.tributos)}</td>
     </tr>`).join("");
   if (estadoD.pagina === totalPag) {
     const soma = (f) => lista.reduce((s, o) => s + o[f], 0);
@@ -934,8 +950,8 @@ function renderTabelaD() {
       <tr class="linha-total">
         <td>Total${termo ? " (filtrado)" : ""}</td>
         <td class="num">${fmtBRL(soma("divida_total"))}</td>
-        <td class="num">${fmtBRL(soma("tributos"))}</td>
         <td class="num">${fmtBRL(soma("encargos"))}</td>
+        <td class="num">${fmtBRL(soma("tributos"))}</td>
       </tr>`;
   }
   tbody.innerHTML = html;

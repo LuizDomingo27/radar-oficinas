@@ -335,8 +335,8 @@
   <ul>
     <li><b>Maiores e menores faturamentos.</b> As 10 oficinas que mais e que menos
       faturaram, respeitando o filtro de ano e, quando informado, de mês. A dica
-      de cada barra, além do faturamento, traz a <b>dívida</b> da oficina (dívida
-      total, tributos e encargos) quando ela consta na planilha de endividamento;
+      de cada barra, além do faturamento, traz a <b>dívida</b> da oficina (dívida,
+      descontos e valor líquido) quando ela consta na planilha de endividamento;
       se não constar, mostra “Dívida — sem registro”.</li>
     <li><b>Faturamento mensal.</b> Uma coluna por mês, seguindo o ano filtrado
       (todos os meses do período quando o ano é <b>Todos</b>). Não muda com o
@@ -388,27 +388,32 @@
   <h2>Tela de Dívidas</h2>
   <p>
     A tela <b>Dívidas</b> lê a planilha <b>Endividamento Oficinas</b> (cada linha
-    é uma oficina, com a dívida total decomposta em <b>tributos</b> e
-    <b>encargos</b>) e responde à pergunta: quanto cada oficina deve, e o quanto
-    isso pesa diante do restante. A última linha da planilha é um <b>rodapé de
-    totais</b> (sem razão social) e é descartada — não conta como oficina nem soma
-    o total em dobro. Cada linha da planilha vira uma oficina na tela (a contagem
-    exibida bate com as oficinas listadas na planilha).
+    é uma oficina, com a dívida decomposta em duas parcelas — <b>Descontos</b> e
+    <b>Valor líquido</b>, que vêm das colunas <i>Encargos</i> e <i>Tributos</i> da
+    planilha) e responde à pergunta: quanto cada oficina deve, e o quanto isso pesa
+    diante do restante. A última linha da planilha é um <b>rodapé de totais</b>
+    (sem razão social) e é descartada — não conta como oficina nem soma o total em
+    dobro. Cada linha da planilha vira uma oficina na tela (a contagem exibida bate
+    com as oficinas listadas na planilha). Os três cards de valor são exibidos na
+    ordem <b>Dívida · Descontos · Valor líquido</b>, com <b>duas casas decimais</b>.
   </p>
   <h3>Cards de resumo</h3>
   <ul>
-    <li><b>Dívida total.</b> Soma da dívida de todas as oficinas (confere com o
+    <li><b>Dívida.</b> Soma da dívida de todas as oficinas (confere com o
       rodapé de totais da planilha).</li>
-    <li><b>Tributos</b> e <b>Encargos.</b> As duas parcelas que compõem a dívida
-      total.</li>
-    <li><b>Oficinas com dívida.</b> Quantas oficinas constam na planilha.</li>
+    <li><b>Descontos</b> e <b>Valor líquido.</b> As duas parcelas que compõem a
+      dívida (Descontos = coluna <i>Encargos</i>; Valor líquido = coluna
+      <i>Tributos</i> da planilha).</li>
+    <li><b>Oficinas com dívida.</b> Quantas oficinas constam na planilha, com o
+      <b>percentual que isso representa sobre o total de oficinas da rede</b>
+      (ex.: 56 de 170 = 32,9%).</li>
   </ul>
   <h3>Gráfico e tabela</h3>
   <ul>
     <li><b>Maiores dívidas.</b> As 12 oficinas mais endividadas; a dica de cada
-      barra traz também os tributos e os encargos.</li>
-    <li><b>Detalhamento por oficina.</b> Tabela com dívida total, tributos e
-      encargos de cada oficina, em ordem decrescente de dívida.
+      barra traz também os Descontos e o Valor líquido.</li>
+    <li><b>Detalhamento por oficina.</b> Tabela com Dívida, Descontos e
+      Valor líquido de cada oficina, em ordem decrescente de dívida.
       <b>Paginada em 15 por página</b>, com um campo de <b>busca</b> por nome e
       uma linha de <b>total</b> (do conjunto filtrado) ao pé da última página.</li>
   </ul>
