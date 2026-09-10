@@ -65,6 +65,26 @@ class TestRodarBuild(unittest.TestCase):
         self.assertIn("RuntimeError", msg)
 
 
+class TestAreaDeAtualizacao(unittest.TestCase):
+    """A área de upload saiu da barra lateral para o fim da página.
+
+    Guarda contra dois modos de regressão: (1) o ponto de entrada
+    ``render_atualizacao`` sumir/deixar de existir e o upload virar órfão; (2)
+    ele quebrar ao renderizar (o AGENTS.md proíbe o app cair). Em ``bare mode``
+    o ``st.button`` devolve ``False``, então o ramo de build não roda — o teste
+    só prova que a montagem dos widgets não levanta exceção.
+    """
+
+    def test_ponto_de_entrada_existe_e_e_chamavel(self):
+        self.assertTrue(callable(getattr(streamlit_app, "render_atualizacao", None)))
+
+    def test_renderiza_sem_excecao(self):
+        try:
+            streamlit_app.render_atualizacao()
+        except Exception as erro:  # noqa: BLE001 — o app não pode quebrar
+            self.fail(f"render_atualizacao levantou {type(erro).__name__}: {erro}")
+
+
 class TestCoerenciaDeImports(unittest.TestCase):
     """O pipeline tem de ser importado no mesmo instante que o ``config``.
 

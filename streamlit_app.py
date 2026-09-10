@@ -44,7 +44,7 @@ WEB = RAIZ / "web"
 DATA = RAIZ / "data"
 
 st.set_page_config(page_title="Radar de Oficinas", layout="wide",
-                   initial_sidebar_state="expanded")
+                   initial_sidebar_state="collapsed")
 
 
 def _ler(caminho: Path, padrao: str = "null") -> str:
@@ -276,16 +276,14 @@ def _commitar_dados(arquivos: list[str]) -> tuple[bool, str]:
     return True, "Commit no GitHub — " + "; ".join(linhas)
 
 
-# --------------------------------------------------------------- barra lateral
+# ------------------------------------------------------------ estilo do embed
 # Deixa o embed no comando visual: some com o chrome do Streamlit (menu/rodapé)
-# e cola o iframe no topo, sem margens.
+# e cola o iframe no topo, sem margens. A barra lateral foi REMOVIDA — a área
+# "Atualizar dados" agora vive no fim da página (ver ``render_atualizacao``).
 st.markdown("""
 <style>
-  /* Some com o chrome do Streamlit (menu/deploy/rodapé), MAS mantém acessível o
-     botão que reabre a barra lateral. O antigo "header{display:none}" escondia
-     junto o botão de expandir (ele vive DENTRO do header): ao recolher a barra
-     — o que acontece sozinho no celular e na Streamlit Cloud — a área
-     "Atualizar dados" sumia sem nenhuma forma de trazê-la de volta. */
+  /* Some com o chrome do Streamlit (menu/deploy/rodapé) e cola o iframe no
+     topo, sem margens. */
   header[data-testid="stHeader"]{
     background:transparent !important; height:0 !important; min-height:0 !important;
     pointer-events:none;
@@ -293,67 +291,84 @@ st.markdown("""
   #MainMenu, footer,
   header[data-testid="stHeader"] [data-testid="stMainMenu"],
   header[data-testid="stHeader"] [data-testid="stAppDeployButton"]{display:none !important;}
-  /* Botão de reabrir a barra lateral: sempre visível e clicável. */
-  [data-testid="stExpandSidebarButton"]{
-    display:inline-flex !important; visibility:visible !important; pointer-events:auto !important;
-  }
-  /* Botão de recolher (dentro da barra) sempre visível, não só no hover. */
-  [data-testid="stSidebarCollapseButton"]{visibility:visible !important;}
+  /* Sidebar removida: nada mais é renderizado nela. Esconde a barra e qualquer
+     botão que a reabriria, para não deixar controle órfão na tela. */
+  [data-testid="stSidebar"],
+  [data-testid="stSidebarCollapsedControl"],
+  [data-testid="stExpandSidebarButton"]{display:none !important;}
   .block-container{padding:0 !important; max-width:100% !important;}
   section.main > div{gap:0 !important;}
-  div[data-testid="stSidebarUserContent"]{padding-top:1rem;}
 </style>
 """, unsafe_allow_html=True)
 
-st.sidebar.header("Atualizar dados")
-uploads = st.sidebar.file_uploader(
-    "Planilhas (.xlsx)", type=["xlsx"], accept_multiple_files=True)
 
-# Resultado da última atualização — guardado em session_state para sobreviver ao
-# st.rerun() (que recarrega o dashboard com os números novos). Sem isso, a
-# mensagem sumiria antes de o usuário lê-la.
-_aviso = st.session_state.pop("_aviso_atualizacao", None)
-if _aviso:
-    getattr(st.sidebar, _aviso[0])(_aviso[1])
+def render_atualizacao() -> None:
+    """Área de upload das planilhas + botão "Atualizar dados", NO FIM da página.
 
-if st.sidebar.button("Atualizar dados", type="primary", use_container_width=True):
-    if not uploads:
-        st.sidebar.warning("Selecione ao menos uma planilha.")
-    else:
-        with st.spinner("Processando..."):
-            _salvar_uploads(uploads)
-            ok, msg = _rodar_build()
-        # Bases que ainda faltam para o pipeline COMPLETO (Ranking/Ficha/Impacto).
-        # Pode subir uma planilha por vez: elas se acumulam no disco da sessão e o
-        # dashboard só regenera quando TODAS estão presentes.
-        _, faltando = _bases_presentes()
-        if ok:
-            with st.spinner("Publicando no GitHub..."):
-                cok, cmsg = _commitar_dados([
-                    "data/dashboard.json", "data/qualidade.json",
-                    "data/faturamento.json", "data/dividas.json",
-                ])
-            extra = ""
-            if faltando:
-                extra = (" Para o dashboard completo, ainda faltam: "
-                         + "; ".join(faltando) + ".")
-            # success (verde) só quando o commit também passou; senão warning
-            # (amarelo) deixando claro que atualizou na sessão mas NÃO persistiu.
-            st.session_state["_aviso_atualizacao"] = (
-                "success" if cok else "warning", f"{msg}{extra} {cmsg}")
-            st.rerun()
-        elif faltando:
-            # Nada regerou ainda, mas é só acúmulo incremental (faltam bases). Sem
-            # alarde: orienta o próximo envio em vez de mostrar erro vermelho.
-            st.sidebar.info(
-                "Recebido. Para gerar o dashboard, ainda faltam estas bases: "
-                + "; ".join(faltando)
-                + ". Envie-as (juntas ou uma a uma) e clique em Atualizar de novo. "
-                + "A Qualidade precisa só do 'Indicador geral'.")
-        else:
-            # Todas as bases presentes, mas o build falhou mesmo assim: erro real
-            # (planilha corrompida, aba/coluna faltando). Mostra o motivo.
-            st.sidebar.error(msg)
+    Antes ficava na barra lateral; agora é renderizada logo abaixo do dashboard
+    (que abre na aba Ranking), como pedido. É Streamlit puro — NÃO roda dentro
+    do iframe da SPA: sobe as planilhas, dispara o pipeline de build e recarrega
+    a página já com os números novos.
+
+    O bloco é envolto por colunas de folga (``_esq``/``_dir``) só para dar
+    respiro lateral sem tirar o full-bleed do iframe acima.
+    """
+    st.divider()
+    _esq, meio, _dir = st.columns([1, 30, 1])
+    with meio:
+        st.subheader("Atualizar dados")
+
+        # Resultado da última atualização — guardado em session_state para
+        # sobreviver ao st.rerun() (que recarrega o dashboard com os números
+        # novos). Sem isso, a mensagem sumiria antes de o usuário lê-la.
+        _aviso = st.session_state.pop("_aviso_atualizacao", None)
+        if _aviso:
+            getattr(st, _aviso[0])(_aviso[1])
+
+        uploads = st.file_uploader(
+            "Planilhas (.xlsx)", type=["xlsx"], accept_multiple_files=True)
+
+        if st.button("Atualizar dados", type="primary"):
+            if not uploads:
+                st.warning("Selecione ao menos uma planilha.")
+            else:
+                with st.spinner("Processando..."):
+                    _salvar_uploads(uploads)
+                    ok, msg = _rodar_build()
+                # Bases que ainda faltam para o pipeline COMPLETO
+                # (Ranking/Ficha/Impacto). Pode subir uma planilha por vez: elas
+                # se acumulam no disco da sessão e o dashboard só regenera quando
+                # TODAS estão presentes.
+                _, faltando = _bases_presentes()
+                if ok:
+                    with st.spinner("Publicando no GitHub..."):
+                        cok, cmsg = _commitar_dados([
+                            "data/dashboard.json", "data/qualidade.json",
+                            "data/faturamento.json", "data/dividas.json",
+                        ])
+                    extra = ""
+                    if faltando:
+                        extra = (" Para o dashboard completo, ainda faltam: "
+                                 + "; ".join(faltando) + ".")
+                    # success (verde) só quando o commit também passou; senão
+                    # warning (amarelo) deixando claro que atualizou na sessão
+                    # mas NÃO persistiu.
+                    st.session_state["_aviso_atualizacao"] = (
+                        "success" if cok else "warning", f"{msg}{extra} {cmsg}")
+                    st.rerun()
+                elif faltando:
+                    # Nada regerou ainda, mas é só acúmulo incremental (faltam
+                    # bases). Sem alarde: orienta o próximo envio em vez de erro.
+                    st.info(
+                        "Recebido. Para gerar o dashboard, ainda faltam estas "
+                        "bases: " + "; ".join(faltando)
+                        + ". Envie-as (juntas ou uma a uma) e clique em Atualizar "
+                        + "de novo. A Qualidade precisa só do 'Indicador geral'.")
+                else:
+                    # Todas as bases presentes, mas o build falhou mesmo assim:
+                    # erro real (planilha corrompida, aba/coluna faltando).
+                    st.error(msg)
+
 
 # --------------------------------------------------------------------- exibição
 # Blindagem (regra do AGENTS.md: o app não pode quebrar). Qualquer falha ao
@@ -375,3 +390,8 @@ else:
         st.error(
             "Falha ao renderizar o painel no navegador — etapa: components.html. "
             f"Detalhe: {type(exc).__name__}: {exc}")
+
+# Área de upload/atualização no FIM da página (abaixo do dashboard). Fica fora
+# do try/except da exibição de propósito: mesmo que a SPA não monte, a equipe
+# ainda precisa poder reenviar planilhas e atualizar os dados.
+render_atualizacao()
