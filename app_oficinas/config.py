@@ -31,9 +31,12 @@ PAPEL_TREINO = "treino"            # treinamentos   (histórico EP / Lidera+)
 
 PAPEIS = (PAPEL_PRODUCAO, PAPEL_ABSENTEISMO, PAPEL_EFICIENCIA, PAPEL_TREINO)
 
-# Fonte cuja grafia é a referência para o nome de exibição da oficina. A
-# planilha de postos é a lista oficial de parceiros, então seus nomes viram o
-# padrão; oficinas ausentes dela caem no desempate por frequência.
+# Fonte cuja grafia é a referência para o nome de exibição da oficina. A base de
+# postos é a lista oficial de parceiros, então seus nomes viram o padrão;
+# oficinas ausentes dela caem no desempate por frequência. Desde a Fase 2 os
+# nomes de "postos" vêm do SUPABASE (não mais de uma planilha) — ver
+# ``infra.leitor_postos.registros_nome``; por isso "postos" não está em
+# ``FONTES`` abaixo, mas continua sendo a fonte-padrão de grafia.
 FONTE_NOME_PADRAO = "postos"
 
 
@@ -62,7 +65,8 @@ class FonteNomes:
 # intencionalmente ignorada. Colunas/linhas foram conferidas na análise inicial.
 FONTES: tuple[FonteNomes, ...] = (
     FonteNomes("recebimento", "RECEBIMENTO.xlsx", "RECEBIMENTO", 1, 2, PAPEL_PRODUCAO),
-    FonteNomes("postos", "postos.xlsx", "Dados", 2, 2, PAPEL_ABSENTEISMO),
+    # "postos" NÃO entra aqui: seus nomes vêm do Supabase (Fase 2), lidos por
+    # ``infra.leitor_postos.registros_nome`` e injetados em ``ler_todas``.
     FonteNomes(
         "estoque_jeans_aux",
         "ESTOQUE OFICINAS - JEANS - 2026.xlsx", "AUX", 0, 2, PAPEL_EFICIENCIA,
@@ -114,23 +118,9 @@ class FonteProducao:
     col_minutos: int = 5
 
 
-@dataclass(frozen=True)
-class FonteAbsenteismo:
-    arquivo: str = "postos.xlsx"
-    aba: str = "Dados"
-    primeira_linha: int = 2
-    col_frete: int = 0
-    col_mp: int = 1
-    col_nome: int = 2
-    # Data Efetivos é a referência: em ~110 linhas a Data Trabalhados vem como
-    # placeholder 1990-12-31 (semana ainda não fechada), enquanto Efetivos traz
-    # a data real. Ver services/consolidacao e o build da Fase 2.
-    col_data: int = 3
-    col_efetivos: int = 4
-    col_trabalhados: int = 6
-    col_contratacao: int = 7
-    col_demissao: int = 8
-    col_semana: int = 9
+# A antiga ``FonteAbsenteismo`` (colunas do postos.xlsx) foi removida na Fase 2:
+# a fonte de absenteísmo agora é a tabela ``postos`` do Supabase, lida por
+# ``infra.leitor_postos`` (que também é a fonte de nome de "postos").
 
 
 @dataclass(frozen=True)
@@ -274,7 +264,6 @@ class FonteEndividamento:
 
 
 PRODUCAO = FonteProducao()
-ABSENTEISMO = FonteAbsenteismo()
 TREINO_EP = FonteTreinoEP()
 TREINO_EP2025_CM = FonteTreinoEP2025CM()
 TREINO_EP2025_TOC = FonteTreinoEP2025TOC()
@@ -354,7 +343,8 @@ QUALIDADE_DEFEITOS = FonteQualidadeDefeitos()
 # duplicar strings). Ordem estável para exibir "o que falta" ao usuário.
 ARQUIVOS_ESPERADOS: tuple[str, ...] = (
     PRODUCAO.arquivo,          # RECEBIMENTO.xlsx
-    ABSENTEISMO.arquivo,       # postos.xlsx
+    # postos.xlsx saiu da checklist na Fase 2: o absenteísmo vem do Supabase,
+    # editado no módulo "Gestão de Postos", não mais por upload de planilha.
     EFIC_JEANS.arquivo,        # ESTOQUE OFICINAS - JEANS - 2026.xlsx
     EFIC_NAOJEANS.arquivo,     # ESTOQUE OFICINA NÃO JEANS.xlsx
     TREINO_EP.arquivo,         # Histórico de Atendimento EP.xlsx
@@ -371,7 +361,6 @@ ARQUIVOS_ESPERADOS: tuple[str, ...] = (
 # nome do arquivo como legenda. Toda chave DEVE estar em ``ARQUIVOS_ESPERADOS``.
 ROTULOS_ARQUIVOS: dict[str, str] = {
     PRODUCAO.arquivo: "Produção — Recebimento",
-    ABSENTEISMO.arquivo: "Absenteísmo — Postos",
     EFIC_JEANS.arquivo: "Eficiência — Estoque Jeans",
     EFIC_NAOJEANS.arquivo: "Eficiência — Estoque Não Jeans",
     TREINO_EP.arquivo: "Treinamento — Histórico de Atendimento EP",
@@ -408,7 +397,7 @@ REGRAS_UPLOAD: tuple[tuple[tuple[str, ...], str], ...] = (
     (("nao", "jeans"), EFIC_NAOJEANS.arquivo),
     (("estoque", "jeans"), EFIC_JEANS.arquivo),
     (("recebimento",), PRODUCAO.arquivo),
-    (("posto",), ABSENTEISMO.arquivo),
+    # "posto" saiu: a base de postos não é mais um upload (vive no Supabase).
     # "ep 2025" antes de "atendimento": ambos citam "ep", mas só a EP 2025 casa
     # os dois tokens ("ep" + "2025"). A regra de atendimento continua para o
     # histórico antigo ("Histórico de Atendimento EP").
@@ -457,9 +446,7 @@ ABAS_ESPERADAS: dict[tuple[str, str], AbaEsperada] = {
     (PRODUCAO.arquivo, PRODUCAO.aba): AbaEsperada(
         assinatura=("dia", "oficina", "ordem mestre", "mp", "minutos"),
     ),
-    (ABSENTEISMO.arquivo, ABSENTEISMO.aba): AbaEsperada(
-        assinatura=("frete", "mp", "oficinas", "data efetivos", "qtd efetivos"),
-    ),
+    # postos.xlsx não é mais lido (Fase 2 → Supabase), logo não há aba a resolver.
     (TREINO_EP.arquivo, TREINO_EP.aba): AbaEsperada(
         assinatura=("empresa", "cnpj", "modulo", "ch", "ciclo"),
     ),

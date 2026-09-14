@@ -81,7 +81,13 @@ def ler_todas(
         Uma tupla ``(registros, erros)`` — a lista de registros lidos e a lista
         de mensagens de erro das fontes que falharam (vazia se ``tolerante`` é
         ``False``, pois nesse caso a primeira falha é propagada).
+
+    Nota (Fase 2): quando ``fontes`` é ``None`` (o pipeline real lê
+    ``config.FONTES``), os nomes de "postos" são acrescentados a partir do
+    SUPABASE — ver ``infra.leitor_postos.registros_nome``. Chamadas com um
+    ``fontes`` explícito (testes) NÃO tocam a rede.
     """
+    incluir_postos = fontes is None  # só o pipeline real puxa o Supabase
     fontes = fontes or config.FONTES
     registros: list[RegistroNome] = []
     erros: list[str] = []
@@ -92,4 +98,14 @@ def ler_todas(
             if not tolerante:
                 raise
             erros.append(f"[{fonte.chave}] {exc}")
+    if incluir_postos:
+        # Import tardio: evita carregar o gateway Supabase (e app_postos) quando
+        # os testes leem fontes explícitas de planilha.
+        from app_oficinas.infra import leitor_postos
+        try:
+            registros.extend(leitor_postos.registros_nome())
+        except Exception as exc:
+            if not tolerante:
+                raise
+            erros.append(f"[postos] {exc}")
     return registros, erros

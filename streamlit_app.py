@@ -207,9 +207,9 @@ def _render_checklist(disponiveis: set[str]) -> None:
 
 # Pistas do log, da MAIS específica para a mais genérica. A ordem é o que
 # importa: o pipeline termina sempre com "FALHOU em '1/7 ...'. Abortando o
-# restante." — uma linha que só diz ONDE parou. A causa real ("Aba 'Dados' não
-# existe em postos.xlsx") vem antes. Varrer o log de trás para frente pegava a
-# genérica e escondia a útil, deixando o usuário sem saber o que corrigir.
+# restante." — uma linha que só diz ONDE parou. A causa real ("Aba 'RECEBIMENTO'
+# não existe em RECEBIMENTO.xlsx") vem antes. Varrer o log de trás para frente
+# pegava a genérica e escondia a útil, deixando o usuário sem saber o que corrigir.
 _PISTAS_MOTIVO: tuple[tuple[str, ...], ...] = (
     ("Planilha não encontrada", "Falha ao abrir a planilha"),
     ("Aba '", "Coluna", "cabeçalho"),
@@ -394,37 +394,47 @@ def render_atualizacao() -> None:
     st.divider()
     _esq, meio, _dir = st.columns([1, 30, 1])
     with meio:
-        st.subheader("Atualizar dados")
-
         # Resultado da última atualização — guardado em session_state para
         # sobreviver ao st.rerun() (que recarrega o dashboard com os números
-        # novos). Sem isso, a mensagem sumiria antes de o usuário lê-la.
+        # novos). Sem isso, a mensagem sumiria antes de o usuário lê-la. Fica
+        # FORA do expander (sempre visível): dentro de um painel fechado o
+        # usuário não veria o sucesso/erro logo após atualizar.
         _aviso = st.session_state.pop("_aviso_atualizacao", None)
         if _aviso:
             getattr(st, _aviso[0])(_aviso[1])
 
-        st.caption(
-            "Envie as planilhas .xlsx abaixo. Pode subir todas de uma vez ou "
-            "uma a uma — elas se acumulam na sessão. O nome do arquivo é "
-            "reconhecido automaticamente (ano/mês/acento diferentes não "
-            "atrapalham). Acompanhe pela checklist o que ainda falta.")
+        # Toda a área de upload+build vive dentro de um expander FECHADO por
+        # padrão. Antes ficava sempre aberta no fim da página, com o botão
+        # primário "Atualizar dados" à mostra — fácil de clicar sem querer ao
+        # rolar até o fim. Agora só aparece quando o usuário abre o painel.
+        # Reabre sozinho logo após uma atualização (``expanded=bool(_aviso)``)
+        # para mostrar a checklist/bases que ainda faltam sem reabrir na mão.
+        with st.expander("Atualizar dados", expanded=bool(_aviso), icon="🔄"):
+            st.caption(
+                "Envie as planilhas .xlsx abaixo. Pode subir todas de uma vez "
+                "ou uma a uma — elas se acumulam na sessão. O nome do arquivo é "
+                "reconhecido automaticamente (ano/mês/acento diferentes não "
+                "atrapalham). Acompanhe pela checklist o que ainda falta.")
 
-        uploads = st.file_uploader(
-            "Planilhas (.xlsx)", type=["xlsx"], accept_multiple_files=True)
+            uploads = st.file_uploader(
+                "Planilhas (.xlsx)", type=["xlsx"], accept_multiple_files=True)
 
-        # Checklist AO VIVO: já refletindo o que está no disco da sessão + o que
-        # acabou de ser selecionado no uploader (o Streamlit re-executa a cada
-        # arquivo escolhido). As bases faltando aparecem em cor/ícone distintos.
-        disponiveis = _canonicos_no_disco() | _canonicos_selecionados(uploads)
-        _render_checklist(disponiveis)
+            # Checklist AO VIVO: já refletindo o que está no disco da sessão + o
+            # que acabou de ser selecionado no uploader (o Streamlit re-executa
+            # a cada arquivo escolhido). As bases faltando aparecem em
+            # cor/ícone distintos.
+            disponiveis = _canonicos_no_disco() | _canonicos_selecionados(uploads)
+            _render_checklist(disponiveis)
 
-        nao_reconhecidos = _uploads_nao_reconhecidos(uploads)
-        if nao_reconhecidos:
-            st.warning(
-                "Não reconheci estes arquivos como uma das planilhas esperadas "
-                "(confira o nome): " + "; ".join(nao_reconhecidos))
+            nao_reconhecidos = _uploads_nao_reconhecidos(uploads)
+            if nao_reconhecidos:
+                st.warning(
+                    "Não reconheci estes arquivos como uma das planilhas "
+                    "esperadas (confira o nome): " + "; ".join(nao_reconhecidos))
 
-        if st.button("Atualizar dados", type="primary"):
+            _atualizar = st.button("Atualizar dados", type="primary")
+
+        if _atualizar:
             if not uploads:
                 st.warning("Selecione ao menos uma planilha.")
             else:

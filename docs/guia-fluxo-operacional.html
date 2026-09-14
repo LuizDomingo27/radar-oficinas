@@ -67,8 +67,9 @@
       <td><b>Radar de Oficinas</b></td>
       <td>O painel comparativo entre oficinas (Ranking, Ficha, Impacto,
         Qualidade, Faturamento, Dívidas). É o foco deste guia.</td>
-      <td>Planilhas Excel enviadas em <b>Atualizar dados</b> (somente leitura da
-        origem).</td>
+      <td>Planilhas Excel enviadas em <b>Atualizar dados</b> (somente leitura),
+        <b>mais o absenteísmo lido direto do Supabase</b> (tabela
+        <code>postos</code>) desde a unificação.</td>
     </tr>
     <tr>
       <td><b>Gestão de Postos</b></td>
@@ -80,13 +81,14 @@
     </tr>
   </table>
   <p class="nota">
-    Diferença essencial: o <b>Radar</b> apenas lê planilhas e publica; a
-    <b>Gestão de Postos</b> escreve no banco (é onde a equipe lança/edita os
-    dados de posto). Os dois tratam das mesmas oficinas — a planilha
-    <b>POSTOS</b> que hoje alimenta o absenteísmo do Radar é exatamente o dado
-    que a Gestão de Postos mantém no Supabase. A unificação dessa fonte (o Radar
-    passar a ler o absenteísmo direto do Supabase, aposentando a planilha) é a
-    etapa seguinte já planejada.
+    Diferença essencial: o <b>Radar</b> lê planilhas e publica; a <b>Gestão de
+    Postos</b> escreve no banco (é onde a equipe lança/edita os dados de posto).
+    Os dois tratam das mesmas oficinas — e a <b>fonte de absenteísmo já foi
+    unificada</b>: o Radar lê o absenteísmo (efetivos, trabalhados, contratações,
+    demissões) <b>direto da tabela <code>postos</code> do Supabase</b>, a mesma
+    que a Gestão de Postos mantém. A antiga planilha <code>postos.xlsx</code> foi
+    <b>aposentada</b> — não é mais enviada em "Atualizar dados", e os nomes
+    canônicos das oficinas também passaram a vir do Supabase.
   </p>
   <p class="nota">
     O módulo Gestão de Postos só carrega os dados quando as credenciais do
@@ -127,18 +129,23 @@
   </table>
   <h3>Tela usada</h3>
   <p>
-    Bloco <b>Atualizar dados</b> no <b>fim da página</b>, logo abaixo do
-    dashboard (que abre na aba Ranking): um campo <b>Planilhas (.xlsx)</b>
-    (aceita vários arquivos) e o botão <b>Atualizar dados</b>. O dashboard
-    ocupa toda a área principal — não há mais barra lateral.
+    Painel recolhível <b>“Atualizar dados”</b> no <b>fim da página</b>, logo
+    abaixo do dashboard (que abre na aba Ranking). Ele começa <b>fechado</b>:
+    aparece só o cabeçalho clicável <b>🔄 Atualizar dados</b> — assim ninguém
+    dispara a atualização sem querer ao rolar até o fim. Ao clicar no cabeçalho,
+    o painel abre e revela o campo <b>Planilhas (.xlsx)</b> (aceita vários
+    arquivos), a checklist e o botão <b>Atualizar dados</b>. Depois de uma
+    atualização o painel <b>reabre sozinho</b> para mostrar o resultado e o que
+    ainda falta. O dashboard ocupa toda a área principal — não há mais barra
+    lateral.
   </p>
   <p>
     Logo abaixo do campo de envio há a <b>checklist “Planilhas necessárias”</b>:
-    uma lista das dez bases esperadas, cada uma com o rótulo de negócio. As que
+    uma lista das nove bases esperadas, cada uma com o rótulo de negócio. As que
     já foram enviadas (na sessão) ou acabaram de ser selecionadas aparecem em
     <b>verde</b> com o selo <b>“pronta”</b>; as que ainda faltam ficam de
     <b>cor diferente</b> — âmbar, com borda tracejada e o selo <b>“falta
-    enviar”</b>. Um contador no topo (<code>X/10</code>) resume quantas faltam.
+    enviar”</b>. Um contador no topo (<code>X/9</code>) resume quantas faltam.
     A checklist se <b>atualiza sozinha</b> a cada arquivo escolhido, antes mesmo
     de clicar em Atualizar dados, para a equipe ver de relance o que está
     pendente. Arquivos cujo nome não bate com nenhuma base esperada são
@@ -148,11 +155,14 @@
 
 <section>
   <h2>Dados de entrada</h2>
-  <p>Dez planilhas alimentam o painel completo:</p>
+  <p>Nove planilhas — <b>mais a tabela <code>postos</code> do Supabase</b> —
+    alimentam o painel completo:</p>
   <table>
-    <tr><th>Planilha</th><th>Alimenta</th></tr>
+    <tr><th>Fonte</th><th>Alimenta</th></tr>
     <tr><td>RECEBIMENTO</td><td>Produtividade (peças e minutos por dia)</td></tr>
-    <tr><td>POSTOS</td><td>Absenteísmo (efetivos × trabalhados por semana)</td></tr>
+    <tr><td><b>Supabase</b> — tabela <code>postos</code> (não é planilha)</td>
+      <td>Absenteísmo (efetivos × trabalhados por semana) e os nomes canônicos
+        das oficinas — <b>lido ao vivo</b>, o mesmo dado da Gestão de Postos</td></tr>
     <tr><td>ESTOQUE OFICINAS — JEANS</td><td>Eficiência das oficinas de jeans</td></tr>
     <tr><td>ESTOQUE OFICINA NÃO JEANS</td><td>Eficiência de malha, polo e tear</td></tr>
     <tr><td>Histórico de Atendimento EP</td><td>Treinamentos realizados (histórico, só o ano)</td></tr>
@@ -179,10 +189,12 @@
       <td>A Dia (data) · B Oficina · D MP · E Real cortado (peças) · F Minutos</td>
     </tr>
     <tr>
-      <td><code>postos.xlsx</code></td><td>posto</td>
-      <td><code>Dados</code> (linha 2)</td>
-      <td>A Frete · B MP · C Oficinas · D Data Efetivos · E Qtd Efetivos ·
-        G Qtd Trabalhados · H Contratação · I Demissão · J Semana</td>
+      <td><b>Supabase</b> — tabela <code>postos</code></td><td>—</td>
+      <td>(sem planilha) — leitura via <code>[supabase]</code> nos Secrets</td>
+      <td>colunas <code>oficina</code> · <code>frete</code> · <code>mp</code> ·
+        <code>data_efetivos</code> · <code>qtd_efetivos</code> ·
+        <code>qtd_trabalhados</code> · <code>contratacoes</code> ·
+        <code>demissoes</code> · <code>semana</code></td>
     </tr>
     <tr>
       <td><code>ESTOQUE OFICINAS - JEANS - 2026.xlsx</code></td><td>estoque + jeans</td>
@@ -273,8 +285,10 @@
 
   <h3>A aba pode ter sido renomeada</h3>
   <p class="nota">
-    Quando uma planilha é reexportada, o Excel costuma renomear a aba (foi o que
-    aconteceu com POSTOS: a aba <code>Dados</code> virou <code>Planilha1</code>).
+    Quando uma planilha é reexportada, o Excel costuma renomear a aba (o caso que
+    motivou isso foi a antiga base de postos, cuja aba <code>Dados</code> virava
+    <code>Planilha1</code>; hoje o postos vem do Supabase, mas o mesmo cuidado
+    protege as demais planilhas, como RECEBIMENTO).
     O sistema procura a aba primeiro pelo nome e, se não achar, <b>pelo
     cabeçalho</b> — a aba cujos títulos de coluna são os esperados. Se duas abas
     ou nenhuma casarem, a atualização para e informa quais abas existem no
@@ -553,8 +567,9 @@
     </tr>
   </table>
   <p class="nota">
-    A mensagem de erro traz a <b>causa</b> (“Aba X não existe em POSTOS.xlsx…”,
-    “Planilha não encontrada…”), não apenas em que passo parou. É a informação
+    A mensagem de erro traz a <b>causa</b> (“Aba X não existe em RECEBIMENTO.xlsx…”,
+    “Planilha não encontrada…”, ou um problema de conexão com o Supabase), não
+    apenas em que passo parou. É a informação
     que permite ao operador corrigir o arquivo e reenviar.
   </p>
 </section>

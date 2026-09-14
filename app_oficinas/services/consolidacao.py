@@ -24,7 +24,7 @@ from app_oficinas.domain.models import (
     FatoTreino,
     Periodo,
 )
-from app_oficinas.infra import leitor_fatos
+from app_oficinas.infra import leitor_fatos, leitor_postos
 from app_oficinas.services import periodos
 from app_oficinas.services.normalizacao import nome_base_de, normalizar_mp
 
@@ -183,7 +183,9 @@ def consolidar(indice: Indice, base_dir: Path | None = None) -> Consolidado:
         )
 
     c.producao = list(_consumir(leitor_fatos.ler_producao(base_dir), prod))
-    c.absenteismo = list(_consumir(leitor_fatos.ler_absenteismo(base_dir), absen))
+    # Absenteísmo vem do Supabase (Fase 2), não mais de planilha — por isso não
+    # recebe ``base_dir``. Mesmo shape de dict; a lógica de ``absen`` não muda.
+    c.absenteismo = list(_consumir(leitor_postos.ler_absenteismo(), absen))
     c.eficiencia = list(_consumir(
         leitor_fatos.ler_eficiencia_jeans(base_dir), efic("estoque_jeans")
     )) + list(_consumir(

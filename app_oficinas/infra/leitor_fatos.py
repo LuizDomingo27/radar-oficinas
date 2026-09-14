@@ -142,28 +142,9 @@ def ler_endividamento(base_dir: Path | None = None) -> Iterator[dict]:
         wb.close()
 
 
-def ler_absenteismo(base_dir: Path | None = None) -> Iterator[dict]:
-    f = config.ABSENTEISMO
-    wb = _abrir((base_dir or config.PLANILHAS_DIR) / f.arquivo)
-    try:
-        ws = _aba(wb, f.aba, f.arquivo)
-        for linha in ws.iter_rows(min_row=f.primeira_linha, values_only=True):
-            nome = _texto(_celula(linha, f.col_nome))
-            if not nome:
-                continue
-            yield {
-                "nome": nome,
-                "frete": _texto(_celula(linha, f.col_frete)),
-                "mp": _texto(_celula(linha, f.col_mp)),
-                "data": _celula(linha, f.col_data),
-                "semana": _texto(_celula(linha, f.col_semana)),
-                "efetivos": _num(_celula(linha, f.col_efetivos)) or 0.0,
-                "trabalhados": _num(_celula(linha, f.col_trabalhados)) or 0.0,
-                "contratacao": _num(_celula(linha, f.col_contratacao)) or 0.0,
-                "demissao": _num(_celula(linha, f.col_demissao)) or 0.0,
-            }
-    finally:
-        wb.close()
+# O absenteísmo saiu daqui na Fase 2: sua fonte passou a ser a tabela ``postos``
+# do Supabase (mesma base do módulo "Gestão de Postos"). Ver
+# ``infra.leitor_postos.ler_absenteismo`` — mesmo shape de dict, origem diferente.
 
 
 def ler_treino_ep(base_dir: Path | None = None) -> Iterator[dict]:

@@ -24,5 +24,15 @@ class FonteInvalida(RadarError):
     """A configuração de uma fonte está incompleta ou inconsistente."""
 
 
+class FonteIndisponivel(RadarError):
+    """Uma fonte externa (ex.: a tabela de postos no Supabase) não pôde ser lida.
+
+    Diferente de ``FonteInvalida`` (configuração local errada), sinaliza falha de
+    acesso ao dado em si: credenciais ausentes, rede indisponível ou resposta
+    inesperada do serviço. É ``RadarError`` para o pipeline reportar a causa e o
+    app nunca quebrar.
+    """
+
+
 class ColunaInvalida(RadarError):
     """O índice de coluna configurado está fora do intervalo da aba."""

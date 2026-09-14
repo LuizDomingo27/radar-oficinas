@@ -1,9 +1,12 @@
 """Testes da resolução de abas renomeadas (``infra.abas``).
 
-Cobre o caso real que quebrou a atualização: a base de postos chegou com a aba
-"Dados" renomeada para "Planilha1" (conteúdo idêntico) e o pipeline parou no 1º
-passo. A aba precisa ser reencontrada pelo cabeçalho, sem afrouxar a ponto de
-aceitar uma aba qualquer.
+Cobre o caso real que quebrou a atualização: uma planilha chegou com a aba
+renomeada (ex.: "RECEBIMENTO" reexportada como "Planilha1", conteúdo idêntico) e
+o pipeline parava no 1º passo. A aba precisa ser reencontrada pelo cabeçalho, sem
+afrouxar a ponto de aceitar uma aba qualquer.
+
+Antes o exemplo usava a base de postos; na Fase 2 ela migrou para o Supabase, e
+o teste passou a exercitar a mesma resolução sobre a produção (RECEBIMENTO).
 """
 
 import unittest
@@ -14,12 +17,12 @@ from app_oficinas import config
 from app_oficinas.errors import AbaNaoEncontrada
 from app_oficinas.infra import abas
 
-CAB_POSTOS = ["Frete", "MP", "Oficinas", "Data Efetivos", "QTD Efetivos",
-              "Data Trabalhados", "QTD Trabalhados", "Contratação",
-              "Demissão", "Semana"]
+# Cabeçalho que casa a assinatura de RECEBIMENTO ("dia/oficina/ordem mestre/mp/
+# minutos"), usado para reencontrar a aba quando ela é renomeada.
+CAB_PRODUCAO = ["Dia", "Oficina", "Ordem Mestre", "MP", "Real Cortado", "Minutos"]
 
-ARQ = config.ABSENTEISMO.arquivo
-ABA = config.ABSENTEISMO.aba
+ARQ = config.PRODUCAO.arquivo
+ABA = config.PRODUCAO.aba
 
 
 def _wb(abas_e_cabecalhos: dict[str, list]) -> openpyxl.Workbook:
@@ -33,16 +36,16 @@ def _wb(abas_e_cabecalhos: dict[str, list]) -> openpyxl.Workbook:
 
 class TestResolver(unittest.TestCase):
     def test_nome_exato_vence(self):
-        wb = _wb({"Dados": CAB_POSTOS, "Planilha1": CAB_POSTOS})
-        self.assertEqual(abas.resolver(wb, ABA, ARQ), "Dados")
+        wb = _wb({"RECEBIMENTO": CAB_PRODUCAO, "Planilha1": CAB_PRODUCAO})
+        self.assertEqual(abas.resolver(wb, ABA, ARQ), "RECEBIMENTO")
 
     def test_ignora_acento_e_caixa(self):
-        wb = _wb({"DADOS": ["qualquer"]})
-        self.assertEqual(abas.resolver(wb, ABA, ARQ), "DADOS")
+        wb = _wb({"recebimento": ["qualquer"]})
+        self.assertEqual(abas.resolver(wb, ABA, ARQ), "recebimento")
 
     def test_encontra_pelo_cabecalho_quando_aba_foi_renomeada(self):
-        # O caso real: "Dados" virou "Planilha1" numa reexportação do Excel.
-        wb = _wb({"Planilha1": CAB_POSTOS, "Planilha2": []})
+        # O caso real: a aba esperada virou "Planilha1" numa reexportação do Excel.
+        wb = _wb({"Planilha1": CAB_PRODUCAO, "Planilha2": []})
         self.assertEqual(abas.resolver(wb, ABA, ARQ), "Planilha1")
 
     def test_erro_quando_nenhuma_aba_tem_o_cabecalho(self):
@@ -54,7 +57,7 @@ class TestResolver(unittest.TestCase):
 
     def test_nao_escolhe_no_escuro_quando_duas_abas_casam(self):
         # Ambiguidade é erro: ler a aba errada publicaria números inventados.
-        wb = _wb({"Base A": CAB_POSTOS, "Base B": CAB_POSTOS})
+        wb = _wb({"Base A": CAB_PRODUCAO, "Base B": CAB_PRODUCAO})
         with self.assertRaises(AbaNaoEncontrada):
             abas.resolver(wb, ABA, ARQ)
 
@@ -74,7 +77,6 @@ class TestRegistroDeAbas(unittest.TestCase):
         """Sem assinatura, uma aba renomeada volta a derrubar o pipeline."""
         usadas = {(f.arquivo, f.aba) for f in config.FONTES} | {
             (config.PRODUCAO.arquivo, config.PRODUCAO.aba),
-            (config.ABSENTEISMO.arquivo, config.ABSENTEISMO.aba),
             (config.TREINO_EP.arquivo, config.TREINO_EP.aba),
             (config.TREINO_LIDERA.arquivo, config.TREINO_LIDERA.aba),
             (config.EFIC_JEANS.arquivo, config.EFIC_JEANS.aba),

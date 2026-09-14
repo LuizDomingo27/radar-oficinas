@@ -20,9 +20,10 @@ class TestNomeCanonicoUpload(unittest.TestCase):
             config.nome_canonico_upload("recebimento agosto 2026.xlsx"),
             config.PRODUCAO.arquivo)
 
-    def test_posto_singular(self):
-        self.assertEqual(
-            config.nome_canonico_upload("Postos_novo.xlsx"), config.ABSENTEISMO.arquivo)
+    def test_posto_nao_mapeia_mais(self):
+        # Fase 2: a base de postos vive no Supabase; não é mais um upload de
+        # planilha, então nenhum arquivo "postos" casa uma regra.
+        self.assertIsNone(config.nome_canonico_upload("Postos_novo.xlsx"))
 
     def test_jeans_ano_diferente(self):
         # Ano no nome muda (2027), mas ainda mapeia para o canônico do pipeline.
@@ -82,9 +83,10 @@ class TestNomeCanonicoUpload(unittest.TestCase):
 
 
 class TestArquivosEsperados(unittest.TestCase):
-    def test_cobre_dez_fontes_distintas(self):
-        self.assertEqual(len(config.ARQUIVOS_ESPERADOS), 10)
-        self.assertEqual(len(set(config.ARQUIVOS_ESPERADOS)), 10)
+    def test_cobre_nove_fontes_distintas(self):
+        # 9 planilhas: postos saiu para o Supabase na Fase 2.
+        self.assertEqual(len(config.ARQUIVOS_ESPERADOS), 9)
+        self.assertEqual(len(set(config.ARQUIVOS_ESPERADOS)), 9)
 
     def test_toda_regra_aponta_para_arquivo_esperado(self):
         for _tokens, canonico in config.REGRAS_UPLOAD:
@@ -122,7 +124,7 @@ class TestSituacaoPlanilhas(unittest.TestCase):
                         [(a, r, o) for a, r, o in config.situacao_planilhas(disponiveis)])
         self.assertTrue(situacao[config.PRODUCAO.arquivo])
         self.assertTrue(situacao[config.FATURAMENTO.arquivo])
-        self.assertFalse(situacao[config.ABSENTEISMO.arquivo])
+        self.assertFalse(situacao[config.EFIC_JEANS.arquivo])
 
     def test_todas_disponiveis_marca_tudo_pronto(self):
         situacao = config.situacao_planilhas(set(config.ARQUIVOS_ESPERADOS))

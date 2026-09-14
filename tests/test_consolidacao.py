@@ -59,16 +59,21 @@ class TestConsolidar(unittest.TestCase):
         ]
 
     def _consolidar(self):
+        # Absenteísmo agora vem do Supabase (leitor_postos); o restante, das
+        # planilhas (leitor_fatos). Cada origem é substituída por fixture.
         with mock.patch.multiple(
             consolidacao.leitor_fatos,
             ler_producao=mock.Mock(return_value=iter(self._prod)),
-            ler_absenteismo=mock.Mock(return_value=iter(self._absen)),
             ler_eficiencia_jeans=mock.Mock(return_value=iter([])),
             ler_eficiencia_naojeans=mock.Mock(return_value=iter(self._efic)),
             ler_treino_ep=mock.Mock(return_value=iter(self._treino_ep)),
             ler_treino_lidera=mock.Mock(return_value=iter(self._treino_lidera)),
             ler_treino_ep2025_cm=mock.Mock(return_value=iter(self._treino_ep2025_cm)),
             ler_treino_ep2025_toc=mock.Mock(return_value=iter(self._treino_ep2025_toc)),
+        ), mock.patch.object(
+            consolidacao.leitor_postos,
+            "ler_absenteismo",
+            mock.Mock(return_value=iter(self._absen)),
         ):
             return consolidacao.consolidar(self.indice)
 
