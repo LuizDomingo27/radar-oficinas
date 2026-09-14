@@ -358,7 +358,7 @@ def _commitar_dados(arquivos: list[str]) -> tuple[bool, str]:
 # Deixa o embed no comando visual: some com o chrome do Streamlit (menu/rodapé)
 # e cola o iframe no topo, sem margens. A barra lateral foi REMOVIDA — a área
 # "Atualizar dados" agora vive no fim da página (ver ``render_atualizacao``).
-st.markdown("""
+_RADAR_CHROME_CSS = """
 <style>
   /* Some com o chrome do Streamlit (menu/deploy/rodapé) e cola o iframe no
      topo, sem margens. */
@@ -377,7 +377,7 @@ st.markdown("""
   .block-container{padding:0 !important; max-width:100% !important;}
   section.main > div{gap:0 !important;}
 </style>
-""", unsafe_allow_html=True)
+"""
 
 
 def render_atualizacao() -> None:
@@ -466,28 +466,83 @@ def render_atualizacao() -> None:
                     st.error(msg)
 
 
-# --------------------------------------------------------------------- exibição
-# Blindagem (regra do AGENTS.md: o app não pode quebrar). Qualquer falha ao
-# montar ou renderizar a SPA exibe uma mensagem clara — o QUÊ e ONDE ocorreu —
-# em vez de derrubar a página inteira com um traceback.
-try:
-    _html_painel = montar_html()
-except Exception as exc:  # captura ampla proposital: é a última linha de defesa
-    st.error(
-        "Não foi possível montar o painel — etapa: montar_html "
-        "(inlining de HTML/CSS/JS e injeção dos dados de data/*.json). "
-        f"Detalhe: {type(exc).__name__}: {exc}")
-    st.info("A barra lateral continua ativa para reenviar planilhas e atualizar. "
-            "Se o erro persistir, confira data/dashboard.json e os arquivos em web/.")
-else:
-    try:
-        components.html(_html_painel, height=2400, scrolling=True)
-    except Exception as exc:  # falha na renderização do iframe
-        st.error(
-            "Falha ao renderizar o painel no navegador — etapa: components.html. "
-            f"Detalhe: {type(exc).__name__}: {exc}")
+def render_radar_page() -> None:
+    """Renderiza o módulo Radar: a SPA embutida no iframe + área de atualização.
 
-# Área de upload/atualização no FIM da página (abaixo do dashboard). Fica fora
-# do try/except da exibição de propósito: mesmo que a SPA não monte, a equipe
-# ainda precisa poder reenviar planilhas e atualizar os dados.
-render_atualizacao()
+    Blindagem (regra do AGENTS.md: o app não pode quebrar). Qualquer falha ao
+    montar ou renderizar a SPA exibe uma mensagem clara — o QUÊ e ONDE ocorreu —
+    em vez de derrubar a página inteira com um traceback.
+    """
+    # CSS de full-bleed do iframe: só faz sentido nesta aba (a aba Postos usa o
+    # seu próprio CSS, aplicado no dispatcher).
+    st.markdown(_RADAR_CHROME_CSS, unsafe_allow_html=True)
+
+    try:
+        _html_painel = montar_html()
+    except Exception as exc:  # captura ampla proposital: é a última linha de defesa
+        st.error(
+            "Não foi possível montar o painel — etapa: montar_html "
+            "(inlining de HTML/CSS/JS e injeção dos dados de data/*.json). "
+            f"Detalhe: {type(exc).__name__}: {exc}")
+        st.info("A área de atualização continua ativa para reenviar planilhas. "
+                "Se o erro persistir, confira data/dashboard.json e os arquivos em web/.")
+    else:
+        try:
+            components.html(_html_painel, height=2400, scrolling=True)
+        except Exception as exc:  # falha na renderização do iframe
+            st.error(
+                "Falha ao renderizar o painel no navegador — etapa: components.html. "
+                f"Detalhe: {type(exc).__name__}: {exc}")
+
+    # Área de upload/atualização no FIM da página (abaixo do dashboard). Fica fora
+    # do try/except da exibição de propósito: mesmo que a SPA não monte, a equipe
+    # ainda precisa poder reenviar planilhas e atualizar os dados.
+    render_atualizacao()
+
+
+def _render_postos_page() -> None:
+    """Renderiza o módulo Postos (dashboard nativo com dados ao vivo no Supabase).
+
+    O import é TARDIO e protegido: o módulo Postos puxa pandas/supabase, e uma
+    eventual falha de import/ambiente não pode derrubar o app inteiro nem impedir
+    o acesso ao Radar. Aplica o CSS próprio do Postos (`build_css`, tema escuro
+    alinhado ao Radar) antes de montar a página.
+    """
+    try:
+        from app_postos.dashboard import render_postos_page
+        from app_postos.ui.styles import build_css as build_postos_css
+    except Exception as exc:  # noqa: BLE001 — última linha de defesa
+        st.error(
+            "Não foi possível carregar o módulo de Postos — etapa: import. "
+            f"Detalhe: {type(exc).__name__}: {exc}. "
+            "Confira se as dependências (pandas, supabase) estão instaladas.")
+        return
+
+    st.markdown(build_postos_css(), unsafe_allow_html=True)
+    render_postos_page()
+
+
+# ------------------------------------------------------------------ dispatcher
+# Alternador de nível superior entre os dois módulos do app unificado. Fica no
+# topo, antes de qualquer CSS específico de módulo, para que ele mesmo apareça
+# limpo em ambas as abas.
+_VIEW_RADAR = "Radar de Oficinas"
+_VIEW_POSTOS = "Gestão de Postos"
+
+# Esconde o chrome do Streamlit (menu/deploy) nas duas abas — o full-bleed do
+# Radar e o padding do Postos ficam a cargo de cada módulo.
+st.markdown(
+    '<style>#MainMenu,footer,[data-testid="stAppDeployButton"]{display:none !important;}'
+    'header[data-testid="stHeader"]{background:transparent !important;}</style>',
+    unsafe_allow_html=True,
+)
+
+_view = st.segmented_control(
+    "Módulo", [_VIEW_RADAR, _VIEW_POSTOS], default=_VIEW_RADAR,
+    key="app_view", label_visibility="collapsed",
+)
+
+if _view == _VIEW_POSTOS:
+    _render_postos_page()
+else:
+    render_radar_page()

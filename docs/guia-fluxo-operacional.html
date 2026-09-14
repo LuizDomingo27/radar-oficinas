@@ -56,6 +56,47 @@
 <main>
 
 <section>
+  <h2>Dois módulos num só aplicativo</h2>
+  <p>
+    O aplicativo passou a reunir <b>dois módulos</b>, escolhidos por um seletor
+    no <b>topo da página</b>:
+  </p>
+  <table>
+    <tr><th>Módulo</th><th>O que é</th><th>Origem dos dados</th></tr>
+    <tr>
+      <td><b>Radar de Oficinas</b></td>
+      <td>O painel comparativo entre oficinas (Ranking, Ficha, Impacto,
+        Qualidade, Faturamento, Dívidas). É o foco deste guia.</td>
+      <td>Planilhas Excel enviadas em <b>Atualizar dados</b> (somente leitura da
+        origem).</td>
+    </tr>
+    <tr>
+      <td><b>Gestão de Postos</b></td>
+      <td>Dashboard de efetivos, trabalhados, absenteísmo, contratações e
+        demissões por oficina, com <b>cadastro e edição de lançamentos</b> e
+        importação de planilha em lote.</td>
+      <td>Banco de dados <b>Supabase</b> (Postgres gerenciado, tabela
+        <code>postos</code>) — dado <b>ao vivo</b>, gravado pelo próprio módulo.</td>
+    </tr>
+  </table>
+  <p class="nota">
+    Diferença essencial: o <b>Radar</b> apenas lê planilhas e publica; a
+    <b>Gestão de Postos</b> escreve no banco (é onde a equipe lança/edita os
+    dados de posto). Os dois tratam das mesmas oficinas — a planilha
+    <b>POSTOS</b> que hoje alimenta o absenteísmo do Radar é exatamente o dado
+    que a Gestão de Postos mantém no Supabase. A unificação dessa fonte (o Radar
+    passar a ler o absenteísmo direto do Supabase, aposentando a planilha) é a
+    etapa seguinte já planejada.
+  </p>
+  <p class="nota">
+    O módulo Gestão de Postos só carrega os dados quando as credenciais do
+    Supabase estão configuradas (seção <code>[supabase]</code> nos Secrets). Sem
+    elas, o módulo exibe uma <b>mensagem de erro amigável</b> ao carregar — nunca
+    um traceback — e o módulo Radar continua funcionando normalmente.
+  </p>
+</section>
+
+<section>
   <h2>Propósito</h2>
   <p>
     As áreas de Produção, RH e Qualidade mantêm suas planilhas em Excel. O Radar

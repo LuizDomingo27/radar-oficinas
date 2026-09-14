@@ -1,3 +1,11 @@
-streamlit>=1.40
+# App unificado: Radar de Oficinas (pipeline + SPA) + Gestão de Postos (Supabase).
+# Superset das dependências dos dois módulos.
+streamlit>=1.52,<2.0
 openpyxl>=3.1
 requests>=2.31
+
+# Módulo Postos (app_postos/): dashboard nativo com dados ao vivo no Supabase.
+pandas==2.2.3
+numpy==1.26.4
+reportlab>=4.2,<5.0
+supabase>=2.10,<3.0
