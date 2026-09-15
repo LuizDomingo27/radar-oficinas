@@ -558,6 +558,30 @@ def _render_envios_page() -> None:
     render_envios_page()
 
 
+def _render_recebimento_page() -> None:
+    """Renderiza o módulo Recebimento (dashboard nativo com dados ao vivo no Neon).
+
+    Import TARDIO e protegido, pelo mesmo motivo do Envios: o módulo puxa
+    pandas/psycopg e uma falha de import/ambiente não pode derrubar o app nem
+    impedir o acesso ao Radar. Aplica o CSS próprio do Recebimento (design system
+    compartilhado + acréscimos) antes de montar a página.
+    """
+    try:
+        from app_recebimento.dashboard import render_recebimento_page
+        from app_recebimento.ui.styles import build_css as build_recebimento_css
+    except Exception as exc:  # noqa: BLE001 — última linha de defesa
+        st.error(
+            "Não foi possível carregar o módulo de Recebimento — etapa: import. "
+            f"Detalhe: {type(exc).__name__}: {exc}. "
+            "Confira se as dependências (pandas, psycopg) estão instaladas.")
+        return
+
+    # st.html() (e não st.markdown) pelo mesmo motivo do Envios: preserva o
+    # bloco <style> compartilhado com os acréscimos de Recebimento intactos.
+    st.html(build_recebimento_css())
+    render_recebimento_page()
+
+
 # ------------------------------------------------------------------ dispatcher
 # Alternador de nível superior entre os módulos do app unificado. Fica no
 # topo, antes de qualquer CSS específico de módulo, para que ele mesmo apareça
@@ -565,6 +589,7 @@ def _render_envios_page() -> None:
 _VIEW_RADAR = "Radar de Oficinas"
 _VIEW_POSTOS = "Gestão de Postos"
 _VIEW_ENVIOS = "Envios"
+_VIEW_RECEBIMENTO = "Recebimento"
 
 # Esconde o chrome do Streamlit (menu/deploy) nas duas abas — o full-bleed do
 # Radar e o padding do Postos ficam a cargo de cada módulo.
@@ -575,13 +600,15 @@ st.markdown(
 )
 
 _view = st.segmented_control(
-    "Módulo", [_VIEW_RADAR, _VIEW_POSTOS, _VIEW_ENVIOS], default=_VIEW_RADAR,
-    key="app_view", label_visibility="collapsed",
+    "Módulo", [_VIEW_RADAR, _VIEW_POSTOS, _VIEW_ENVIOS, _VIEW_RECEBIMENTO],
+    default=_VIEW_RADAR, key="app_view", label_visibility="collapsed",
 )
 
 if _view == _VIEW_POSTOS:
     _render_postos_page()
 elif _view == _VIEW_ENVIOS:
     _render_envios_page()
+elif _view == _VIEW_RECEBIMENTO:
+    _render_recebimento_page()
 else:
     render_radar_page()

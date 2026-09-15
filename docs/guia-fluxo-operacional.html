@@ -56,9 +56,9 @@
 <main>
 
 <section>
-  <h2>Três módulos num só aplicativo</h2>
+  <h2>Quatro módulos num só aplicativo</h2>
   <p>
-    O aplicativo passou a reunir <b>três módulos</b>, escolhidos por um seletor
+    O aplicativo passou a reunir <b>quatro módulos</b>, escolhidos por um seletor
     no <b>topo da página</b>:
   </p>
   <table>
@@ -87,6 +87,17 @@
       <td>Banco de dados <b>Neon</b> (tabela <code>Envios_Radar</code>) — a
         planilha de envios é importada em lote e <b>só os registros novos</b> são
         gravados (deduplicação por impressão digital de linha).</td>
+    </tr>
+    <tr>
+      <td><b>Recebimento</b></td>
+      <td>Contrapartida do Envios: acompanhamento das <b>peças recebidas de volta
+        das oficinas</b> (peças cortadas e minutos), por matéria-prima, oficina,
+        mês, semana e dia, com gráficos e a mesma <b>consulta por número da
+        ordem</b> (tabela paginada, 15 por página).</td>
+      <td>Banco de dados <b>Neon</b> (tabela <code>Recebimento_Radar</code>) — a
+        planilha <code>RECEBIMENTO.xlsx</code> é importada em lote e <b>só os
+        registros novos</b> são gravados (mesma deduplicação por impressão
+        digital de linha).</td>
     </tr>
   </table>
   <p class="nota">
@@ -183,6 +194,86 @@
     digital para deduplicação). A criação dessa tabela é feita uma única vez pela
     migração
     <code>db_migrations/migrations/20260915120000_create_envios_radar_table.sql</code>
+    (idempotente: <code>CREATE TABLE IF NOT EXISTS</code>, sem apagar nada).
+  </p>
+</section>
+
+<section>
+  <h2>Módulo Recebimento — do arquivo ao painel</h2>
+  <p>
+    <b>Propósito (linguagem de negócio):</b> enxergar quantas <b>peças</b> e
+    quantos <b>minutos</b> <b>voltaram</b> das oficinas — o outro lado do fluxo
+    que o módulo Envios mede na saída — e onde esse volume se concentra, além de
+    permitir <b>consultar um recebimento pelo número da ordem</b>.
+  </p>
+  <p>
+    <b>Papel e tela:</b> a equipe de planejamento abre o módulo
+    <b>Recebimento</b> no seletor do topo. Há duas telas internas:
+    <b>Dashboard</b> (visão e consulta) e <b>Lançamento de Dados</b> (importação
+    da planilha).
+  </p>
+  <p>
+    <b>Dados de entrada:</b> a planilha <code>RECEBIMENTO.xlsx</code> (aba
+    <code>RECEBIMENTO</code>), com as colunas <code>DIA</code> (data do
+    recebimento), <code>OFICINA</code>, <code>ORDEM MESTRE</code>,
+    <code>MP</code>, <code>REAL CORTADO</code> (peças) e <code>MINUTOS</code>.
+    É a <b>mesma planilha</b> que o Radar já usa para o indicador de
+    produtividade — a diferença é que aqui ela é <b>importada para o banco</b>,
+    em <b>Lançamento de Dados → Importação em Lote</b>, e passa a ser consultável
+    sem re-enviar o arquivo.
+  </p>
+  <p>
+    <b>Fluxo completo:</b>
+  </p>
+  <ol>
+    <li>A equipe importa a planilha em <b>Lançamento de Dados</b>. A tela mostra
+      as <b>colunas obrigatórias</b>, uma <b>pré-visualização</b> das 10
+      primeiras linhas e só grava após a confirmação.</li>
+    <li>O sistema calcula, para cada linha, uma <b>impressão digital</b>
+      (<code>row_hash</code>) a partir do conteúdo. <b>Só entram no banco as
+      linhas cujo hash ainda não existe</b> — re-subir a mesma planilha não
+      insere nada, e <b>nada é apagado ou sobrescrito</b> (gravação insert-only
+      na tabela <code>Recebimento_Radar</code> do Neon). Duas linhas idênticas do
+      mesmo arquivo são <b>ambas preservadas</b> (o índice de ocorrência as
+      diferencia).</li>
+    <li>O <b>Dashboard</b> lê os recebimentos ao vivo do Neon e mostra:
+      <ul>
+        <li><b>Filtros</b> em cascata: <b>Ano</b> (obrigatório, começa no mais
+          recente), <b>Mês</b>, <b>Matéria-prima</b> e <b>Oficinas</b>.</li>
+        <li><b>Cards</b> com peças recebidas (e nº de ordens), minutos recebidos
+          e nº de recebimentos.</li>
+        <li><b>Total de peças e minutos por granularidade</b> escolhida:
+          <b>Matéria-prima, Oficinas, Mês, Semana ou Dia</b> (referente ao
+          recorte filtrado).</li>
+        <li>Um <b>gráfico de colunas</b> com as <b>10 oficinas que mais
+          entregaram peças</b> e um <b>gráfico de período que acompanha o
+          filtro</b>: com “Todos os meses” ele mostra <b>peças por mês</b>; ao
+          escolher um mês, ele passa a mostrar <b>peças por semana</b> daquele
+          mês, com rótulos no padrão <b>W10, W11…</b> (semana ISO).</li>
+        <li>Uma <b>tabela de consulta</b> com as colunas
+          <b>Ordem · Oficina · Qtd · Minutos · Recebimento · MP</b>, com
+          <b>busca pelo número da ordem</b> e <b>paginação de 15 linhas por
+          página</b> (a busca sempre volta para a página 1).</li>
+      </ul>
+    </li>
+  </ol>
+  <p class="nota">
+    <b>Exceções previstas:</b> linhas <b>sem data de recebimento</b> entram nos
+    totais e nas granularidades por MP/Oficina, mas ficam <b>de fora do recorte
+    por ano</b> e das granularidades de mês/semana/dia — o painel avisa quantas
+    foram excluídas. Quando um filtro não devolve nenhuma linha, a tela mostra um
+    <b>aviso</b> em vez de uma tabela vazia; quando a tabela do banco ainda está
+    sem registros, o painel <b>orienta a usar o Lançamento de Dados</b>. Se as
+    credenciais do Neon não estiverem configuradas, o módulo mostra uma
+    <b>mensagem amigável</b> (nunca um traceback) e os demais módulos continuam
+    funcionando.
+  </p>
+  <p class="nota">
+    <b>O que o sistema salva:</b> os recebimentos ficam na tabela
+    <code>Recebimento_Radar</code> do Neon (uma linha por recebimento, mais a
+    impressão digital para deduplicação). A criação dessa tabela é feita uma
+    única vez pela migração
+    <code>db_migrations/migrations/20260916120000_create_recebimento_radar_table.sql</code>
     (idempotente: <code>CREATE TABLE IF NOT EXISTS</code>, sem apagar nada).
   </p>
 </section>

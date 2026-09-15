@@ -22,3 +22,7 @@ venv/
 
 # Tooling local do agente (não é código do app)
 .claude/
+
+# Cópias de segurança do Neon (dados de produção, geradas por
+# app_common/scripts/backup_neon.py) — nunca versionar.
+backups/
