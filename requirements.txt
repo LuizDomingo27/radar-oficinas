@@ -19,10 +19,16 @@ streamlit==1.58.0
 openpyxl==3.1.5
 requests==2.32.5
 
-# Gestão de Postos (app_postos/): dashboard nativo com dados ao vivo no Supabase.
+# Gestão de Postos e Envios (app_postos/, app_envios/): dashboards com dados ao
+# vivo no Neon (Postgres). O acesso ao banco é feito via psycopg (SQL direto).
 pandas==2.3.2
 numpy==2.3.3
 reportlab==4.5.0
+psycopg==3.3.4
+psycopg-binary==3.3.4
+# supabase: mantido APENAS para o script único de migração Supabase→Neon
+# (app_common/scripts/bootstrap_neon.py), que lê os postos antigos. O app em
+# runtime não usa mais o Supabase.
 supabase==2.31.0
 
 # --- Transitivas travadas (resolvidas pelo pip; não editar à mão) --------------

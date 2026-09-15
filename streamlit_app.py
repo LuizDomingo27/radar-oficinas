@@ -532,12 +532,39 @@ def _render_postos_page() -> None:
     render_postos_page()
 
 
+def _render_envios_page() -> None:
+    """Renderiza o módulo Envios (dashboard nativo com dados ao vivo no Supabase).
+
+    Import TARDIO e protegido, pelo mesmo motivo do Postos: o módulo puxa
+    pandas/supabase e uma falha de import/ambiente não pode derrubar o app nem
+    impedir o acesso ao Radar. Aplica o CSS próprio do Envios (design system
+    compartilhado + acréscimos) antes de montar a página.
+    """
+    try:
+        from app_envios.dashboard import render_envios_page
+        from app_envios.ui.styles import build_css as build_envios_css
+    except Exception as exc:  # noqa: BLE001 — última linha de defesa
+        st.error(
+            "Não foi possível carregar o módulo de Envios — etapa: import. "
+            f"Detalhe: {type(exc).__name__}: {exc}. "
+            "Confira se as dependências (pandas, supabase) estão instaladas.")
+        return
+
+    # st.html() renderiza HTML bruto SEM passar pelo parser de Markdown — ao
+    # contrário de st.markdown, que quebrava o bloco <style> ao meio (parte das
+    # regras vazava como texto na tela). Aqui isso é essencial porque o CSS de
+    # Envios injeta regras extras dentro do bloco compartilhado.
+    st.html(build_envios_css())
+    render_envios_page()
+
+
 # ------------------------------------------------------------------ dispatcher
-# Alternador de nível superior entre os dois módulos do app unificado. Fica no
+# Alternador de nível superior entre os módulos do app unificado. Fica no
 # topo, antes de qualquer CSS específico de módulo, para que ele mesmo apareça
-# limpo em ambas as abas.
+# limpo em todas as abas.
 _VIEW_RADAR = "Radar de Oficinas"
 _VIEW_POSTOS = "Gestão de Postos"
+_VIEW_ENVIOS = "Envios"
 
 # Esconde o chrome do Streamlit (menu/deploy) nas duas abas — o full-bleed do
 # Radar e o padding do Postos ficam a cargo de cada módulo.
@@ -548,11 +575,13 @@ st.markdown(
 )
 
 _view = st.segmented_control(
-    "Módulo", [_VIEW_RADAR, _VIEW_POSTOS], default=_VIEW_RADAR,
+    "Módulo", [_VIEW_RADAR, _VIEW_POSTOS, _VIEW_ENVIOS], default=_VIEW_RADAR,
     key="app_view", label_visibility="collapsed",
 )
 
 if _view == _VIEW_POSTOS:
     _render_postos_page()
+elif _view == _VIEW_ENVIOS:
+    _render_envios_page()
 else:
     render_radar_page()

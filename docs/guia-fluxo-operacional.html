@@ -56,9 +56,9 @@
 <main>
 
 <section>
-  <h2>Dois módulos num só aplicativo</h2>
+  <h2>Três módulos num só aplicativo</h2>
   <p>
-    O aplicativo passou a reunir <b>dois módulos</b>, escolhidos por um seletor
+    O aplicativo passou a reunir <b>três módulos</b>, escolhidos por um seletor
     no <b>topo da página</b>:
   </p>
   <table>
@@ -68,7 +68,7 @@
       <td>O painel comparativo entre oficinas (Ranking, Ficha, Impacto,
         Qualidade, Faturamento, Dívidas). É o foco deste guia.</td>
       <td>Planilhas Excel enviadas em <b>Atualizar dados</b> (somente leitura),
-        <b>mais o absenteísmo lido direto do Supabase</b> (tabela
+        <b>mais o absenteísmo lido direto do Neon</b> (tabela
         <code>postos</code>) desde a unificação.</td>
     </tr>
     <tr>
@@ -76,8 +76,17 @@
       <td>Dashboard de efetivos, trabalhados, absenteísmo, contratações e
         demissões por oficina, com <b>cadastro e edição de lançamentos</b> e
         importação de planilha em lote.</td>
-      <td>Banco de dados <b>Supabase</b> (Postgres gerenciado, tabela
+      <td>Banco de dados <b>Neon</b> (Postgres gerenciado, tabela
         <code>postos</code>) — dado <b>ao vivo</b>, gravado pelo próprio módulo.</td>
+    </tr>
+    <tr>
+      <td><b>Envios</b></td>
+      <td>Acompanhamento dos <b>envios de peças às oficinas</b> — peças e minutos
+        enviados, por matéria-prima, oficina, mês, semana e dia, com gráficos e
+        uma <b>consulta por número da ordem</b> (tabela paginada, 15 por página).</td>
+      <td>Banco de dados <b>Neon</b> (tabela <code>Envios_Radar</code>) — a
+        planilha de envios é importada em lote e <b>só os registros novos</b> são
+        gravados (deduplicação por impressão digital de linha).</td>
     </tr>
   </table>
   <p class="nota">
@@ -85,14 +94,14 @@
     Postos</b> escreve no banco (é onde a equipe lança/edita os dados de posto).
     Os dois tratam das mesmas oficinas — e a <b>fonte de absenteísmo já foi
     unificada</b>: o Radar lê o absenteísmo (efetivos, trabalhados, contratações,
-    demissões) <b>direto da tabela <code>postos</code> do Supabase</b>, a mesma
+    demissões) <b>direto da tabela <code>postos</code> do Neon</b>, a mesma
     que a Gestão de Postos mantém. A antiga planilha <code>postos.xlsx</code> foi
     <b>aposentada</b> — não é mais enviada em "Atualizar dados", e os nomes
-    canônicos das oficinas também passaram a vir do Supabase.
+    canônicos das oficinas também passaram a vir do Neon.
   </p>
   <p class="nota">
     O módulo Gestão de Postos só carrega os dados quando as credenciais do
-    Supabase estão configuradas (seção <code>[supabase]</code> nos Secrets). Sem
+    Neon estão configuradas (seção <code>[neon]</code> nos Secrets). Sem
     elas, o módulo exibe uma <b>mensagem de erro amigável</b> ao carregar — nunca
     um traceback — e o módulo Radar continua funcionando normalmente.
   </p>
@@ -111,6 +120,70 @@
     mostrando onde esse valor passa. As médias móveis (MM4/MM20) foram
     removidas para deixar a leitura mais limpa. Vale para as duas abas —
     Evolução Semanal e Evolução Mensal.
+  </p>
+</section>
+
+<section>
+  <h2>Módulo Envios — do arquivo ao painel</h2>
+  <p>
+    <b>Propósito (linguagem de negócio):</b> enxergar quantas <b>peças</b> e
+    quantos <b>minutos</b> foram enviados às oficinas e onde eles se concentram,
+    além de permitir <b>consultar um envio pelo número da ordem</b>.
+  </p>
+  <p>
+    <b>Papel e tela:</b> a equipe de planejamento abre o módulo <b>Envios</b> no
+    seletor do topo. Há duas telas internas: <b>Dashboard</b> (visão e consulta)
+    e <b>Lançamento de Dados</b> (importação da planilha).
+  </p>
+  <p>
+    <b>Dados de entrada:</b> a planilha <code>ENVIOS_OFICINAS.xlsx</code>, com as
+    colunas <code>ORIGEM</code>, <code>ORDEM</code>, <code>OFICINA</code>,
+    <code>QTD</code>, <code>MINUTOS</code>, <code>ENVIO</code> (data),
+    <code>MP</code>, <code>PDV</code>, <code>FRETE</code> e
+    <code>SITUAÇÃO</code>. Ela é <b>re-exportada periodicamente</b> e importada em
+    <b>Lançamento de Dados → Importação em Lote</b>.
+  </p>
+  <p>
+    <b>Fluxo completo:</b>
+  </p>
+  <ol>
+    <li>A equipe importa a planilha em <b>Lançamento de Dados</b>.</li>
+    <li>O sistema calcula, para cada linha, uma <b>impressão digital</b>
+      (<code>row_hash</code>) a partir do conteúdo. <b>Só entram no banco as
+      linhas cujo hash ainda não existe</b> — re-subir a mesma planilha não
+      insere nada, e <b>nada é apagado ou sobrescrito</b> (gravação insert-only
+      na tabela <code>Envios_Radar</code> do Neon).</li>
+    <li>O <b>Dashboard</b> lê os envios ao vivo do Neon e mostra:
+      <ul>
+        <li><b>Cards</b> com total de peças, total de minutos, nº de envios e
+          oficinas atendidas.</li>
+        <li><b>Total de peças e minutos por granularidade</b> escolhida:
+          <b>Matéria-prima, Oficinas, Mês, Semana ou Dia</b> (referente ao
+          recorte filtrado; o ano é o filtro principal).</li>
+        <li>Um <b>gráfico de colunas</b> com as <b>10 oficinas que mais
+          receberam peças</b> e <b>gráficos de envios por mês e por semana</b>.</li>
+        <li>Uma <b>tabela de consulta</b> com as colunas
+          <b>Ordem · Oficina · Qtd · Minutos · Envio · MP</b>, com <b>busca pelo
+          número da ordem</b> e <b>paginação de 15 linhas por página</b>.</li>
+      </ul>
+    </li>
+  </ol>
+  <p class="nota">
+    <b>Exceções previstas:</b> a planilha traz ~326 linhas <b>sem data de
+    envio</b>. Elas entram nos totais e nas granularidades por MP/Oficina, mas
+    ficam <b>de fora do recorte por ano</b> e das granularidades de
+    mês/semana/dia (não há período onde posicioná-las) — o painel avisa quantas
+    foram excluídas. Se as credenciais do Neon não estiverem configuradas, o
+    módulo mostra uma <b>mensagem amigável</b> (nunca um traceback) e os demais
+    módulos continuam funcionando.
+  </p>
+  <p class="nota">
+    <b>O que o sistema salva:</b> os envios ficam na tabela
+    <code>Envios_Radar</code> do Neon (uma linha por envio, mais a impressão
+    digital para deduplicação). A criação dessa tabela é feita uma única vez pela
+    migração
+    <code>db_migrations/migrations/20260915120000_create_envios_radar_table.sql</code>
+    (idempotente: <code>CREATE TABLE IF NOT EXISTS</code>, sem apagar nada).
   </p>
 </section>
 
@@ -171,12 +244,12 @@
 
 <section>
   <h2>Dados de entrada</h2>
-  <p>Nove planilhas — <b>mais a tabela <code>postos</code> do Supabase</b> —
+  <p>Nove planilhas — <b>mais a tabela <code>postos</code> do Neon</b> —
     alimentam o painel completo:</p>
   <table>
     <tr><th>Fonte</th><th>Alimenta</th></tr>
     <tr><td>RECEBIMENTO</td><td>Produtividade (peças e minutos por dia)</td></tr>
-    <tr><td><b>Supabase</b> — tabela <code>postos</code> (não é planilha)</td>
+    <tr><td><b>Neon</b> — tabela <code>postos</code> (não é planilha)</td>
       <td>Absenteísmo (efetivos × trabalhados por semana) e os nomes canônicos
         das oficinas — <b>lido ao vivo</b>, o mesmo dado da Gestão de Postos</td></tr>
     <tr><td>ESTOQUE OFICINAS — JEANS</td><td>Eficiência das oficinas de jeans</td></tr>
@@ -205,8 +278,8 @@
       <td>A Dia (data) · B Oficina · D MP · E Real cortado (peças) · F Minutos</td>
     </tr>
     <tr>
-      <td><b>Supabase</b> — tabela <code>postos</code></td><td>—</td>
-      <td>(sem planilha) — leitura via <code>[supabase]</code> nos Secrets</td>
+      <td><b>Neon</b> — tabela <code>postos</code></td><td>—</td>
+      <td>(sem planilha) — leitura via <code>[neon]</code> nos Secrets</td>
       <td>colunas <code>oficina</code> · <code>frete</code> · <code>mp</code> ·
         <code>data_efetivos</code> · <code>qtd_efetivos</code> ·
         <code>qtd_trabalhados</code> · <code>contratacoes</code> ·
@@ -303,7 +376,7 @@
   <p class="nota">
     Quando uma planilha é reexportada, o Excel costuma renomear a aba (o caso que
     motivou isso foi a antiga base de postos, cuja aba <code>Dados</code> virava
-    <code>Planilha1</code>; hoje o postos vem do Supabase, mas o mesmo cuidado
+    <code>Planilha1</code>; hoje o postos vem do Neon, mas o mesmo cuidado
     protege as demais planilhas, como RECEBIMENTO).
     O sistema procura a aba primeiro pelo nome e, se não achar, <b>pelo
     cabeçalho</b> — a aba cujos títulos de coluna são os esperados. Se duas abas
@@ -584,7 +657,7 @@
   </table>
   <p class="nota">
     A mensagem de erro traz a <b>causa</b> (“Aba X não existe em RECEBIMENTO.xlsx…”,
-    “Planilha não encontrada…”, ou um problema de conexão com o Supabase), não
+    “Planilha não encontrada…”, ou um problema de conexão com o Neon), não
     apenas em que passo parou. É a informação
     que permite ao operador corrigir o arquivo e reenviar.
   </p>

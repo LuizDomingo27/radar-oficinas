@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planilhas e colunas — Radar de Oficinas</title>
+<style>
+  :root { color-scheme: dark; --bg:#0f141b; --card:#182230; --txt:#e6edf3;
+    --sub:#9fb0c3; --linha:#25313f; --ok:#2ea043; --alerta:#d29922; --crit:#f85149;
+    --acc:#3fb9a0; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt);
+    font:15px/1.6 system-ui,Segoe UI,Roboto,Arial,sans-serif; }
+  header { padding:28px 20px; border-bottom:1px solid var(--linha); }
+  h1 { margin:0 0 6px; font-size:24px; }
+  h2 { font-size:19px; margin:0 0 10px; }
+  h3 { font-size:15px; margin:18px 0 6px; color:var(--acc); }
+  .intro { color:var(--sub); max-width:80ch; }
+  main { padding:20px; max-width:1040px; margin:0 auto; display:grid; gap:18px; }
+  section { background:var(--card); border:1px solid var(--linha);
+    border-radius:12px; padding:18px 20px; }
+  table { width:100%; border-collapse:collapse; margin-top:8px; font-size:14px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--linha);
+    vertical-align:top; }
+  th { color:var(--sub); font-weight:600; font-size:13px; text-transform:uppercase;
+    letter-spacing:.03em; }
+  td.let { font-family:ui-monospace,Consolas,monospace; color:var(--acc);
+    font-weight:700; white-space:nowrap; }
+  code { background:#0b1017; border:1px solid var(--linha); border-radius:5px;
+    padding:1px 6px; font-size:13px; }
+  ol.passos { counter-reset:p; list-style:none; padding:0; margin:0; }
+  ol.passos > li { counter-increment:p; position:relative; padding:10px 0 10px 44px;
+    border-bottom:1px solid var(--linha); }
+  ol.passos > li:last-child { border-bottom:0; }
+  ol.passos > li::before { content:counter(p); position:absolute; left:0; top:10px;
+    width:28px; height:28px; border-radius:50%; background:rgba(63,185,160,.16);
+    color:var(--acc); font-weight:700; font-size:13px; display:grid; place-items:center; }
+  /* Fonte (nome do arquivo) bem visível */
+  .fonte { display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+    margin:0 0 4px; }
+  .fonte .arquivo { font-family:ui-monospace,Consolas,monospace; font-size:18px;
+    font-weight:800; color:#fff; background:#0b1017; border:1px solid var(--acc);
+    border-left:5px solid var(--acc); border-radius:8px; padding:8px 14px;
+    letter-spacing:.01em; word-break:break-word; }
+  .tela { font-size:12px; padding:3px 10px; border-radius:999px; font-weight:700;
+    background:rgba(63,185,160,.16); color:var(--acc); white-space:nowrap; }
+  .meta { color:var(--sub); font-size:13.5px; margin:6px 0 2px; }
+  .meta b { color:var(--txt); }
+  .kw { font-family:ui-monospace,Consolas,monospace; color:var(--alerta); }
+  .nota { color:var(--sub); font-size:13.5px; background:rgba(210,153,34,.08);
+    border-left:3px solid var(--alerta); border-radius:6px; padding:8px 12px;
+    margin-top:10px; }
+  .selo { font-size:11px; padding:2px 8px; border-radius:999px; font-weight:700;
+    display:inline-block; }
+  .selo.ok { background:rgba(46,160,67,.18); color:var(--ok); }
+  .idx { color:var(--sub); font-size:12px; }
+  footer { padding:16px 20px; color:var(--sub); font-size:12px; text-align:center; }
+  .grid-resumo td:first-child { font-family:ui-monospace,Consolas,monospace;
+    color:var(--txt); font-weight:600; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Planilhas e colunas que o app precisa</h1>
+  <div class="intro">
+    Referência completa das <b>10 planilhas de origem</b> que alimentam o
+    <b>Radar de Oficinas</b> — o nome exato de cada arquivo, a aba usada, a linha
+    do cabeçalho e o que cada coluna significa. Use este guia sempre que for
+    <b>Atualizar dados</b> (enviar planilhas novas) e os números não mudarem: o
+    problema quase sempre é um arquivo com nome trocado, uma aba renomeada ou uma
+    coluna fora do lugar. Os nomes de arquivo estão em destaque para conferência
+    rápida.
+  </div>
+</header>
+
+<main>
+
+<section>
+  <h2>Como o app lê as planilhas</h2>
+  <ol class="passos">
+    <li>Na tela <b>Atualizar dados</b> (fim da página) você envia os arquivos
+      <code>.xlsx</code>. Eles são salvos na pasta única <code>Planilhas/</code>,
+      de onde o pipeline lê — envio e leitura apontam para o mesmo lugar.</li>
+    <li>Cada upload é reconhecido por <b>palavras-chave no nome</b> (sem acento,
+      em minúsculas) e <b>renomeado para o nome canônico</b> que o pipeline
+      procura. Ex.: <span class="kw">estoque nao jeans agosto.xlsx</span> vira
+      <code>ESTOQUE OFICINA NÃO JEANS.xlsx</code>. Você pode subir com o nome que
+      tiver, desde que contenha as palavras-chave.</li>
+    <li>A <b>aba certa é reencontrada pela assinatura do cabeçalho</b> (os
+      rótulos das colunas), não só pelo nome. Assim, se o Excel renomear a aba
+      para <code>Planilha1</code> numa reexportação, o app ainda a encontra —
+      desde que os cabeçalhos continuem os mesmos.</li>
+    <li>As colunas são lidas por <b>posição</b> (a letra/índice indicado abaixo).
+      Se alguém inserir ou remover uma coluna no meio da planilha, a leitura sai
+      do lugar. Mantenha a ordem e os cabeçalhos das colunas usadas.</li>
+  </ol>
+  <div class="nota"><b>Regra de ouro:</b> não renomeie abas nem reordene colunas
+    das planilhas de origem. Acrescentar colunas <i>no fim</i> é seguro; mexer no
+    <i>meio</i> quebra a leitura.</div>
+</section>
+
+<section>
+  <h2>Resumo — as 10 planilhas</h2>
+  <table class="grid-resumo">
+    <thead><tr><th>Arquivo (nome canônico)</th><th>Aba(s)</th><th>Alimenta a tela</th></tr></thead>
+    <tbody>
+      <tr><td>RECEBIMENTO.xlsx</td><td>RECEBIMENTO</td><td>Produtividade / Produção</td></tr>
+      <tr><td>postos.xlsx</td><td>Dados</td><td>Absenteísmo</td></tr>
+      <tr><td>ESTOQUE OFICINAS - JEANS - 2026.xlsx</td><td>ESTOQUE + AUX</td><td>Eficiência (Jeans)</td></tr>
+      <tr><td>ESTOQUE OFICINA NÃO JEANS.xlsx</td><td>ESTOQUE OFICINAS + AUX</td><td>Eficiência (Não-Jeans)</td></tr>
+      <tr><td>Histórico de Atendimento EP.xlsx</td><td>Planilha1</td><td>Treinamentos</td></tr>
+      <tr><td>EP 2025.xlsx</td><td>CM + TOC</td><td>Treinamentos (PRODUZA+ / TOC)</td></tr>
+      <tr><td>Inscrições Lidera+ Gestão de Pessoas.xlsx</td><td>Sheet1</td><td>Treinamentos (Lidera+)</td></tr>
+      <tr><td>Indicador geral_*.xlsx</td><td>RESUMO + DEFEITOS</td><td>Qualidade</td></tr>
+      <tr><td>FATURAMENTO_CONSOLIDADO.xlsx</td><td>Faturamento</td><td>Faturamento</td></tr>
+      <tr><td>Endividamento_Oficinas_*.xlsx</td><td>Endividamento Oficinas</td><td>Dívidas das oficinas</td></tr>
+    </tbody>
+  </table>
+  <div class="nota">O arquivo <code>Indicador geral</code> só é usado para a tela
+    de <b>Qualidade</b>. Para todas as outras métricas ele é ignorado de
+    propósito.</div>
+</section>
+
+<!-- 1 -->
+<section>
+  <div class="fonte">
+    <span class="arquivo">RECEBIMENTO.xlsx</span>
+    <span class="tela">Produtividade / Produção</span>
+  </div>
+  <p class="meta"><b>Aba:</b> <code>RECEBIMENTO</code> &nbsp;·&nbsp;
+    <b>Cabeçalho:</b> linha 1 &nbsp;·&nbsp; <b>Dados:</b> a partir da linha 2
+    &nbsp;·&nbsp; <b>Palavra-chave no upload:</b> <span class="kw">recebimento</span></p>
+  <p class="meta">Uma linha = uma produção do dia por oficina/matéria-prima.</p>
+  <table>
+    <thead><tr><th>Coluna</th><th>Cabeçalho</th><th>O que representa</th></tr></thead>
+    <tbody>
+      <tr><td class="let">A <span class="idx">(1)</span></td><td>DIA</td><td>Data da produção.</td></tr>
+      <tr><td class="let">B <span class="idx">(2)</span></td><td>OFICINA</td><td>Razão social / nome da oficina.</td></tr>
+      <tr><td class="let">D <span class="idx">(4)</span></td><td>MP</td><td>Matéria-prima (Jeans, Malha, Tear…).</td></tr>
+      <tr><td class="let">E <span class="idx">(5)</span></td><td>REAL CORTADO</td><td>Peças efetivamente produzidas.</td></tr>
+      <tr><td class="let">F <span class="idx">(6)</span></td><td>MINUTOS</td><td>Minutos de produção (base da produtividade).</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Assinatura da aba:</b> dia · oficina · ordem mestre · mp · minutos.</div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="fonte">
+    <span class="arquivo">postos.xlsx</span>
+    <span class="tela">Absenteísmo</span>
+  </div>
+  <p class="meta"><b>Aba:</b> <code>Dados</code> &nbsp;·&nbsp;
+    <b>Cabeçalho:</b> linha 1 &nbsp;·&nbsp; <b>Dados:</b> a partir da linha 2
+    &nbsp;·&nbsp; <b>Palavra-chave no upload:</b> <span class="kw">posto</span></p>
+  <p class="meta">Uma linha = uma semana de uma oficina/matéria-prima. É a
+    <b>lista oficial de parceiros</b>: os nomes desta planilha viram o padrão de
+    exibição das oficinas.</p>
+  <table>
+    <thead><tr><th>Coluna</th><th>Cabeçalho</th><th>O que representa</th></tr></thead>
+    <tbody>
+      <tr><td class="let">A <span class="idx">(1)</span></td><td>Frete</td><td>Frete / rota.</td></tr>
+      <tr><td class="let">B <span class="idx">(2)</span></td><td>MP</td><td>Matéria-prima.</td></tr>
+      <tr><td class="let">C <span class="idx">(3)</span></td><td>Oficinas</td><td>Nome da oficina.</td></tr>
+      <tr><td class="let">D <span class="idx">(4)</span></td><td>Data Efetivos</td><td>Data de referência da semana (a que vale).</td></tr>
+      <tr><td class="let">E <span class="idx">(5)</span></td><td>QTD Efetivos</td><td>Quantidade de efetivos previstos.</td></tr>
+      <tr><td class="let">G <span class="idx">(7)</span></td><td>QTD Trabalhados</td><td>Quantidade que efetivamente trabalhou.</td></tr>
+      <tr><td class="let">H <span class="idx">(8)</span></td><td>Contratação</td><td>Contratações da semana.</td></tr>
+      <tr><td class="let">I <span class="idx">(9)</span></td><td>Demissão</td><td>Demissões da semana.</td></tr>
+      <tr><td class="let">J <span class="idx">(10)</span></td><td>Semana</td><td>Identificação da semana.</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Assinatura da aba:</b> frete · mp · oficinas · data efetivos · qtd efetivos.
+    A <b>Data Efetivos</b> (col. D) é a referência — a Data Trabalhados às vezes
+    vem como marcador <code>1990-12-31</code> quando a semana ainda não fechou.</div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="fonte">
+    <span class="arquivo">ESTOQUE OFICINAS - JEANS - 2026.xlsx</span>
+    <span class="tela">Eficiência (Jeans)</span>
+  </div>
+  <p class="meta"><b>Abas:</b> <code>ESTOQUE</code> (cabeçalho na linha 5, dados a
+    partir da 6) e <code>AUX</code> (lista de nomes) &nbsp;·&nbsp;
+    <b>Palavras-chave no upload:</b> <span class="kw">estoque</span> + <span class="kw">jeans</span></p>
+  <p class="meta">Uma linha = uma oficina. A eficiência exibida é a
+    <b>% oficial da própria planilha</b> (Méd. das últimas 4 semanas ÷ capacidade
+    100%) — o app lê essa coluna direto, não recalcula.</p>
+  <table>
+    <thead><tr><th>Coluna</th><th>Cabeçalho</th><th>O que representa</th></tr></thead>
+    <tbody>
+      <tr><td class="let">A <span class="idx">(1)</span></td><td>Fornecedor</td><td>Nome da oficina.</td></tr>
+      <tr><td class="let">por rótulo</td><td>% 4WK</td><td>Eficiência oficial (média de 4 semanas). Localizada pelo <b>cabeçalho</b>, não por posição fixa.</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Assinatura da aba ESTOQUE:</b> fornecedor · postos · cap
+    peças 100%. &nbsp;A coluna <code>% 4WK</code> é achada pelo nome porque a
+    planilha ganha colunas de semana a cada carga — um índice fixo sairia do
+    lugar. A aba <code>AUX</code> (assinatura: razão social · aux) fornece nomes
+    extras de oficina.</div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="fonte">
+    <span class="arquivo">ESTOQUE OFICINA NÃO JEANS.xlsx</span>
+    <span class="tela">Eficiência (Não-Jeans)</span>
+  </div>
+  <p class="meta"><b>Abas:</b> <code>ESTOQUE OFICINAS</code> (cabeçalho na linha 8,
+    dados a partir da 9) e <code>AUX</code> &nbsp;·&nbsp;
+    <b>Palavras-chave no upload:</b> <span class="kw">nao</span> + <span class="kw">jeans</span></p>
+  <p class="meta">Uma linha = uma oficina numa matéria-prima (Malha, Polo, Tear).</p>
+  <table>
+    <thead><tr><th>Coluna</th><th>Cabeçalho</th><th>O que representa</th></tr></thead>
+    <tbody>
+      <tr><td class="let">A <span class="idx">(1)</span></td><td>PRODUTO</td><td>Matéria-prima (Malha, Polo, Tear).</td></tr>
+      <tr><td class="let">B <span class="idx">(2)</span></td><td>OFICINA</td><td>Nome da oficina.</td></tr>
+      <tr><td class="let">por rótulo</td><td>MÉDIA 4W</td><td>Eficiência oficial (média de 4 semanas). Localizada pelo <b>cabeçalho</b>.</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Assinatura da aba:</b> produto · oficina · postos · cap
+    peças 100%. &nbsp;A antiga aba <code>HISTÓRICO EFIC</code> foi abandonada — não
+    inclua; se apontar para uma aba inexistente, o pipeline inteiro abortava.</div>
+</section>
+
+<!-- 5 -->
+<section>
+  <div class="fonte">
+    <span class="arquivo">Histórico de Atendimento EP.xlsx</span>
+    <span class="tela">Treinamentos</span>
+  </div>
+  <p class="meta"><b>Aba:</b> <code>Planilha1</code> &nbsp;·&nbsp;
+    <b>Cabeçalho:</b> linha 1 &nbsp;·&nbsp; <b>Dados:</b> a partir da linha 2
+    &nbsp;·&nbsp; <b>Palavra-chave no upload:</b> <span class="kw">atendimento</span></p>
+  <p class="meta">Uma linha = um atendimento/treinamento realizado por oficina.</p>
+  <table>
+    <thead><tr><th>Coluna</th><th>Cabeçalho</th><th>O que representa</th></tr></thead>
+    <tbody>
+      <tr><td class="let">A <span class="idx">(1)</span></td><td>Empresa</td><td>Nome da oficina.</td></tr>
+      <tr><td class="let">C <span class="idx">(3)</span></td><td>Módulo</td><td>Módulo/tema do treinamento.</td></tr>
+      <tr><td class="let">D <span class="idx">(4)</span></td><td>CH</td><td>Carga horária.</td></tr>
+      <tr><td class="let">E <span class="idx">(5)</span></td><td>Ciclo</td><td>Ciclo do programa.</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Assinatura da aba:</b> empresa · cnpj · módulo · ch · ciclo.</div>
+</section>
+
+<!-- 6 -->
+<section>
+  <div class="fonte">
+    <span class="arquivo">EP 2025.xlsx</span>
+    <span class="tela">Treinamentos (PRODUZA+ / TOC)</span>
+  </div>
+  <p class="meta"><b>Palavras-chave no upload:</b> <span class="kw">ep</span> +
+    <span class="kw">2025</span>. Um único arquivo com <b>duas abas</b> de turmas
+    com datas de início/fim por oficina.</p>
+
+  <h3>Aba CM — Costura e Mecânica (PRODUZA+)</h3>
+  <p class="meta"><b>Cabeçalho:</b> linha 1 &nbsp;·&nbsp; <b>Dados:</b> a partir da
+    linha 2. Uma linha = uma oficina em um módulo. O mês sai da data de início.</p>
+  <table>
+    <thead><tr><th>Coluna</th><th>Cabeçalho</th><th>O que representa</th></tr></thead>
+    <tbody>
+      <tr><td class="let">A <span class="idx">(1)</span></td><td>Empresa</td><td>Nome da oficina.</td></tr>
+      <tr><td class="let">B <span class="idx">(2)</span></td><td>Módulo</td><td>Ex.: "PRODUZA+ - MÓDULO 1".</td></tr>
+      <tr><td class="let">C <span class="idx">(3)</span></td><td>Início</td><td>Data de início (define o mês).</td></tr>
+      <tr><td class="let">D <span class="idx">(4)</span></td><td>Término</td><td>Data de término.</td></tr>
+      <tr><td class="let">E <span class="idx">(5)</span></td><td>Status</td><td>Situação da turma.</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Assinatura:</b> empresa · módulo · início · término · status.</div>
+
+  <h3>Aba TOC</h3>
+  <p class="meta"><b>Cabeçalho:</b> linha 2 (a linha 1 é o merge "2ª ETAPA")
+    &nbsp;·&nbsp; <b>Dados:</b> a partir da linha 3. Uma linha = uma oficina com
+    <b>duas etapas datadas</b> (vira até dois marcos: "TOC - 1ª etapa" e
+    "TOC - 2ª etapa").</p>
+  <table>
+    <thead><tr><th>Coluna</th><th>Cabeçalho</th><th>O que representa</th></tr></thead>
+    <tbody>
+      <tr><td class="let">B <span class="idx">(2)</span></td><td>Empresa</td><td>Nome da oficina.</td></tr>
+      <tr><td class="let">C <span class="idx">(3)</span></td><td>Início</td><td>Início da 1ª etapa.</td></tr>
+      <tr><td class="let">D <span class="idx">(4)</span></td><td>Término</td><td>Término da 1ª etapa.</td></tr>
+      <tr><td class="let">E <span class="idx">(5)</span></td><td>Início</td><td>Início da 2ª etapa.</td></tr>
+      <tr><td class="let">F <span class="idx">(6)</span></td><td>Término</td><td>Término da 2ª etapa.</td></tr>
+      <tr><td class="let">H <span class="idx">(8)</span></td><td>Status</td><td>Situação da turma.</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Assinatura:</b> empresa · início · término · consultor · status
+    (cabeçalho na linha 2).</div>
+</section>
+
+<!-- 7 -->
+<section>
+  <div class="fonte">
+    <span class="arquivo">Inscrições Lidera+ Gestão de Pessoas.xlsx</span>
+    <span class="tela">Treinamentos (Lidera+)</span>
+  </div>
+  <p class="meta"><b>Aba:</b> <code>Sheet1</code> &nbsp;·&nbsp;
+    <b>Cabeçalho:</b> linha 1 &nbsp;·&nbsp; <b>Dados:</b> a partir da linha 2
+    &nbsp;·&nbsp; <b>Palavra-chave no upload:</b> <span class="kw">lidera</span></p>
+  <p class="meta">Exportação de <b>formulário de inscrição</b> (uma linha = uma
+    inscrição no módulo "Lidera+ Gestão de Pessoas"). As colunas são lidas por
+    posição fixa da exportação; mantenha a ordem original do formulário.</p>
+  <table>
+    <thead><tr><th>Coluna</th><th>Cabeçalho</th><th>O que representa</th></tr></thead>
+    <tbody>
+      <tr><td class="let">B <span class="idx">(2)</span></td><td>Hora de início</td><td>Data/hora da inscrição (define o mês).</td></tr>
+      <tr><td class="let">G <span class="idx">(7)</span></td><td>Participante</td><td>Identificação do participante (posição fixa na exportação).</td></tr>
+      <tr><td class="let">I <span class="idx">(9)</span></td><td>Empresa / Polo</td><td>Empresa (oficina) / polo do participante.</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Assinatura da aba:</b> id · hora de início · email · nome.
+    Por ser export de formulário, os cabeçalhos são longos (perguntas) — o que
+    importa é <b>não reordenar</b> as colunas.</div>
+</section>
+
+<!-- 8 -->
+<section>
+  <div class="fonte">
+    <span class="arquivo">Indicador geral_*.xlsx</span>
+    <span class="tela">Qualidade</span>
+  </div>
+  <p class="meta"><b>Palavra-chave no upload:</b> <span class="kw">indicador</span>.
+    Exceção deliberada: esta planilha <b>só</b> alimenta a tela de Qualidade.
+    Duas abas alimentam os gráficos.</p>
+
+  <h3>Aba RESUMO (tabela RES)</h3>
+  <p class="meta"><b>Cabeçalho:</b> linha 2 &nbsp;·&nbsp; <b>Dados:</b> a partir da
+    linha 3. Uma linha = uma inspeção / Ordem Mestre.</p>
+  <table>
+    <thead><tr><th>Coluna</th><th>Cabeçalho</th><th>O que representa</th></tr></thead>
+    <tbody>
+      <tr><td class="let">F <span class="idx">(6)</span></td><td>OFICINA</td><td>Nome da oficina.</td></tr>
+      <tr><td class="let">L <span class="idx">(12)</span></td><td>STATUS</td><td>Aprovado / Reprovado / Aprovado com concessão.</td></tr>
+      <tr><td class="let">V <span class="idx">(22)</span></td><td>2QA</td><td>Peças de 2ª qualidade.</td></tr>
+      <tr><td class="let">W <span class="idx">(23)</span></td><td>PROD</td><td>Produção (denominador).</td></tr>
+      <tr><td class="let">AC <span class="idx">(29)</span></td><td>DATA 3</td><td>Data usada no filtro de período.</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Assinatura:</b> oficina · status · 2qa · prod (cabeçalho na linha 2).</div>
+
+  <h3>Aba DEFEITOS (tabela DEF)</h3>
+  <p class="meta"><b>Cabeçalho:</b> linha 2 &nbsp;·&nbsp; <b>Dados:</b> a partir da
+    linha 3. Uma linha = um defeito.</p>
+  <table>
+    <thead><tr><th>Coluna</th><th>Cabeçalho</th><th>O que representa</th></tr></thead>
+    <tbody>
+      <tr><td class="let">G <span class="idx">(7)</span></td><td>QNTD</td><td>Quantidade do defeito.</td></tr>
+      <tr><td class="let">I <span class="idx">(9)</span></td><td>DESCRIÇÃO DO DEFEITO</td><td>Descrição do defeito.</td></tr>
+      <tr><td class="let">L <span class="idx">(12)</span></td><td>TIPO DE INSPEÇÃO</td><td>Tipo (ex.: "SEGUNDA" para 2ª qualidade).</td></tr>
+      <tr><td class="let">P <span class="idx">(16)</span></td><td>SETOR</td><td>Setor (ex.: COSTURA).</td></tr>
+      <tr><td class="let">S <span class="idx">(19)</span></td><td>MÊS</td><td>Mês.</td></tr>
+      <tr><td class="let">T <span class="idx">(20)</span></td><td>ANO</td><td>Ano.</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Assinatura:</b> qntd · descrição do defeito · tipo de
+    inspeção · setor (cabeçalho na linha 2).</div>
+</section>
+
+<!-- 9 -->
+<section>
+  <div class="fonte">
+    <span class="arquivo">FATURAMENTO_CONSOLIDADO.xlsx</span>
+    <span class="tela">Faturamento</span>
+  </div>
+  <p class="meta"><b>Aba:</b> <code>Faturamento</code> &nbsp;·&nbsp;
+    <b>Cabeçalho:</b> linha 1 &nbsp;·&nbsp; <b>Dados:</b> a partir da linha 2
+    &nbsp;·&nbsp; <b>Palavra-chave no upload:</b> <span class="kw">faturamento</span></p>
+  <p class="meta">Uma linha = um título a receber de uma oficina (base dos totais
+    por oficina e das séries mensal e semanal).</p>
+  <table>
+    <thead><tr><th>Coluna</th><th>Cabeçalho</th><th>O que representa</th></tr></thead>
+    <tbody>
+      <tr><td class="let">A <span class="idx">(1)</span></td><td>Nome do fornecedor</td><td>Nome da oficina.</td></tr>
+      <tr><td class="let">B <span class="idx">(2)</span></td><td>Data vencimento líq.</td><td>Data de vencimento do título.</td></tr>
+      <tr><td class="let">C <span class="idx">(3)</span></td><td>Montante (ME)</td><td>Valor do título.</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Assinatura da aba:</b> fornecedor · vencimento · montante.</div>
+</section>
+
+<!-- 10 -->
+<section>
+  <div class="fonte">
+    <span class="arquivo">Endividamento_Oficinas_*.xlsx</span>
+    <span class="tela">Dívidas das oficinas</span>
+  </div>
+  <p class="meta"><b>Aba:</b> <code>Endividamento Oficinas</code> &nbsp;·&nbsp;
+    <b>Cabeçalho:</b> linha 1 &nbsp;·&nbsp; <b>Dados:</b> a partir da linha 2
+    &nbsp;·&nbsp; <b>Palavra-chave no upload:</b> <span class="kw">endividamento</span></p>
+  <p class="meta">Uma linha = uma oficina, com a dívida total e sua decomposição.</p>
+  <table>
+    <thead><tr><th>Coluna</th><th>Cabeçalho</th><th>O que representa</th></tr></thead>
+    <tbody>
+      <tr><td class="let">A <span class="idx">(1)</span></td><td>Razão Social</td><td>Nome da oficina.</td></tr>
+      <tr><td class="let">B <span class="idx">(2)</span></td><td>Dívida Total (R$)</td><td>Dívida total.</td></tr>
+      <tr><td class="let">C <span class="idx">(3)</span></td><td>Encargos (R$)</td><td>Encargos.</td></tr>
+      <tr><td class="let">D <span class="idx">(4)</span></td><td>Tributos (R$)</td><td>Tributos.</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Assinatura da aba:</b> razão social · encargos (r$) ·
+    tributos (r$). &nbsp;A <b>última linha</b> é um rodapé de totais (sem razão
+    social) — o app a descarta sozinho, então não a remova nem se preocupe com ela.</div>
+</section>
+
+<footer>
+  Radar de Oficinas · Referência de planilhas e colunas · gerado a partir de
+  <code>app_oficinas/config.py</code> (fonte única da verdade).
+</footer>
+
+</main>
+</body>
+</html>
