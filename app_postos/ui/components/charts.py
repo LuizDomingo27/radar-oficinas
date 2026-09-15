@@ -27,8 +27,6 @@ from app_postos.core.utils import format_delta_br, format_int_br, format_percent
 
 _GREEN = "#18C99E"
 _RED   = "#D93025"
-_MM_CURTO_COLOR = "#FBBF24"
-_MM_LONGO_COLOR = "#FB923C"
 _LAST_N_WEEKS = 4
 
 _ECHARTS_CDN = "https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"
@@ -100,9 +98,8 @@ def build_evolution_chart(
     Camadas:
       • Área de preenchimento gradual (3 paradas, glow) + linha principal;
       • Pontos coloridos por tendência com efeito shadow;
+      • Rótulo de valor em cada ponto (com contorno e hideOverlap);
       • Média simples do período (markLine com label em caixa);
-      • MM4  — Média Móvel curto prazo (4 períodos, âmbar tracejado);
-      • MM20 — Média Móvel longo prazo (20 períodos, laranja tracejado);
       • DataZoom (slider + scroll) quando há mais de 6 pontos;
       • Tooltip HTML rico com pointer cruzado;
       • Toolbox com salvar imagem.
@@ -119,8 +116,11 @@ def build_evolution_chart(
         lambda d: trend_color(d, invert=invert_trend)
     )
 
+    # A média é exibida FORA do gráfico, numa pílula ao lado do seletor de
+    # indicador (ver ui/layout.py) — dentro do gráfico ela fica só como uma
+    # linha de referência tracejada, sem rótulo, para não colidir com os
+    # rótulos de valor de cada ponto.
     media_val = float(df_plot["media"].iloc[0]) if len(df_plot) else 0.0
-    media_label = f"Média: {_format_value(media_val, is_percentage)}"
     n_points = len(df_plot)
 
     main_data = []
@@ -131,6 +131,9 @@ def build_evolution_chart(
             "x_label": str(row["x_label"]),
             "tooltip_valor": str(row["tooltip_valor"]),
             "tooltip_variacao": str(row["tooltip_variacao"]),
+            # Rótulo por ponto: usa o valor já formatado (pt-BR / %). Como não
+            # contém chaves, o ECharts o renderiza literalmente (sem template).
+            "label": {"formatter": str(row["tooltip_valor"])},
             "itemStyle": {
                 "color": str(row["trend_color"]),
                 "borderColor": Theme.BG_PRIMARY,
@@ -139,15 +142,6 @@ def build_evolution_chart(
                 "shadowColor": str(row["trend_color"]),
             },
         })
-
-    mm_curto_data = [
-        None if pd.isna(row["mm_curto"]) else float(row["mm_curto"])
-        for _, row in df_plot.iterrows()
-    ]
-    mm_longo_data = [
-        None if pd.isna(row["mm_longo"]) else float(row["mm_longo"])
-        for _, row in df_plot.iterrows()
-    ]
 
     use_zoom = n_points > 6
     grid_bottom = "22%" if use_zoom else "14%"
@@ -234,7 +228,7 @@ def build_evolution_chart(
         },
         "legend": {
             "show": True,
-            "data": [value_label, "MM4", "MM20"],
+            "data": [value_label],
             "textStyle": {
                 "color": Theme.TEXT_PRIMARY,
                 "fontFamily": "Inter, sans-serif",
@@ -286,6 +280,22 @@ def build_evolution_chart(
                 "symbol": "circle",
                 "symbolSize": 10,
                 "data": main_data,
+                # Rótulos de valor em cada ponto da linha principal. O contorno
+                # (textBorder) garante leitura sobre a área/gradiente; o
+                # hideOverlap descarta rótulos que se sobreporiam, mantendo o
+                # gráfico limpo mesmo com muitas semanas.
+                "label": {
+                    "show": True,
+                    "position": "top",
+                    "distance": 8,
+                    "color": Theme.TEXT_PRIMARY,
+                    "fontFamily": "Inter, sans-serif",
+                    "fontSize": 11,
+                    "fontWeight": "bold",
+                    "textBorderColor": Theme.BG_PRIMARY,
+                    "textBorderWidth": 3,
+                },
+                "labelLayout": {"hideOverlap": True},
                 "lineStyle": {
                     "width": 3,
                     "color": Theme.ACCENT,
@@ -324,56 +334,15 @@ def build_evolution_chart(
                         {
                             "yAxis": media_val,
                             "lineStyle": {
-                                "color": Theme.ACCENT_SOFT,
+                                "color": Theme.NEUTRAL,
                                 "type": "dashed",
                                 "width": 1.5,
-                                "opacity": 0.75,
+                                "opacity": 0.6,
                             },
-                            "label": {
-                                "show": True,
-                                "position": "insideEndTop",
-                                "formatter": media_label,
-                                "color": "#e8ecf2",
-                                "fontWeight": "bold",
-                                "fontSize": 11,
-                                "fontFamily": "Inter, sans-serif",
-                                "backgroundColor": "rgba(22,27,34,0.92)",
-                                "padding": [3, 7],
-                                "borderRadius": 4,
-                                "borderColor": Theme.ACCENT_SOFT,
-                                "borderWidth": 1,
-                            },
+                            "label": {"show": False},
                         }
                     ],
                 },
-            },
-            {
-                "name": "MM4",
-                "type": "line",
-                "smooth": 0.4,
-                "showSymbol": False,
-                "data": mm_curto_data,
-                "lineStyle": {
-                    "width": 1.5,
-                    "type": "dashed",
-                    "color": _MM_CURTO_COLOR,
-                    "opacity": 0.85,
-                },
-                "emphasis": {"disabled": True},
-            },
-            {
-                "name": "MM20",
-                "type": "line",
-                "smooth": 0.4,
-                "showSymbol": False,
-                "data": mm_longo_data,
-                "lineStyle": {
-                    "width": 1.5,
-                    "type": "dashed",
-                    "color": _MM_LONGO_COLOR,
-                    "opacity": 0.85,
-                },
-                "emphasis": {"disabled": True},
             },
         ],
     }
@@ -381,10 +350,7 @@ def build_evolution_chart(
     formatter_js = r"""
 function(params) {
   if (!params || params.length === 0) return '';
-  var main = params.find(function(p) {
-    return p.seriesName !== 'MM4' && p.seriesName !== 'MM20';
-  });
-  if (!main) main = params[0];
+  var main = params[0];
   var d = main.data || {};
   var label    = d.x_label || main.name || '';
   var valor    = d.tooltip_valor || (main.value != null ? String(main.value) : '—');

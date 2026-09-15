@@ -77,6 +77,27 @@ def render_kpi_section(df_filtered: pd.DataFrame) -> None:
 _INDICADORES_INVERTIDOS = {"absenteismo", "ausencia", "demissoes"}
 
 
+def _render_media_pill(value: float, is_percentage: bool) -> None:
+    """Exibe a média simples do período como uma pílula ao lado do seletor.
+
+    A média deixou de ser um rótulo dentro do gráfico (colidia com os rótulos
+    de valor de cada ponto) e passou a ser anotada aqui, alinhada à direita da
+    linha de indicadores — logo após o último botão (Taxa de Absenteísmo).
+    """
+    if value != value:  # NaN
+        texto = "—"
+    else:
+        texto = format_percent_br(value) if is_percentage else format_int_br(value)
+    st.markdown(
+        '<div class="media-pill-wrap">'
+        '<span class="media-pill" title="Média simples do período">'
+        '<span class="mp-label">Média</span>'
+        f'<span class="mp-value">{texto}</span>'
+        '</span></div>',
+        unsafe_allow_html=True,
+    )
+
+
 def _indicator_selector(tab_key: str) -> str:
     options = list(KPI_ORDER)
     labels = [INDICATORS[k].label for k in options]
@@ -94,13 +115,19 @@ def _indicator_selector(tab_key: str) -> str:
 @guard("renderizar a evolução semanal")
 def render_weekly_tab(df_filtered: pd.DataFrame) -> None:
     st.markdown("#### Evolução semanal por indicador")
-    indicator_key = _indicator_selector("semanal")
+    sel_col, pill_col = st.columns([4, 1], vertical_alignment="center")
+    with sel_col:
+        indicator_key = _indicator_selector("semanal")
     meta = INDICATORS[indicator_key]
 
     serie = weekly_evolution(df_filtered, indicator_key)
     if serie.empty:
         st.info("Sem dados para o filtro selecionado.")
         return
+
+    with pill_col:
+        media_val = float(serie["media"].iloc[0]) if len(serie) else float("nan")
+        _render_media_pill(media_val, meta.is_percentage)
 
     x_labels = [f"S{int(s)}" for s in serie["semana"]]
     chart_html = build_evolution_chart(
@@ -120,13 +147,19 @@ def render_weekly_tab(df_filtered: pd.DataFrame) -> None:
 @guard("renderizar a evolução mensal")
 def render_monthly_tab(df_filtered: pd.DataFrame) -> None:
     st.markdown("#### Evolução mensal por indicador")
-    indicator_key = _indicator_selector("mensal")
+    sel_col, pill_col = st.columns([4, 1], vertical_alignment="center")
+    with sel_col:
+        indicator_key = _indicator_selector("mensal")
     meta = INDICATORS[indicator_key]
 
     serie = monthly_evolution(df_filtered, indicator_key)
     if serie.empty:
         st.info("Sem dados para o filtro selecionado.")
         return
+
+    with pill_col:
+        media_val = float(serie["media"].iloc[0]) if len(serie) else float("nan")
+        _render_media_pill(media_val, meta.is_percentage)
 
     x_labels = serie["mes_label"].tolist()
     chart_html = build_evolution_chart(

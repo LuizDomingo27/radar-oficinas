@@ -189,6 +189,42 @@ h1, h2, h3, h4 {{
     margin-right: 8px;
 }}
 
+/* Pílula da Média (ao lado do seletor de indicador na evolução) */
+.media-pill-wrap {{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}}
+
+.media-pill {{
+    display: inline-flex;
+    align-items: baseline;
+    gap: 7px;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    border: 1px solid rgba(79,208,195,0.35);
+    white-space: nowrap;
+    font-family: var(--font-body);
+}}
+
+.media-pill .mp-label {{
+    font-size: 0.64rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--accent);
+    font-weight: 700;
+}}
+
+.media-pill .mp-value {{
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+}}
+
 /* ---------- Sidebar (desativada — navegação e filtros migraram para o topo) ---------- */
 section[data-testid="stSidebar"] {{
     display: none !important;
