@@ -5,7 +5,7 @@ renomeada (ex.: "RECEBIMENTO" reexportada como "Planilha1", conteúdo idêntico)
 o pipeline parava no 1º passo. A aba precisa ser reencontrada pelo cabeçalho, sem
 afrouxar a ponto de aceitar uma aba qualquer.
 
-Antes o exemplo usava a base de postos; na Fase 2 ela migrou para o Supabase, e
+Antes o exemplo usava a base de postos; na Fase 2 ela migrou para o banco, e
 o teste passou a exercitar a mesma resolução sobre a produção (RECEBIMENTO).
 """
 

@@ -5,7 +5,7 @@ Camada de visualização (UI) separada para a funcionalidade de cadastro
 de dados (manual e importação em lote).
 
 Persistência: os lançamentos são gravados diretamente na tabela `postos` do
-Supabase (Postgres gerenciado) — persistência real, sem o workaround de
+Neon (Postgres gerenciado) — persistência real, sem o workaround de
 sincronizar um arquivo local com o GitHub que era necessário no SQLite.
 """
 

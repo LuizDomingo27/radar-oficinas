@@ -21,7 +21,7 @@ class TestNomeCanonicoUpload(unittest.TestCase):
             config.PRODUCAO.arquivo)
 
     def test_posto_nao_mapeia_mais(self):
-        # Fase 2: a base de postos vive no Supabase; não é mais um upload de
+        # Fase 2: a base de postos vive no Neon; não é mais um upload de
         # planilha, então nenhum arquivo "postos" casa uma regra.
         self.assertIsNone(config.nome_canonico_upload("Postos_novo.xlsx"))
 
@@ -84,7 +84,7 @@ class TestNomeCanonicoUpload(unittest.TestCase):
 
 class TestArquivosEsperados(unittest.TestCase):
     def test_cobre_nove_fontes_distintas(self):
-        # 9 planilhas: postos saiu para o Supabase na Fase 2.
+        # 9 planilhas: postos saiu para o banco na Fase 2.
         self.assertEqual(len(config.ARQUIVOS_ESPERADOS), 9)
         self.assertEqual(len(set(config.ARQUIVOS_ESPERADOS)), 9)
 

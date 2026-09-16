@@ -2,7 +2,7 @@
 services/data_writer.py
 -------------------------
 Responsabilidade única: gravar novos registros na tabela `postos` do
-Supabase. Isso mantém a lógica de escrita completamente isolada das
+Neon. Isso mantém a lógica de escrita completamente isolada das
 visualizações e filtros.
 """
 
@@ -12,12 +12,12 @@ from typing import TYPE_CHECKING
 
 import pandas as pd
 
-from app_postos.core.config import Columns, RAW_TO_DB_COLUMNS, RawColumns, SUPABASE_TABLE_POSTOS
+from app_postos.core.config import Columns, RAW_TO_DB_COLUMNS, RawColumns, DB_TABLE_POSTOS
 from app_postos.core.record import build_record_payload
-from app_postos.services.supabase_client import fetch_all_rows, get_supabase_client
+from app_common.neon_client import fetch_all_rows, get_db_client
 
 if TYPE_CHECKING:  # apenas para type hints; não exige a lib em runtime/testes
-    from supabase import Client
+    from app_common.neon_client import NeonClient as Client
 
 _BULK_INSERT_BATCH_SIZE = 500
 
@@ -33,7 +33,7 @@ def check_record_exists(
 ) -> bool:
     """
     Verifica se já existe um lançamento para a mesma Oficina + Matéria-prima
-    na mesma Semana e no mesmo ANO na tabela `postos` do Supabase.
+    na mesma Semana e no mesmo ANO na tabela `postos` do Neon.
 
     Regra de negócio (formulário manual): uma oficina só pode ter UM
     lançamento por matéria-prima dentro de uma mesma semana,
@@ -54,16 +54,16 @@ def check_record_exists(
     acusa conflito se OUTRO registro tiver a mesma chave.
 
     `client`: injeção de dependência opcional (usada nos testes). Em produção
-    fica `None` e a conexão real do Supabase é obtida sob demanda.
+    fica `None` e a conexão real do banco é obtida sob demanda.
     """
     oficina_clean = str(oficina).strip()
     mp_clean = str(mp).strip().upper()
     ano = str(data_efetivos)[:4]  # "YYYY-MM-DD" -> "YYYY" (ano-calendário)
 
-    client = client or get_supabase_client()
+    client = client or get_db_client()
     try:
         query = (
-            client.table(SUPABASE_TABLE_POSTOS)
+            client.table(DB_TABLE_POSTOS)
             .select("id")
             .eq(Columns.OFICINA, oficina_clean)
             .eq(Columns.MP, mp_clean)
@@ -76,7 +76,7 @@ def check_record_exists(
         response = query.limit(1).execute()
         return len(response.data or []) > 0
     except Exception as exc:
-        raise RuntimeError(f"Erro ao verificar existência de registro no Supabase: {exc}") from exc
+        raise RuntimeError(f"Erro ao verificar existência de registro no banco: {exc}") from exc
 
 
 def insert_record(
@@ -94,7 +94,7 @@ def insert_record(
 ) -> None:
     """
     Insere um único registro de posto de trabalho na tabela `postos` do
-    Supabase. A sanitização/montagem do payload é delegada ao domínio
+    Neon. A sanitização/montagem do payload é delegada ao domínio
     (`core.record.build_record_payload`), garantindo o mesmo contrato usado
     pela edição. `client` permite injeção de dependência nos testes.
     """
@@ -111,16 +111,16 @@ def insert_record(
         semana=semana,
     )
 
-    client = client or get_supabase_client()
+    client = client or get_db_client()
     try:
-        client.table(SUPABASE_TABLE_POSTOS).insert(payload).execute()
+        client.table(DB_TABLE_POSTOS).insert(payload).execute()
     except Exception as exc:
-        raise RuntimeError(f"Erro ao inserir registro no Supabase: {exc}") from exc
+        raise RuntimeError(f"Erro ao inserir registro no banco: {exc}") from exc
 
 
 def insert_bulk_records(df: pd.DataFrame) -> int:
     """
-    Insere múltiplos registros na tabela `postos` do Supabase, ignorando
+    Insere múltiplos registros na tabela `postos` do Neon, ignorando
     qualquer linha cuja combinação (Oficinas, MP, Semana, Data Efetivos) já
     exista no banco. Retorna o número de linhas novas inseridas com sucesso.
 
@@ -166,12 +166,12 @@ def insert_bulk_records(df: pd.DataFrame) -> int:
     for col in int_cols:
         df_clean[col] = df_clean[col].fillna(0).astype(int)
 
-    client = get_supabase_client()
+    client = get_db_client()
     try:
-        # 1. Carrega as chaves (Oficina, MP, Semana, Data Efetivos) já existentes no Supabase
+        # 1. Carrega as chaves (Oficina, MP, Semana, Data Efetivos) já existentes no banco
         existing_rows = fetch_all_rows(
             client,
-            SUPABASE_TABLE_POSTOS,
+            DB_TABLE_POSTOS,
             columns=f"{Columns.OFICINA},{Columns.MP},{Columns.SEMANA},{Columns.DATA_EFETIVOS}",
         )
         existing_keys = {
@@ -203,14 +203,14 @@ def insert_bulk_records(df: pd.DataFrame) -> int:
         if len(df_to_insert) == 0:
             return 0
 
-        # 4. Traduz para as colunas do Supabase e grava em blocos (o PostgREST
+        # 4. Traduz para as colunas do banco e grava em blocos (a inserção
         #    aceita lotes grandes, mas dividir evita payloads excessivos).
         payload = df_to_insert.rename(columns=RAW_TO_DB_COLUMNS).to_dict(orient="records")
         for i in range(0, len(payload), _BULK_INSERT_BATCH_SIZE):
-            client.table(SUPABASE_TABLE_POSTOS).insert(
+            client.table(DB_TABLE_POSTOS).insert(
                 payload[i : i + _BULK_INSERT_BATCH_SIZE]
             ).execute()
 
         return len(df_to_insert)
     except Exception as exc:
-        raise RuntimeError(f"Erro ao importar dados em lote para o Supabase: {exc}") from exc
+        raise RuntimeError(f"Erro ao importar dados em lote para o banco: {exc}") from exc

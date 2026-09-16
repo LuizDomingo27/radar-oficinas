@@ -511,9 +511,9 @@ def render_radar_page() -> None:
 
 
 def _render_postos_page() -> None:
-    """Renderiza o módulo Postos (dashboard nativo com dados ao vivo no Supabase).
+    """Renderiza o módulo Postos (dashboard nativo com dados ao vivo no Neon).
 
-    O import é TARDIO e protegido: o módulo Postos puxa pandas/supabase, e uma
+    O import é TARDIO e protegido: o módulo Postos puxa pandas/psycopg, e uma
     eventual falha de import/ambiente não pode derrubar o app inteiro nem impedir
     o acesso ao Radar. Aplica o CSS próprio do Postos (`build_css`, tema escuro
     alinhado ao Radar) antes de montar a página.
@@ -525,7 +525,7 @@ def _render_postos_page() -> None:
         st.error(
             "Não foi possível carregar o módulo de Postos — etapa: import. "
             f"Detalhe: {type(exc).__name__}: {exc}. "
-            "Confira se as dependências (pandas, supabase) estão instaladas.")
+            "Confira se as dependências (pandas, psycopg) estão instaladas.")
         return
 
     st.markdown(build_postos_css(), unsafe_allow_html=True)
@@ -533,28 +533,28 @@ def _render_postos_page() -> None:
 
 
 def _render_envios_page() -> None:
-    """Renderiza o módulo Envios (dashboard nativo com dados ao vivo no Supabase).
+    """Renderiza o módulo Envios (dashboard nativo com dados ao vivo no Neon).
 
     Import TARDIO e protegido, pelo mesmo motivo do Postos: o módulo puxa
-    pandas/supabase e uma falha de import/ambiente não pode derrubar o app nem
-    impedir o acesso ao Radar. Aplica o CSS próprio do Envios (design system
+    pandas/psycopg e uma falha de import/ambiente não pode derrubar o app nem
+    impedir o acesso ao Radar. Aplica o CSS da movimentação (design system
     compartilhado + acréscimos) antes de montar a página.
     """
     try:
+        from app_common.movimentacao.ui.styles import build_css as build_movimentacao_css
         from app_envios.dashboard import render_envios_page
-        from app_envios.ui.styles import build_css as build_envios_css
     except Exception as exc:  # noqa: BLE001 — última linha de defesa
         st.error(
             "Não foi possível carregar o módulo de Envios — etapa: import. "
             f"Detalhe: {type(exc).__name__}: {exc}. "
-            "Confira se as dependências (pandas, supabase) estão instaladas.")
+            "Confira se as dependências (pandas, psycopg) estão instaladas.")
         return
 
     # st.html() renderiza HTML bruto SEM passar pelo parser de Markdown — ao
     # contrário de st.markdown, que quebrava o bloco <style> ao meio (parte das
-    # regras vazava como texto na tela). Aqui isso é essencial porque o CSS de
-    # Envios injeta regras extras dentro do bloco compartilhado.
-    st.html(build_envios_css())
+    # regras vazava como texto na tela). Aqui isso é essencial porque o CSS da
+    # movimentação injeta regras extras dentro do bloco compartilhado.
+    st.html(build_movimentacao_css())
     render_envios_page()
 
 
@@ -567,8 +567,8 @@ def _render_recebimento_page() -> None:
     compartilhado + acréscimos) antes de montar a página.
     """
     try:
+        from app_common.movimentacao.ui.styles import build_css as build_movimentacao_css
         from app_recebimento.dashboard import render_recebimento_page
-        from app_recebimento.ui.styles import build_css as build_recebimento_css
     except Exception as exc:  # noqa: BLE001 — última linha de defesa
         st.error(
             "Não foi possível carregar o módulo de Recebimento — etapa: import. "
@@ -577,8 +577,8 @@ def _render_recebimento_page() -> None:
         return
 
     # st.html() (e não st.markdown) pelo mesmo motivo do Envios: preserva o
-    # bloco <style> compartilhado com os acréscimos de Recebimento intactos.
-    st.html(build_recebimento_css())
+    # bloco <style> compartilhado com os acréscimos da movimentação intactos.
+    st.html(build_movimentacao_css())
     render_recebimento_page()
 
 

@@ -25,7 +25,7 @@ class FonteInvalida(RadarError):
 
 
 class FonteIndisponivel(RadarError):
-    """Uma fonte externa (ex.: a tabela de postos no Supabase) não pôde ser lida.
+    """Uma fonte externa (ex.: a tabela de postos no Neon) não pôde ser lida.
 
     Diferente de ``FonteInvalida`` (configuração local errada), sinaliza falha de
     acesso ao dado em si: credenciais ausentes, rede indisponível ou resposta

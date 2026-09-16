@@ -22,12 +22,12 @@ DATASET_PATH = BASE_DIR / "Dataset" / "POSTOS.xlsx"
 DATASET_SHEET_NAME = "Planilha1"
 
 # ---------------------------------------------------------------------------
-# Banco de dados — Supabase
+# Banco de dados — Neon (Postgres)
 # ---------------------------------------------------------------------------
-# Nome da tabela no Supabase (schema `public`) que armazena os lançamentos.
-# As credenciais (URL + service_role key) ficam em `.streamlit/secrets.toml`,
-# nunca aqui — ver `services/supabase_client.py`.
-SUPABASE_TABLE_POSTOS = "postos"
+# Nome da tabela (schema `public`) que armazena os lançamentos. A string de
+# conexão fica em `.streamlit/secrets.toml`, nunca aqui — ver
+# `app_common/neon_client.py`.
+DB_TABLE_POSTOS = "postos"
 
 # ---------------------------------------------------------------------------
 # Metadados da aplicação
@@ -39,7 +39,7 @@ APP_SUBTITLE = "Acompanhamento de efetivos, produtividade e absenteísmo por ofi
 # ---------------------------------------------------------------------------
 # Nomes das colunas BRUTAS, exatamente como vêm da planilha Excel original.
 # Esse contrato é usado na importação em lote (upload de .xlsx) e no script
-# `scripts/migrate_excel_to_supabase.py`. Centralizar aqui é o que permite
+# `app_common/scripts/bootstrap_neon.py`. Centralizar aqui é o que permite
 # que, se a planilha mudar o nome de uma coluna, o ajuste seja feito em UM
 # único lugar.
 # ---------------------------------------------------------------------------
@@ -79,7 +79,7 @@ class Columns:
 
 # ---------------------------------------------------------------------------
 # Tradução entre o contrato "bruto" (RawColumns, cabeçalhos da planilha
-# Excel) e as colunas reais da tabela `postos` no Supabase (snake_case,
+# Excel) e as colunas reais da tabela `postos` no Neon (snake_case,
 # mesmos nomes de `Columns` para os campos persistidos). Um único lugar
 # evita divergência entre `services/data_loader.py` (leitura) e
 # `services/data_writer.py` (escrita).
@@ -125,36 +125,6 @@ INDICATORS: dict[str, IndicatorMeta] = {
 
 # Ordem de exibição dos cards de KPI
 KPI_ORDER = ["efetivos", "trabalhados", "ausencia", "contratacoes", "demissoes", "absenteismo"]
-
-# ---------------------------------------------------------------------------
-# Paleta de cores — tema ESCURO, alinhado ao Radar de Oficinas.
-# ---------------------------------------------------------------------------
-# Decisão do usuário: "manter a cor do Radar para ambos". Os valores abaixo são
-# os mesmos tokens do tema escuro da SPA do Radar (web/assets/css/estilo.css,
-# bloco :root[data-theme="dark"]) — ground/surface/line/ink/accent etc. Como
-# `Theme` alimenta tanto o CSS (ui/styles.py) quanto os gráficos ECharts
-# (ui/components/charts.py), trocar aqui propaga a paleta por toda a UI do
-# Postos, sem divergir do visual do Radar.
-class Theme:
-    BG_PRIMARY = "#0d1015"          # ground — fundo principal
-    BG_SECONDARY = "#161b22"        # surface — superfícies / cabeçalho de tabela
-    CARD_BG = "#161b22"             # surface — fundo dos cards
-    CARD_BORDER = "#2a323d"         # line — borda sutil
-
-    ACCENT = "#4fd0c3"              # accent teal do Radar
-    ACCENT_SOFT = "rgba(79,208,195,0.16)"  # teal muito suave (fundos)
-    ACCENT_GLOW = "rgba(79,208,195,0.20)"  # glow radial dos cards
-
-    POSITIVE = "#6cc596"            # ok — verde do Radar
-    NEGATIVE = "#ec7063"            # critico — vermelho do Radar
-    NEUTRAL = "#a3adbc"             # muted / sem dado
-
-    TEXT_PRIMARY = "#e8ecf2"        # ink — texto principal
-    TEXT_MUTED = "#a3adbc"          # muted — texto secundário
-
-    FONT_HEADING = "'Sora', sans-serif"
-    FONT_BODY = "'Inter', sans-serif"
-
 
 # ---------------------------------------------------------------------------
 # Outras constantes de negócio

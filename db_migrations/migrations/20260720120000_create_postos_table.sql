@@ -3,15 +3,15 @@
 -- =============================================================================
 --
 -- Contexto: migração do APP_Postos de SQLite (`Dataset/postos.db`) para
--- Supabase. Esta é a única tabela nova exigida pelo app — o restante do
+-- Neon. Esta é a única tabela nova exigida pelo app — o restante do
 -- schema já existe e NÃO é tocado por este script.
 --
 -- Segurança: usa `CREATE TABLE IF NOT EXISTS` (idempotente, nunca derruba
 -- dados existentes) e não contém nenhum DROP/DELETE/TRUNCATE. Seguro para
 -- rodar mais de uma vez.
 --
--- Como aplicar: cole e execute este arquivo no Supabase Dashboard →
--- SQL Editor (ou via `supabase db push`, se estiver usando a CLI).
+-- Como aplicar: `py -3.12 -m app_common.scripts.bootstrap_neon`, que executa
+-- este arquivo no endpoint direto do Neon.
 -- =============================================================================
 
 create table if not exists public.postos (
@@ -38,11 +38,6 @@ create index if not exists postos_oficina_mp_semana_idx
 create index if not exists postos_semana_idx
     on public.postos (semana);
 
--- RLS habilitado por padrão (boa prática recomendada pelo Supabase). O app
--- acessa esta tabela com a service_role key, que ignora RLS — nenhuma
--- policy é necessária aqui. Se no futuro a tabela precisar ser lida com a
--- anon key, adicione policies explícitas de select/insert.
-alter table public.postos enable row level security;
 
 comment on table public.postos is
     'Lançamentos semanais de efetivos/trabalhados/contratações/demissões por oficina e matéria-prima. Migrado do SQLite (Dataset/postos.db) do APP_Postos.';

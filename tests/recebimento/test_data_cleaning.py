@@ -4,12 +4,7 @@ from __future__ import annotations
 import pandas as pd
 
 from app_recebimento.core.config import Columns, RawColumns
-from app_recebimento.services.data_cleaning import (
-    SEM_DATA_LABEL,
-    add_derived,
-    clean_dataframe,
-    standardize_raw,
-)
+from app_recebimento.services.data_cleaning import standardize_raw
 
 
 def _raw_df() -> pd.DataFrame:
@@ -45,18 +40,3 @@ def test_standardize_faltando_coluna():
         assert "obrigatórias" in str(exc)
     else:
         raise AssertionError("deveria ter levantado ValueError")
-
-
-def test_add_derived_periodos_e_sem_data():
-    df = add_derived(standardize_raw(_raw_df()))
-    assert df[Columns.MES_LABEL].iloc[0] == "Jan/2026"
-    assert int(df[Columns.SEMANA].iloc[0]) == 1
-    assert df[Columns.MES_LABEL].iloc[1] == SEM_DATA_LABEL
-    assert df[Columns.DIA_LABEL].iloc[1] == SEM_DATA_LABEL
-    assert pd.isna(df[Columns.ANO].iloc[1])
-
-
-def test_clean_dataframe_pipeline_completo():
-    df = clean_dataframe(_raw_df())
-    assert int(df[Columns.ANO].iloc[0]) == 2026
-    assert len(df) == 2

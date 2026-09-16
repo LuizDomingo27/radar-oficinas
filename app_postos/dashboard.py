@@ -29,9 +29,10 @@ from app_postos.services.data_loader import (
     EmptyDataError,
     load_raw_dataframe,
 )
+from app_postos.services.filter_service import apply_filters
 from app_postos.ui.cadastro_view import render_cadastro_page
 from app_postos.ui.components.export import render_export_controls
-from app_postos.ui.components.filters import apply_filters, render_top_filters
+from app_postos.ui.components.filters import render_top_filters
 from app_postos.ui.layout import (
     render_kpi_section,
     render_monthly_tab,

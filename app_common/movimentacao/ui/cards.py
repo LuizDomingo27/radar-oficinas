@@ -1,7 +1,7 @@
 """
-ui/components/cards.py — cards de indicadores da área "Envios".
+app_common/movimentacao/ui/cards.py — cards de indicadores.
 
-Apenas apresentação (HTML/CSS): recebe os valores já formatados da camada de
+Apenas apresentação (HTML/CSS): recebe os valores JÁ FORMATADOS da camada de
 orquestração e desenha o grid de cards, reutilizando as classes ``kpi-grid`` /
 ``kpi-card`` do design system compartilhado.
 """

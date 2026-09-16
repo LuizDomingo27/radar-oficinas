@@ -2,15 +2,22 @@
 core/config.py — configurações centrais da área "Recebimento".
 
 Concentra caminhos, nome da tabela no Neon, contrato de colunas (bruto da
-planilha ↔ snake_case do banco), paleta de tema e metadados dos indicadores.
-Espelha ``app_envios/core/config.py`` — mesmos indicadores, fonte diferente:
-a planilha RECEBIMENTO.xlsx traz as peças CORTADAS/recebidas das oficinas.
+planilha ↔ snake_case do banco) e o descritor ``AREA``, que é o que liga esta
+área ao núcleo compartilhado em ``app_common.movimentacao``.
+
+Espelha ``app_envios/core/config.py`` — mesmos indicadores, fonte diferente: a
+planilha RECEBIMENTO.xlsx traz as peças CORTADAS/recebidas das oficinas.
 """
 
 from __future__ import annotations
 
-from dataclasses import dataclass
 from pathlib import Path
+
+from app_common.movimentacao.area import (
+    AreaMovimentacao,
+    ColunasMovimentacao,
+    VocabularioMovimentacao,
+)
 
 # ---------------------------------------------------------------------------
 # Caminhos
@@ -39,6 +46,7 @@ PAGE_SIZE_TABLE = 15
 # Nº de oficinas no gráfico de colunas de "quem mais entregou peças".
 TOP_N_OFICINAS = 10
 
+
 # ---------------------------------------------------------------------------
 # Colunas BRUTAS — cabeçalhos exatos da planilha RECEBIMENTO.xlsx.
 # ---------------------------------------------------------------------------
@@ -54,21 +62,10 @@ class RawColumns:
 # ---------------------------------------------------------------------------
 # Colunas PADRONIZADAS (snake_case) — usadas internamente e no banco.
 # ---------------------------------------------------------------------------
-class Columns:
-    ORDEM = "ordem"
-    OFICINA = "oficina"
-    QTD = "qtd"
-    MINUTOS = "minutos"
+class Columns(ColunasMovimentacao):
+    """Colunas comuns da movimentação + a data que só existe em Recebimento."""
+
     RECEBIMENTO = "recebimento"   # data do recebimento (a coluna "DIA" da planilha)
-    MP = "mp"
-    ROW_HASH = "row_hash"
-    # Derivadas (não persistidas)
-    ANO = "ano"                # ano do recebimento (YYYY)
-    ANO_MES = "ano_mes"        # período mensal (YYYY-MM)
-    MES_LABEL = "mes_label"    # rótulo amigável do mês (ex.: "Jan/2026")
-    SEMANA = "semana"          # semana ISO do recebimento
-    DIA = "dia"                # data do recebimento (date, para agrupar por dia)
-    DIA_LABEL = "dia_label"    # rótulo amigável do dia (ex.: "02/01/2026")
 
 
 # Tradução bruto → banco (as colunas persistidas na tabela Recebimento_Radar).
@@ -92,25 +89,6 @@ DB_COLUMNS_PERSISTED: list[str] = [
     Columns.MP,
 ]
 
-
-# ---------------------------------------------------------------------------
-# Granularidades disponíveis na análise (requisito do produto).
-# ---------------------------------------------------------------------------
-@dataclass(frozen=True)
-class Granularity:
-    key: str
-    label: str
-
-
-GRANULARITIES: dict[str, Granularity] = {
-    "mp": Granularity("mp", "Matéria-prima"),
-    "oficina": Granularity("oficina", "Oficinas"),
-    "mes": Granularity("mes", "Mês"),
-    "semana": Granularity("semana", "Semana"),
-    "dia": Granularity("dia", "Dia"),
-}
-GRANULARITY_ORDER = ["mp", "oficina", "mes", "semana", "dia"]
-
 # Normalização de MP. A planilha traz variações apenas de caixa (ex.: "Malha"
 # vs "MALHA"), resolvidas pelo ``.upper()`` da limpeza; o mapa abaixo cobre,
 # por segurança, o mesmo valor-hora inválido tratado em Envios.
@@ -120,24 +98,25 @@ MP_NORMALIZATION_MAP = {
 
 
 # ---------------------------------------------------------------------------
-# Paleta de cores — tema ESCURO, alinhado ao Radar (mesmos tokens do Postos).
+# Descritor da área — o contrato lido pelo núcleo compartilhado.
 # ---------------------------------------------------------------------------
-class Theme:
-    BG_PRIMARY = "#0d1015"
-    BG_SECONDARY = "#161b22"
-    CARD_BG = "#161b22"
-    CARD_BORDER = "#2a323d"
-
-    ACCENT = "#4fd0c3"
-    ACCENT_SOFT = "rgba(79,208,195,0.16)"
-    ACCENT_GLOW = "rgba(79,208,195,0.20)"
-
-    POSITIVE = "#6cc596"
-    NEGATIVE = "#ec7063"
-    NEUTRAL = "#a3adbc"
-
-    TEXT_PRIMARY = "#e8ecf2"
-    TEXT_MUTED = "#a3adbc"
-
-    FONT_HEADING = "'Sora', sans-serif"
-    FONT_BODY = "'Inter', sans-serif"
+AREA = AreaMovimentacao(
+    chave="receb",
+    titulo=APP_TITLE,
+    subtitulo=APP_SUBTITLE,
+    tabela=DB_TABLE_RECEBIMENTO,
+    coluna_data=Columns.RECEBIMENTO,
+    colunas_persistidas=DB_COLUMNS_PERSISTED,
+    vocabulario=VocabularioMovimentacao(
+        singular="recebimento",
+        plural="recebimentos",
+        pecas_participio="Recebidas",
+        minutos_participio="Recebidos",
+        titulo_registros="Recebimentos",
+        verbo_oficina="entregaram",
+        rotulo_data="Recebimento",
+        exemplo_ordem="300222936",
+    ),
+    top_n_oficinas=TOP_N_OFICINAS,
+    page_size_tabela=PAGE_SIZE_TABLE,
+)

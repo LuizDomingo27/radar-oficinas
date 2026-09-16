@@ -1,17 +1,13 @@
 """
-services/data_cleaning.py — padroniza e enriquece os dados de recebimento.
+services/data_cleaning.py — padroniza os dados brutos da planilha de recebimento.
 
-Duas responsabilidades:
-  • ``standardize_raw`` — do contrato BRUTO (cabeçalhos da planilha
-    RECEBIMENTO.xlsx) para o contrato snake_case persistido (limpeza de strings,
-    normalização de MP, tipos de qtd/minutos, data de recebimento como datetime).
-    É o que a escrita (data_writer) e a leitura (data_loader) têm em comum.
-  • ``add_derived`` / ``clean_dataframe`` — deriva ano, mês, semana e dia a
-    partir da data de recebimento, para as granularidades e os gráficos.
+``standardize_raw`` leva do contrato BRUTO (cabeçalhos de RECEBIMENTO.xlsx) para
+o contrato snake_case persistido: limpeza de strings, normalização de MP, tipos
+de qtd/minutos e data de recebimento como datetime. É o que a escrita
+(``data_writer``) e a leitura (``data_loader``) têm em comum.
 
-Linhas SEM data de recebimento (não esperadas nesta planilha, mas tratadas por
-robustez) entram nos totais e na granularidade por MP/Oficina, mas ficam de fora
-das granularidades temporais (mês/semana/dia), onde recebem rótulo "Sem data".
+A derivação de período (ano, mês, semana, dia) NÃO está aqui: é idêntica em
+Envios e Recebimento e vive em ``app_common.movimentacao.derivacao``.
 """
 
 from __future__ import annotations
@@ -24,15 +20,7 @@ from app_recebimento.core.config import (
     RAW_TO_DB_COLUMNS,
 )
 
-_MESES_PT = {
-    1: "Jan", 2: "Fev", 3: "Mar", 4: "Abr", 5: "Mai", 6: "Jun",
-    7: "Jul", 8: "Ago", 9: "Set", 10: "Out", 11: "Nov", 12: "Dez",
-}
-
 _STRING_COLUMNS = [Columns.ORDEM, Columns.OFICINA, Columns.MP]
-
-SEM_DATA_LABEL = "Sem data"
-
 
 def _strip_and_normalize_headers(df: pd.DataFrame) -> pd.DataFrame:
     """Remove espaços dos cabeçalhos (a planilha às vezes traz sobras)."""
@@ -66,29 +54,3 @@ def standardize_raw(df_raw: pd.DataFrame) -> pd.DataFrame:
     df[Columns.RECEBIMENTO] = pd.to_datetime(df[Columns.RECEBIMENTO], errors="coerce")
 
     return df.reset_index(drop=True)
-
-
-def add_derived(df: pd.DataFrame) -> pd.DataFrame:
-    """Deriva ano, ano_mes, mes_label, semana, dia e dia_label da data de recebimento."""
-    df = df.copy()
-    receb = pd.to_datetime(df[Columns.RECEBIMENTO], errors="coerce")
-
-    iso = receb.dt.isocalendar()
-    df[Columns.ANO] = receb.dt.year.astype("Int64")
-    df[Columns.SEMANA] = iso["week"].astype("Int64")
-    df[Columns.DIA] = receb.dt.normalize()
-
-    periodo = receb.dt.to_period("M")
-    df[Columns.ANO_MES] = periodo.astype(str).where(receb.notna(), None)
-    df[Columns.MES_LABEL] = receb.apply(
-        lambda d: f"{_MESES_PT[d.month]}/{d.year}" if pd.notna(d) else SEM_DATA_LABEL
-    )
-    df[Columns.DIA_LABEL] = receb.apply(
-        lambda d: d.strftime("%d/%m/%Y") if pd.notna(d) else SEM_DATA_LABEL
-    )
-    return df
-
-
-def clean_dataframe(df_raw: pd.DataFrame) -> pd.DataFrame:
-    """Pipeline completo: padroniza + deriva (usado pela leitura para a UI)."""
-    return add_derived(standardize_raw(df_raw))

@@ -1,19 +1,20 @@
 """
-ui/styles.py — CSS da área "Recebimento".
+app_common/movimentacao/ui/styles.py — CSS das áreas de movimentação.
 
-Reaproveita o CSS do DESIGN SYSTEM compartilhado (mesma paleta do Radar) já
-definido em ``app_postos.ui.styles`` e acrescenta apenas o que é específico de
-Recebimento (barra de paginação e cabeçalho de dimensão). Manter uma única fonte
-de verdade para o tema evita divergência visual entre as áreas do app unificado.
+Reaproveita o CSS do DESIGN SYSTEM compartilhado (mesma paleta do Radar —
+decisão "manter a cor do Radar para todas as áreas") já definido em
+``app_postos.ui.styles`` e acrescenta apenas o que é específico da movimentação
+(barra de paginação e cabeçalho de dimensão). Uma fonte de verdade só para o
+tema é o que evita divergência visual entre as áreas do app unificado.
 """
 
 from __future__ import annotations
 
 from app_postos.ui.styles import build_css as _build_shared_css
 
-_RECEB_EXTRA_RULES = """
+_MOVIMENTACAO_EXTRA_RULES = """
 /* ---------- Paginação da tabela de consulta ---------- */
-.receb-pager {
+.mov-pager {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -22,10 +23,10 @@ _RECEB_EXTRA_RULES = """
     color: var(--text-muted);
     margin-top: 8px;
 }
-.receb-pager .pg-info {
+.mov-pager .pg-info {
     font-family: var(--font-body);
 }
-.receb-pager .pg-info strong {
+.mov-pager .pg-info strong {
     color: var(--text-primary);
     font-variant-numeric: tabular-nums;
 }
@@ -60,10 +61,10 @@ _RECEB_EXTRA_RULES = """
 
 
 def build_css() -> str:
-    """CSS compartilhado (design system) + acréscimos de Recebimento num ÚNICO <style>.
+    """CSS compartilhado (design system) + acréscimos da movimentação num ÚNICO <style>.
 
     Os acréscimos são injetados ANTES do ``</style>`` do CSS compartilhado —
     dois blocos ``<style>`` separados num mesmo ``st.markdown`` fazem o Streamlit
     exibir o segundo como texto em vez de aplicá-lo.
     """
-    return _build_shared_css().replace("</style>", _RECEB_EXTRA_RULES + "\n</style>")
+    return _build_shared_css().replace("</style>", _MOVIMENTACAO_EXTRA_RULES + "\n</style>")

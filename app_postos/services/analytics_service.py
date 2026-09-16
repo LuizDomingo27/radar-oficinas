@@ -19,7 +19,7 @@ from __future__ import annotations
 import pandas as pd
 
 from app_postos.core.config import Columns
-from app_postos.core.utils import pct_change, safe_div
+from app_common.formatting import safe_div
 
 _BASE_SUM_COLUMNS = [
     Columns.QTD_EFETIVOS,
@@ -155,3 +155,124 @@ def latest_period_delta(serie: pd.DataFrame) -> float:
     if len(serie) < 2:
         return float("nan")
     return float(serie["variacao_pct"].iloc[-1])
+
+
+# ---------------------------------------------------------------------------
+# Agregações por dimensão (MP e oficina) — consumidas pelas tabelas e pelo
+# ranking da camada `ui`. Ficam aqui, e não nas funções de desenho, porque
+# `groupby`, soma de indicador e cálculo de taxa são regra de negócio: a `ui`
+# só formata o que recebe pronto.
+# ---------------------------------------------------------------------------
+
+# Janela do ranking de absenteísmo por oficina: as N últimas semanas presentes
+# no recorte filtrado (regra de negócio, não preferência de gráfico).
+RANKING_ULTIMAS_SEMANAS = 4
+
+_MP_COLUMNS = ["efetivos", "trabalhados", "contratacoes", "demissoes",
+               "ausencia", "absenteismo"]
+_OFICINA_COLUMNS = ["efetivos", "trabalhados", "contratacoes", "demissoes",
+                    "absenteismo_%"]
+
+
+def _somas_por(df: pd.DataFrame, chave: str) -> pd.DataFrame:
+    """Soma as quatro métricas-base agrupando por ``chave``."""
+    return df.groupby(chave, as_index=False).agg(
+        efetivos=(Columns.QTD_EFETIVOS, "sum"),
+        trabalhados=(Columns.QTD_TRABALHADOS, "sum"),
+        contratacoes=(Columns.CONTRATACOES, "sum"),
+        demissoes=(Columns.DEMISSOES, "sum"),
+    )
+
+
+def _taxa_absenteismo(grp: pd.DataFrame, casas: int) -> pd.Series:
+    """Taxa de absenteísmo (%) por linha já agregada, com ``casas`` decimais.
+
+    Razão entre somas (ausência ÷ efetivos), nunca média de taxas — pelo mesmo
+    motivo explicado no topo deste módulo.
+    """
+    return grp.apply(
+        lambda r: safe_div(r["efetivos"] - r["trabalhados"], r["efetivos"]) * 100,
+        axis=1,
+    ).round(casas)
+
+
+def aggregate_by_mp(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Totais por matéria-prima, com ausência e taxa de absenteísmo (2 casas).
+
+    Ordenado pelo nome da MP. DataFrame vazio devolve o mesmo contrato de
+    colunas, vazio — quem desenha só precisa checar ``.empty``.
+    """
+    if df.empty:
+        return pd.DataFrame(columns=[Columns.MP, *_MP_COLUMNS])
+
+    grp = _somas_por(df, Columns.MP)
+    grp["ausencia"] = grp["efetivos"] - grp["trabalhados"]
+    grp["absenteismo"] = _taxa_absenteismo(grp, casas=2)
+    return grp.sort_values(Columns.MP).reset_index(drop=True)
+
+
+def aggregate_by_oficina(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Totais por oficina+MP, com taxa de absenteísmo (1 casa), do menor para o
+    maior absenteísmo — a ordem em que a Tabela Completa é lida.
+    """
+    if df.empty:
+        return pd.DataFrame(columns=[Columns.OFICINA_MP, *_OFICINA_COLUMNS])
+
+    grp = _somas_por(df, Columns.OFICINA_MP)
+    grp["absenteismo_%"] = _taxa_absenteismo(grp, casas=1)
+    return grp.sort_values("absenteismo_%", ascending=True).reset_index(drop=True)
+
+
+def absenteismo_por_oficina(
+    df: pd.DataFrame, *, semanas: int = RANKING_ULTIMAS_SEMANAS
+) -> tuple[pd.DataFrame, int]:
+    """
+    Absenteísmo por oficina+MP nas ``semanas`` últimas semanas do recorte.
+
+    Devolve ``(agregado, semanas_usadas)`` — o segundo valor é quantas semanas
+    realmente existiam no recorte, usado no título do gráfico. Oficinas sem taxa
+    calculável (efetivo zero) saem do resultado.
+    """
+    if df.empty:
+        return pd.DataFrame(columns=[Columns.OFICINA_MP, "efetivos", "trabalhados",
+                                     "absenteismo"]), 0
+
+    disponiveis = sorted(df[Columns.SEMANA].dropna().unique())
+    ultimas = disponiveis[-semanas:]
+    janela = df[df[Columns.SEMANA].isin(ultimas)]
+
+    grp = janela.groupby(Columns.OFICINA_MP, as_index=False).agg(
+        efetivos=(Columns.QTD_EFETIVOS, "sum"),
+        trabalhados=(Columns.QTD_TRABALHADOS, "sum"),
+    )
+    grp["absenteismo"] = _taxa_absenteismo(grp, casas=2)
+    return grp.dropna(subset=["absenteismo"]), len(ultimas)
+
+
+def ranking_absenteismo(agregado: pd.DataFrame, *, mode: str, top_n: int) -> pd.DataFrame:
+    """
+    As ``top_n`` oficinas do ranking, sempre ordenadas do menor para o maior
+    absenteísmo (ordem de desenho das barras).
+
+    mode: ``'piores'`` → maiores taxas · ``'melhores'`` → menores taxas.
+    """
+    if mode not in ("piores", "melhores"):
+        raise ValueError(f"Modo de ranking desconhecido: {mode}")
+    if agregado.empty:
+        return agregado
+
+    escolhidas = (
+        agregado.nlargest(top_n, "absenteismo")
+        if mode == "piores"
+        else agregado.nsmallest(top_n, "absenteismo")
+    )
+    return escolhidas.sort_values("absenteismo", ascending=True).reset_index(drop=True)
+
+
+def media_absenteismo(ranking: pd.DataFrame) -> float:
+    """Média simples das taxas do ranking (linha de referência do gráfico)."""
+    if ranking.empty:
+        return float("nan")
+    return float(ranking["absenteismo"].mean())

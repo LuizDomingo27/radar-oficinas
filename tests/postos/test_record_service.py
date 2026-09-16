@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from app_postos.core.config import Columns, SUPABASE_TABLE_POSTOS
+from app_postos.core.config import Columns, DB_TABLE_POSTOS
 from app_postos.core.record import RecordValidationError
 from app_postos.services.record_service import (
     RecordDuplicateError,
@@ -12,7 +12,7 @@ from app_postos.services.record_service import (
     list_records,
     update_record,
 )
-from tests.postos.fakes import FakeSupabaseClient
+from tests.postos.fakes import FakeNeonClient
 
 
 def _row(rid, oficina="MARIA", mp="ALGODAO", semana=35, data="2026-08-24", qtd_efetivos=100):
@@ -33,7 +33,7 @@ def _row(rid, oficina="MARIA", mp="ALGODAO", semana=35, data="2026-08-24", qtd_e
 
 
 def _client(rows=None):
-    return FakeSupabaseClient({SUPABASE_TABLE_POSTOS: rows if rows is not None else []})
+    return FakeNeonClient({DB_TABLE_POSTOS: rows if rows is not None else []})
 
 
 def _update_kwargs(**overrides):
@@ -56,7 +56,7 @@ class _WriteBoomClient:
     """Leituras funcionam; qualquer UPDATE falha (simula queda na escrita)."""
 
     def __init__(self, rows):
-        self._fake = FakeSupabaseClient({SUPABASE_TABLE_POSTOS: rows})
+        self._fake = FakeNeonClient({DB_TABLE_POSTOS: rows})
 
     def table(self, name):
         t = self._fake.table(name)
@@ -96,14 +96,14 @@ class UpdateRecordTests(unittest.TestCase):
     def test_overwrites_existing_record(self) -> None:
         client = _client([_row(1, qtd_efetivos=100)])
         update_record(1, client=client, **_update_kwargs(qtd_efetivos=120))
-        row = client.rows(SUPABASE_TABLE_POSTOS)[0]
+        row = client.rows(DB_TABLE_POSTOS)[0]
         self.assertEqual(row[Columns.QTD_EFETIVOS], 120)
         self.assertEqual(row[Columns.QTD_TRABALHADOS], 110)
 
     def test_allows_saving_same_record_without_changing_key(self) -> None:
         client = _client([_row(1)])
         update_record(1, client=client, **_update_kwargs())  # não deve levantar
-        self.assertEqual(client.rows(SUPABASE_TABLE_POSTOS)[0][Columns.QTD_TRABALHADOS], 110)
+        self.assertEqual(client.rows(DB_TABLE_POSTOS)[0][Columns.QTD_TRABALHADOS], 110)
 
     def test_blocks_when_key_collides_with_another_record(self) -> None:
         client = _client([_row(1, oficina="MARIA"), _row(2, oficina="JOAO")])
@@ -117,7 +117,7 @@ class UpdateRecordTests(unittest.TestCase):
         update_record(
             2, client=client, **_update_kwargs(oficina="MARIA", mp="POLIESTER", qtd_efetivos=50)
         )
-        self.assertEqual(client.rows(SUPABASE_TABLE_POSTOS)[1][Columns.QTD_EFETIVOS], 50)
+        self.assertEqual(client.rows(DB_TABLE_POSTOS)[1][Columns.QTD_EFETIVOS], 50)
 
     def test_raises_not_found_when_editing_missing_record(self) -> None:
         with self.assertRaises(RecordNotFoundError):
@@ -127,7 +127,7 @@ class UpdateRecordTests(unittest.TestCase):
         client = _client([_row(1)])
         with self.assertRaises(RecordValidationError):
             update_record(1, client=client, **_update_kwargs(oficina="", semana=99))
-        self.assertEqual(client.rows(SUPABASE_TABLE_POSTOS)[0][Columns.OFICINA], "MARIA")
+        self.assertEqual(client.rows(DB_TABLE_POSTOS)[0][Columns.OFICINA], "MARIA")
 
     def test_wraps_backend_error_on_write(self) -> None:
         client = _WriteBoomClient([_row(1)])

@@ -19,7 +19,7 @@ from dataclasses import dataclass
 import pandas as pd
 
 from app_postos.core.config import Columns
-from app_postos.core.utils import safe_div
+from app_common.formatting import safe_div
 
 
 @dataclass(frozen=True)

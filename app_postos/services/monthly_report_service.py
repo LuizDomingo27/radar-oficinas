@@ -25,7 +25,7 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.worksheet.table import Table, TableStyleInfo
 
 from app_postos.core.config import Columns
-from app_postos.core.utils import safe_div
+from app_common.formatting import safe_div
 from app_postos.services.export_service import DataExportError
 
 

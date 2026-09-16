@@ -11,7 +11,7 @@ de modo que qualquer ajuste de paleta deve ser feito nos dois lugares.
 
 from __future__ import annotations
 
-from app_postos.core.config import Theme
+from app_common.theme import Theme
 
 
 def build_css() -> str:

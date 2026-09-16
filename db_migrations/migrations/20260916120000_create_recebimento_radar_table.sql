@@ -47,9 +47,5 @@ create index if not exists recebimento_radar_recebimento_idx
 create index if not exists recebimento_radar_oficina_idx
     on public."Recebimento_Radar" (oficina);
 
--- RLS habilitado por padrão (boa prática). O app acessa via string de conexão
--- direta do Neon; nenhuma policy é necessária aqui.
-alter table public."Recebimento_Radar" enable row level security;
-
 comment on table public."Recebimento_Radar" is
     'Recebimentos de peças das oficinas (peças cortadas, minutos, data, matéria-prima). Área "Recebimento" do Radar de Oficinas. Deduplicado por row_hash (insert-only).';

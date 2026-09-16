@@ -59,7 +59,7 @@ class TestConsolidar(unittest.TestCase):
         ]
 
     def _consolidar(self):
-        # Absenteísmo agora vem do Supabase (leitor_postos); o restante, das
+        # Absenteísmo agora vem do Neon (leitor_postos); o restante, das
         # planilhas (leitor_fatos). Cada origem é substituída por fixture.
         with mock.patch.multiple(
             consolidacao.leitor_fatos,

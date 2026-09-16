@@ -13,7 +13,8 @@ from dataclasses import dataclass
 
 import streamlit as st
 
-from app_postos.core.utils import format_delta_br, trend_arrow
+from app_common.formatting import format_delta_br
+from app_postos.core.utils import trend_arrow
 
 
 @dataclass(frozen=True)

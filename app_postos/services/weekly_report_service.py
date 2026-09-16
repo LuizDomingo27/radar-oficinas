@@ -2,7 +2,7 @@
 
 O módulo recebe somente o DataFrame limpo da aplicação e não depende do
 Streamlit. Isso mantém a agregação e a geração dos arquivos testáveis sem
-acesso ao Supabase ou à interface.
+acesso ao banco ou à interface.
 """
 
 from __future__ import annotations
@@ -19,7 +19,7 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.worksheet.table import Table, TableStyleInfo
 
 from app_postos.core.config import Columns
-from app_postos.core.utils import safe_div
+from app_common.formatting import safe_div
 from app_postos.services.export_service import DataExportError
 
 

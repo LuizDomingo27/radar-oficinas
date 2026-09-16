@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import unittest
 
-from app_postos.core.config import Columns, SUPABASE_TABLE_POSTOS
+from app_postos.core.config import Columns, DB_TABLE_POSTOS
 from app_postos.services.data_writer import check_record_exists, insert_record
-from tests.postos.fakes import FakeSupabaseClient
+from tests.postos.fakes import FakeNeonClient
 
 
 def _row(rid: int, oficina="MARIA", mp="ALGODAO", semana=35, data="2026-08-24") -> dict:
@@ -17,8 +17,8 @@ def _row(rid: int, oficina="MARIA", mp="ALGODAO", semana=35, data="2026-08-24") 
     }
 
 
-def _client(rows=None) -> FakeSupabaseClient:
-    return FakeSupabaseClient({SUPABASE_TABLE_POSTOS: rows or []})
+def _client(rows=None) -> FakeNeonClient:
+    return FakeNeonClient({DB_TABLE_POSTOS: rows or []})
 
 
 class _BoomClient:
@@ -81,7 +81,7 @@ class InsertRecordTests(unittest.TestCase):
             data_trabalhados="2026-08-24", qtd_trabalhados=9,
             contratacoes=1, demissoes=0, semana=35, client=client,
         )
-        rows = client.rows(SUPABASE_TABLE_POSTOS)
+        rows = client.rows(DB_TABLE_POSTOS)
         self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0][Columns.MP], "ALGODAO")
         self.assertEqual(rows[0][Columns.OFICINA], "Maria")

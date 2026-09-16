@@ -1,5 +1,5 @@
 """
-ui/cadastro_view.py — importação em lote de envios (planilha → Supabase).
+ui/cadastro_view.py — importação em lote de envios (planilha → Neon).
 
 Os envios vêm da planilha ENVIOS_OFICINAS.xlsx, re-exportada periodicamente.
 A regra anti-duplicação (row_hash) garante que só os envios NOVOS entrem —

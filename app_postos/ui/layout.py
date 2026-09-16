@@ -18,8 +18,14 @@ import streamlit as st
 
 from app_postos.core.config import Columns, INDICATORS, KPI_ORDER
 from app_postos.core.errors import guard
-from app_postos.core.utils import format_int_br, format_percent_br
-from app_postos.services.analytics_service import latest_period_delta, monthly_evolution, weekly_evolution
+from app_common.formatting import format_int_br, format_percent_br
+from app_postos.services.analytics_service import (
+    aggregate_by_mp,
+    aggregate_by_oficina,
+    latest_period_delta,
+    monthly_evolution,
+    weekly_evolution,
+)
 from app_postos.services.indicators_service import compute_kpis, kpi_value
 from app_postos.ui.components.cards import KpiCardData, render_kpi_cards
 from app_postos.ui.components.charts import (
@@ -177,37 +183,18 @@ def render_monthly_tab(df_filtered: pd.DataFrame) -> None:
 
 
 def _format_delta_caption(delta: float) -> str:
-    from app_postos.core.utils import format_delta_br
+    from app_common.formatting import format_delta_br
 
     if delta != delta:  # NaN
         return "sem base de comparação"
     return format_delta_br(delta)
 
 
-def _agg_mp(df: pd.DataFrame) -> pd.DataFrame:
-    """Agrega efetivos, trabalhados, contratações e demissões por MP."""
-    from app_postos.core.utils import safe_div
-    grp = (
-        df.groupby(Columns.MP, as_index=False)
-        .agg(
-            efetivos=(Columns.QTD_EFETIVOS, "sum"),
-            trabalhados=(Columns.QTD_TRABALHADOS, "sum"),
-            contratacoes=(Columns.CONTRATACOES, "sum"),
-            demissoes=(Columns.DEMISSOES, "sum"),
-        )
-    )
-    grp["ausencia"] = grp["efetivos"] - grp["trabalhados"]
-    grp["absenteismo"] = grp.apply(
-        lambda r: safe_div(r["ausencia"], r["efetivos"]) * 100, axis=1
-    ).round(2)
-    return grp.sort_values(Columns.MP).reset_index(drop=True)
-
-
 def _render_table_semana_atual(df_semana: pd.DataFrame, semana_atual: int) -> None:
     """Tabela 1 — Resultados por MP para a semana atual filtrada."""
     #st.markdown(f"#### Resultados Da Semana {semana_atual}")
 
-    grp = _agg_mp(df_semana)
+    grp = aggregate_by_mp(df_semana)
     if grp.empty:
         st.info("Sem dados para esta semana.")
         return
@@ -314,8 +301,8 @@ def _render_table_comparacao(
     if source_label:
         st.caption(source_label)
 
-    grp_atual = _agg_mp(df_atual).set_index(Columns.MP)
-    grp_ant   = _agg_mp(df_anterior).set_index(Columns.MP)
+    grp_atual = aggregate_by_mp(df_atual).set_index(Columns.MP)
+    grp_ant   = aggregate_by_mp(df_anterior).set_index(Columns.MP)
 
     all_mps = sorted(set(grp_atual.index) | set(grp_ant.index))
     if not all_mps:
@@ -380,8 +367,6 @@ def render_workshops_tab(df_filtered: pd.DataFrame, df_full: pd.DataFrame) -> No
       3. Gráfico de ranking (piores absenteísmos).
       4. Tabela completa por oficina+MP (existente).
     """
-    from app_postos.core.utils import safe_div
-
     st.markdown("#### Tabela Absenteísmo")
 
     if df_filtered.empty:
@@ -434,20 +419,8 @@ def render_workshops_tab(df_filtered: pd.DataFrame, df_full: pd.DataFrame) -> No
 
     # ── Tabela HTML completa (por oficina+MP) ─────────────────────────────
     # Exibe apenas a semana atual, respeitando os demais filtros ativos.
-    agrupado = (
-        df_semana_atual.groupby(Columns.OFICINA_MP, as_index=False)
-        .agg(
-            efetivos=(Columns.QTD_EFETIVOS, "sum"),
-            trabalhados=(Columns.QTD_TRABALHADOS, "sum"),
-            contratacoes=(Columns.CONTRATACOES, "sum"),
-            demissoes=(Columns.DEMISSOES, "sum"),
-        )
-    )
-    agrupado["absenteismo_%"] = agrupado.apply(
-        lambda r: safe_div(r["efetivos"] - r["trabalhados"], r["efetivos"]) * 100, axis=1
-    ).round(1)
-    agrupado = agrupado.sort_values("absenteismo_%", ascending=True).reset_index(drop=True)
-    agrupado.index += 1
+    agrupado = aggregate_by_oficina(df_semana_atual)
+    agrupado.index += 1  # numeração de exibição (a tabela começa em 1)
 
     rows_html = []
     for idx, row in agrupado.iterrows():

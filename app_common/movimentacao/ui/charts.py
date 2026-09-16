@@ -1,9 +1,12 @@
 """
-ui/components/charts.py — gráficos ECharts 5.x da área "Recebimento".
+app_common/movimentacao/ui/charts.py — gráficos ECharts 5.x da movimentação.
 
 Cada função devolve um HTML autossuficiente (carrega o ECharts do CDN),
-renderizado via ``st.components.v1.html``. Mesmo padrão de ``app_envios``:
+renderizado via ``st.components.v1.html``. Mesmo padrão de ``app_postos``:
 tema escuro alinhado ao Radar, tooltips ricos e rótulos de valor nas barras.
+
+Os gráficos são idênticos em Envios e Recebimento — o que muda é só o título,
+recebido como parâmetro —, então vivem aqui e não em cada área.
 """
 
 from __future__ import annotations
@@ -12,8 +15,9 @@ import json
 
 import pandas as pd
 
-from app_recebimento.core.config import Columns, Theme
-from app_recebimento.core.utils import format_int_br, format_minutos_br
+from app_common.formatting import format_int_br, format_minutos_br
+from app_common.movimentacao.area import COLUNA_ROTULO, ColunasMovimentacao as Columns
+from app_common.theme import Theme
 
 _ECHARTS_CDN = "https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"
 
@@ -71,20 +75,20 @@ def _bar_gradient(top: str, bottom: str) -> dict:
     }
 
 
-def build_top_oficinas_chart(df_top: pd.DataFrame, top_n: int = 10) -> str:
-    """Barras verticais das oficinas que mais entregaram peças (com minutos no tooltip)."""
+def build_top_oficinas_chart(df_top: pd.DataFrame) -> str:
+    """Barras verticais das oficinas com maior volume de peças (minutos no tooltip)."""
     if df_top is None or df_top.empty:
         return _empty_html()
 
     df = df_top.copy()
-    df["label_curto"] = df["rotulo"].astype(str).str.slice(0, 26)
+    df["label_curto"] = df[COLUNA_ROTULO].astype(str).str.slice(0, 26)
     df["tt_pecas"] = df[Columns.QTD].apply(format_int_br)
     df["tt_min"] = df[Columns.MINUTOS].apply(format_minutos_br)
 
     series_data = [
         {
             "value": int(row[Columns.QTD]),
-            "oficina_full": str(row["rotulo"]),
+            "oficina_full": str(row[COLUNA_ROTULO]),
             "tt_pecas": str(row["tt_pecas"]),
             "tt_min": str(row["tt_min"]),
             # Rótulo já formatado em pt-BR (sem chaves → o ECharts o exibe
@@ -151,7 +155,7 @@ function(p){
 
 
 def build_periodo_chart(serie: pd.DataFrame, value_label: str, color_top: str = "#4fd0c3") -> str:
-    """Barras de peças recebidas por período (mês ou semana), com minutos no tooltip."""
+    """Barras de peças por período (mês ou semana), com minutos no tooltip."""
     if serie is None or serie.empty:
         return _empty_html("Sem dados de período")
 
@@ -160,7 +164,7 @@ def build_periodo_chart(serie: pd.DataFrame, value_label: str, color_top: str = 
     df["tt_min"] = df[Columns.MINUTOS].apply(format_minutos_br)
 
     series_data = [
-        {"value": int(row[Columns.QTD]), "periodo": str(row["rotulo"]),
+        {"value": int(row[Columns.QTD]), "periodo": str(row[COLUNA_ROTULO]),
          "tt_pecas": str(row["tt_pecas"]), "tt_min": str(row["tt_min"]),
          # Rótulo já formatado em pt-BR (exibido literalmente pelo ECharts).
          "label": {"formatter": str(row["tt_pecas"])}}
@@ -185,7 +189,7 @@ def build_periodo_chart(serie: pd.DataFrame, value_label: str, color_top: str = 
         },
         "grid": {"left": "3%", "right": "4%", "bottom": "14%", "top": "18%", "containLabel": True},
         "xAxis": {
-            "type": "category", "data": df["rotulo"].astype(str).tolist(),
+            "type": "category", "data": df[COLUNA_ROTULO].astype(str).tolist(),
             "axisLine": {"show": False}, "axisTick": {"show": False}, "splitLine": {"show": False},
             "axisLabel": {"color": Theme.TEXT_MUTED, "fontFamily": "Inter, sans-serif",
                           "fontSize": 11, "rotate": -40 if n > 8 else 0, "interval": 0},

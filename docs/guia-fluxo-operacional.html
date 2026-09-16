@@ -50,6 +50,10 @@
     que acontece quando algo dá errado. Este guia descreve o único fluxo com
     escrita do sistema: <b>Atualizar dados</b> — a substituição das planilhas de
     origem pelos números publicados no dashboard.
+    <br><br>
+    Para o detalhe coluna a coluna de cada planilha aceita pelo aplicativo —
+    cabeçalhos exatos, tipo esperado e o que acontece quando um campo vem vazio —
+    consulte o anexo <a href="planilhas-e-colunas.html">Planilhas e colunas</a>.
   </div>
 </header>
 
@@ -275,6 +279,16 @@
     única vez pela migração
     <code>db_migrations/migrations/20260916120000_create_recebimento_radar_table.sql</code>
     (idempotente: <code>CREATE TABLE IF NOT EXISTS</code>, sem apagar nada).
+  </p>
+  <p class="nota">
+    <b>Envios e Recebimento são a mesma tela.</b> Os dois módulos medem o mesmo
+    movimento de peças em sentidos opostos, então usam <b>um único motor</b>:
+    filtros, cards, granularidades, gráficos e a consulta paginada são o mesmo
+    código, e cada módulo declara apenas a sua tabela, a sua coluna de data e o
+    seu vocabulário (“enviadas” / “recebidas”, “receberam” / “entregaram”).
+    Na prática isso significa que <b>um ajuste feito num aparece no outro</b> —
+    e que os dois nunca vão divergir por descuido. Nenhum rótulo, número ou
+    comportamento de tela mudou com essa unificação.
   </p>
 </section>
 

@@ -1,11 +1,11 @@
 """
 app_common/neon_client.py — acesso ao banco Neon (Postgres) para todo o app.
 
-Substitui o antigo client Supabase (PostgREST). Para manter a migração cirúrgica,
-expõe um ``NeonClient`` com a MESMA API fluente que o código já usava
-(``client.table(nome).select(...).eq(...).execute()``, ``.insert()``,
-``.update()``) — assim as camadas de serviço de ``app_postos``/``app_envios`` e os
-fakes de teste continuam iguais, só muda o motor por baixo (SQL via psycopg).
+Único ponto de acesso ao banco em todo o app. Expõe um ``NeonClient`` com uma
+API fluente (``client.table(nome).select(...).eq(...).execute()``, ``.insert()``,
+``.update()``) que as camadas de serviço de ``app_postos``, ``app_envios`` e
+``app_recebimento`` usam — e que os fakes de teste reproduzem, o que permite
+testar a escrita sem tocar no banco real.
 
 Conexão:
     A string de conexão vem dos Secrets do Streamlit, seção ``[neon]``:
@@ -116,7 +116,7 @@ class _Query:
         return self
 
     def range(self, start: int, end: int) -> "_Query":
-        # PostgREST: intervalo inclusivo [start, end].
+        # Intervalo INCLUSIVO [start, end] — a convenção que o app já usava.
         self._offset = start
         self._limit = end - start + 1
         return self
@@ -182,7 +182,7 @@ class _Query:
 
 
 class NeonClient:
-    """Client Neon com a API fluente do PostgREST (subconjunto usado pelo app)."""
+    """Client do Neon com a API fluente usada pelo app (SQL por baixo)."""
 
     def __init__(self, dsn: str):
         self._dsn = dsn

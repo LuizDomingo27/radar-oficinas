@@ -34,7 +34,7 @@ PAPEIS = (PAPEL_PRODUCAO, PAPEL_ABSENTEISMO, PAPEL_EFICIENCIA, PAPEL_TREINO)
 # Fonte cuja grafia é a referência para o nome de exibição da oficina. A base de
 # postos é a lista oficial de parceiros, então seus nomes viram o padrão;
 # oficinas ausentes dela caem no desempate por frequência. Desde a Fase 2 os
-# nomes de "postos" vêm do SUPABASE (não mais de uma planilha) — ver
+# nomes de "postos" vêm do NEON (não mais de uma planilha) — ver
 # ``infra.leitor_postos.registros_nome``; por isso "postos" não está em
 # ``FONTES`` abaixo, mas continua sendo a fonte-padrão de grafia.
 FONTE_NOME_PADRAO = "postos"
@@ -65,7 +65,7 @@ class FonteNomes:
 # intencionalmente ignorada. Colunas/linhas foram conferidas na análise inicial.
 FONTES: tuple[FonteNomes, ...] = (
     FonteNomes("recebimento", "RECEBIMENTO.xlsx", "RECEBIMENTO", 1, 2, PAPEL_PRODUCAO),
-    # "postos" NÃO entra aqui: seus nomes vêm do Supabase (Fase 2), lidos por
+    # "postos" NÃO entra aqui: seus nomes vêm do Neon (Fase 2), lidos por
     # ``infra.leitor_postos.registros_nome`` e injetados em ``ler_todas``.
     FonteNomes(
         "estoque_jeans_aux",
@@ -119,7 +119,7 @@ class FonteProducao:
 
 
 # A antiga ``FonteAbsenteismo`` (colunas do postos.xlsx) foi removida na Fase 2:
-# a fonte de absenteísmo agora é a tabela ``postos`` do Supabase, lida por
+# a fonte de absenteísmo agora é a tabela ``postos`` do Neon, lida por
 # ``infra.leitor_postos`` (que também é a fonte de nome de "postos").
 
 
@@ -343,7 +343,7 @@ QUALIDADE_DEFEITOS = FonteQualidadeDefeitos()
 # duplicar strings). Ordem estável para exibir "o que falta" ao usuário.
 ARQUIVOS_ESPERADOS: tuple[str, ...] = (
     PRODUCAO.arquivo,          # RECEBIMENTO.xlsx
-    # postos.xlsx saiu da checklist na Fase 2: o absenteísmo vem do Supabase,
+    # postos.xlsx saiu da checklist na Fase 2: o absenteísmo vem do Neon,
     # editado no módulo "Gestão de Postos", não mais por upload de planilha.
     EFIC_JEANS.arquivo,        # ESTOQUE OFICINAS - JEANS - 2026.xlsx
     EFIC_NAOJEANS.arquivo,     # ESTOQUE OFICINA NÃO JEANS.xlsx
@@ -397,7 +397,7 @@ REGRAS_UPLOAD: tuple[tuple[tuple[str, ...], str], ...] = (
     (("nao", "jeans"), EFIC_NAOJEANS.arquivo),
     (("estoque", "jeans"), EFIC_JEANS.arquivo),
     (("recebimento",), PRODUCAO.arquivo),
-    # "posto" saiu: a base de postos não é mais um upload (vive no Supabase).
+    # "posto" saiu: a base de postos não é mais um upload (vive no Neon).
     # "ep 2025" antes de "atendimento": ambos citam "ep", mas só a EP 2025 casa
     # os dois tokens ("ep" + "2025"). A regra de atendimento continua para o
     # histórico antigo ("Histórico de Atendimento EP").
@@ -446,7 +446,7 @@ ABAS_ESPERADAS: dict[tuple[str, str], AbaEsperada] = {
     (PRODUCAO.arquivo, PRODUCAO.aba): AbaEsperada(
         assinatura=("dia", "oficina", "ordem mestre", "mp", "minutos"),
     ),
-    # postos.xlsx não é mais lido (Fase 2 → Supabase), logo não há aba a resolver.
+    # postos.xlsx não é mais lido (Fase 2 → Neon), logo não há aba a resolver.
     (TREINO_EP.arquivo, TREINO_EP.aba): AbaEsperada(
         assinatura=("empresa", "cnpj", "modulo", "ch", "ciclo"),
     ),

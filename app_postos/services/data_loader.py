@@ -2,18 +2,18 @@
 services/data_loader.py
 -------------------------
 Responsabilidade única: ler os dados BRUTOS da fonte (tabela `postos` no
-Supabase) e validar sua estrutura, devolvendo-os no contrato de colunas
+Neon) e validar sua estrutura, devolvendo-os no contrato de colunas
 histórico da planilha Excel (`RawColumns`). Isso mantém toda a camada de
 limpeza (`services/data_cleaning.py`) e o restante da aplicação alheios à
-troca de fonte de dados (SQLite → Supabase).
+troca de fonte de dados (SQLite → Neon).
 """
 
 from __future__ import annotations
 
 import pandas as pd
 
-from app_postos.core.config import DB_TO_RAW_COLUMNS, RawColumns, SUPABASE_TABLE_POSTOS
-from app_postos.services.supabase_client import SupabaseConfigError, fetch_all_rows, get_supabase_client
+from app_postos.core.config import DB_TO_RAW_COLUMNS, RawColumns, DB_TABLE_POSTOS
+from app_common.neon_client import DbConfigError, fetch_all_rows, get_db_client
 
 REQUIRED_RAW_COLUMNS = [
     RawColumns.FRETE,
@@ -45,23 +45,23 @@ class EmptyDataError(DataLoadError):
 
 def load_raw_dataframe() -> pd.DataFrame:
     """
-    Lê todos os registros da tabela `postos` no Supabase e devolve um
+    Lê todos os registros da tabela `postos` no Neon e devolve um
     DataFrame no contrato de colunas "bruto" (nomes originais da planilha
     Excel), para consumo pela camada de limpeza.
     """
     try:
-        client = get_supabase_client()
-    except SupabaseConfigError as exc:
+        client = get_db_client()
+    except DbConfigError as exc:
         raise DataLoadError(str(exc)) from exc
 
     try:
-        rows = fetch_all_rows(client, SUPABASE_TABLE_POSTOS)
+        rows = fetch_all_rows(client, DB_TABLE_POSTOS)
     except Exception as exc:
-        raise DataLoadError(f"Falha ao ler os dados do Supabase: {exc}") from exc
+        raise DataLoadError(f"Falha ao ler os dados do banco: {exc}") from exc
 
     if not rows:
         raise EmptyDataError(
-            f"A tabela '{SUPABASE_TABLE_POSTOS}' no Supabase não contém nenhum registro. "
+            f"A tabela '{DB_TABLE_POSTOS}' no banco não contém nenhum registro. "
             "Use a página de Lançamento de Dados para importar a planilha inicial."
         )
 
@@ -77,7 +77,7 @@ def load_raw_dataframe() -> pd.DataFrame:
         df[RawColumns.DATA_EFETIVOS] = pd.to_datetime(df[RawColumns.DATA_EFETIVOS])
         df[RawColumns.DATA_TRABALHADOS] = pd.to_datetime(df[RawColumns.DATA_TRABALHADOS])
     except Exception as exc:
-        raise DataLoadError(f"Erro ao converter formatos de data do Supabase: {exc}") from exc
+        raise DataLoadError(f"Erro ao converter formatos de data do banco: {exc}") from exc
 
     _validate_schema(df)
     return df
@@ -88,9 +88,9 @@ def _validate_schema(df: pd.DataFrame) -> None:
     faltantes = [col for col in REQUIRED_RAW_COLUMNS if col not in df.columns]
     if faltantes:
         raise DataLoadError(
-            f"Os dados da tabela '{SUPABASE_TABLE_POSTOS}' estão sem as colunas obrigatórias: "
+            f"Os dados da tabela '{DB_TABLE_POSTOS}' estão sem as colunas obrigatórias: "
             f"{faltantes}. Colunas encontradas: {list(df.columns)}"
         )
     if df.empty:
-        raise DataLoadError(f"A tabela '{SUPABASE_TABLE_POSTOS}' não contém nenhuma linha.")
+        raise DataLoadError(f"A tabela '{DB_TABLE_POSTOS}' não contém nenhuma linha.")
 

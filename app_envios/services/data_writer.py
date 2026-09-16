@@ -12,14 +12,14 @@ from __future__ import annotations
 
 import pandas as pd
 
+from app_common.formatting import build_row_hash
+from app_common.neon_client import fetch_all_rows, get_db_client
 from app_envios.core.config import (
     Columns,
     DB_COLUMNS_PERSISTED,
-    SUPABASE_TABLE_ENVIOS,
+    DB_TABLE_ENVIOS,
 )
-from app_envios.core.utils import build_row_hash
 from app_envios.services.data_cleaning import standardize_raw
-from app_envios.services.supabase_client import fetch_all_rows, get_supabase_client
 
 _BULK_INSERT_BATCH_SIZE = 500
 
@@ -86,9 +86,9 @@ def insert_bulk_records(df_raw: pd.DataFrame, client=None) -> int:
     """
     df = prepare_dataframe_for_insert(df_raw)
 
-    client = client or get_supabase_client()
+    client = client or get_db_client()
     try:
-        existentes = fetch_all_rows(client, SUPABASE_TABLE_ENVIOS, columns=Columns.ROW_HASH)
+        existentes = fetch_all_rows(client, DB_TABLE_ENVIOS, columns=Columns.ROW_HASH)
         hashes_existentes = {str(r[Columns.ROW_HASH]) for r in existentes}
 
         # Remove os já existentes no banco e eventuais repetições no próprio lote.
@@ -100,10 +100,10 @@ def insert_bulk_records(df_raw: pd.DataFrame, client=None) -> int:
 
         payload = [_row_to_payload(row) for _, row in df_novos.iterrows()]
         for i in range(0, len(payload), _BULK_INSERT_BATCH_SIZE):
-            client.table(SUPABASE_TABLE_ENVIOS).insert(
+            client.table(DB_TABLE_ENVIOS).insert(
                 payload[i : i + _BULK_INSERT_BATCH_SIZE]
             ).execute()
 
         return len(df_novos)
     except Exception as exc:  # noqa: BLE001
-        raise RuntimeError(f"Erro ao importar envios para o Supabase: {exc}") from exc
+        raise RuntimeError(f"Erro ao importar envios para o banco: {exc}") from exc

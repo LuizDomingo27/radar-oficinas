@@ -9,20 +9,20 @@ SOBRESCREVER um registro após validar as invariantes do domínio
 Mantém o recurso de edição isolado da inserção e das telas.
 
 Todas as funções aceitam `client` (injeção de dependência) para permitir
-testes com um fake, sem tocar o Supabase remoto de produção.
+testes com um fake, sem tocar o banco remoto de produção.
 """
 
 from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any
 
-from app_postos.core.config import Columns, SUPABASE_TABLE_POSTOS
+from app_postos.core.config import Columns, DB_TABLE_POSTOS
 from app_postos.core.record import RecordValidationError, build_record_payload, validate_record_fields
 from app_postos.services.data_writer import check_record_exists
-from app_postos.services.supabase_client import fetch_all_rows, get_supabase_client
+from app_common.neon_client import fetch_all_rows, get_db_client
 
 if TYPE_CHECKING:  # apenas para type hints
-    from supabase import Client
+    from app_common.neon_client import NeonClient as Client
 
 __all__ = [
     "RecordServiceError",
@@ -52,19 +52,19 @@ class RecordDuplicateError(RecordServiceError):
 
 def list_records(*, client: "Client | None" = None) -> list[dict]:
     """Lê todos os registros (com `id`) para popular a seleção de edição."""
-    client = client or get_supabase_client()
+    client = client or get_db_client()
     try:
-        return fetch_all_rows(client, SUPABASE_TABLE_POSTOS)
+        return fetch_all_rows(client, DB_TABLE_POSTOS)
     except Exception as exc:
-        raise RecordServiceError(f"Erro ao listar os registros no Supabase: {exc}") from exc
+        raise RecordServiceError(f"Erro ao listar os registros no banco: {exc}") from exc
 
 
 def get_record(record_id: int, *, client: "Client | None" = None) -> dict:
     """Busca um registro por `id`; levanta RecordNotFoundError se não existir."""
-    client = client or get_supabase_client()
+    client = client or get_db_client()
     try:
         response = (
-            client.table(SUPABASE_TABLE_POSTOS)
+            client.table(DB_TABLE_POSTOS)
             .select("*")
             .eq("id", record_id)
             .limit(1)
@@ -72,7 +72,7 @@ def get_record(record_id: int, *, client: "Client | None" = None) -> dict:
         )
         data = response.data or []
     except Exception as exc:
-        raise RecordServiceError(f"Erro ao buscar o registro no Supabase: {exc}") from exc
+        raise RecordServiceError(f"Erro ao buscar o registro no banco: {exc}") from exc
 
     if not data:
         raise RecordNotFoundError(f"Registro id={record_id} não encontrado.")
@@ -117,7 +117,7 @@ def update_record(
         semana=semana,
     )
 
-    client = client or get_supabase_client()
+    client = client or get_db_client()
 
     # 2. Registro precisa existir (mensagem clara em vez de UPDATE silencioso).
     get_record(record_id, client=client)
@@ -154,6 +154,6 @@ def update_record(
 
     # 4. Sobrescreve o registro.
     try:
-        client.table(SUPABASE_TABLE_POSTOS).update(payload).eq("id", record_id).execute()
+        client.table(DB_TABLE_POSTOS).update(payload).eq("id", record_id).execute()
     except Exception as exc:
-        raise RecordServiceError(f"Erro ao atualizar o registro no Supabase: {exc}") from exc
+        raise RecordServiceError(f"Erro ao atualizar o registro no banco: {exc}") from exc

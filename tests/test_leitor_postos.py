@@ -1,8 +1,8 @@
-"""Testes do leitor de POSTOS via Supabase (Fase 2).
+"""Testes do leitor de POSTOS via Neon (Fase 2).
 
 O I/O de rede é substituído injetando as linhas cruas (``_obter_linhas``), de
 modo que os testes exercitam só o mapeamento e o contrato de erro — nunca tocam
-o Supabase de verdade.
+o banco de verdade.
 """
 
 import unittest
@@ -14,7 +14,7 @@ from app_oficinas.infra import leitor_postos
 
 
 def _linha(**kw) -> dict:
-    """Linha crua no formato da tabela ``postos`` do Supabase."""
+    """Linha crua no formato da tabela ``postos`` do Neon."""
     base = {
         "oficina": "ALFA TEXTIL LTDA",
         "frete": "RA",
@@ -95,7 +95,7 @@ class TestErroDeFonte(unittest.TestCase):
 
         with self.assertRaises(FonteIndisponivel) as ctx:
             list(leitor_postos.registros_nome(client=ClienteQuebrado()))
-        self.assertIn("supabase", str(ctx.exception).lower())
+        self.assertIn("[neon]", str(ctx.exception).lower())
 
 
 if __name__ == "__main__":

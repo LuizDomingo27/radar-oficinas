@@ -2,7 +2,7 @@
 -- Migration: criação da tabela `Envios_Radar`
 -- =============================================================================
 --
--- Contexto: nova área "Envios" do Radar de Oficinas. Armazena, no Supabase,
+-- Contexto: nova área "Envios" do Radar de Oficinas. Armazena, no Neon,
 -- os envios de peças às oficinas (peças, minutos, data de envio, matéria-prima
 -- etc.), para não depender de re-subir a planilha completa a cada vez — o app
 -- sobe apenas os envios NOVOS, como já é feito na tabela `postos`.
@@ -13,10 +13,10 @@
 --
 -- Nome com maiúsculas/underscore ("Envios_Radar") a pedido do time, para
 -- identificar a tabela com facilidade — por isso é sempre referenciada entre
--- aspas no Postgres e com o mesmo case exato no app (PostgREST é case-sensitive).
+-- aspas no Postgres e com o mesmo case exato no app.
 --
--- Como aplicar: cole e execute no Supabase Dashboard → SQL Editor
--- (ou via `supabase db push`, se estiver usando a CLI).
+-- Como aplicar: `py -3.12 -m app_common.scripts.bootstrap_neon`, que executa
+-- este arquivo no endpoint direto do Neon.
 -- =============================================================================
 
 create table if not exists public."Envios_Radar" (
@@ -52,10 +52,6 @@ create index if not exists envios_radar_envio_idx
     on public."Envios_Radar" (envio);
 create index if not exists envios_radar_oficina_idx
     on public."Envios_Radar" (oficina);
-
--- RLS habilitado por padrão (boa prática Supabase). O app acessa com a
--- service_role key, que ignora RLS — nenhuma policy é necessária aqui.
-alter table public."Envios_Radar" enable row level security;
 
 comment on table public."Envios_Radar" is
     'Envios de peças às oficinas (peças, minutos, data de envio, matéria-prima). Área "Envios" do Radar de Oficinas. Deduplicado por row_hash (insert-only).';

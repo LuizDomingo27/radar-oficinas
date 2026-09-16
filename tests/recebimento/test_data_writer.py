@@ -5,7 +5,7 @@ import pandas as pd
 
 from app_recebimento.core.config import Columns, DB_TABLE_RECEBIMENTO, RawColumns
 from app_recebimento.services.data_writer import insert_bulk_records, prepare_dataframe_for_insert
-from tests.postos.fakes import FakeSupabaseClient
+from tests.postos.fakes import FakeNeonClient
 
 
 def _raw_df(rows: list[dict]) -> pd.DataFrame:
@@ -40,7 +40,7 @@ def test_linhas_identicas_preservadas_por_ocorrencia():
 
 
 def test_insert_conta_novos_e_ignora_existentes():
-    client = FakeSupabaseClient({DB_TABLE_RECEBIMENTO: []})
+    client = FakeNeonClient({DB_TABLE_RECEBIMENTO: []})
     df = _raw_df([{"ordem": "1", "oficina": "A"}, {"ordem": "2", "oficina": "B"}])
 
     inseridos = insert_bulk_records(df, client=client)
@@ -54,7 +54,7 @@ def test_insert_conta_novos_e_ignora_existentes():
 
 
 def test_insert_apenas_linhas_novas_no_reupload():
-    client = FakeSupabaseClient({DB_TABLE_RECEBIMENTO: []})
+    client = FakeNeonClient({DB_TABLE_RECEBIMENTO: []})
     insert_bulk_records(_raw_df([{"ordem": "1", "oficina": "A"}]), client=client)
 
     # Segundo arquivo: uma repetida + uma nova → só a nova entra.
@@ -67,7 +67,7 @@ def test_insert_apenas_linhas_novas_no_reupload():
 
 
 def test_insert_preserva_duas_linhas_identicas_na_carga():
-    client = FakeSupabaseClient({DB_TABLE_RECEBIMENTO: []})
+    client = FakeNeonClient({DB_TABLE_RECEBIMENTO: []})
     novos = insert_bulk_records(
         _raw_df([{"ordem": "9", "oficina": "Z"}, {"ordem": "9", "oficina": "Z"}]),
         client=client,

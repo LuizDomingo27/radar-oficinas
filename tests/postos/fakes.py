@@ -1,7 +1,7 @@
 """
-tests/fakes.py
-----------------
-Fake mínimo do client Supabase (postgrest) para testes.
+tests/postos/fakes.py
+---------------------
+Fake mínimo do client do banco (``app_common.neon_client.NeonClient``).
 
 Simula a API fluente (`client.table(...).select(...).eq(...).execute()`) sobre
 listas de dicts EM MEMÓRIA — os testes NUNCA tocam o banco remoto de produção.
@@ -132,7 +132,7 @@ class _FakeTable:
         return _Query(self).update(payload)
 
 
-class FakeSupabaseClient:
+class FakeNeonClient:
     """Client fake: `client.table(nome)` devolve um builder sobre memória."""
 
     def __init__(self, tables: dict[str, list[dict]] | None = None):

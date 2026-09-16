@@ -13,8 +13,8 @@ import pandas as pd
 import streamlit as st
 
 from app_postos.core.config import Columns
-from app_postos.core.utils import all_or_selected
-from app_postos.services.filter_service import FilterSelection, apply_filters
+from app_common.formatting import all_or_selected
+from app_postos.services.filter_service import FilterSelection
 
 
 def render_top_filters(df: pd.DataFrame) -> FilterSelection:

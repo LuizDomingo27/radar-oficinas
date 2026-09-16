@@ -21,13 +21,18 @@ from __future__ import annotations
 
 import json
 import pandas as pd
-import streamlit as st
-from app_postos.core.config import Theme, Columns
-from app_postos.core.utils import format_delta_br, format_int_br, format_percent_br, trend_color, safe_div
+from app_common.theme import Theme
+from app_postos.core.config import Columns
+from app_common.formatting import format_delta_br, format_int_br, format_percent_br
+from app_postos.core.utils import trend_color
+from app_postos.services.analytics_service import (
+    absenteismo_por_oficina,
+    media_absenteismo,
+    ranking_absenteismo,
+)
 
 _GREEN = "#18C99E"
 _RED   = "#D93025"
-_LAST_N_WEEKS = 4
 
 _ECHARTS_CDN = "https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"
 
@@ -413,30 +418,15 @@ def build_absenteismo_ranking_chart(
     if df_filtered.empty:
         return _echart_html(_empty_option)
 
-    semanas_disponiveis = sorted(df_filtered[Columns.SEMANA].dropna().unique())
-    ultimas = semanas_disponiveis[-_LAST_N_WEEKS:]
-    df_janela = df_filtered[df_filtered[Columns.SEMANA].isin(ultimas)]
-
-    agrupado = (
-        df_janela
-        .groupby(Columns.OFICINA_MP, as_index=False)
-        .agg(
-            efetivos=(Columns.QTD_EFETIVOS, "sum"),
-            trabalhados=(Columns.QTD_TRABALHADOS, "sum"),
-        )
-    )
-    agrupado["absenteismo"] = agrupado.apply(
-        lambda r: safe_div(r["efetivos"] - r["trabalhados"], r["efetivos"]) * 100,
-        axis=1,
-    ).round(2)
-    agrupado = agrupado.dropna(subset=["absenteismo"])
+    agrupado, qtd_semanas = absenteismo_por_oficina(df_filtered)
 
     if agrupado.empty:
         _empty_option["title"]["text"] = "Sem dados suficientes"
         return _echart_html(_empty_option)
 
+    top = ranking_absenteismo(agrupado, mode=mode, top_n=top_n)
+
     if mode == "piores":
-        top = agrupado.nlargest(top_n, "absenteismo").copy()
         bar_gradient = {
             "type": "linear", "x": 0, "y": 0, "x2": 0, "y2": 1,
             "colorStops": [
@@ -449,7 +439,6 @@ def build_absenteismo_ranking_chart(
         title_text = ""  # O título desta seção é renderizado fora do gráfico (ver ui/layout.py).
         
     else:
-        top = agrupado.nsmallest(top_n, "absenteismo").copy()
         bar_gradient = {
             "type": "linear", "x": 0, "y": 0, "x2": 0, "y2": 1,
             "colorStops": [
@@ -460,16 +449,15 @@ def build_absenteismo_ranking_chart(
         
         label_color = _GREEN
         emphasis_shadow = "rgba(24,201,158,0.45)"
-        title_text = f"Top {top_n} Menores Absenteísmos — Média das Últimas {len(ultimas)} Semanas"
+        title_text = f"Top {top_n} Menores Absenteísmos — Média das Últimas {qtd_semanas} Semanas"
 
     top["oficina_label"] = top[Columns.OFICINA_MP].str[:28]
     top["tooltip_abs"]   = top["absenteismo"].apply(format_percent_br)
     top["tooltip_ef"]    = top["efetivos"].apply(format_int_br)
     top["tooltip_trab"]  = top["trabalhados"].apply(format_int_br)
 
-    top = top.sort_values("absenteismo", ascending=True)
     y_data = top["oficina_label"].tolist()
-    media_geral = float(top["absenteismo"].mean())
+    media_geral = media_absenteismo(top)
 
     series_data = [
         {

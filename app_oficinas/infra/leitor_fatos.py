@@ -143,7 +143,7 @@ def ler_endividamento(base_dir: Path | None = None) -> Iterator[dict]:
 
 
 # O absenteísmo saiu daqui na Fase 2: sua fonte passou a ser a tabela ``postos``
-# do Supabase (mesma base do módulo "Gestão de Postos"). Ver
+# do Neon (mesma base do módulo "Gestão de Postos"). Ver
 # ``infra.leitor_postos.ler_absenteismo`` — mesmo shape de dict, origem diferente.
 
 

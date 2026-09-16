@@ -4,6 +4,9 @@ app_envios/dashboard.py — ponto de entrada da área "Envios" no app unificado.
 É uma FUNÇÃO (`render_envios_page`) chamada pelo shell (`streamlit_app.py`)
 quando a aba "Envios" está ativa. Não chama `st.set_page_config` nem aplica CSS
 (responsabilidade do shell). Orquestra: navbar → carga de dados → página ativa.
+
+As seções do dashboard vêm do núcleo compartilhado
+(``app_common.movimentacao``), parametrizadas pelo descritor ``AREA``.
 """
 
 from __future__ import annotations
@@ -11,17 +14,21 @@ from __future__ import annotations
 import pandas as pd
 import streamlit as st
 
-from app_envios.core.config import APP_SUBTITLE, APP_TITLE
-from app_envios.core.errors import error_boundary, guard
-from app_envios.services.data_loader import EmptyDataError, empty_dataframe, load_clean_dataframe
-from app_envios.ui.cadastro_view import render_cadastro_page
-from app_envios.ui.components.filters import render_filters
-from app_envios.ui.layout import (
+from app_common.movimentacao.data_loader import (
+    EmptyDataError,
+    empty_dataframe,
+    load_clean_dataframe,
+)
+from app_common.movimentacao.ui.filters import render_filters
+from app_common.movimentacao.ui.layout import (
     render_charts_section,
     render_consulta_table,
     render_granularity_section,
     render_kpi_section,
 )
+from app_envios.core.config import AREA
+from app_envios.core.errors import error_boundary, guard
+from app_envios.ui.cadastro_view import render_cadastro_page
 
 _PAGE_DASHBOARD = "envios_dashboard"
 _PAGE_LANCAMENTO = "envios_lancamento"
@@ -29,14 +36,14 @@ _PAGE_LANCAMENTO = "envios_lancamento"
 
 @st.cache_data(show_spinner="Carregando dados de envios...")
 def _load_clean_data() -> pd.DataFrame:
-    return load_clean_dataframe()
+    return load_clean_dataframe(AREA)
 
 
 def _load_data_or_empty() -> pd.DataFrame:
     try:
         return _load_clean_data()
     except EmptyDataError:
-        return empty_dataframe()
+        return empty_dataframe(AREA)
 
 
 def _render_navbar() -> str:
@@ -46,8 +53,8 @@ def _render_navbar() -> str:
     col_brand, col_dash, col_lanc = st.columns([6, 2, 2], vertical_alignment="center")
     with col_brand:
         st.markdown(
-            f'<div class="app-navbar"><span class="brand-title">{APP_TITLE}</span>'
-            f'<span class="brand-sub">{APP_SUBTITLE}</span></div>',
+            f'<div class="app-navbar"><span class="brand-title">{AREA.titulo}</span>'
+            f'<span class="brand-sub">{AREA.subtitulo}</span></div>',
             unsafe_allow_html=True,
         )
     with col_dash:
@@ -69,7 +76,7 @@ def _render_navbar() -> str:
 
 @guard("montar o dashboard de envios")
 def _render_dashboard(df: pd.DataFrame) -> None:
-    df_filtrado, sem_data, mes_sel = render_filters(df)
+    df_filtrado, sem_data, mes_sel = render_filters(df, AREA)
 
     if sem_data:
         st.caption(
@@ -81,10 +88,10 @@ def _render_dashboard(df: pd.DataFrame) -> None:
         st.warning("Nenhum envio encontrado para os filtros selecionados.")
         return
 
-    render_kpi_section(df_filtrado)
-    render_granularity_section(df_filtrado)
-    render_charts_section(df_filtrado, mes_sel)
-    render_consulta_table(df_filtrado)
+    render_kpi_section(df_filtrado, AREA)
+    render_granularity_section(df_filtrado, AREA)
+    render_charts_section(df_filtrado, AREA, mes_sel)
+    render_consulta_table(df_filtrado, AREA)
 
 
 def render_envios_page() -> None:

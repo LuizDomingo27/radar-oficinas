@@ -1,7 +1,7 @@
-"""Leitura da fonte de POSTOS a partir do Supabase (Fase 2 — I/O isolado).
+"""Leitura da fonte de POSTOS a partir do Neon (Fase 2 — I/O isolado).
 
 Substitui a antiga planilha ``postos.xlsx`` como fonte ÚNICA de absenteísmo e de
-nomes canônicos das oficinas. A tabela ``postos`` do Supabase é a MESMA
+nomes canônicos das oficinas. A tabela ``postos`` do Neon é a MESMA
 alimentada pelo módulo "Gestão de Postos": o Radar passa a LER dela o que o
 Postos ESCREVE, unificando a origem (o objetivo da Fase 2).
 
@@ -28,7 +28,7 @@ from app_oficinas import config
 from app_oficinas.domain.models import RegistroNome
 from app_oficinas.errors import FonteIndisponivel
 
-# Tabela e colunas da fonte no Supabase (schema estável — o mesmo escrito pelo
+# Tabela e colunas da fonte no Neon (schema estável — o mesmo escrito pelo
 # módulo de Postos). É o CONTRATO desta fonte; se a tabela mudar de coluna, o
 # ajuste é feito só aqui.
 TABELA = "postos"
@@ -78,25 +78,25 @@ def _obter_linhas(client: object | None = None) -> list[dict]:
     """Busca TODAS as linhas da tabela ``postos``, traduzindo falhas em domínio.
 
     Args:
-        client: client Supabase já pronto (injetável nos testes). Por padrão usa
+        client: client do banco já pronto (injetável nos testes). Por padrão usa
             o client compartilhado do módulo de Postos, que lê as credenciais de
             ``.streamlit/secrets.toml`` / Secrets do Streamlit Cloud.
 
     Raises:
         FonteIndisponivel: credenciais ausentes/incompletas, rede indisponível ou
-            resposta inesperada do Supabase.
+            resposta inesperada do banco.
     """
     try:
         if client is None:
-            from app_postos.services.supabase_client import get_supabase_client
-            client = get_supabase_client()
-        from app_postos.services.supabase_client import fetch_all_rows
+            from app_common.neon_client import get_db_client
+            client = get_db_client()
+        from app_common.neon_client import fetch_all_rows
         return fetch_all_rows(client, TABELA)
-    except Exception as exc:  # SupabaseConfigError, rede, PostgREST, etc.
+    except Exception as exc:  # DbConfigError, rede, SQL, etc.
         raise FonteIndisponivel(
-            f"Não foi possível ler os postos do Supabase: {exc}. Confira a seção "
-            "[supabase] em .streamlit/secrets.toml (url e service_role_key) ou nos "
-            "Secrets do Streamlit Cloud."
+            f"Não foi possível ler os postos do banco: {exc}. Confira a seção "
+            "[neon] em .streamlit/secrets.toml (campo dsn) ou nos Secrets do "
+            "Streamlit Cloud."
         ) from exc
 
 

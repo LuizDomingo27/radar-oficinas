@@ -2,7 +2,7 @@
 Gera arquivos Excel para compartilhamento dos dados do dashboard.
 
 O módulo não depende do Streamlit: recebe apenas o DataFrame já carregado e
-filtrado. Assim, a exportação não dispara consultas adicionais ao Supabase e
+filtrado. Assim, a exportação não dispara consultas adicionais ao banco e
 continua simples de testar e reaproveitar em outros pontos da aplicação.
 """
 

@@ -16,7 +16,6 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Callable, Iterable
 
-from app_oficinas import config
 from app_oficinas.domain.models import (
     FatoAbsenteismo,
     FatoEficiencia,
@@ -183,7 +182,7 @@ def consolidar(indice: Indice, base_dir: Path | None = None) -> Consolidado:
         )
 
     c.producao = list(_consumir(leitor_fatos.ler_producao(base_dir), prod))
-    # Absenteísmo vem do Supabase (Fase 2), não mais de planilha — por isso não
+    # Absenteísmo vem do Neon (Fase 2), não mais de planilha — por isso não
     # recebe ``base_dir``. Mesmo shape de dict; a lógica de ``absen`` não muda.
     c.absenteismo = list(_consumir(leitor_postos.ler_absenteismo(), absen))
     c.eficiencia = list(_consumir(
