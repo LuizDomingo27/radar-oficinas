@@ -93,7 +93,7 @@ class TestJanelaPrePos(unittest.TestCase):
     def test_todas_as_metricas_geram_uma_linha(self):
         series = self._series()
         linhas = impacto.impacto_por_oficina([("of", "TOC", 2025)], series)
-        self.assertEqual({l["metrica"] for l in linhas}, set(impacto.METRICAS))
+        self.assertEqual({l["metrica"] for l in linhas}, set(impacto.SENTIDO))
 
 
 class TestExtrairTreinos(unittest.TestCase):

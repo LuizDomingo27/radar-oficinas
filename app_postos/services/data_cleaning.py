@@ -36,7 +36,7 @@ from __future__ import annotations
 
 import pandas as pd
 
-from app_postos.core.config import Columns, INVALID_SENTINEL_DATE_YEAR, MP_NORMALIZATION_MAP, RawColumns
+from app_postos.core.config import Columns, MP_NORMALIZATION_MAP, RawColumns
 
 _RAW_TO_STANDARD = {
     RawColumns.FRETE: Columns.FRETE,
@@ -127,32 +127,3 @@ def _derive_oficina_mp_label(df: pd.DataFrame) -> pd.DataFrame:
     """
     df[Columns.OFICINA_MP] = df[Columns.OFICINA] + " " + df[Columns.MP].str.title()
     return df
-
-
-def build_data_quality_report(df_raw: pd.DataFrame) -> dict:
-    """
-    Gera um pequeno relatório (não bloqueante) sobre as inconsistências
-    encontradas na planilha de origem. Útil para auditoria e para a seção
-    de transparência exibida na interface.
-    """
-    df = df_raw.rename(columns=_RAW_TO_STANDARD)
-
-    mp_variantes = sorted(df[Columns.MP].dropna().astype(str).str.strip().unique().tolist())
-    frete_variantes = sorted(df[Columns.FRETE].dropna().astype(str).unique().tolist())
-
-    linhas_sentinela = df[
-        pd.to_datetime(df[Columns.DATA_TRABALHADOS], errors="coerce").dt.year
-        == INVALID_SENTINEL_DATE_YEAR
-    ]
-
-    return {
-        "linhas_totais": len(df),
-        "qtd_efetivos_nulos": int(df[Columns.QTD_EFETIVOS].isna().sum()),
-        "qtd_trabalhados_nulos": int(df[Columns.QTD_TRABALHADOS].isna().sum()),
-        "mp_variantes_brutas": mp_variantes,
-        "frete_variantes_brutas": frete_variantes,
-        "linhas_data_trabalhados_invalida": int(len(linhas_sentinela)),
-        "semanas_afetadas_data_invalida": sorted(
-            linhas_sentinela[Columns.SEMANA].unique().tolist()
-        ),
-    }

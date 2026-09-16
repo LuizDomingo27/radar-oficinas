@@ -29,8 +29,6 @@ PAPEL_ABSENTEISMO = "absenteismo"  # absenteísmo    (postos)
 PAPEL_EFICIENCIA = "eficiencia"    # eficiência     (estoque oficinas)
 PAPEL_TREINO = "treino"            # treinamentos   (histórico EP / Lidera+)
 
-PAPEIS = (PAPEL_PRODUCAO, PAPEL_ABSENTEISMO, PAPEL_EFICIENCIA, PAPEL_TREINO)
-
 # Fonte cuja grafia é a referência para o nome de exibição da oficina. A base de
 # postos é a lista oficial de parceiros, então seus nomes viram o padrão;
 # oficinas ausentes dela caem no desempate por frequência. Desde a Fase 2 os
@@ -282,7 +280,6 @@ ENDIVIDAMENTO = FonteEndividamento()
 # gráficos: RESUMO (tabela RES, 1 linha = 1 inspeção/OM) e DEFEITOS (tabela DEF,
 # 1 linha = 1 defeito). Índices base 0 a partir da coluna A da aba; as tabelas
 # começam na coluna B, por isso os índices "pulam" a coluna A vazia.
-PAPEL_QUALIDADE = "qualidade"
 
 # Status de inspeção que entram no denominador da nota (os demais são ignorados).
 STATUS_APROVADO = "APROVADO"
@@ -556,5 +553,3 @@ MP_CANONICO: dict[str, str] = {
     "comart": "COMART",
 }
 
-# MPs presentes na produção que não têm capacidade nas planilhas de eficiência.
-MP_SEM_EFICIENCIA = frozenset({"ECOBAGS", "COMART"})

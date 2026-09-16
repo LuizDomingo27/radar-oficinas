@@ -33,7 +33,6 @@ DB_TABLE_POSTOS = "postos"
 # Metadados da aplicação
 # ---------------------------------------------------------------------------
 APP_TITLE = "Gestão de Postos de Trabalho"
-APP_ICON = "🧵"
 APP_SUBTITLE = "Acompanhamento de efetivos, produtividade e absenteísmo por oficina"
 
 # ---------------------------------------------------------------------------
@@ -136,7 +135,3 @@ MP_NORMALIZATION_MAP = {
     "POLÓ": "POLO",
 }
 
-# Linhas cujo valor de "Data Trabalhados" é uma data sentinela/inválida
-# vinda da planilha de origem (ex.: 1990-12-31). Não confiável para
-# cálculos de tempo — ver services/data_cleaning.py.
-INVALID_SENTINEL_DATE_YEAR = 1990

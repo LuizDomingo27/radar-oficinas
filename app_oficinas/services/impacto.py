@@ -38,7 +38,6 @@ SENTIDO = {
     "eficiencia": +1,      # eficiência % — subir é bom
     "absenteismo": -1,     # absenteísmo % — subir é ruim
 }
-METRICAS = ("produtividade", "absenteismo", "eficiencia")
 
 # Status de um par pré/pós.
 OK = "ok"

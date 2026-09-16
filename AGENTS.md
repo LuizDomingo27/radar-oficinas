@@ -71,6 +71,34 @@ Nos dashboards, a dependência corre em **uma direção só**: `ui → services 
 - **Nada órfão.** Toda função, constante, arquivo e coluna precisa ter quem a
   use em código de produção. Coisa usada só por teste é código morto — apague.
   Antes de fechar, faça a busca e confirme.
+- **Órfão só some depois de provado órfão.** Nunca apague no susto: primeiro
+  **verifique**, depois confirme, e só então remova. O roteiro é este, e ele
+  não tem atalho:
+  1. **Procure em TODO tipo de arquivo, não só `.py`.** O nome pode ser lido
+     pela SPA (`web/assets/js/*.js`), por um `.html`, por um JSON de
+     configuração ou por uma migração:
+     `grep -rn "NOME" --include='*.py' --include='*.js' --include='*.html' --include='*.json' --include='*.sql' .`
+  2. **Procure quem usa através do módulo** — reexport, `__all__`, import
+     encadeado. Um `grep` só dentro do arquivo não basta.
+  3. **Descarte o uso dinâmico** antes de confiar na busca estática:
+     `import *`, `getattr(config, nome)`, `globals()[nome]` e chave de
+     dicionário montada em tempo de execução escapam do `grep`.
+  4. **Homônimo não é uso.** Se o nome aparece em outro lugar, confirme que é
+     a MESMA coisa — a SPA pode ter uma constante própria com o mesmo nome,
+     declarada nela mesma. Nesse caso o símbolo do Python continua órfão (e a
+     duplicação vira um problema vizinho a relatar, não a consertar junto).
+  5. **Remova e varra de novo, até o ponto fixo.** Apagar um órfão cria
+     órfãos: a constante que só ele lia, o import que só ele usava. Repita a
+     varredura até não sobrar nada.
+  6. **Suíte verde e linter limpo** depois da remoção, sempre.
+- **Exceção à regra do "usado só por teste": implementação de referência.**
+  Quando a SPA reimplementa em JS uma fórmula do Python, a versão Python segue
+  viva como **oráculo testado** daquele cálculo — apagá-la deixaria a fórmula do
+  frontend sem nenhuma checagem automatizada. É o caso de `ranking_nota`,
+  `ranking_2qa` e `principais_causas` em `services/qualidade.py`, que
+  `web/assets/js/dashboard.js` replica. Quem tem esse papel **diz isso na
+  docstring**, e o lado JS aponta de volta; sem os dois apontamentos escritos,
+  o código é órfão comum e vai embora.
 - **Uma fonte de verdade.** Nome de tabela, cabeçalho de planilha, paleta e
   rótulo se declaram **uma vez** (em `core/config.py` ou num módulo
   compartilhado) e são importados. Copiar e colar constante entre áreas é erro.
